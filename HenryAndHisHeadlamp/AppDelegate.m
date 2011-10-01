@@ -10,8 +10,10 @@
 
 #import "AppDelegate.h"
 #import "GameConfig.h"
-#import "HelloWorldLayer.h"
+#import "StartUpScreenLayer.h"
 #import "RootViewController.h"
+#import "FlurryAnalytics.h"
+#import "TestFlight.h"
 
 @implementation AppDelegate
 
@@ -40,6 +42,17 @@
 }
 - (void) applicationDidFinishLaunching:(UIApplication*)application
 {
+
+#ifdef HALLOWEEN
+    [TestFlight takeOff:@"76c69515ac87392bd0ccfe77842a7140_MzEzMjQyMDExLTA5LTI2IDE2OjI3OjI4Ljc1OTExNg"];
+#endif
+    
+#ifdef HALLOWEEN
+    [FlurryAnalytics startSession:@"DGHMVRDQU4TFPMXPJIGH"];
+    [FlurryAnalytics setSessionReportsOnPauseEnabled:YES];
+#endif
+    
+    
 	// Init the window
 	window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
 	
@@ -89,14 +102,16 @@
 #endif
 	
 	[director setAnimationInterval:1.0/60];
-	[director setDisplayFPS:YES];
+	[director setDisplayFPS:NO];
 	
 	
 	// make the OpenGLView a child of the view controller
 	[viewController setView:glView];
 	
 	// make the View Controller a child of the main window
+    window.rootViewController=viewController;
 	[window addSubview: viewController.view];
+//    [window setRootViewController:viewController];
 	
 	[window makeKeyAndVisible];
 	
@@ -110,7 +125,7 @@
 	[self removeStartupFlicker];
 	
 	// Run the intro Scene
-	[[CCDirector sharedDirector] runWithScene: [HelloWorldLayer scene]];
+	[[CCDirector sharedDirector] runWithScene: [StartUpScreenLayer scene]];
 }
 
 

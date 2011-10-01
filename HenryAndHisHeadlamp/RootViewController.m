@@ -84,8 +84,14 @@
 	// Sample: Autorotate only in landscpe mode
 	//
 	// return YES for the supported orientations
-	
-	return ( UIInterfaceOrientationIsLandscape( interfaceOrientation ) );
+    
+    if( interfaceOrientation == UIInterfaceOrientationLandscapeLeft || interfaceOrientation == UIInterfaceOrientationLandscapeRight){
+        return YES;
+    }
+    
+
+    
+//	return ( UIInterfaceOrientationIsLandscape( interfaceOrientation ) );
 	
 #else
 #error Unknown value in GAME_AUTOROTATION

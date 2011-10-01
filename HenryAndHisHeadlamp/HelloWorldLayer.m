@@ -23,6 +23,7 @@
 	
 	// add layer as a child to scene
 	[scene addChild: layer];
+
 	
 	// return the scene
 	return scene;
@@ -46,6 +47,9 @@
 		
 		// add the label as a child to this Layer
 		[self addChild: label];
+        
+        
+                
 	}
 	return self;
 }

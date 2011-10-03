@@ -52,6 +52,11 @@
     [FlurryAnalytics setSessionReportsOnPauseEnabled:YES];
 #endif
     
+#ifdef HALLOWEEN
+    [[SimpleAudioEngine sharedEngine] preloadBackgroundMusic:@"spooky2.caf"];
+    [[SimpleAudioEngine sharedEngine] playBackgroundMusic:@"spooky2.caf" loop:YES];
+#endif
+
     
 	// Init the window
 	window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
@@ -123,6 +128,10 @@
 	
 	// Removes the startup flicker
 	[self removeStartupFlicker];
+    
+//    [[NSUserDefaults standardUserDefaults] setValue:nil forKey:@"firstPlace"];
+//    [[NSUserDefaults standardUserDefaults] setValue:nil forKey:@"secondPlace"];
+//    [[NSUserDefaults standardUserDefaults] setValue:nil forKey:@"thirdPlace"];
 	
 	// Run the intro Scene
 	[[CCDirector sharedDirector] runWithScene: [StartUpScreenLayer scene]];

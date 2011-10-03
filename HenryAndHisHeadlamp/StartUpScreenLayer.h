@@ -19,4 +19,5 @@
 +(CCScene *) scene;
 -(void) transitionToGamePlay;
 -(void) transitionToAboutPage;
+-(void) loadGameLayer;
 @end

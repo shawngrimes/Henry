@@ -143,10 +143,6 @@
 		293B38C9143155C8008B65B7 /* HenryBodyTextures.png in Resources */ = {isa = PBXBuildFile; fileRef = 293B38C5143155C8008B65B7 /* HenryBodyTextures.png */; };
 		293CCBAE142ABA9A00851CD2 /* ding.caf in Resources */ = {isa = PBXBuildFile; fileRef = 293CCBAD142ABA9A00851CD2 /* ding.caf */; };
 		293CCBAF142ABA9A00851CD2 /* ding.caf in Resources */ = {isa = PBXBuildFile; fileRef = 293CCBAD142ABA9A00851CD2 /* ding.caf */; };
-		293CCBB2142AC13700851CD2 /* Default-Portrait~ipad.png in Resources */ = {isa = PBXBuildFile; fileRef = 293CCBB1142AC13700851CD2 /* Default-Portrait~ipad.png */; };
-		293CCBB4142AC13A00851CD2 /* Default-Landscape~ipad.png in Resources */ = {isa = PBXBuildFile; fileRef = 293CCBB3142AC13A00851CD2 /* Default-Landscape~ipad.png */; };
-		293CCBB6142AC16000851CD2 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 293CCBB5142AC16000851CD2 /* Default.png */; };
-		293CCBB8142AC16200851CD2 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 293CCBB7142AC16200851CD2 /* Default@2x.png */; };
 		293CCBBF142AC1EA00851CD2 /* Icon-72.png in Resources */ = {isa = PBXBuildFile; fileRef = 293CCBB9142AC1EA00851CD2 /* Icon-72.png */; };
 		293CCBC0142AC1EA00851CD2 /* Icon-72.png in Resources */ = {isa = PBXBuildFile; fileRef = 293CCBB9142AC1EA00851CD2 /* Icon-72.png */; };
 		293CCBC1142AC1EA00851CD2 /* Icon-Small-50.png in Resources */ = {isa = PBXBuildFile; fileRef = 293CCBBA142AC1EA00851CD2 /* Icon-Small-50.png */; };
@@ -159,6 +155,9 @@
 		293CCBC8142AC1EA00851CD2 /* Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 293CCBBD142AC1EA00851CD2 /* Icon.png */; };
 		293CCBC9142AC1EA00851CD2 /* Icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 293CCBBE142AC1EA00851CD2 /* Icon@2x.png */; };
 		293CCBCA142AC1EA00851CD2 /* Icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 293CCBBE142AC1EA00851CD2 /* Icon@2x.png */; };
+		293EF007143925F10075F16E /* HenrySpeech1.caf in Resources */ = {isa = PBXBuildFile; fileRef = 293EF005143925F10075F16E /* HenrySpeech1.caf */; };
+		293EF008143925F10075F16E /* HenrySpeech2.caf in Resources */ = {isa = PBXBuildFile; fileRef = 293EF006143925F10075F16E /* HenrySpeech2.caf */; };
+		296730811437DBC9007B4EA2 /* Default-Landscape~ipad.png in Resources */ = {isa = PBXBuildFile; fileRef = 296730801437DBC9007B4EA2 /* Default-Landscape~ipad.png */; };
 		2986CA0E141932C6002DA1C8 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2986CA0D141932C6002DA1C8 /* QuartzCore.framework */; };
 		2986CA10141932C6002DA1C8 /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2986CA0F141932C6002DA1C8 /* OpenGLES.framework */; };
 		2986CA12141932C6002DA1C8 /* OpenAL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2986CA11141932C6002DA1C8 /* OpenAL.framework */; };
@@ -309,7 +308,7 @@
 
 /* Begin PBXFileReference section */
 		29151CF8142A3D20001ED460 /* Henry_Hallo_bkgrd.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Henry_Hallo_bkgrd.png; sourceTree = "<group>"; };
-		29151D87142A3D32001ED460 /* HalloweenHenry.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HalloweenHenry.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		29151D87142A3D32001ED460 /* SpookyHenry.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SpookyHenry.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		29151D89142A3D32001ED460 /* HenryAndHisHeadlamp copy-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "HenryAndHisHeadlamp copy-Info.plist"; path = "/Users/shawn/SourceCode/HenryAndHisHeadlamp/HenryAndHisHeadlamp copy-Info.plist"; sourceTree = "<absolute>"; };
 		29151DAA142A6709001ED460 /* headLampLight.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = headLampLight.png; sourceTree = "<group>"; };
 		2921EC4A14353CA000028468 /* Henry_Spooky_Title_Screen.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Henry_Spooky_Title_Screen.png; sourceTree = "<group>"; };
@@ -326,16 +325,15 @@
 		293B38C4143155C8008B65B7 /* HenryBodyTextures.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = HenryBodyTextures.plist; path = HenryAndHisHeadlamp/HenryBodyTextures.plist; sourceTree = "<group>"; };
 		293B38C5143155C8008B65B7 /* HenryBodyTextures.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = HenryBodyTextures.png; path = HenryAndHisHeadlamp/HenryBodyTextures.png; sourceTree = "<group>"; };
 		293CCBAD142ABA9A00851CD2 /* ding.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = ding.caf; sourceTree = "<group>"; };
-		293CCBB1142AC13700851CD2 /* Default-Portrait~ipad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-Portrait~ipad.png"; sourceTree = "<group>"; };
-		293CCBB3142AC13A00851CD2 /* Default-Landscape~ipad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-Landscape~ipad.png"; sourceTree = "<group>"; };
-		293CCBB5142AC16000851CD2 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
-		293CCBB7142AC16200851CD2 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
 		293CCBB9142AC1EA00851CD2 /* Icon-72.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-72.png"; sourceTree = "<group>"; };
 		293CCBBA142AC1EA00851CD2 /* Icon-Small-50.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-Small-50.png"; sourceTree = "<group>"; };
 		293CCBBB142AC1EA00851CD2 /* Icon-Small.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-Small.png"; sourceTree = "<group>"; };
 		293CCBBC142AC1EA00851CD2 /* Icon-Small@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-Small@2x.png"; sourceTree = "<group>"; };
 		293CCBBD142AC1EA00851CD2 /* Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Icon.png; sourceTree = "<group>"; };
 		293CCBBE142AC1EA00851CD2 /* Icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon@2x.png"; sourceTree = "<group>"; };
+		293EF005143925F10075F16E /* HenrySpeech1.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = HenrySpeech1.caf; sourceTree = "<group>"; };
+		293EF006143925F10075F16E /* HenrySpeech2.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = HenrySpeech2.caf; sourceTree = "<group>"; };
+		296730801437DBC9007B4EA2 /* Default-Landscape~ipad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-Landscape~ipad.png"; sourceTree = "<group>"; };
 		2986CA09141932C6002DA1C8 /* HenryAndHisHeadlamp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HenryAndHisHeadlamp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2986CA0D141932C6002DA1C8 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		2986CA0F141932C6002DA1C8 /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
@@ -676,6 +674,8 @@
 		29317958142F891000D5FD4E /* Audio */ = {
 			isa = PBXGroup;
 			children = (
+				293EF005143925F10075F16E /* HenrySpeech1.caf */,
+				293EF006143925F10075F16E /* HenrySpeech2.caf */,
 				29B3ADEC14325BEB00CF4669 /* spooky2.caf */,
 			);
 			name = Audio;
@@ -684,6 +684,7 @@
 		2986C9FE141932C6002DA1C8 = {
 			isa = PBXGroup;
 			children = (
+				296730801437DBC9007B4EA2 /* Default-Landscape~ipad.png */,
 				293B38C4143155C8008B65B7 /* HenryBodyTextures.plist */,
 				293B38C5143155C8008B65B7 /* HenryBodyTextures.png */,
 				293CCBB9142AC1EA00851CD2 /* Icon-72.png */,
@@ -692,10 +693,6 @@
 				293CCBBC142AC1EA00851CD2 /* Icon-Small@2x.png */,
 				293CCBBD142AC1EA00851CD2 /* Icon.png */,
 				293CCBBE142AC1EA00851CD2 /* Icon@2x.png */,
-				293CCBB7142AC16200851CD2 /* Default@2x.png */,
-				293CCBB5142AC16000851CD2 /* Default.png */,
-				293CCBB3142AC13A00851CD2 /* Default-Landscape~ipad.png */,
-				293CCBB1142AC13700851CD2 /* Default-Portrait~ipad.png */,
 				29BFCB301431172E000A021F /* TestFlight */,
 				29BFCB2B143112FE000A021F /* FlurryAnalytics */,
 				29151CF5142A3CF4001ED460 /* Halloween Files */,
@@ -710,7 +707,7 @@
 			isa = PBXGroup;
 			children = (
 				2986CA09141932C6002DA1C8 /* HenryAndHisHeadlamp.app */,
-				29151D87142A3D32001ED460 /* HalloweenHenry.app */,
+				29151D87142A3D32001ED460 /* SpookyHenry.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -1128,9 +1125,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		29151CFA142A3D32001ED460 /* Halloween Henry */ = {
+		29151CFA142A3D32001ED460 /* Spooky Henry */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 29151D84142A3D32001ED460 /* Build configuration list for PBXNativeTarget "Halloween Henry" */;
+			buildConfigurationList = 29151D84142A3D32001ED460 /* Build configuration list for PBXNativeTarget "Spooky Henry" */;
 			buildPhases = (
 				29151CFB142A3D32001ED460 /* Sources */,
 				29151D62142A3D32001ED460 /* Frameworks */,
@@ -1140,9 +1137,9 @@
 			);
 			dependencies = (
 			);
-			name = "Halloween Henry";
+			name = "Spooky Henry";
 			productName = HenryAndHisHeadlamp;
-			productReference = 29151D87142A3D32001ED460 /* HalloweenHenry.app */;
+			productReference = 29151D87142A3D32001ED460 /* SpookyHenry.app */;
 			productType = "com.apple.product-type.application";
 		};
 		2986CA08141932C6002DA1C8 /* HenryAndHisHeadlamp */ = {
@@ -1183,7 +1180,7 @@
 			projectRoot = "";
 			targets = (
 				2986CA08141932C6002DA1C8 /* HenryAndHisHeadlamp */,
-				29151CFA142A3D32001ED460 /* Halloween Henry */,
+				29151CFA142A3D32001ED460 /* Spooky Henry */,
 			);
 		};
 /* End PBXProject section */
@@ -1203,10 +1200,6 @@
 				2991C8D9142A6FC700053634 /* halloweenSpritesFile.png in Resources */,
 				2991C8E2142A7EA800053634 /* click.caf in Resources */,
 				293CCBAF142ABA9A00851CD2 /* ding.caf in Resources */,
-				293CCBB2142AC13700851CD2 /* Default-Portrait~ipad.png in Resources */,
-				293CCBB4142AC13A00851CD2 /* Default-Landscape~ipad.png in Resources */,
-				293CCBB6142AC16000851CD2 /* Default.png in Resources */,
-				293CCBB8142AC16200851CD2 /* Default@2x.png in Resources */,
 				293CCBC0142AC1EA00851CD2 /* Icon-72.png in Resources */,
 				293CCBC2142AC1EA00851CD2 /* Icon-Small-50.png in Resources */,
 				293CCBC4142AC1EA00851CD2 /* Icon-Small.png in Resources */,
@@ -1230,6 +1223,9 @@
 				29B94FDE1436C27B00885326 /* Henry_Spooky_Speech2.png in Resources */,
 				29B94FE11436CCBD00885326 /* buttonsAndResources-Halloween.plist in Resources */,
 				29B94FE21436CCBD00885326 /* buttonsAndResources-Halloween.png in Resources */,
+				296730811437DBC9007B4EA2 /* Default-Landscape~ipad.png in Resources */,
+				293EF007143925F10075F16E /* HenrySpeech1.caf in Resources */,
+				293EF008143925F10075F16E /* HenrySpeech2.caf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1526,7 +1522,7 @@
 					"-all_load",
 					"-lz",
 				);
-				PRODUCT_NAME = HalloweenHenry;
+				PRODUCT_NAME = SpookyHenry;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				WRAPPER_EXTENSION = app;
 			};
@@ -1563,7 +1559,7 @@
 					"-all_load",
 					"-lz",
 				);
-				PRODUCT_NAME = HalloweenHenry;
+				PRODUCT_NAME = SpookyHenry;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
 				WRAPPER_EXTENSION = app;
@@ -1601,6 +1597,7 @@
 					armv6,
 					"$(ARCHS_STANDARD_32_BIT)",
 				);
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Campfire Apps, LLC.";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Campfire Apps, LLC.";
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_PREPROCESSOR_DEFINITIONS = NDEBUG;
@@ -1613,7 +1610,8 @@
 					"-ObjC",
 					"-all_load",
 				);
-				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "ABC50410-B7CE-4244-921D-EB024CF59D47";
+				PROVISIONING_PROFILE = "68C3E74D-0EDE-40F6-8C31-A56CB602E561";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "68C3E74D-0EDE-40F6-8C31-A56CB602E561";
 				SDKROOT = iphoneos;
 			};
 			name = Release;
@@ -1689,7 +1687,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		29151D84142A3D32001ED460 /* Build configuration list for PBXNativeTarget "Halloween Henry" */ = {
+		29151D84142A3D32001ED460 /* Build configuration list for PBXNativeTarget "Spooky Henry" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				29151D85142A3D32001ED460 /* Debug */,

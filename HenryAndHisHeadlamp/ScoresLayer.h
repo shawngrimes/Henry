@@ -12,6 +12,7 @@
 #import "GameLayer.h"
 #import "ScoreNode.h"
 #import "FlurryAnalytics.h"
+#import "StartUpScreenLayer.h"
 
 typedef enum {
   kTAGuserIconMenu=70,
@@ -19,10 +20,11 @@ typedef enum {
 } sceneTags;    
     
 @interface ScoresLayer : CCLayer {
-    
 }
 
--(void)setScore:(int)playerScore;
+@property (nonatomic) float timeToFindObjects;
+
+-(void)withTime:(float)userTime;
 +(CCScene *) scene;
 
 @end

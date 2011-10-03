@@ -33,24 +33,40 @@ int touchCount=0;
 	// always call "super" init
 	// Apple recommends to re-assign "self" with the "super" return value
 	if( (self=[super init])) {
-		
+#ifdef HALLOWEEN
+        [[SimpleAudioEngine sharedEngine] preloadEffect:@"HenrySpeech1.caf"];
+        [[SimpleAudioEngine sharedEngine] preloadEffect:@"HenrySpeech2.caf"];
+#endif
         // ask director the the window size
 		CGSize size = [[CCDirector sharedDirector] winSize];
         
 		CCSprite *backgroundSprite=[CCSprite spriteWithFile:@"Henry_Spooky_Story_Scene.png"];
         backgroundSprite.position=ccp(size.width *0.5, size.height *0.5);
+        if (UI_USER_INTERFACE_IDIOM() != UIUserInterfaceIdiomPad) { 
+            [backgroundSprite setScaleX:size.width/1024.0f];
+            [backgroundSprite setScaleY:size.height/768.0f];
+        }
+
         [self addChild:backgroundSprite];
         
         CCSprite *speechBubble1=[CCSprite spriteWithFile:@"Henry_Spooky_Speech1.png"];
         speechBubble1.anchorPoint=ccp(0.5,0.5);
-        speechBubble1.position=ccp(375,size.height-230);
+        if (UI_USER_INTERFACE_IDIOM() != UIUserInterfaceIdiomPad) { 
+            [speechBubble1 setScaleX:size.width/1024.0f];
+            [speechBubble1 setScaleY:size.height/768.0f];
+        }
+
+        speechBubble1.position=ccp(size.width * .366,size.height-(size.height * (230.0/768.0)));
         [self addChild:speechBubble1 z:2 tag:2];
+        
+        
         
         self.isTouchEnabled=YES;
         
+        touchCount=0;
+        
 #ifdef HALLOWEEN
-        [[SimpleAudioEngine sharedEngine] preloadBackgroundMusic:@"spooky2.caf"];
-        [[SimpleAudioEngine sharedEngine] playBackgroundMusic:@"spooky2.caf" loop:YES];
+        [[SimpleAudioEngine sharedEngine] playEffect:@"HenrySpeech1.caf"];
 #endif
 	}
 	return self;
@@ -90,19 +106,27 @@ int touchCount=0;
 
 -(void)ccTouchEnded:(UITouch *)touch withEvent:(UIEvent *)event{
     touchCount++;
+    
     [self removeChildByTag:2 cleanup:YES];
     
     // ask director the the window size
     CGSize size = [[CCDirector sharedDirector] winSize];
     
-    if(touchCount==1){
+    if(touchCount>0 && touchCount<2){
         CCSprite *speechBubble2=[CCSprite spriteWithFile:@"Henry_Spooky_Speech2.png"];
         speechBubble2.anchorPoint=ccp(0.5,0.5);
-        speechBubble2.position=ccp(375,size.height-230);
+        speechBubble2.position=ccp((375.0/1024.0)*size.width,size.height-((230.0/768.0)*size.height));
+        if (UI_USER_INTERFACE_IDIOM() != UIUserInterfaceIdiomPad) { 
+            [speechBubble2 setScaleX:size.width/1024.0f];
+            [speechBubble2 setScaleY:size.height/768.0f];
+        }
         [self addChild:speechBubble2 z:2 tag:2];
+#ifdef HALLOWEEN
+        [[SimpleAudioEngine sharedEngine] playEffect:@"HenrySpeech2.caf"];
+#endif
     }
     
-    if(touchCount==2){
+    if(touchCount>=2){
         CGSize size = [[CCDirector sharedDirector] winSize];
         CCLabelBMFont *labelLoading=[CCLabelBMFont labelWithString:@"Loading..." fntFile:@"Corben-64.fnt"];
 #ifdef HALLOWEEN

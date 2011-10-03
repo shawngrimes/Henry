@@ -14,5 +14,5 @@
 }
 
 +(ScoreNode *) scoreOf:(int)playerScore;
-
++(ScoreNode *) timeOf:(float)playerTime;
 @end

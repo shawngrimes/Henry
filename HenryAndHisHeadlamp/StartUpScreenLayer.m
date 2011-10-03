@@ -90,10 +90,6 @@
         [self addChild:mainMenu];
     }
     
-#ifdef HALLOWEEN
-    [[SimpleAudioEngine sharedEngine] preloadBackgroundMusic:@"spooky2.caf"];
-    [[SimpleAudioEngine sharedEngine] playBackgroundMusic:@"spooky2.caf" loop:YES];
-#endif
     
     [TestFlight passCheckpoint:@"RETURNING_SPLASH"];
     
@@ -104,19 +100,21 @@
 
 -(void) transitionToGamePlay{
     [TestFlight passCheckpoint:@"LOADING_GAME_SCENE"];
-    CGSize size = [[CCDirector sharedDirector] winSize];
-        CCLabelBMFont *labelLoading=[CCLabelBMFont labelWithString:@"Loading..." fntFile:@"Corben-64.fnt"];
-#ifdef HALLOWEEN
-        labelLoading.color=ccORANGE;
-#endif
-        if (UI_USER_INTERFACE_IDIOM() != UIUserInterfaceIdiomPad) { 
-            [labelLoading setScaleX:(size.width/1024.0f)];
-            [labelLoading setScaleY:(size.height/768.0f)];
-        }
-		labelLoading.position =  ccp( size.width /2 , size.height/2 );
-		[self addChild:labelLoading];
+//    CGSize size = [[CCDirector sharedDirector] winSize];
+//        CCLabelBMFont *labelLoading=[CCLabelBMFont labelWithString:@"Loading..." fntFile:@"Corben-64.fnt"];
+//#ifdef HALLOWEEN
+//        labelLoading.color=ccORANGE;
+//#endif
+//        if (UI_USER_INTERFACE_IDIOM() != UIUserInterfaceIdiomPad) { 
+//            [labelLoading setScaleX:(size.width/1024.0f)];
+//            [labelLoading setScaleY:(size.height/768.0f)];
+//        }
+//		labelLoading.position =  ccp( size.width /2 , size.height/2 );
+//		[self addChild:labelLoading];
 
-    [self schedule:@selector(loadGameLayer) interval:0.5];
+    [self loadGameLayer];
+    
+//    [self schedule:@selector(loadGameLayer) interval:0.5];
 }
 
 -(void) loadGameLayer{

@@ -107,7 +107,7 @@ if (UI_USER_INTERFACE_IDIOM() != UIUserInterfaceIdiomPad) {
         _henryHead.anchorPoint=ccp(0.72,0.18);
         _henryHead.position=ccp(size.width-((henryBody.textureRect.size.width * henryBody.scaleX) + .002*size.width), 
                                 (henryBody.textureRect.size.height-(.10*henryBody.textureRect.size.height)) * _henryHead.scaleY);
-        CCLOG(@"Henry Head Position: %f %f", _henryHead.position.x, _henryHead.position.y);
+//        CCLOG(@"Henry Head Position: %f %f", _henryHead.position.x, _henryHead.position.y);
         _henryHead.rotation= 22.700861;
         
         [self addChild:henryBody z:9 tag:kTAGhenry];
@@ -125,7 +125,7 @@ if (UI_USER_INTERFACE_IDIOM() != UIUserInterfaceIdiomPad) {
         int MAX_CHARACTERS=28;
         
         NSMutableArray *aryCharacterTypes=[NSMutableArray arrayWithCapacity:5];
-        for (int c=0; c<5; c++) {
+        for (int c=0; c<7; c++) {
             int randomCharacter=arc4random() % MAX_CHARACTERS+1;
             while ([aryCharacterTypes containsObject:[NSNumber numberWithInt:randomCharacter]]){
                 randomCharacter=arc4random() % MAX_CHARACTERS+1;
@@ -133,15 +133,26 @@ if (UI_USER_INTERFACE_IDIOM() != UIUserInterfaceIdiomPad) {
             [aryCharacterTypes addObject:[NSNumber numberWithInt:randomCharacter]];
             CCLOG(@"Random Character Type: %i", randomCharacter);
             CharacterSprite *randomSprite=[CharacterSprite characterOfType:randomCharacter];
+            if (UI_USER_INTERFACE_IDIOM() != UIUserInterfaceIdiomPad) { 
+                [randomSprite setScaleX:size.width/1024.0f];
+                [randomSprite setScaleY:size.height/768.0f];
+            }
             if(_arrCharacters.count<1){
                 [randomSprite setRandomPosition:playableAreaSize];
-                while(CGRectIntersectsRect(statusBarSprite.boundingBox, randomSprite.boundingBox) || CGRectIntersectsRect(henryBody.boundingBox, randomSprite.boundingBox) || CGRectIntersectsRect(_henryHead.boundingBox, randomSprite.boundingBox)){
-                    [randomSprite setRandomPosition:playableAreaSize];
+                while(CGRectIntersectsRect(statusBarSprite.boundingBox, randomSprite.boundingBox) 
+                      || CGRectIntersectsRect(henryBody.boundingBox, randomSprite.boundingBox) 
+                      || CGRectIntersectsRect(_henryHead.boundingBox, randomSprite.boundingBox)){
+                    CCLOG(@"Intersect other RECT1");
+                            [randomSprite setRandomPosition:playableAreaSize];
                 }
             }else{
                 [randomSprite setRandomPosition:playableAreaSize checkOtherSprites:_arrCharacters];
-                 while(CGRectIntersectsRect(statusBarSprite.boundingBox, randomSprite.boundingBox) || CGRectIntersectsRect(henryBody.boundingBox, randomSprite.boundingBox) || CGRectIntersectsRect(_henryHead.boundingBox, randomSprite.boundingBox)){
-                    [randomSprite setRandomPosition:playableAreaSize checkOtherSprites:_arrCharacters];
+                 while(CGRectIntersectsRect(statusBarSprite.boundingBox, randomSprite.boundingBox) 
+                       || CGRectIntersectsRect(henryBody.boundingBox, randomSprite.boundingBox) 
+                       || CGRectIntersectsRect(_henryHead.boundingBox, randomSprite.boundingBox)){
+//                while(CGRectIntersectsRect(CGRectMake(statusBarSprite.boundingBox.origin.x, 0, size.width-statusBarSprite.boundingBox.origin.x, size.height), randomSprite.boundingBox)){
+                     CCLOG(@"Intersect other RECT2");
+                            [randomSprite setRandomPosition:playableAreaSize checkOtherSprites:_arrCharacters];
                 }
             }
             
@@ -168,10 +179,7 @@ if (UI_USER_INTERFACE_IDIOM() != UIUserInterfaceIdiomPad) {
         [_arrCharacters addObject:blueTriangleSprite];  
 #endif
         
-        _targetCharacter=[_arrCharacters objectAtIndex:0];
-        _targetCharacter.isTarget=YES;
-        [self showTargetLabel];
-        [TestFlight passCheckpoint:@"SET_INITIAL_TARGET"];
+        
         
         
         
@@ -194,7 +202,7 @@ if (UI_USER_INTERFACE_IDIOM() != UIUserInterfaceIdiomPad) {
         
         
 //        CCLabelTTF *labelInstructions = [CCLabelTTF labelWithString:@"Touch to shine your light on the scene" fontName:@"Marker Felt" fontSize:32];
-        CCLabelBMFont *labelInstructions=[CCLabelBMFont labelWithString:@"Touch to shine your light on the scene" fntFile:@"Corben-64.fnt"];
+        CCLabelBMFont *labelInstructions=[CCLabelBMFont labelWithString:@"Tap & Hold, drag to move light" fntFile:@"Corben-64.fnt"];
         
 #ifdef HALLOWEEN
         labelInstructions.color=ccORANGE;
@@ -226,8 +234,8 @@ if (UI_USER_INTERFACE_IDIOM() != UIUserInterfaceIdiomPad) {
         [[SimpleAudioEngine sharedEngine] preloadEffect:@"click.caf"];
         [[SimpleAudioEngine sharedEngine] preloadEffect:@"ding.caf"];
 #ifdef HALLOWEEN
-        [[SimpleAudioEngine sharedEngine] preloadBackgroundMusic:@"spooky2.caf"];
-        [[SimpleAudioEngine sharedEngine] playBackgroundMusic:@"spooky2.caf" loop:YES];
+//        [[SimpleAudioEngine sharedEngine] preloadBackgroundMusic:@"spooky2.caf"];
+//        [[SimpleAudioEngine sharedEngine] playBackgroundMusic:@"spooky2.caf" loop:YES];
 #endif
 
         
@@ -235,32 +243,13 @@ if (UI_USER_INTERFACE_IDIOM() != UIUserInterfaceIdiomPad) {
     
     winCount=0;
     
-    [self schedule: @selector(updateTimer:) interval:1.0];
+    _targetCharacter=[_arrCharacters objectAtIndex:0];
+    _targetCharacter.isTarget=YES;
+    [self showTargetLabel];
+    [TestFlight passCheckpoint:@"SET_INITIAL_TARGET"];
     
-//    CCLabelBMFont *labelSendFeedback=[CCLabelBMFont labelWithString:@"Send Us Feedback" fntFile:@"Corben-64.fnt"];
-//    
-//    CCMenuItemLabel *labelSendFeedbackItem=[CCMenuItemLabel itemWithLabel:labelSendFeedback block:^(id sender)
-//                                                 {
-//                                                     [TestFlight openFeedbackView];
-//                                                 }
-//                                         ];    
-//    CCMenu *feedbackMenu=[CCMenu menuWithItems:labelSendFeedbackItem, nil];
-//    if (UI_USER_INTERFACE_IDIOM() != UIUserInterfaceIdiomPad) 
-//    { 
-//        CGSize size = [[CCDirector sharedDirector] winSize];
-//        [feedbackMenu setScaleX:size.width/1024.0f * 0.5];   
-//        [feedbackMenu setScaleY:size.height/768.0f *0.5];
-//    }else{
-//        [feedbackMenu setScale:0.25];
-//    }
-//    [feedbackMenu alignItemsVertically];
-//    feedbackMenu.anchorPoint=ccp(0.0,0.0);
-//
-//    CGSize size = [[CCDirector sharedDirector] winSize];
-//    feedbackMenu.position=ccp(size.width-(size.width*.25), size.height*.10);
-//    CCLOG(@"Feedback position: %f %f", feedbackMenu.position.x, feedbackMenu.position.y);
-//    CCLOG(@"Feedback Label Size: %f %f", labelSendFeedback.contentSize.width * feedbackMenu.scaleX, labelSendFeedback.contentSize.height* feedbackMenu.scaleY);
-//    [self addChild:feedbackMenu z:15];     
+    [self schedule: @selector(updateTimer:) interval:1.0];
+       
     [TestFlight passCheckpoint:@"RETURNING_SCENE"];
     
 	return self;
@@ -314,6 +303,13 @@ if (UI_USER_INTERFACE_IDIOM() != UIUserInterfaceIdiomPad) {
 //        CCLOG(@"Setting %@", nextCharacter.description);
         if(!nextCharacter.isTarget){
             [nextCharacter setRandomPosition:playableAreaSize checkOtherSprites:_arrCharacters];
+            CCSprite *statusBarSprite=(CCSprite*)[self getChildByTag:kTAGHUD];
+            CCSprite *henryBody=(CCSprite*)[self getChildByTag:kTAGhenry];
+            while(CGRectIntersectsRect(statusBarSprite.boundingBox, nextCharacter.boundingBox) 
+                  || CGRectIntersectsRect(henryBody.boundingBox, nextCharacter.boundingBox) 
+                  || CGRectIntersectsRect(_henryHead.boundingBox, nextCharacter.boundingBox)){
+                [nextCharacter setRandomPosition:playableAreaSize checkOtherSprites:_arrCharacters];
+            }
         }
     }
 
@@ -362,7 +358,7 @@ if (UI_USER_INTERFACE_IDIOM() != UIUserInterfaceIdiomPad) {
     CCLabelBMFont *gameOverLabel=[CCLabelBMFont labelWithString:@"Game Over" fntFile:@"Corben-64.fnt"];
     CCLabelBMFont *gameOverTime=[CCLabelBMFont labelWithString:[NSString stringWithFormat:@"All objects found in %.0f seconds", gameTimer] fntFile:@"Corben-64.fnt"];
     
-    [FlurryAnalytics logEvent:@"GAME_WON" withParameters:[NSDictionary dictionaryWithObjectsAndKeys:[NSNumber numberWithFloat:gameTimer],
+    [FlurryAnalytics logEvent:@"GAME_WON" withParameters:[NSDictionary dictionaryWithObjectsAndKeys:[NSNumber numberWithInt:(int)gameTimer],
                                                           @"Time To Complete", 
                                                           nil]
      ];
@@ -388,32 +384,7 @@ if (UI_USER_INTERFACE_IDIOM() != UIUserInterfaceIdiomPad) {
     
     [self removeChildByTag:kTAGnight cleanup:YES];
     [_headLampLight setVisible:NO];
-    
-//    CCLabelBMFont *labelPlayAgain=[CCLabelBMFont labelWithString:@"Touch Here To Play Again" fntFile:@"Corben-64.fnt"];
-//
-//    CCMenuItemLabel *labelPlayAgainItem=[CCMenuItemLabel itemWithLabel:labelPlayAgain block:^(id sender)
-//                                         {
-//                                             [FlurryAnalytics logEvent:@"PLAY_AGAIN_TOUCHED"];
-//                                             [TestFlight passCheckpoint:@"PLAY_AGAIN_TOUCHED"];
-//                                             [[SimpleAudioEngine sharedEngine] stopBackgroundMusic];
-//                                            [[CCDirector sharedDirector] replaceScene:
-//                                                  [CCTransitionFade transitionWithDuration:0.5f scene:[GameLayer scene]]];
-//                                         }
-//    ];
-//    
-//    CCMenu *playAgainMenu=[CCMenu menuWithItems:labelPlayAgainItem, nil];
-//    if (UI_USER_INTERFACE_IDIOM() != UIUserInterfaceIdiomPad) { 
-//        [playAgainMenu setScaleX:size.width/1024.0f * 0.5];   
-//        [playAgainMenu setScaleY:size.height/768.0f *0.5];
-//    }else{
-//        [playAgainMenu setScale:0.5];
-//    }
-//    [playAgainMenu alignItemsVertically];
-//    playAgainMenu.anchorPoint=ccp(0.0,0.0);
-//    playAgainMenu.position=ccp(size.width/2, size.height-size.height * 0.8);
-//
-//    [self addChild:playAgainMenu];     
-    
+        
     [TestFlight passCheckpoint:@"GAME_OVER_SIGNALED"];
     
     [self schedule:@selector(loadScores) interval:2.0];
@@ -427,7 +398,7 @@ if (UI_USER_INTERFACE_IDIOM() != UIUserInterfaceIdiomPad) {
     [TestFlight passCheckpoint:@"LOADING_SCORES_SCENE"];
     CCScene *scoresScene=[CCScene node];
     ScoresLayer *showScores=[ScoresLayer node];
-    [showScores setScore:3];
+    [showScores withTime:gameTimer];
     [scoresScene addChild:showScores];
     [[CCDirector sharedDirector] replaceScene:
      [CCTransitionRotoZoom transitionWithDuration:3.0f scene:scoresScene]];
@@ -477,7 +448,7 @@ if (UI_USER_INTERFACE_IDIOM() != UIUserInterfaceIdiomPad) {
 {
     gameTimer+=dt;
     _timerLabel.string=[NSString stringWithFormat:@"%i", (int)gameTimer];
-//    if(gameTimer>5)
+//    if(gameTimer>2)
 //        [self gameOver];
 }
 
@@ -502,7 +473,7 @@ if (UI_USER_INTERFACE_IDIOM() != UIUserInterfaceIdiomPad) {
     float angleRadians = atanf((float)offY / (float)offX);
     float angleDegrees = CC_RADIANS_TO_DEGREES(angleRadians);
     float cocosAngle = -1 * (angleDegrees+25);
-    CCLOG(@"Rotating TO: %f", cocosAngle);
+//    CCLOG(@"Rotating TO: %f", cocosAngle);
     if(cocosAngle>=0)
         _henryHead.rotation=cocosAngle;
     
@@ -528,7 +499,7 @@ if (UI_USER_INTERFACE_IDIOM() != UIUserInterfaceIdiomPad) {
     float angleRadians = atanf((float)offY / (float)offX);
     float angleDegrees = CC_RADIANS_TO_DEGREES(angleRadians);
     float cocosAngle = -1 * (angleDegrees+25);
-    CCLOG(@"Rotating TO: %f", cocosAngle);
+//    CCLOG(@"Rotating TO: %f", cocosAngle);
     if(cocosAngle>=0)
         _henryHead.rotation=cocosAngle;
 

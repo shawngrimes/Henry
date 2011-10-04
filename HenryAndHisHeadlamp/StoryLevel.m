@@ -9,6 +9,7 @@
 #import "StoryLevel.h"
 
 int touchCount=0;
+ALuint soundEffect;
 
 @implementation StoryLevel
 +(CCScene *) scene
@@ -66,7 +67,7 @@ int touchCount=0;
         touchCount=0;
         
 #ifdef HALLOWEEN
-        [[SimpleAudioEngine sharedEngine] playEffect:@"HenrySpeech1.caf"];
+        soundEffect=[[SimpleAudioEngine sharedEngine] playEffect:@"HenrySpeech1.caf"];
 #endif
 	}
 	return self;
@@ -122,7 +123,8 @@ int touchCount=0;
         }
         [self addChild:speechBubble2 z:2 tag:2];
 #ifdef HALLOWEEN
-        [[SimpleAudioEngine sharedEngine] playEffect:@"HenrySpeech2.caf"];
+        [[SimpleAudioEngine sharedEngine] stopEffect:soundEffect];
+        soundEffect=[[SimpleAudioEngine sharedEngine] playEffect:@"HenrySpeech2.caf"];
 #endif
     }
     
@@ -145,6 +147,7 @@ int touchCount=0;
 }
 
 -(void) loadGameLayer{
+    [[SimpleAudioEngine sharedEngine] stopEffect:soundEffect];
     [[CCDirector sharedDirector] replaceScene:
      [CCTransitionSlideInR transitionWithDuration:1.0f scene:[GameLayer scene]]];
     

@@ -35,6 +35,7 @@ typedef enum {
 	
 	// add layer as a child to scene
 	[scene addChild: layer];
+
     
 //    ParentLoginViewController *parentVC=[[ParentLoginViewController alloc] init];
 //    AppDelegate *myDelegate=(AppDelegate *)[[UIApplication sharedApplication] delegate];
@@ -98,15 +99,17 @@ if (UI_USER_INTERFACE_IDIOM() != UIUserInterfaceIdiomPad) {
         if (UI_USER_INTERFACE_IDIOM() != UIUserInterfaceIdiomPad) { 
             [henryBody setScaleX:size.width/1024.0f];
             [henryBody setScaleY:size.height/768.0f];
-            [_henryHead setScaleX:size.width/1024.0f];
-            [_henryHead setScaleY:size.height/768.0f];
+            [_henryHead setScaleX:size.width/1024.0f * 1.25];
+            [_henryHead setScaleY:size.height/768.0f * 1.25];
+        }else{
+            _henryHead.scale=1.25;
         }
         henryBody.anchorPoint=ccp(0.5, 0);
         henryBody.position=ccp(size.width-((henryBody.textureRect.size.width * henryBody.scaleX) + .01*size.width), 0);
         
         _henryHead.anchorPoint=ccp(0.72,0.18);
         _henryHead.position=ccp(size.width-((henryBody.textureRect.size.width * henryBody.scaleX) + .002*size.width), 
-                                (henryBody.textureRect.size.height-(.10*henryBody.textureRect.size.height)) * _henryHead.scaleY);
+                                ((henryBody.textureRect.size.height * henryBody.scaleY) -(.10*henryBody.textureRect.size.height * henryBody.scaleY)));// * _henryHead.scaleY);
 //        CCLOG(@"Henry Head Position: %f %f", _henryHead.position.x, _henryHead.position.y);
         _henryHead.rotation= 22.700861;
         
@@ -245,7 +248,7 @@ if (UI_USER_INTERFACE_IDIOM() != UIUserInterfaceIdiomPad) {
     
     _targetCharacter=[_arrCharacters objectAtIndex:0];
     _targetCharacter.isTarget=YES;
-    [self showTargetLabel];
+    
     [TestFlight passCheckpoint:@"SET_INITIAL_TARGET"];
     
     [self schedule: @selector(updateTimer:) interval:1.0];
@@ -446,6 +449,8 @@ if (UI_USER_INTERFACE_IDIOM() != UIUserInterfaceIdiomPad) {
 
 -(void) updateTimer: (ccTime) dt
 {
+    if(![self getChildByTag:kTAGtargetSprite])
+        [self showTargetLabel];
     gameTimer+=dt;
     _timerLabel.string=[NSString stringWithFormat:@"%i", (int)gameTimer];
 //    if(gameTimer>2)

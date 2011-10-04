@@ -67,29 +67,29 @@
                                       target:self 
                                       selector:@selector(transitionToStartUpScreen)];
         
-        CCMenuItemSprite *rateSprite=[CCMenuItemSprite 
-                                       itemFromNormalSprite:[CCSprite spriteWithSpriteFrameName:@"rate_inactive.png"] 
-                                       selectedSprite:[CCSprite spriteWithSpriteFrameName:@"rate_active.png"]
-                                       target:self 
-                                       selector:@selector(transitionToRateApp)];
-        
-        CCMenuItemSprite *moreSprite=[CCMenuItemSprite 
-                                      itemFromNormalSprite:[CCSprite spriteWithSpriteFrameName:@"more_inactive.png"] 
-                                      selectedSprite:[CCSprite spriteWithSpriteFrameName:@"more_active.png"]
-                                      target:self 
-                                      selector:@selector(transitionToMoreApps)];
+//        CCMenuItemSprite *rateSprite=[CCMenuItemSprite 
+//                                       itemFromNormalSprite:[CCSprite spriteWithSpriteFrameName:@"rate_inactive.png"] 
+//                                       selectedSprite:[CCSprite spriteWithSpriteFrameName:@"rate_active.png"]
+//                                       target:self 
+//                                       selector:@selector(transitionToRateApp)];
+//        
+//        CCMenuItemSprite *moreSprite=[CCMenuItemSprite 
+//                                      itemFromNormalSprite:[CCSprite spriteWithSpriteFrameName:@"more_inactive.png"] 
+//                                      selectedSprite:[CCSprite spriteWithSpriteFrameName:@"more_active.png"]
+//                                      target:self 
+//                                      selector:@selector(transitionToMoreApps)];
 
         
-        CCMenu *mainMenu=[CCMenu menuWithItems:backSprite,rateSprite,moreSprite, nil];
+        CCMenu *mainMenu=[CCMenu menuWithItems:backSprite,nil]; //rateSprite,moreSprite, nil];
         if (UI_USER_INTERFACE_IDIOM() != UIUserInterfaceIdiomPad) {
             [backSprite setScaleX:(size.width/1024.0f)];
             [backSprite setScaleY:(size.width/768.0f)];
             
-            [rateSprite setScaleX:(size.width/1024.0f)];
-            [rateSprite setScaleY:(size.width/768.0f)];
-            
-            [moreSprite setScaleX:(size.width/1024.0f)];
-            [moreSprite setScaleY:(size.width/768.0f)];
+//            [rateSprite setScaleX:(size.width/1024.0f)];
+//            [rateSprite setScaleY:(size.width/768.0f)];
+//            
+//            [moreSprite setScaleX:(size.width/1024.0f)];
+//            [moreSprite setScaleY:(size.width/768.0f)];
         }
         
         [mainMenu alignItemsHorizontallyWithPadding:0.2*size.width];
@@ -104,13 +104,13 @@
                                        itemFromNormalSprite:[CCSprite spriteWithSpriteFrameName:@"visit_inactive.png"] 
                                        selectedSprite:[CCSprite spriteWithSpriteFrameName:@"visit_active.png"] 
                                        target:self 
-                                       selector:@selector(transitionToStartUpScreen)];
+                                       selector:@selector(visitCFSite)];
         
         CCMenuItemSprite *visitSupportSprite=[CCMenuItemSprite 
                                        itemFromNormalSprite:[CCSprite spriteWithSpriteFrameName:@"visit_inactive.png"] 
                                        selectedSprite:[CCSprite spriteWithSpriteFrameName:@"visit_active.png"] 
                                        target:self 
-                                       selector:@selector(transitionToStartUpScreen)];
+                                       selector:@selector(visitSupportSite)];
         
         if (UI_USER_INTERFACE_IDIOM() != UIUserInterfaceIdiomPad) {
             [visitSprite setScaleX:(size.width/1024.0f)];
@@ -152,6 +152,15 @@
      [CCTransitionMoveInR transitionWithDuration:1.0f scene:[StartUpScreenLayer scene]]];
 }
 
+-(void)visitCFSite{
+    [FlurryAnalytics logEvent:@"VISIT_CF_APPS_SITE"];
+    [[UIApplication sharedApplication] openURL:[NSURL URLWithString:@"http://www.campfireapps.com"]];
+}
+
+-(void)visitSupportSite{
+    [FlurryAnalytics logEvent:@"VISIT_SUPPORT_SITE"];
+    [[UIApplication sharedApplication] openURL:[NSURL URLWithString:@"http://spookyhenry.campfireapps.com"]];
+}
 
 -(void)dealloc{
     [super dealloc];

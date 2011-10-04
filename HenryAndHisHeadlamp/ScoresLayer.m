@@ -193,33 +193,56 @@
     NSDictionary *firstPlace=[scores dictionaryForKey:@"firstPlace"];
     
     
-    NSNumber *thirdPlaceTime=[thirdPlace objectForKey:@"time"];
-    if(thirdPlaceTime>userTimeNumber || thirdPlaceTime==0){
-        NSNumber *secondPlaceTime=[secondPlace valueForKey:@"time"];
-        if(secondPlaceTime>userTimeNumber || secondPlaceTime==0){
-            NSNumber *firstPlaceTime=[scores valueForKey:@"time"];
-            if(firstPlaceTime>userTimeNumber  || firstPlaceTime==0){
-                thirdPlace=secondPlace;
-                secondPlace=firstPlace;
-                firstPlace=[NSDictionary dictionaryWithObjectsAndKeys:userTimeNumber, @"time",iconNumber,@"icon", nil];
-                [scores setValue:thirdPlace forKey:@"thirdPlace"];
-                [scores setValue:secondPlace forKey:@"secondPlace"];
-                [scores setValue:firstPlace forKey:@"firstPlace"];
-                [TestFlight passCheckpoint:@"SETTING_FIRST_PLACE"];
-            }else{
-                thirdPlace=secondPlace;
-                secondPlace=[NSDictionary dictionaryWithObjectsAndKeys:userTimeNumber, @"time",iconNumber,@"icon", nil];
-                [scores setValue:thirdPlace forKey:@"thirdPlace"];
-                [scores setValue:secondPlace forKey:@"secondPlace"];
-                [TestFlight passCheckpoint:@"SETTING_SECOND_PLACE"];
-            }
-        }else{
-            thirdPlace=[NSDictionary dictionaryWithObjectsAndKeys:userTimeNumber, @"time",iconNumber,@"icon", nil];;
-            [scores setValue:thirdPlace forKey:@"thirdPlace"];
-            [TestFlight passCheckpoint:@"SETTING_THIRD_PLACE"];
-        }
-        
+
+    NSNumber *firstPlaceTime=[firstPlace valueForKey:@"time"];
+    if(firstPlaceTime>userTimeNumber || firstPlaceTime==0){
+        thirdPlace=secondPlace;
+        secondPlace=firstPlace;
+        firstPlace=[NSDictionary dictionaryWithObjectsAndKeys:userTimeNumber, @"time",iconNumber,@"icon", nil];
+        [scores setValue:thirdPlace forKey:@"thirdPlace"];
+        [scores setValue:secondPlace forKey:@"secondPlace"];
+        [scores setValue:firstPlace forKey:@"firstPlace"];
+        [TestFlight passCheckpoint:@"SETTING_FIRST_PLACE"];
+    }else if([secondPlace valueForKey:@"time"]>userTimeNumber || [secondPlace valueForKey:@"time"]==0){
+        thirdPlace=secondPlace;
+        secondPlace=[NSDictionary dictionaryWithObjectsAndKeys:userTimeNumber, @"time",iconNumber,@"icon", nil];
+        [scores setValue:thirdPlace forKey:@"thirdPlace"];
+        [scores setValue:secondPlace forKey:@"secondPlace"];
+        [TestFlight passCheckpoint:@"SETTING_SECOND_PLACE"];
+    }else if([thirdPlace valueForKey:@"time"]>userTimeNumber || [thirdPlace valueForKey:@"time"]==0){
+        thirdPlace=[NSDictionary dictionaryWithObjectsAndKeys:userTimeNumber, @"time",iconNumber,@"icon", nil];;
+        [scores setValue:thirdPlace forKey:@"thirdPlace"];
+        [TestFlight passCheckpoint:@"SETTING_THIRD_PLACE"];
     }
+    
+//    NSNumber *thirdPlaceTime=[thirdPlace objectForKey:@"time"];
+//    
+//    if(thirdPlaceTime>userTimeNumber || thirdPlaceTime==0){
+//        NSNumber *secondPlaceTime=[secondPlace valueForKey:@"time"];
+//        if(secondPlaceTime>userTimeNumber || secondPlaceTime==0){
+//            NSNumber *firstPlaceTime=[firstPlace valueForKey:@"time"];
+//            if(firstPlaceTime>userTimeNumber  || firstPlaceTime==0){
+//                thirdPlace=secondPlace;
+//                secondPlace=firstPlace;
+//                firstPlace=[NSDictionary dictionaryWithObjectsAndKeys:userTimeNumber, @"time",iconNumber,@"icon", nil];
+//                [scores setValue:thirdPlace forKey:@"thirdPlace"];
+//                [scores setValue:secondPlace forKey:@"secondPlace"];
+//                [scores setValue:firstPlace forKey:@"firstPlace"];
+//                [TestFlight passCheckpoint:@"SETTING_FIRST_PLACE"];
+//            }else{
+//                thirdPlace=secondPlace;
+//                secondPlace=[NSDictionary dictionaryWithObjectsAndKeys:userTimeNumber, @"time",iconNumber,@"icon", nil];
+//                [scores setValue:thirdPlace forKey:@"thirdPlace"];
+//                [scores setValue:secondPlace forKey:@"secondPlace"];
+//                [TestFlight passCheckpoint:@"SETTING_SECOND_PLACE"];
+//            }
+//        }else{
+//            thirdPlace=[NSDictionary dictionaryWithObjectsAndKeys:userTimeNumber, @"time",iconNumber,@"icon", nil];;
+//            [scores setValue:thirdPlace forKey:@"thirdPlace"];
+//            [TestFlight passCheckpoint:@"SETTING_THIRD_PLACE"];
+//        }
+//        
+//    }
     [scores synchronize];
     
     //First Place

@@ -128,10 +128,8 @@
 		29151DA9142A66D3001ED460 /* GameLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 2986CB8814193B44002DA1C8 /* GameLayer.m */; };
 		29151DAB142A6709001ED460 /* headLampLight.png in Resources */ = {isa = PBXBuildFile; fileRef = 29151DAA142A6709001ED460 /* headLampLight.png */; };
 		29151DAC142A6712001ED460 /* headLampLight.png in Resources */ = {isa = PBXBuildFile; fileRef = 29151DAA142A6709001ED460 /* headLampLight.png */; };
-		2921EC4B14353CA000028468 /* Henry_Spooky_Title_Screen.png in Resources */ = {isa = PBXBuildFile; fileRef = 2921EC4A14353CA000028468 /* Henry_Spooky_Title_Screen.png */; };
 		2921EC4F14353CD500028468 /* StartUpScreenLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 2921EC4E14353CD500028468 /* StartUpScreenLayer.m */; };
 		2921EC5214355B6800028468 /* AboutUsLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 2921EC5114355B6700028468 /* AboutUsLayer.m */; };
-		2921EC54143565E500028468 /* Henry_Spooky_About_Page.png in Resources */ = {isa = PBXBuildFile; fileRef = 2921EC53143565E500028468 /* Henry_Spooky_About_Page.png */; };
 		2923A47A1419A910008D4820 /* campingBackground.png in Resources */ = {isa = PBXBuildFile; fileRef = 2923A4791419A910008D4820 /* campingBackground.png */; };
 		2923A50F1419C269008D4820 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2923A50E1419C269008D4820 /* CFNetwork.framework */; };
 		2923A5111419C272008D4820 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2923A5101419C272008D4820 /* CoreLocation.framework */; };
@@ -143,20 +141,6 @@
 		293B38C9143155C8008B65B7 /* HenryBodyTextures.png in Resources */ = {isa = PBXBuildFile; fileRef = 293B38C5143155C8008B65B7 /* HenryBodyTextures.png */; };
 		293CCBAE142ABA9A00851CD2 /* ding.caf in Resources */ = {isa = PBXBuildFile; fileRef = 293CCBAD142ABA9A00851CD2 /* ding.caf */; };
 		293CCBAF142ABA9A00851CD2 /* ding.caf in Resources */ = {isa = PBXBuildFile; fileRef = 293CCBAD142ABA9A00851CD2 /* ding.caf */; };
-		293CCBBF142AC1EA00851CD2 /* Icon-72.png in Resources */ = {isa = PBXBuildFile; fileRef = 293CCBB9142AC1EA00851CD2 /* Icon-72.png */; };
-		293CCBC0142AC1EA00851CD2 /* Icon-72.png in Resources */ = {isa = PBXBuildFile; fileRef = 293CCBB9142AC1EA00851CD2 /* Icon-72.png */; };
-		293CCBC1142AC1EA00851CD2 /* Icon-Small-50.png in Resources */ = {isa = PBXBuildFile; fileRef = 293CCBBA142AC1EA00851CD2 /* Icon-Small-50.png */; };
-		293CCBC2142AC1EA00851CD2 /* Icon-Small-50.png in Resources */ = {isa = PBXBuildFile; fileRef = 293CCBBA142AC1EA00851CD2 /* Icon-Small-50.png */; };
-		293CCBC3142AC1EA00851CD2 /* Icon-Small.png in Resources */ = {isa = PBXBuildFile; fileRef = 293CCBBB142AC1EA00851CD2 /* Icon-Small.png */; };
-		293CCBC4142AC1EA00851CD2 /* Icon-Small.png in Resources */ = {isa = PBXBuildFile; fileRef = 293CCBBB142AC1EA00851CD2 /* Icon-Small.png */; };
-		293CCBC5142AC1EA00851CD2 /* Icon-Small@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 293CCBBC142AC1EA00851CD2 /* Icon-Small@2x.png */; };
-		293CCBC6142AC1EA00851CD2 /* Icon-Small@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 293CCBBC142AC1EA00851CD2 /* Icon-Small@2x.png */; };
-		293CCBC7142AC1EA00851CD2 /* Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 293CCBBD142AC1EA00851CD2 /* Icon.png */; };
-		293CCBC8142AC1EA00851CD2 /* Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 293CCBBD142AC1EA00851CD2 /* Icon.png */; };
-		293CCBC9142AC1EA00851CD2 /* Icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 293CCBBE142AC1EA00851CD2 /* Icon@2x.png */; };
-		293CCBCA142AC1EA00851CD2 /* Icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 293CCBBE142AC1EA00851CD2 /* Icon@2x.png */; };
-		293EF007143925F10075F16E /* HenrySpeech1.caf in Resources */ = {isa = PBXBuildFile; fileRef = 293EF005143925F10075F16E /* HenrySpeech1.caf */; };
-		293EF008143925F10075F16E /* HenrySpeech2.caf in Resources */ = {isa = PBXBuildFile; fileRef = 293EF006143925F10075F16E /* HenrySpeech2.caf */; };
 		296730811437DBC9007B4EA2 /* Default-Landscape~ipad.png in Resources */ = {isa = PBXBuildFile; fileRef = 296730801437DBC9007B4EA2 /* Default-Landscape~ipad.png */; };
 		2986CA0E141932C6002DA1C8 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2986CA0D141932C6002DA1C8 /* QuartzCore.framework */; };
 		2986CA10141932C6002DA1C8 /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2986CA0F141932C6002DA1C8 /* OpenGLES.framework */; };
@@ -273,7 +257,17 @@
 		2991C8D9142A6FC700053634 /* halloweenSpritesFile.png in Resources */ = {isa = PBXBuildFile; fileRef = 2991C8D4142A6FBB00053634 /* halloweenSpritesFile.png */; };
 		2991C8E1142A7EA800053634 /* click.caf in Resources */ = {isa = PBXBuildFile; fileRef = 2991C8E0142A7EA800053634 /* click.caf */; };
 		2991C8E2142A7EA800053634 /* click.caf in Resources */ = {isa = PBXBuildFile; fileRef = 2991C8E0142A7EA800053634 /* click.caf */; };
-		29B3ADED14325BEB00CF4669 /* spooky2.caf in Resources */ = {isa = PBXBuildFile; fileRef = 29B3ADEC14325BEB00CF4669 /* spooky2.caf */; };
+		299564A5143A919600F00CE2 /* Icon-72.png in Resources */ = {isa = PBXBuildFile; fileRef = 2995649F143A919600F00CE2 /* Icon-72.png */; };
+		299564A6143A919600F00CE2 /* Icon-Small-50.png in Resources */ = {isa = PBXBuildFile; fileRef = 299564A0143A919600F00CE2 /* Icon-Small-50.png */; };
+		299564A7143A919600F00CE2 /* Icon-Small.png in Resources */ = {isa = PBXBuildFile; fileRef = 299564A1143A919600F00CE2 /* Icon-Small.png */; };
+		299564A8143A919600F00CE2 /* Icon-Small@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 299564A2143A919600F00CE2 /* Icon-Small@2x.png */; };
+		299564A9143A919600F00CE2 /* Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 299564A3143A919600F00CE2 /* Icon.png */; };
+		299564AA143A919600F00CE2 /* Icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 299564A4143A919600F00CE2 /* Icon@2x.png */; };
+		299564AC143A9C1F00F00CE2 /* Henry_Spooky_About_Page.png in Resources */ = {isa = PBXBuildFile; fileRef = 299564AB143A9C1F00F00CE2 /* Henry_Spooky_About_Page.png */; };
+		299564AF143B75FF00F00CE2 /* HenrySpeech2.caf in Resources */ = {isa = PBXBuildFile; fileRef = 299564AD143B75FF00F00CE2 /* HenrySpeech2.caf */; };
+		299564B0143B75FF00F00CE2 /* HenrySpeech1.caf in Resources */ = {isa = PBXBuildFile; fileRef = 299564AE143B75FF00F00CE2 /* HenrySpeech1.caf */; };
+		299B1125143A1CAB00DAC263 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 299B1120143A1BEE00DAC263 /* Default@2x.png */; };
+		299B1127143A1CB000DAC263 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 299B1126143A1CB000DAC263 /* Default.png */; };
 		29B94FC614367A4000885326 /* ScoresLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 29B94FC514367A3F00885326 /* ScoresLayer.m */; };
 		29B94FC714367A4000885326 /* ScoresLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 29B94FC514367A3F00885326 /* ScoresLayer.m */; };
 		29B94FC914367A5800885326 /* AboutUsLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 2921EC5114355B6700028468 /* AboutUsLayer.m */; };
@@ -286,7 +280,6 @@
 		29B94FD41436A31100885326 /* UserIcons.png in Resources */ = {isa = PBXBuildFile; fileRef = 29B94FD01436A31100885326 /* UserIcons.png */; };
 		29B94FD71436C13700885326 /* StoryLevel.m in Sources */ = {isa = PBXBuildFile; fileRef = 29B94FD61436C13700885326 /* StoryLevel.m */; };
 		29B94FD81436C13700885326 /* StoryLevel.m in Sources */ = {isa = PBXBuildFile; fileRef = 29B94FD61436C13700885326 /* StoryLevel.m */; };
-		29B94FDA1436C1A300885326 /* Henry_Spooky_Story_Scene.png in Resources */ = {isa = PBXBuildFile; fileRef = 29B94FD91436C1A300885326 /* Henry_Spooky_Story_Scene.png */; };
 		29B94FDD1436C27B00885326 /* Henry_Spooky_Speech1.png in Resources */ = {isa = PBXBuildFile; fileRef = 29B94FDB1436C27B00885326 /* Henry_Spooky_Speech1.png */; };
 		29B94FDE1436C27B00885326 /* Henry_Spooky_Speech2.png in Resources */ = {isa = PBXBuildFile; fileRef = 29B94FDC1436C27B00885326 /* Henry_Spooky_Speech2.png */; };
 		29B94FE11436CCBD00885326 /* buttonsAndResources-Halloween.plist in Resources */ = {isa = PBXBuildFile; fileRef = 29B94FDF1436CCBD00885326 /* buttonsAndResources-Halloween.plist */; };
@@ -303,7 +296,10 @@
 		29BFCB3314311747000A021F /* README.txt in Resources */ = {isa = PBXBuildFile; fileRef = 29BFCB3114311747000A021F /* README.txt */; };
 		29BFCB3614311752000A021F /* libTestFlight.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 29BFCB3414311752000A021F /* libTestFlight.a */; };
 		29BFCB3714311752000A021F /* libTestFlight.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 29BFCB3414311752000A021F /* libTestFlight.a */; };
+		29C9D786143955630020172C /* spooky2.caf in Resources */ = {isa = PBXBuildFile; fileRef = 29C9D785143955630020172C /* spooky2.caf */; };
 		29E6B73B143538DA00EB59AF /* Henry_Spooky_Scores.png in Resources */ = {isa = PBXBuildFile; fileRef = 29E6B73A143538DA00EB59AF /* Henry_Spooky_Scores.png */; };
+		29F23A5C143A5BCA00673AEE /* Henry_Spooky_Story_Scene.png in Resources */ = {isa = PBXBuildFile; fileRef = 29F23A5A143A5BCA00673AEE /* Henry_Spooky_Story_Scene.png */; };
+		29F23A5D143A5BCA00673AEE /* Henry_Spooky_Title_Screen.png in Resources */ = {isa = PBXBuildFile; fileRef = 29F23A5B143A5BCA00673AEE /* Henry_Spooky_Title_Screen.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -311,12 +307,10 @@
 		29151D87142A3D32001ED460 /* SpookyHenry.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SpookyHenry.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		29151D89142A3D32001ED460 /* HenryAndHisHeadlamp copy-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "HenryAndHisHeadlamp copy-Info.plist"; path = "/Users/shawn/SourceCode/HenryAndHisHeadlamp/HenryAndHisHeadlamp copy-Info.plist"; sourceTree = "<absolute>"; };
 		29151DAA142A6709001ED460 /* headLampLight.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = headLampLight.png; sourceTree = "<group>"; };
-		2921EC4A14353CA000028468 /* Henry_Spooky_Title_Screen.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Henry_Spooky_Title_Screen.png; sourceTree = "<group>"; };
 		2921EC4D14353CD500028468 /* StartUpScreenLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StartUpScreenLayer.h; sourceTree = "<group>"; };
 		2921EC4E14353CD500028468 /* StartUpScreenLayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StartUpScreenLayer.m; sourceTree = "<group>"; };
 		2921EC5014355B6700028468 /* AboutUsLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AboutUsLayer.h; sourceTree = "<group>"; };
 		2921EC5114355B6700028468 /* AboutUsLayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AboutUsLayer.m; sourceTree = "<group>"; };
-		2921EC53143565E500028468 /* Henry_Spooky_About_Page.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Henry_Spooky_About_Page.png; sourceTree = "<group>"; };
 		2923A4791419A910008D4820 /* campingBackground.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = campingBackground.png; sourceTree = "<group>"; };
 		2923A50E1419C269008D4820 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
 		2923A5101419C272008D4820 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
@@ -325,14 +319,6 @@
 		293B38C4143155C8008B65B7 /* HenryBodyTextures.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = HenryBodyTextures.plist; path = HenryAndHisHeadlamp/HenryBodyTextures.plist; sourceTree = "<group>"; };
 		293B38C5143155C8008B65B7 /* HenryBodyTextures.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = HenryBodyTextures.png; path = HenryAndHisHeadlamp/HenryBodyTextures.png; sourceTree = "<group>"; };
 		293CCBAD142ABA9A00851CD2 /* ding.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = ding.caf; sourceTree = "<group>"; };
-		293CCBB9142AC1EA00851CD2 /* Icon-72.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-72.png"; sourceTree = "<group>"; };
-		293CCBBA142AC1EA00851CD2 /* Icon-Small-50.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-Small-50.png"; sourceTree = "<group>"; };
-		293CCBBB142AC1EA00851CD2 /* Icon-Small.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-Small.png"; sourceTree = "<group>"; };
-		293CCBBC142AC1EA00851CD2 /* Icon-Small@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-Small@2x.png"; sourceTree = "<group>"; };
-		293CCBBD142AC1EA00851CD2 /* Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Icon.png; sourceTree = "<group>"; };
-		293CCBBE142AC1EA00851CD2 /* Icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon@2x.png"; sourceTree = "<group>"; };
-		293EF005143925F10075F16E /* HenrySpeech1.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = HenrySpeech1.caf; sourceTree = "<group>"; };
-		293EF006143925F10075F16E /* HenrySpeech2.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = HenrySpeech2.caf; sourceTree = "<group>"; };
 		296730801437DBC9007B4EA2 /* Default-Landscape~ipad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-Landscape~ipad.png"; sourceTree = "<group>"; };
 		2986CA09141932C6002DA1C8 /* HenryAndHisHeadlamp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HenryAndHisHeadlamp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2986CA0D141932C6002DA1C8 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
@@ -572,7 +558,17 @@
 		2991C8D3142A6FBB00053634 /* halloweenSpritesFile.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = halloweenSpritesFile.plist; sourceTree = "<group>"; };
 		2991C8D4142A6FBB00053634 /* halloweenSpritesFile.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = halloweenSpritesFile.png; sourceTree = "<group>"; };
 		2991C8E0142A7EA800053634 /* click.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = click.caf; sourceTree = "<group>"; };
-		29B3ADEC14325BEB00CF4669 /* spooky2.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = spooky2.caf; sourceTree = "<group>"; };
+		2995649F143A919600F00CE2 /* Icon-72.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-72.png"; sourceTree = "<group>"; };
+		299564A0143A919600F00CE2 /* Icon-Small-50.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-Small-50.png"; sourceTree = "<group>"; };
+		299564A1143A919600F00CE2 /* Icon-Small.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-Small.png"; sourceTree = "<group>"; };
+		299564A2143A919600F00CE2 /* Icon-Small@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-Small@2x.png"; sourceTree = "<group>"; };
+		299564A3143A919600F00CE2 /* Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Icon.png; sourceTree = "<group>"; };
+		299564A4143A919600F00CE2 /* Icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon@2x.png"; sourceTree = "<group>"; };
+		299564AB143A9C1F00F00CE2 /* Henry_Spooky_About_Page.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Henry_Spooky_About_Page.png; sourceTree = "<group>"; };
+		299564AD143B75FF00F00CE2 /* HenrySpeech2.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = HenrySpeech2.caf; sourceTree = "<group>"; };
+		299564AE143B75FF00F00CE2 /* HenrySpeech1.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = HenrySpeech1.caf; sourceTree = "<group>"; };
+		299B1120143A1BEE00DAC263 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
+		299B1126143A1CB000DAC263 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
 		29B94FC414367A3F00885326 /* ScoresLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ScoresLayer.h; sourceTree = "<group>"; };
 		29B94FC514367A3F00885326 /* ScoresLayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ScoresLayer.m; sourceTree = "<group>"; };
 		29B94FCB14367B2C00885326 /* ScoreNode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ScoreNode.h; sourceTree = "<group>"; };
@@ -581,7 +577,6 @@
 		29B94FD01436A31100885326 /* UserIcons.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = UserIcons.png; sourceTree = "<group>"; };
 		29B94FD51436C13700885326 /* StoryLevel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StoryLevel.h; sourceTree = "<group>"; };
 		29B94FD61436C13700885326 /* StoryLevel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StoryLevel.m; sourceTree = "<group>"; };
-		29B94FD91436C1A300885326 /* Henry_Spooky_Story_Scene.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Henry_Spooky_Story_Scene.png; sourceTree = "<group>"; };
 		29B94FDB1436C27B00885326 /* Henry_Spooky_Speech1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Henry_Spooky_Speech1.png; sourceTree = "<group>"; };
 		29B94FDC1436C27B00885326 /* Henry_Spooky_Speech2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Henry_Spooky_Speech2.png; sourceTree = "<group>"; };
 		29B94FDF1436CCBD00885326 /* buttonsAndResources-Halloween.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "buttonsAndResources-Halloween.plist"; sourceTree = "<group>"; };
@@ -594,7 +589,10 @@
 		29BFCB3114311747000A021F /* README.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README.txt; sourceTree = "<group>"; };
 		29BFCB3414311752000A021F /* libTestFlight.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libTestFlight.a; sourceTree = "<group>"; };
 		29BFCB3514311752000A021F /* TestFlight.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestFlight.h; sourceTree = "<group>"; };
+		29C9D785143955630020172C /* spooky2.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = spooky2.caf; sourceTree = "<group>"; };
 		29E6B73A143538DA00EB59AF /* Henry_Spooky_Scores.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Henry_Spooky_Scores.png; sourceTree = "<group>"; };
+		29F23A5A143A5BCA00673AEE /* Henry_Spooky_Story_Scene.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Henry_Spooky_Story_Scene.png; sourceTree = "<group>"; };
+		29F23A5B143A5BCA00673AEE /* Henry_Spooky_Title_Screen.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Henry_Spooky_Title_Screen.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -658,13 +656,13 @@
 			children = (
 				29B94FDF1436CCBD00885326 /* buttonsAndResources-Halloween.plist */,
 				29B94FE01436CCBD00885326 /* buttonsAndResources-Halloween.png */,
-				2921EC4A14353CA000028468 /* Henry_Spooky_Title_Screen.png */,
 				2991C8D3142A6FBB00053634 /* halloweenSpritesFile.plist */,
 				2991C8D4142A6FBB00053634 /* halloweenSpritesFile.png */,
 				29E6B73A143538DA00EB59AF /* Henry_Spooky_Scores.png */,
-				2921EC53143565E500028468 /* Henry_Spooky_About_Page.png */,
+				29F23A5A143A5BCA00673AEE /* Henry_Spooky_Story_Scene.png */,
+				29F23A5B143A5BCA00673AEE /* Henry_Spooky_Title_Screen.png */,
+				299564AB143A9C1F00F00CE2 /* Henry_Spooky_About_Page.png */,
 				29151CF8142A3D20001ED460 /* Henry_Hallo_bkgrd.png */,
-				29B94FD91436C1A300885326 /* Henry_Spooky_Story_Scene.png */,
 				29B94FDB1436C27B00885326 /* Henry_Spooky_Speech1.png */,
 				29B94FDC1436C27B00885326 /* Henry_Spooky_Speech2.png */,
 			);
@@ -674,9 +672,9 @@
 		29317958142F891000D5FD4E /* Audio */ = {
 			isa = PBXGroup;
 			children = (
-				293EF005143925F10075F16E /* HenrySpeech1.caf */,
-				293EF006143925F10075F16E /* HenrySpeech2.caf */,
-				29B3ADEC14325BEB00CF4669 /* spooky2.caf */,
+				299564AD143B75FF00F00CE2 /* HenrySpeech2.caf */,
+				299564AE143B75FF00F00CE2 /* HenrySpeech1.caf */,
+				29C9D785143955630020172C /* spooky2.caf */,
 			);
 			name = Audio;
 			sourceTree = "<group>";
@@ -684,15 +682,17 @@
 		2986C9FE141932C6002DA1C8 = {
 			isa = PBXGroup;
 			children = (
+				299B1126143A1CB000DAC263 /* Default.png */,
+				299B1120143A1BEE00DAC263 /* Default@2x.png */,
 				296730801437DBC9007B4EA2 /* Default-Landscape~ipad.png */,
 				293B38C4143155C8008B65B7 /* HenryBodyTextures.plist */,
 				293B38C5143155C8008B65B7 /* HenryBodyTextures.png */,
-				293CCBB9142AC1EA00851CD2 /* Icon-72.png */,
-				293CCBBA142AC1EA00851CD2 /* Icon-Small-50.png */,
-				293CCBBB142AC1EA00851CD2 /* Icon-Small.png */,
-				293CCBBC142AC1EA00851CD2 /* Icon-Small@2x.png */,
-				293CCBBD142AC1EA00851CD2 /* Icon.png */,
-				293CCBBE142AC1EA00851CD2 /* Icon@2x.png */,
+				2995649F143A919600F00CE2 /* Icon-72.png */,
+				299564A0143A919600F00CE2 /* Icon-Small-50.png */,
+				299564A1143A919600F00CE2 /* Icon-Small.png */,
+				299564A2143A919600F00CE2 /* Icon-Small@2x.png */,
+				299564A3143A919600F00CE2 /* Icon.png */,
+				299564A4143A919600F00CE2 /* Icon@2x.png */,
 				29BFCB301431172E000A021F /* TestFlight */,
 				29BFCB2B143112FE000A021F /* FlurryAnalytics */,
 				29151CF5142A3CF4001ED460 /* Halloween Files */,
@@ -1200,32 +1200,34 @@
 				2991C8D9142A6FC700053634 /* halloweenSpritesFile.png in Resources */,
 				2991C8E2142A7EA800053634 /* click.caf in Resources */,
 				293CCBAF142ABA9A00851CD2 /* ding.caf in Resources */,
-				293CCBC0142AC1EA00851CD2 /* Icon-72.png in Resources */,
-				293CCBC2142AC1EA00851CD2 /* Icon-Small-50.png in Resources */,
-				293CCBC4142AC1EA00851CD2 /* Icon-Small.png in Resources */,
-				293CCBC6142AC1EA00851CD2 /* Icon-Small@2x.png in Resources */,
-				293CCBC8142AC1EA00851CD2 /* Icon.png in Resources */,
-				293CCBCA142AC1EA00851CD2 /* Icon@2x.png in Resources */,
 				29BBEE92142BB94700B44E52 /* Corben-64.fnt in Resources */,
 				29BBEE94142BB94700B44E52 /* Corben-64.png in Resources */,
 				29BBEE98142BBE4600B44E52 /* Hallow_status_bar.png in Resources */,
 				29BFCB3314311747000A021F /* README.txt in Resources */,
 				293B38C7143155C8008B65B7 /* HenryBodyTextures.plist in Resources */,
 				293B38C9143155C8008B65B7 /* HenryBodyTextures.png in Resources */,
-				29B3ADED14325BEB00CF4669 /* spooky2.caf in Resources */,
 				29E6B73B143538DA00EB59AF /* Henry_Spooky_Scores.png in Resources */,
-				2921EC4B14353CA000028468 /* Henry_Spooky_Title_Screen.png in Resources */,
-				2921EC54143565E500028468 /* Henry_Spooky_About_Page.png in Resources */,
 				29B94FD21436A31100885326 /* UserIcons.plist in Resources */,
 				29B94FD41436A31100885326 /* UserIcons.png in Resources */,
-				29B94FDA1436C1A300885326 /* Henry_Spooky_Story_Scene.png in Resources */,
 				29B94FDD1436C27B00885326 /* Henry_Spooky_Speech1.png in Resources */,
 				29B94FDE1436C27B00885326 /* Henry_Spooky_Speech2.png in Resources */,
 				29B94FE11436CCBD00885326 /* buttonsAndResources-Halloween.plist in Resources */,
 				29B94FE21436CCBD00885326 /* buttonsAndResources-Halloween.png in Resources */,
 				296730811437DBC9007B4EA2 /* Default-Landscape~ipad.png in Resources */,
-				293EF007143925F10075F16E /* HenrySpeech1.caf in Resources */,
-				293EF008143925F10075F16E /* HenrySpeech2.caf in Resources */,
+				29C9D786143955630020172C /* spooky2.caf in Resources */,
+				299B1125143A1CAB00DAC263 /* Default@2x.png in Resources */,
+				299B1127143A1CB000DAC263 /* Default.png in Resources */,
+				29F23A5C143A5BCA00673AEE /* Henry_Spooky_Story_Scene.png in Resources */,
+				29F23A5D143A5BCA00673AEE /* Henry_Spooky_Title_Screen.png in Resources */,
+				299564A5143A919600F00CE2 /* Icon-72.png in Resources */,
+				299564A6143A919600F00CE2 /* Icon-Small-50.png in Resources */,
+				299564A7143A919600F00CE2 /* Icon-Small.png in Resources */,
+				299564A8143A919600F00CE2 /* Icon-Small@2x.png in Resources */,
+				299564A9143A919600F00CE2 /* Icon.png in Resources */,
+				299564AA143A919600F00CE2 /* Icon@2x.png in Resources */,
+				299564AC143A9C1F00F00CE2 /* Henry_Spooky_About_Page.png in Resources */,
+				299564AF143B75FF00F00CE2 /* HenrySpeech2.caf in Resources */,
+				299564B0143B75FF00F00CE2 /* HenrySpeech1.caf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1240,12 +1242,6 @@
 				29151DAB142A6709001ED460 /* headLampLight.png in Resources */,
 				2991C8E1142A7EA800053634 /* click.caf in Resources */,
 				293CCBAE142ABA9A00851CD2 /* ding.caf in Resources */,
-				293CCBBF142AC1EA00851CD2 /* Icon-72.png in Resources */,
-				293CCBC1142AC1EA00851CD2 /* Icon-Small-50.png in Resources */,
-				293CCBC3142AC1EA00851CD2 /* Icon-Small.png in Resources */,
-				293CCBC5142AC1EA00851CD2 /* Icon-Small@2x.png in Resources */,
-				293CCBC7142AC1EA00851CD2 /* Icon.png in Resources */,
-				293CCBC9142AC1EA00851CD2 /* Icon@2x.png in Resources */,
 				29BBEE91142BB94700B44E52 /* Corben-64.fnt in Resources */,
 				29BBEE93142BB94700B44E52 /* Corben-64.png in Resources */,
 				29BBEE97142BBE4600B44E52 /* Hallow_status_bar.png in Resources */,
@@ -1610,8 +1606,8 @@
 					"-ObjC",
 					"-all_load",
 				);
-				PROVISIONING_PROFILE = "68C3E74D-0EDE-40F6-8C31-A56CB602E561";
-				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "68C3E74D-0EDE-40F6-8C31-A56CB602E561";
+				PROVISIONING_PROFILE = "8DBFC777-0F66-41EA-BBD0-854E99F183AF";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "8DBFC777-0F66-41EA-BBD0-854E99F183AF";
 				SDKROOT = iphoneos;
 			};
 			name = Release;

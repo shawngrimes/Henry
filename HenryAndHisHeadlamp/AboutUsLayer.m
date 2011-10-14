@@ -67,29 +67,29 @@
                                       target:self 
                                       selector:@selector(transitionToStartUpScreen)];
         
-//        CCMenuItemSprite *rateSprite=[CCMenuItemSprite 
-//                                       itemFromNormalSprite:[CCSprite spriteWithSpriteFrameName:@"rate_inactive.png"] 
-//                                       selectedSprite:[CCSprite spriteWithSpriteFrameName:@"rate_active.png"]
-//                                       target:self 
-//                                       selector:@selector(transitionToRateApp)];
-//        
-//        CCMenuItemSprite *moreSprite=[CCMenuItemSprite 
-//                                      itemFromNormalSprite:[CCSprite spriteWithSpriteFrameName:@"more_inactive.png"] 
-//                                      selectedSprite:[CCSprite spriteWithSpriteFrameName:@"more_active.png"]
-//                                      target:self 
-//                                      selector:@selector(transitionToMoreApps)];
+        CCMenuItemSprite *rateSprite=[CCMenuItemSprite 
+                                       itemFromNormalSprite:[CCSprite spriteWithSpriteFrameName:@"rate_inactive.png"] 
+                                       selectedSprite:[CCSprite spriteWithSpriteFrameName:@"rate_active.png"]
+                                       target:self 
+                                       selector:@selector(transitionToRateApp)];
+        
+        CCMenuItemSprite *moreSprite=[CCMenuItemSprite 
+                                      itemFromNormalSprite:[CCSprite spriteWithSpriteFrameName:@"more_inactive.png"] 
+                                      selectedSprite:[CCSprite spriteWithSpriteFrameName:@"more_active.png"]
+                                      target:self 
+                                      selector:@selector(transitionToMoreApps)];
 
         
-        CCMenu *mainMenu=[CCMenu menuWithItems:backSprite,nil]; //rateSprite,moreSprite, nil];
+        CCMenu *mainMenu=[CCMenu menuWithItems:backSprite,rateSprite,moreSprite, nil];
         if (UI_USER_INTERFACE_IDIOM() != UIUserInterfaceIdiomPad) {
             [backSprite setScaleX:(size.width/1024.0f)];
             [backSprite setScaleY:(size.width/768.0f)];
             
-//            [rateSprite setScaleX:(size.width/1024.0f)];
-//            [rateSprite setScaleY:(size.width/768.0f)];
-//            
-//            [moreSprite setScaleX:(size.width/1024.0f)];
-//            [moreSprite setScaleY:(size.width/768.0f)];
+            [rateSprite setScaleX:(size.width/1024.0f)];
+            [rateSprite setScaleY:(size.width/768.0f)];
+            
+            [moreSprite setScaleX:(size.width/1024.0f)];
+            [moreSprite setScaleY:(size.width/768.0f)];
         }
         
         [mainMenu alignItemsHorizontallyWithPadding:0.2*size.width];
@@ -119,37 +119,43 @@
             [visitSupportSprite setScaleX:(size.width/1024.0f)];
             [visitSupportSprite setScaleY:(size.width/768.0f)];
         }
-        visitSprite.position=ccp(size.width-size.width*.22,size.height-size.height*.2);
-        visitSupportSprite.position=ccp(size.width-size.width*.22,size.height-size.height*.38);
-
-        
-        [self addChild:visitSprite];
-        [self addChild:visitSupportSprite];
+        CCMenu *visitMenu=[CCMenu menuWithItems:visitSprite,visitSupportSprite, nil];
+        if (UI_USER_INTERFACE_IDIOM() != UIUserInterfaceIdiomPad) {
+            [visitMenu alignItemsVerticallyWithPadding:size.height/24];
+        }else{
+            [visitMenu alignItemsVerticallyWithPadding:size.height/16];            
+        }
+        visitMenu.position=ccp(3.9*size.width/5, size.height-size.height/3.5);
+//        visitSprite.position=ccp(size.width-size.width*.22,size.height-size.height*.2);
+//        visitSupportSprite.position=ccp(size.width-size.width*.22,size.height-size.height*.38);
+        [self addChild:visitMenu];
+//        [self addChild:visitSprite];
+//        [self addChild:visitSupportSprite];
         
     }
     
-    [TestFlight passCheckpoint:@"RETURNING_SPLASH"];
+    [TestFlight passCheckpoint:@"RETURNING_ABOUT_MENU"];
     
 	return self;
     
 }
 
 -(void) transitionToStartUpScreen{
-    [TestFlight passCheckpoint:@"LOADING_SPLASH_SCREEN"];
+//    [TestFlight passCheckpoint:@"LOADING_SPLASH_SCREEN"];
     [[CCDirector sharedDirector] replaceScene:
      [CCTransitionSlideInL transitionWithDuration:1.0f scene:[StartUpScreenLayer scene]]];
 }
 
 -(void) transitionToRateApp{
-    [TestFlight passCheckpoint:@"LOADING_RATE_APPS"];
-    [[CCDirector sharedDirector] replaceScene:
-     [CCTransitionMoveInR transitionWithDuration:1.0f scene:[StartUpScreenLayer scene]]];
+//    [TestFlight passCheckpoint:@"LOADING_RATE_APPS"];
+    [FlurryAnalytics logEvent:@"RATE_APP_TOUCHED"];
+    [[UIApplication sharedApplication] openURL:[NSURL URLWithString:@"http://click.linksynergy.com/fs-bin/stat?id=ufqtEXoqemY&offerid=146261&type=3&subid=0&tmpid=1826&RD_PARM1=http%253A%252F%252Fitunes.apple.com%252Fus%252Fapp%252Fhenrys-spooky-headlamp%252Fid469760219%253Fmt%253D8%2526uo%253D4%2526partnerId%253D30"]];
 }
 
 -(void) transitionToMoreApps{
     [TestFlight passCheckpoint:@"LOADING_MORE_APPS"];
-    [[CCDirector sharedDirector] replaceScene:
-     [CCTransitionMoveInR transitionWithDuration:1.0f scene:[StartUpScreenLayer scene]]];
+    [FlurryAnalytics logEvent:@"MORE_APPS_TOUCHED"];
+    [[UIApplication sharedApplication] openURL:[NSURL URLWithString:@"http://click.linksynergy.com/fs-bin/stat?id=ufqtEXoqemY&offerid=146261&type=3&subid=0&tmpid=1826&RD_PARM1=http%253A%252F%252Fitunes.apple.com%252Fus%252Fartist%252Fcampfire-apps-llc.%252Fid469760222%253Fuo%253D4%2526partnerId%253D30"]];
 }
 
 -(void)visitCFSite{

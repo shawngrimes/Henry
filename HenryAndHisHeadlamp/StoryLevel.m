@@ -53,8 +53,8 @@ ALuint soundEffect;
         CCSprite *speechBubble1=[CCSprite spriteWithFile:@"Henry_Spooky_Speech1.png"];
         speechBubble1.anchorPoint=ccp(0.5,0.5);
         if (UI_USER_INTERFACE_IDIOM() != UIUserInterfaceIdiomPad) { 
-            [speechBubble1 setScaleX:size.width/1024.0f];
-            [speechBubble1 setScaleY:size.height/768.0f];
+            [speechBubble1 setScale:size.width/1024.0f * 1.5];
+//            [speechBubble1 setScaleY:size.height/768.0f];
         }
 
         speechBubble1.position=ccp(size.width * .366,size.height-(size.height * (230.0/768.0)));
@@ -118,8 +118,8 @@ ALuint soundEffect;
         speechBubble2.anchorPoint=ccp(0.5,0.5);
         speechBubble2.position=ccp((375.0/1024.0)*size.width,size.height-((230.0/768.0)*size.height));
         if (UI_USER_INTERFACE_IDIOM() != UIUserInterfaceIdiomPad) { 
-            [speechBubble2 setScaleX:size.width/1024.0f];
-            [speechBubble2 setScaleY:size.height/768.0f];
+            [speechBubble2 setScale:size.width/1024.0f * 1.5];
+//            [speechBubble2 setScaleY:size.height/768.0f];
         }
         [self addChild:speechBubble2 z:2 tag:2];
 #ifdef HALLOWEEN

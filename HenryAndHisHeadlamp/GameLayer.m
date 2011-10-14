@@ -108,11 +108,11 @@ if (UI_USER_INTERFACE_IDIOM() != UIUserInterfaceIdiomPad) {
         henryBody.position=ccp(size.width-((henryBody.textureRect.size.width * henryBody.scaleX) + .01*size.width), 0);
         
         _henryHead.anchorPoint=ccp(0.72,0.18);
-        _henryHead.position=ccp(size.width-((henryBody.textureRect.size.width * henryBody.scaleX) + .002*size.width), 
+        _henryHead.position=ccp(size.width-((henryBody.textureRect.size.width * henryBody.scaleX)/2 + 0.035*size.width), 
                                 ((henryBody.textureRect.size.height * henryBody.scaleY) -(.10*henryBody.textureRect.size.height * henryBody.scaleY)));// * _henryHead.scaleY);
 //        CCLOG(@"Henry Head Position: %f %f", _henryHead.position.x, _henryHead.position.y);
-        _henryHead.rotation= 22.700861;
-        
+//        _henryHead.rotation= 22.700861;
+        _henryHead.rotation=-22.700861;
         [self addChild:henryBody z:9 tag:kTAGhenry];
         [self addChild:_henryHead z:10 tag:kTAGhenryHead];
 
@@ -188,10 +188,14 @@ if (UI_USER_INTERFACE_IDIOM() != UIUserInterfaceIdiomPad) {
         
         _headLampLight=[CCSprite spriteWithFile:@"headLampLight.png"];
         if (UI_USER_INTERFACE_IDIOM() != UIUserInterfaceIdiomPad) { 
-            [_headLampLight setScaleX:size.width/1024.0f];
-            [_headLampLight setScaleY:size.height/768.0f];
+            [_headLampLight setScaleX:size.width/1024.0f * 1.4];
+            [_headLampLight setScaleY:size.height/768.0f * 1.4];
         }
-        _headLampLight.anchorPoint=ccp(0.5,0.5);
+        if (UI_USER_INTERFACE_IDIOM() != UIUserInterfaceIdiomPad) { 
+            _headLampLight.anchorPoint=ccp(0.5,0.45);
+        }else{
+            _headLampLight.anchorPoint=ccp(0.5,0.5);
+        }
         _headLampLight.position=ccp(size.width/2, size.height/2);
         [_headLampLight setVisible:NO];
         [self addChild:_headLampLight z:1 tag:kTAGheadLamp];
@@ -477,10 +481,13 @@ if (UI_USER_INTERFACE_IDIOM() != UIUserInterfaceIdiomPad) {
     int offY =  _henryHead.position.y - location.y;
     float angleRadians = atanf((float)offY / (float)offX);
     float angleDegrees = CC_RADIANS_TO_DEGREES(angleRadians);
-    float cocosAngle = -1 * (angleDegrees+25);
-//    CCLOG(@"Rotating TO: %f", cocosAngle);
-    if(cocosAngle>=0)
+    float cocosAngle = -1 * (angleDegrees+50);
+
+    if(cocosAngle>=-25.0 && cocosAngle<=25.0){
         _henryHead.rotation=cocosAngle;
+//        CCLOG(@"Rotating TO: %f", cocosAngle);
+    }
+        
     
     [_headLampLight setVisible:YES];
     [[self getChildByTag:kTAGnight] setVisible:NO];
@@ -503,10 +510,13 @@ if (UI_USER_INTERFACE_IDIOM() != UIUserInterfaceIdiomPad) {
     int offY =  _henryHead.position.y - location.y;
     float angleRadians = atanf((float)offY / (float)offX);
     float angleDegrees = CC_RADIANS_TO_DEGREES(angleRadians);
-    float cocosAngle = -1 * (angleDegrees+25);
-//    CCLOG(@"Rotating TO: %f", cocosAngle);
-    if(cocosAngle>=0)
+    float cocosAngle = -1 * (angleDegrees+50);
+    
+    if(cocosAngle>=-25.0  && cocosAngle<=25.0){
+//        CCLOG(@"Rotating TO: %f", cocosAngle);
         _henryHead.rotation=cocosAngle;
+    }
+
 
     
 //    location=[self convertTouchToNodeSpace:touch];

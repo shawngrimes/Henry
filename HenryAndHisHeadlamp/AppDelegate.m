@@ -44,7 +44,7 @@
 {
 
 #ifdef HALLOWEEN
-    [TestFlight takeOff:@"76c69515ac87392bd0ccfe77842a7140_MzEzMjQyMDExLTA5LTI2IDE2OjI3OjI4Ljc1OTExNg"];
+//    [TestFlight takeOff:@"76c69515ac87392bd0ccfe77842a7140_MzEzMjQyMDExLTA5LTI2IDE2OjI3OjI4Ljc1OTExNg"];
 #endif
     
 #ifdef HALLOWEEN

@@ -192,10 +192,12 @@
     NSDictionary *secondPlace=[scores dictionaryForKey:@"secondPlace"];
     NSDictionary *firstPlace=[scores dictionaryForKey:@"firstPlace"];
     
+    NSLog(@"First: %f", [[firstPlace valueForKey:@"time"] floatValue]);
+    NSLog(@"Second: %f", [[secondPlace valueForKey:@"time"] floatValue]);    
+    NSLog(@"Third: %f", [[thirdPlace valueForKey:@"time"] floatValue]);
     
-
     NSNumber *firstPlaceTime=[firstPlace valueForKey:@"time"];
-    if(firstPlaceTime>userTimeNumber || firstPlaceTime==0){
+    if([firstPlaceTime floatValue]>[userTimeNumber floatValue] || firstPlaceTime==0){
         thirdPlace=secondPlace;
         secondPlace=firstPlace;
         firstPlace=[NSDictionary dictionaryWithObjectsAndKeys:userTimeNumber, @"time",iconNumber,@"icon", nil];
@@ -203,13 +205,13 @@
         [scores setValue:secondPlace forKey:@"secondPlace"];
         [scores setValue:firstPlace forKey:@"firstPlace"];
         [TestFlight passCheckpoint:@"SETTING_FIRST_PLACE"];
-    }else if([secondPlace valueForKey:@"time"]>userTimeNumber || [secondPlace valueForKey:@"time"]==0){
+    }else if([[secondPlace valueForKey:@"time"] floatValue]>[userTimeNumber floatValue] || [secondPlace valueForKey:@"time"]==0){
         thirdPlace=secondPlace;
         secondPlace=[NSDictionary dictionaryWithObjectsAndKeys:userTimeNumber, @"time",iconNumber,@"icon", nil];
         [scores setValue:thirdPlace forKey:@"thirdPlace"];
         [scores setValue:secondPlace forKey:@"secondPlace"];
         [TestFlight passCheckpoint:@"SETTING_SECOND_PLACE"];
-    }else if([thirdPlace valueForKey:@"time"]>userTimeNumber || [thirdPlace valueForKey:@"time"]==0){
+    }else if([[thirdPlace valueForKey:@"time"] floatValue]>[userTimeNumber floatValue] || [thirdPlace valueForKey:@"time"]==0){
         thirdPlace=[NSDictionary dictionaryWithObjectsAndKeys:userTimeNumber, @"time",iconNumber,@"icon", nil];;
         [scores setValue:thirdPlace forKey:@"thirdPlace"];
         [TestFlight passCheckpoint:@"SETTING_THIRD_PLACE"];
@@ -346,6 +348,7 @@
 
 -(void) transitionToGameScreen{
     [TestFlight passCheckpoint:@"LOADING_GAME_SCENE"];
+    [FlurryAnalytics logEvent:@"PLAY_AGAING_SELECTED_ON_SCORES_SCREEN"];
     [[CCDirector sharedDirector] replaceScene:
      [CCTransitionSlideInL transitionWithDuration:1.0f scene:[GameLayer scene]]];
 }

@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>frames</key>
+	<dict>
+		<key>SpeechBubble1.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{2,242},{307,238}}</string>
+			<key>offset</key>
+			<string>{0,0}</string>
+			<key>rotated</key>
+			<false/>
+			<key>sourceColorRect</key>
+			<string>{{0,0},{307,238}}</string>
+			<key>sourceSize</key>
+			<string>{307,238}</string>
+		</dict>
+		<key>SpeechBubble2.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{2,2},{307,238}}</string>
+			<key>offset</key>
+			<string>{0,0}</string>
+			<key>rotated</key>
+			<false/>
+			<key>sourceColorRect</key>
+			<string>{{0,0},{307,238}}</string>
+			<key>sourceSize</key>
+			<string>{307,238}</string>
+		</dict>
+	</dict>
+	<key>metadata</key>
+	<dict>
+		<key>format</key>
+		<integer>2</integer>
+		<key>realTextureFileName</key>
+		<string>SpeechBubbles-ipad.pvr.gz</string>
+		<key>size</key>
+		<string>{512,512}</string>
+		<key>smartupdate</key>
+		<string>$TexturePacker:SmartUpdate:f3be4d28cdeed64d0798557c3cc91fa1$</string>
+		<key>textureFileName</key>
+		<string>SpeechBubbles-ipad.pvr.gz</string>
+	</dict>
+</dict>
+</plist>

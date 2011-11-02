@@ -11,9 +11,11 @@
 #import "GameLayer.h"
 
 @interface StoryLevel : CCLayer {
-    
+    CCSpriteBatchNode *batchNode;
 }
 
 +(CCScene *) scene;
+-(void) loadUserSelectionScene;
+-(void) loadGameLayer;
 
 @end

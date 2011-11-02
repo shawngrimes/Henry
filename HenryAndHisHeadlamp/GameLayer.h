@@ -16,6 +16,15 @@
 #import "TestFlight.h"
 #import "ScoresLayer.h"
 
+typedef enum {
+    kGameModeNone=0,
+    kGameModeUpperAlphabet,
+    kGameModeLowerAlphabet,
+    kGameModeNumbers,
+    kGameModeShapes,
+    kGameModeSmartAll,
+} GameModeType;
+
 @interface GameLayer : CCLayer {
     CCSprite *_headLampLight;
     CCSprite *_henryHead;
@@ -24,11 +33,13 @@
     int winCount;
     CCLabelBMFont *_timerLabel;
     float gameTimer;
+    GameModeType gameMode;
 }
 
 @property (nonatomic, retain) NSMutableArray *arrCharacters;
 
-+(CCScene *) scene;
++(CCScene *) sceneWithGameMode:(GameModeType)selectedGameMode;
+-(id) initWithGameMode:(GameModeType) selectedGameMode;
 -(void)showTargetLabel;
 -(void)gameOver;
 @end

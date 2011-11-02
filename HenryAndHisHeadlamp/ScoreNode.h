@@ -13,6 +13,10 @@
     int score; 
 }
 
+@property (nonatomic) int score;
+
++(int) scoreForTime:(float)playerTime;
+
 +(ScoreNode *) scoreOf:(int)playerScore;
 +(ScoreNode *) timeOf:(float)playerTime;
 @end

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model name="" userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="872" systemVersion="11C62" minimumToolsVersion="Automatic" macOSVersion="Automatic" iOSVersion="Automatic">
+    <entity name="Player" representedClassName="Player" syncable="YES">
+        <attribute name="iconNumber" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
+        <relationship name="prizes" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Prize" syncable="YES"/>
+    </entity>
+    <entity name="Prize" representedClassName="Prize" syncable="YES">
+        <attribute name="prizeNumber" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
+    </entity>
+    <elements>
+        <element name="Player" positionX="160" positionY="192" width="128" height="75"/>
+        <element name="Prize" positionX="9" positionY="369" width="128" height="60"/>
+    </elements>
+</model>

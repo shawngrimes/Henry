@@ -9,15 +9,26 @@
 #import <Foundation/Foundation.h>
 #import "cocos2d.h"
 #import "TestFlight.h"
-#import "GameLayer.h"
+//#import "GameLayer.h"
 #import "AboutUsLayer.h"
 #import "StoryLevel.h"
 
+//#ifdef __cplusplus
+#import "Box2D.h"
+//#endif 
+
 @interface StartUpScreenLayer : CCLayer {
-    float gameTimer;
+    CCSpriteBatchNode *batchNode;
+    CCSpriteBatchNode *buttonBatchNode;
+    b2World *_world;
+    b2Body *_groundBody;
+    b2MouseJoint *_mouseJoint;
+    
 }
 +(CCScene *) scene;
 -(void) transitionToGamePlay;
 -(void) transitionToAboutPage;
 -(void) loadGameLayer;
+
+
 @end

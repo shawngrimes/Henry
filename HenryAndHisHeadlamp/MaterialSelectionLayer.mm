@@ -8,6 +8,7 @@
 
 #import "MaterialSelectionLayer.h"
 #import "GameLayer.h"
+#import "UserSelectionLayer.h"
 
 @implementation MaterialSelectionLayer
 
@@ -122,6 +123,19 @@
 //        [materialMenu alignItemsInRows:[NSNumber numberWithInt:2],[NSNumber numberWithInt:2], [NSNumber numberWithInt:1], nil];
         [self addChild:materialMenu z:4];
         
+#ifdef SMART
+        [[CCSpriteFrameCache sharedSpriteFrameCache] addSpriteFramesWithFile:@"buttonsAndResources-Smart.plist"];
+        CCMenuItemSprite *backSprite=[CCMenuItemSprite 
+                                      itemFromNormalSprite:[CCSprite spriteWithSpriteFrameName:@"BackArrow_inactive.png"] 
+                                      selectedSprite:[CCSprite spriteWithSpriteFrameName:@"BackArrow_active.png"] 
+                                      target:self 
+                                      selector:@selector(transitionToPrevScreen)];
+        CCMenu *backMenu=[CCMenu menuWithItems:backSprite, nil];
+        [self addChild:backMenu];
+        backMenu.anchorPoint=ccp(0.5,0.5);
+        backMenu.position=ccp(0+backSprite.contentSize.width,size.height-backSprite.contentSize.height);
+#endif
+
         
     }
     return self;
@@ -137,6 +151,11 @@
     CCLOG(@"TAG: %i", selectedSprite.tag);
     [[CCDirector sharedDirector] replaceScene:[CCTransitionMoveInR transitionWithDuration:1.0f scene:[GameLayer sceneWithGameMode:(GameModeType) selectedSprite.tag]]];    
 
+}
+
+-(void)transitionToPrevScreen{
+    [[CCDirector sharedDirector] replaceScene:
+     [CCTransitionSlideInL transitionWithDuration:1.0f scene:[UserSelectionLayer scene]]];
 }
 
 @end

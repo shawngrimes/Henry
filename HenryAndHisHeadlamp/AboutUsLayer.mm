@@ -97,9 +97,15 @@
 //        }
         
         [mainMenu alignItemsHorizontallyWithPadding:0.2*size.width];
-//        aboutSprite.position=ccp(.0195*size.width, aboutSprite.position.y);
+        if (UI_USER_INTERFACE_IDIOM() != UIUserInterfaceIdiomPad) {
+            mainMenu.position=ccp(size.width *.5, size.height/10);
+        }else{
+            mainMenu.position=ccp(size.width *.5, size.height/6);
+        }
         
-        mainMenu.position=ccp(size.width *.5, size.height/6);
+        //        aboutSprite.position=ccp(.0195*size.width, aboutSprite.position.y);
+        
+        
         
         [self addChild:mainMenu];
         
@@ -125,11 +131,13 @@
 //        }
         CCMenu *visitMenu=[CCMenu menuWithItems:visitSprite,visitSupportSprite, nil];
         if (UI_USER_INTERFACE_IDIOM() != UIUserInterfaceIdiomPad) {
-            [visitMenu alignItemsVerticallyWithPadding:size.height/24];
+            [visitMenu alignItemsVerticallyWithPadding:size.height/9];
+            visitMenu.position=ccp(3.9*size.width/5, size.height-size.height/3.1);
         }else{
-            [visitMenu alignItemsVerticallyWithPadding:size.height/9];            
+            [visitMenu alignItemsVerticallyWithPadding:size.height/9];   
+            visitMenu.position=ccp(3.9*size.width/5, size.height-size.height/3.4);
         }
-        visitMenu.position=ccp(3.9*size.width/5, size.height-size.height/3.4);
+        
 //        visitSprite.position=ccp(size.width-size.width*.22,size.height-size.height*.2);
 //        visitSupportSprite.position=ccp(size.width-size.width*.22,size.height-size.height*.38);
         [self addChild:visitMenu];
@@ -156,7 +164,7 @@
 #ifdef HALLOWEEN
     [[UIApplication sharedApplication] openURL:[NSURL URLWithString:@"http://click.linksynergy.com/fs-bin/stat?id=ufqtEXoqemY&offerid=146261&type=3&subid=0&tmpid=1826&RD_PARM1=http%253A%252F%252Fitunes.apple.com%252Fus%252Fapp%252Fhenrys-spooky-headlamp%252Fid469760219%253Fmt%253D8%2526uo%253D4%2526partnerId%253D30"]];
 #elif SMART
-    [[UIApplication sharedApplication] openURL:[NSURL URLWithString:@"http://click.linksynergy.com/fs-bin/stat?id=ufqtEXoqemY&offerid=146261&type=3&subid=0&tmpid=1826&RD_PARM1=http%253A%252F%252Fitunes.apple.com%252Fus%252Fapp%252Fhenrys-spooky-headlamp%252Fid469760219%253Fmt%253D8%2526uo%253D4%2526partnerId%253D30"]];
+    [[UIApplication sharedApplication] openURL:[NSURL URLWithString:@""]];
 #endif
 }
 

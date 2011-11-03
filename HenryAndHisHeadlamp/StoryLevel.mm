@@ -87,6 +87,18 @@ ALuint soundEffect=0;
         [self addChild:batchNode];
 #endif
         
+#ifdef SMART
+        [[CCSpriteFrameCache sharedSpriteFrameCache] addSpriteFramesWithFile:@"buttonsAndResources-Smart.plist"];
+        CCMenuItemSprite *backSprite=[CCMenuItemSprite 
+                                      itemFromNormalSprite:[CCSprite spriteWithSpriteFrameName:@"BackArrow_inactive.png"] 
+                                      selectedSprite:[CCSprite spriteWithSpriteFrameName:@"BackArrow_active.png"] 
+                                      target:self 
+                                      selector:@selector(transitionToPrevScreen)];
+        CCMenu *backMenu=[CCMenu menuWithItems:backSprite, nil];
+        [self addChild:backMenu];
+        backMenu.anchorPoint=ccp(0.5,0.5);
+        backMenu.position=ccp(0+backSprite.contentSize.width,size.height-backSprite.contentSize.height);
+#endif
         
         
         self.isTouchEnabled=YES;
@@ -212,7 +224,13 @@ ALuint soundEffect=0;
      [[SimpleAudioEngine sharedEngine] setBackgroundMusicVolume:1.0];
     [[CCDirector sharedDirector] replaceScene:
      [CCTransitionSlideInR transitionWithDuration:1.0f scene:[MaterialSelectionLayer scene]]];
+}
 
+-(void)transitionToPrevScreen{
+    [[SimpleAudioEngine sharedEngine] stopEffect:soundEffect];
+    [[SimpleAudioEngine sharedEngine] setBackgroundMusicVolume:1.0];
+    [[CCDirector sharedDirector] replaceScene:
+     [CCTransitionSlideInL transitionWithDuration:1.0f scene:[UserSelectionLayer scene]]];
 }
 
 

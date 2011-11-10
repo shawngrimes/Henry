@@ -8,19 +8,25 @@
 
 #import <Foundation/Foundation.h>
 #import "cocos2d.h"
+#import "GameLayer.h"
 
 @class ScoreNode;
 @class AppDelegate;
 @class Player;
 
+
+
 @interface PrizeSelectionScene : CCLayer {
     ScoreNode *playerScore;
     Player *currentPlayer;
+    GameModeType selectedGameMode;
 }
 
 
+
 +(CCScene *) sceneWithTime:(float) userTime;
--(id) initWithTime:(float)userTime;
+//-(id) initWithTime:(float)userTime;
+-(id) initWithTime:(float)userTime andGameModeType:(GameModeType) gameMode;
 -(void)withTime:(float)userTime;
 -(void) showPrizes;
 

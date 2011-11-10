@@ -129,6 +129,7 @@
 //            [visitSupportSprite setScaleX:(size.width/1024.0f)];
 //            [visitSupportSprite setScaleY:(size.width/768.0f)];
 //        }
+        
         CCMenu *visitMenu=[CCMenu menuWithItems:visitSprite,visitSupportSprite, nil];
         if (UI_USER_INTERFACE_IDIOM() != UIUserInterfaceIdiomPad) {
             [visitMenu alignItemsVerticallyWithPadding:size.height/9];
@@ -151,6 +152,8 @@
 	return self;
     
 }
+
+
 
 -(void) transitionToStartUpScreen{
 //    [TestFlight passCheckpoint:@"LOADING_SPLASH_SCREEN"];

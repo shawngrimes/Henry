@@ -18,6 +18,7 @@ float _userTime=0.0;
 
 
 @implementation PrizeSelectionScene
+
 +(CCScene *) sceneWithTime:(float) userTime;
 {
 	// 'scene' is an autorelease object.
@@ -40,16 +41,14 @@ float _userTime=0.0;
 }
 
 -(void) showPrizes{
-    CGSize winSize=[CCDirector sharedDirector].winSize;
-    
-    
-    
-
 }
 
 
--(id) initWithTime:(float)userTime{
+-(id) initWithTime:(float)userTime andGameModeType:(GameModeType) gameMode{
     if(self=[super init]){
+        
+        selectedGameMode=gameMode;
+        
         [CCTexture2D PVRImagesHavePremultipliedAlpha:YES];
         
         CGSize size=[[CCDirector sharedDirector] winSize];
@@ -221,6 +220,30 @@ float _userTime=0.0;
     CCSprite *selectedSprite=(CCSprite *)[selectedMaterialSprite.children objectAtIndex:0];
     CCLOG(@"TAG: %i", selectedSprite.tag);
     CCLOG(@"Did select sender: %i", selectedSprite.tag);
+    
+    NSString *gameModeString;
+    switch (selectedGameMode) {
+        case kGameModeUpperAlphabet:
+            gameModeString=@"ABCs";
+            break;
+        case kGameModeLowerAlphabet:
+            gameModeString=@"abcs";
+            break;
+        case kGameModeNumbers:
+            gameModeString=@"123s";
+            break;
+        case kGameModeShapes:
+            gameModeString=@"Shapes";
+            break;
+        case kGameModeSmartAll:
+            gameModeString=@"All";
+            break;
+        default:
+            break;
+    }
+    
+       
+    
     
     NSFetchRequest *fetchRequest = [[NSFetchRequest alloc] init];
     AppDelegate *sharedAppDelegate=(AppDelegate *)[UIApplication sharedApplication].delegate;

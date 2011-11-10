@@ -286,9 +286,9 @@ int kNumObjects=7;
 //                    NSString *letters=@"0123456789";
                     NSMutableArray *aryCharacterTypes=[NSMutableArray arrayWithCapacity:kNumObjects];
                     for (int c=0; c<kNumObjects; c++) {
-                        int randomCharacterInt=arc4random() % CHARACTER_COUNT;
+                        int randomCharacterInt=(arc4random() % CHARACTER_COUNT)+1;
                         while ([aryCharacterTypes containsObject:[NSNumber numberWithInt:randomCharacterInt]]){
-                            randomCharacterInt=arc4random() % CHARACTER_COUNT;
+                            randomCharacterInt=(arc4random() % CHARACTER_COUNT)+1;
                         }
                         [aryCharacterTypes addObject:[NSNumber numberWithInt:randomCharacterInt]];
                         CCLOG(@"Random Character Type: %i", randomCharacterInt);
@@ -428,11 +428,11 @@ int kNumObjects=7;
                         case 2:
                         {
                             int CHARACTER_COUNT=20;
-                            int randomCharacterInt=arc4random() % CHARACTER_COUNT;
+                            int randomCharacterInt=(arc4random() % CHARACTER_COUNT)+1;
                             NSString *randomCharacter=[NSString stringWithFormat:@"%i",randomCharacterInt];
                             randomSprite=[[[CharacterSprite alloc] initWithString:randomCharacter] autorelease];
                             while ([aryCharacterTypes containsObject:randomSprite]){
-                                int randomCharacterInt=arc4random() % CHARACTER_COUNT;
+                                int randomCharacterInt=(arc4random() % CHARACTER_COUNT)+1;
                                 NSString *randomCharacter=[NSString stringWithFormat:@"%i",randomCharacterInt];
                                 randomSprite=[[[CharacterSprite alloc] initWithString:randomCharacter] autorelease];
                             }
@@ -732,7 +732,7 @@ int kNumObjects=7;
      [CCTransitionRotoZoom transitionWithDuration:2.0f scene:scoresScene]];
 #elif SMART
     CCScene *scoreScene=[CCScene node];
-    PrizeSelectionScene *prizeLayer=[[[PrizeSelectionScene alloc] initWithTime:gameTimer] autorelease];
+    PrizeSelectionScene *prizeLayer=[[[PrizeSelectionScene alloc] initWithTime:gameTimer andGameModeType:gameMode] autorelease];
 //    [prizeLayer withTime:gameTimer];
     [scoreScene addChild:prizeLayer];
     

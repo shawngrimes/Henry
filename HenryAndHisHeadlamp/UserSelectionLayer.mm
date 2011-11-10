@@ -13,6 +13,7 @@
 #import "MaterialSelectionLayer.h"
 #import "Player.h"
 
+
 @implementation UserSelectionLayer
 +(CCScene *) scene
 {
@@ -128,7 +129,10 @@
 //    for (CCNode *childElement in selectedMaterialSprite.children) {
 //        NSLog(@"ChildELement: %@", childElement);
 //    }
+    
     CCSprite *selectedSprite=(CCSprite *)[selectedMaterialSprite.children objectAtIndex:0];
+    
+    
     
     NSFetchRequest *fetchRequest = [[NSFetchRequest alloc] init];
     AppDelegate *sharedAppDelegate=(AppDelegate *)[UIApplication sharedApplication].delegate;

@@ -521,6 +521,8 @@
 		2975653914603D080067D213 /* HenryBodyTextures.pvr.ccz in Resources */ = {isa = PBXBuildFile; fileRef = 2975653114603D080067D213 /* HenryBodyTextures.pvr.ccz */; };
 		29756740146066590067D213 /* GLES-Render.mm in Sources */ = {isa = PBXBuildFile; fileRef = 2975673F146066590067D213 /* GLES-Render.mm */; };
 		29756741146066590067D213 /* GLES-Render.mm in Sources */ = {isa = PBXBuildFile; fileRef = 2975673F146066590067D213 /* GLES-Render.mm */; };
+		29795BAB14676F8E0089E0EA /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2923A50E1419C269008D4820 /* CFNetwork.framework */; };
+		29795BAC14676FEA0089E0EA /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2923A5121419C27B008D4820 /* SystemConfiguration.framework */; };
 		297B7556145F68E6001EFCCC /* SpeechBubbles-hd.plist in Resources */ = {isa = PBXBuildFile; fileRef = 297B7550145F68E3001EFCCC /* SpeechBubbles-hd.plist */; };
 		297B7557145F68E6001EFCCC /* SpeechBubbles-hd.plist in Resources */ = {isa = PBXBuildFile; fileRef = 297B7550145F68E3001EFCCC /* SpeechBubbles-hd.plist */; };
 		297B7558145F68E6001EFCCC /* SpeechBubbles-hd.pvr.gz in Resources */ = {isa = PBXBuildFile; fileRef = 297B7551145F68E4001EFCCC /* SpeechBubbles-hd.pvr.gz */; };
@@ -1320,6 +1322,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				29795BAC14676FEA0089E0EA /* SystemConfiguration.framework in Frameworks */,
+				29795BAB14676F8E0089E0EA /* CFNetwork.framework in Frameworks */,
 				296F01D11460E7B3004B536A /* CoreData.framework in Frameworks */,
 				290A2E53144CFE7B00BBFBA3 /* QuartzCore.framework in Frameworks */,
 				290A2E54144CFE7B00BBFBA3 /* OpenGLES.framework in Frameworks */,
@@ -3178,6 +3182,11 @@
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/Smore.embeddedframework\"",
+					"\"$(SRCROOT)\"",
+				);
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = SmartHenry/Prefix.pch;
@@ -3202,6 +3211,11 @@
 				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/Smore.embeddedframework\"",
+					"\"$(SRCROOT)\"",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = SmartHenry/Prefix.pch;
 				"GCC_THUMB_SUPPORT[arch=armv6]" = "";
@@ -3225,6 +3239,12 @@
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/Smore.embeddedframework\"",
+					"\"$(SRCROOT)/../../Library/Developer/Xcode/DerivedData/Smore-hgkfgjvvptzkwhgpkgxksrtpbdtw/Build/Products/Debug-iphoneos/Smore.embeddedframework\"",
+					"\"$(SRCROOT)\"",
+				);
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = SmartHenry/Prefix.pch;
@@ -3257,6 +3277,12 @@
 				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
 				CODE_SIGN_IDENTITY = "iPhone Distribution: Campfire Apps, LLC.";
 				COPY_PHASE_STRIP = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/Smore.embeddedframework\"",
+					"\"$(SRCROOT)/../../Library/Developer/Xcode/DerivedData/Smore-hgkfgjvvptzkwhgpkgxksrtpbdtw/Build/Products/Debug-iphoneos/Smore.embeddedframework\"",
+					"\"$(SRCROOT)\"",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = SmartHenry/Prefix.pch;
 				GCC_PREPROCESSOR_DEFINITIONS = (
@@ -3418,6 +3444,7 @@
 					"\"$(SRCROOT)/../StackMob_iOS/external/libraries\"",
 					"\"$(SRCROOT)/HenryAndHisHeadlamp\"",
 					"\"$(SRCROOT)\"",
+					"\"$(SRCROOT)/Smore.embeddedframework\"",
 				);
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
@@ -3452,6 +3479,7 @@
 					"\"$(SRCROOT)/../StackMob_iOS/external/libraries\"",
 					"\"$(SRCROOT)/HenryAndHisHeadlamp\"",
 					"\"$(SRCROOT)\"",
+					"\"$(SRCROOT)/Smore.embeddedframework\"",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = HenryAndHisHeadlamp/Prefix.pch;

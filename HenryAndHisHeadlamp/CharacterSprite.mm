@@ -24,11 +24,11 @@
     if(self.isShape!=compareObject.isShape){
         return NO;
     }
-    CCLOG(@"Self is shape: %i", self.isShape);
-    CCLOG(@"CompareObject is shape: %i", self.isShape);
+//    CCLOG(@"Self is shape: %i", self.isShape);
+//    CCLOG(@"CompareObject is shape: %i", self.isShape);
     if(!self.isShape){
-        CCLOG(@"Self is characterString: %@", self.characterString);
-        CCLOG(@"CompareObject is characterString: %@", self.characterString);
+//        CCLOG(@"Self is characterString: %@", self.characterString);
+//        CCLOG(@"CompareObject is characterString: %@", self.characterString);
         if(![self.characterString isEqualToString:compareObject.characterString]){
             return NO;
         }else{
@@ -89,6 +89,10 @@
         CCLOG(@"Bounding Box: %f, %f, %f, %f", [characterLabel boundingBox].origin.x, [characterLabel boundingBox].origin.y, [characterLabel boundingBox].size.width,[characterLabel boundingBox].size.height);
         self.characterString=selectedCharacter;
         self.isShape=NO;
+        if (UI_USER_INTERFACE_IDIOM() != UIUserInterfaceIdiomPad) { 
+            CGSize size = [[CCDirector sharedDirector] winSizeInPixels];
+            self.scale=size.width/1024.0f;
+        }
     }
     return self;
 }
@@ -164,8 +168,8 @@
     
     if (UI_USER_INTERFACE_IDIOM() != UIUserInterfaceIdiomPad) { 
         CGSize size = [[CCDirector sharedDirector] winSize];
-        [newCharacter setScaleX:size.width/1024.0f];
-        [newCharacter setScaleY:size.height/768.0f];
+        [newCharacter setScale:size.width/1024.0f];
+//        [newCharacter setScaleY:size.height/768.0f];
     }
     return newCharacter;
 }
@@ -275,7 +279,7 @@
 //    }
     
     CGPoint newLocation=ccp((xCoord+[self boundingBox].size.width/2), (yCoord-[self boundingBox].size.height/2));
-    CCLOG(@"New Point: %f, %f", newLocation.x, newLocation.y);
+//    CCLOG(@"New Point: %f, %f", newLocation.x, newLocation.y);
     self.position=newLocation;
     
 //    NSLog(@"New Location: %f,%f", newLocation.x,newLocation.y);
@@ -303,9 +307,9 @@
 #elif SMART
             while (CGRectIntersectsRect([self boundingBox], [checkSprite boundingBox])) { 
 #endif
-//                CCLOG(@"Conflicts with: %@", checkSprite.characterString);
-//                 CCLOG(@"Self Box: %f, %f, %f, %f", [self boundingBox].origin.x, [self boundingBox].origin.y, [self boundingBox].size.width,[self boundingBox].size.height);
-//                 CCLOG(@"Bounding Box: %f, %f, %f, %f", [checkSprite boundingBox].origin.x, [checkSprite boundingBox].origin.y, [checkSprite boundingBox].size.width,[checkSprite boundingBox].size.height);
+                CCLOG(@"Conflicts with: %@", checkSprite.characterString);
+                 CCLOG(@"Self Box: %f, %f, %f, %f", [self boundingBox].origin.x, [self boundingBox].origin.y, [self boundingBox].size.width,[self boundingBox].size.height);
+                 CCLOG(@"Bounding Box: %f, %f, %f, %f", [checkSprite boundingBox].origin.x, [checkSprite boundingBox].origin.y, [checkSprite boundingBox].size.width,[checkSprite boundingBox].size.height);
                  [self setRandomPosition:playableArea checkOtherSprites:aryOtherSprites];   
             }
         }

@@ -177,25 +177,11 @@
          continueAfterRunningActions = "No"
          isPathRelative = "1"
          filePath = "HenryAndHisHeadlamp/GameLayer.mm"
-         timestampString = "342735240.788271"
+         timestampString = "342814982.813027"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "249"
-         endingLineNumber = "249"
-         landmarkName = "-initWithGameMode:"
-         landmarkType = "5">
-      </FileBreakpoint>
-      <FileBreakpoint
-         shouldBeEnabled = "No"
-         ignoreCount = "0"
-         continueAfterRunningActions = "No"
-         isPathRelative = "1"
-         filePath = "HenryAndHisHeadlamp/GameLayer.mm"
-         timestampString = "342764402.229428"
-         startingColumnNumber = "9223372036854775807"
-         endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "924"
-         endingLineNumber = "924"
+         startingLineNumber = "946"
+         endingLineNumber = "946"
          landmarkName = "-showTargetLabel"
          landmarkType = "5">
       </FileBreakpoint>
@@ -247,11 +233,11 @@
          continueAfterRunningActions = "No"
          isPathRelative = "1"
          filePath = "HenryAndHisHeadlamp/GameLayer.mm"
-         timestampString = "342735240.788271"
+         timestampString = "342808478.942642"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "644"
-         endingLineNumber = "644"
+         startingLineNumber = "665"
+         endingLineNumber = "665"
          landmarkName = "-cdAudioSourceDidFinishPlaying:"
          landmarkType = "5">
       </FileBreakpoint>
@@ -261,12 +247,54 @@
          continueAfterRunningActions = "No"
          isPathRelative = "1"
          filePath = "HenryAndHisHeadlamp/GameLayer.mm"
-         timestampString = "342735240.788271"
+         timestampString = "342808478.942642"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "638"
-         endingLineNumber = "638"
+         startingLineNumber = "659"
+         endingLineNumber = "659"
          landmarkName = "-cdAudioSourceFileDidChange:"
+         landmarkType = "5">
+      </FileBreakpoint>
+      <FileBreakpoint
+         shouldBeEnabled = "No"
+         ignoreCount = "0"
+         continueAfterRunningActions = "No"
+         isPathRelative = "1"
+         filePath = "HenryAndHisHeadlamp/GameLayer.mm"
+         timestampString = "342808708.258523"
+         startingColumnNumber = "9223372036854775807"
+         endingColumnNumber = "9223372036854775807"
+         startingLineNumber = "552"
+         endingLineNumber = "552"
+         landmarkName = "-initWithGameMode:"
+         landmarkType = "5">
+      </FileBreakpoint>
+      <FileBreakpoint
+         shouldBeEnabled = "No"
+         ignoreCount = "0"
+         continueAfterRunningActions = "No"
+         isPathRelative = "1"
+         filePath = "HenryAndHisHeadlamp/GameLayer.mm"
+         timestampString = "342808710.144196"
+         startingColumnNumber = "9223372036854775807"
+         endingColumnNumber = "9223372036854775807"
+         startingLineNumber = "553"
+         endingLineNumber = "553"
+         landmarkName = "-initWithGameMode:"
+         landmarkType = "5">
+      </FileBreakpoint>
+      <FileBreakpoint
+         shouldBeEnabled = "No"
+         ignoreCount = "0"
+         continueAfterRunningActions = "No"
+         isPathRelative = "1"
+         filePath = "HenryAndHisHeadlamp/CharacterSprite.mm"
+         timestampString = "342814157.944204"
+         startingColumnNumber = "9223372036854775807"
+         endingColumnNumber = "9223372036854775807"
+         startingLineNumber = "146"
+         endingLineNumber = "146"
+         landmarkName = "-getChildRect"
          landmarkType = "5">
       </FileBreakpoint>
    </FileBreakpoints>

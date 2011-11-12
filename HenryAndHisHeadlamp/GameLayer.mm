@@ -244,11 +244,11 @@ int kNumObjects=7;
 
                     CharacterSprite *randomSprite=[[[CharacterSprite alloc] initWithString:randomCharacter] autorelease];
                     CCLOG(@"randomSprite before scale Box: %f, %f, %f, %f", randomSprite.boundingBox.origin.x, randomSprite.boundingBox.origin.y, randomSprite.boundingBox.size.width,randomSprite.boundingBox.size.height);
-                    if (UI_USER_INTERFACE_IDIOM() != UIUserInterfaceIdiomPad) { 
-                        CGSize winSizeInPixels=[[CCDirector sharedDirector] winSizeInPixels];
-                        [randomSprite setScale:winSizeInPixels.width/1024.0f];
-//                        [randomSprite setScaleY:size.height/768.0f];
-                    }
+//                    if (UI_USER_INTERFACE_IDIOM() != UIUserInterfaceIdiomPad) { 
+//                        CGSize winSizeInPixels=[[CCDirector sharedDirector] winSizeInPixels];
+////                        [randomSprite setScale:winSizeInPixels.width/1024.0f];
+////                        [randomSprite setScaleY:size.height/768.0f];
+//                    }
                      CCLOG(@"randomSprite after scale : %f, %f, %f, %f", randomSprite.boundingBox.origin.x, randomSprite.boundingBox.origin.y, randomSprite.boundingBox.size.width,randomSprite.boundingBox.size.height);
                     
                     if(_arrCharacters.count<1){
@@ -264,12 +264,17 @@ int kNumObjects=7;
 //                        CCLOG(@"Random Sprite Size: %f, %f", randomSprite.contentSize.width, randomSprite.contentSize.height);
 //                        [randomSprite setRandomPosition:playableAreaSize];
                         [randomSprite setRandomPosition:playableAreaSize checkOtherSprites:_arrCharacters];
-//                        while(CGRectIntersectsRect(statusBarSprite.boundingBox, [randomSprite getChildRect]) 
-//                              || CGRectIntersectsRect(henryBody.boundingBox, [randomSprite getChildRect]) 
-//                              || CGRectIntersectsRect(_henryHead.boundingBox, [randomSprite getChildRect])){
-//                            CCLOG(@"Intersect other RECT2");
-//                            [randomSprite setRandomPosition:playableAreaSize checkOtherSprites:_arrCharacters];
-//                        }
+                        int loopCount=0;
+                        while(CGRectIntersectsRect(statusBarSprite.boundingBox, [randomSprite getChildRect]) 
+                              || CGRectIntersectsRect(henryBody.boundingBox, [randomSprite getChildRect]) 
+                              || CGRectIntersectsRect(_henryHead.boundingBox, [randomSprite getChildRect])){
+                            CCLOG(@"Intersect other RECT2");
+                            [randomSprite setRandomPosition:playableAreaSize checkOtherSprites:_arrCharacters];
+                            loopCount++;
+                            if(loopCount>100){
+                                break;
+                            }
+                        }
                     }
 //                    for (CCSprite *child in randomSprite.children) {
 //                        child.color=ccc3(118,188,241);
@@ -300,10 +305,10 @@ int kNumObjects=7;
                     
                     CharacterSprite *randomSprite=[[[CharacterSprite alloc] initWithString:randomCharacter] autorelease];
                     
-                    if (UI_USER_INTERFACE_IDIOM() != UIUserInterfaceIdiomPad) { 
-                        CGSize winSizeInPixels=[[CCDirector sharedDirector] winSizeInPixels];
-                        [randomSprite setScale:winSizeInPixels.width/1024.0f];
-                    }
+//                    if (UI_USER_INTERFACE_IDIOM() != UIUserInterfaceIdiomPad) { 
+//                        CGSize winSizeInPixels=[[CCDirector sharedDirector] winSizeInPixels];
+//                        [randomSprite setScale:winSizeInPixels.width/1024.0f];
+//                    }
                     if(_arrCharacters.count<1){
                         [randomSprite setRandomPosition:playableAreaSize];
                         while(CGRectIntersectsRect(statusBarSprite.boundingBox, [randomSprite getChildRect]) 
@@ -314,11 +319,16 @@ int kNumObjects=7;
                         }
                     }else{
                         [randomSprite setRandomPosition:playableAreaSize checkOtherSprites:_arrCharacters];
+                        int loopCount=0;
                         while(CGRectIntersectsRect(statusBarSprite.boundingBox, [randomSprite getChildRect]) 
                               || CGRectIntersectsRect(henryBody.boundingBox, [randomSprite getChildRect]) 
                               || CGRectIntersectsRect(_henryHead.boundingBox, [randomSprite getChildRect])){
                             CCLOG(@"Intersect other RECT2");
                             [randomSprite setRandomPosition:playableAreaSize checkOtherSprites:_arrCharacters];
+                            loopCount++;
+                            if(loopCount>100){
+                                break;
+                            }
                         }
                     }
 //                    for (CCSprite *child in randomSprite.children) {
@@ -347,10 +357,10 @@ int kNumObjects=7;
                         CCLOG(@"Random Character: %@", randomCharacter);
                         
                         CharacterSprite *randomSprite=[[[CharacterSprite alloc] initWithString:randomCharacter] autorelease];
-                        if (UI_USER_INTERFACE_IDIOM() != UIUserInterfaceIdiomPad) { 
-                            CGSize winSizeInPixels=[[CCDirector sharedDirector] winSizeInPixels];
-                            [randomSprite setScale:winSizeInPixels.width/1024.0f];
-                        }
+//                        if (UI_USER_INTERFACE_IDIOM() != UIUserInterfaceIdiomPad) { 
+//                            CGSize winSizeInPixels=[[CCDirector sharedDirector] winSizeInPixels];
+//                            [randomSprite setScale:winSizeInPixels.width/1024.0f];
+//                        }
                         if(_arrCharacters.count<1){
                             [randomSprite setRandomPosition:playableAreaSize];
                             while(CGRectIntersectsRect(statusBarSprite.boundingBox, [randomSprite getChildRect]) 
@@ -361,11 +371,16 @@ int kNumObjects=7;
                             }
                         }else{
                             [randomSprite setRandomPosition:playableAreaSize checkOtherSprites:_arrCharacters];
+                            int loopCount=0;
                             while(CGRectIntersectsRect(statusBarSprite.boundingBox, [randomSprite getChildRect]) 
                                   || CGRectIntersectsRect(henryBody.boundingBox, [randomSprite getChildRect]) 
                                   || CGRectIntersectsRect(_henryHead.boundingBox, [randomSprite getChildRect])){
                                 CCLOG(@"Intersect other RECT2");
                                 [randomSprite setRandomPosition:playableAreaSize checkOtherSprites:_arrCharacters];
+                                loopCount++;
+                                if(loopCount>100){
+                                    break;
+                                }
                             }
                         }
 //                        for (CCSprite *child in randomSprite.children) {
@@ -405,11 +420,16 @@ int kNumObjects=7;
                         }
                     }else{
                         [randomSprite setRandomPosition:playableAreaSize checkOtherSprites:_arrCharacters];
+                        int loopCount=0;
                         while(CGRectIntersectsRect(statusBarSprite.boundingBox, randomSprite.boundingBox) 
                               || CGRectIntersectsRect(henryBody.boundingBox, randomSprite.boundingBox) 
                               || CGRectIntersectsRect(_henryHead.boundingBox, randomSprite.boundingBox)){
                             CCLOG(@"Intersect other RECT2");
                             [randomSprite setRandomPosition:playableAreaSize checkOtherSprites:_arrCharacters];
+                            loopCount++;
+                            if(loopCount>100){
+                                break;
+                            }
                         }
                     }
                     
@@ -504,8 +524,8 @@ int kNumObjects=7;
                             int randomColor=(arc4random() % kCharacterColorMAX);
                             randomSprite=[CharacterSprite characterOfType:randomCharacter withColor:randomColor];
                             while ([aryCharacterTypes containsObject:randomSprite]){
-                                int randomCharacter=arc4random() % MAX_CHARACTERS+1;
-                                int randomColor=(arc4random() % kCharacterColorMAX)+1;
+                                int randomCharacter=arc4random() % MAX_CHARACTERS;
+                                int randomColor=(arc4random() % kCharacterColorMAX);
                                 randomSprite=[CharacterSprite characterOfType:randomCharacter withColor:randomColor];
                             }
 
@@ -517,18 +537,19 @@ int kNumObjects=7;
                     [aryCharacterTypes addObject:randomSprite];
                     if(_arrCharacters.count<1){
                         [randomSprite setRandomPosition:playableAreaSize];
-                        while(CGRectIntersectsRect(statusBarSprite.boundingBox, [randomSprite getChildRect]) 
-                              || CGRectIntersectsRect(henryBody.boundingBox, [randomSprite getChildRect]) 
-                              || CGRectIntersectsRect(_henryHead.boundingBox, [randomSprite getChildRect])){
+                        while(CGRectIntersectsRect(statusBarSprite.boundingBox, [randomSprite boundingBox]) 
+                              || CGRectIntersectsRect(henryBody.boundingBox, [randomSprite boundingBox]) 
+                              || CGRectIntersectsRect(_henryHead.boundingBox, [randomSprite boundingBox])){
                             CCLOG(@"Intersect other RECT1");
                             [randomSprite setRandomPosition:playableAreaSize];
                         }
                     }else{
                         [randomSprite setRandomPosition:playableAreaSize checkOtherSprites:_arrCharacters];
-                        while(CGRectIntersectsRect(statusBarSprite.boundingBox, [randomSprite getChildRect]) 
-                              || CGRectIntersectsRect(henryBody.boundingBox, [randomSprite getChildRect]) 
-                              || CGRectIntersectsRect(_henryHead.boundingBox, [randomSprite getChildRect])){
+                        while(CGRectIntersectsRect(statusBarSprite.boundingBox, [randomSprite boundingBox]) 
+                              || CGRectIntersectsRect(henryBody.boundingBox, [randomSprite boundingBox]) 
+                              || CGRectIntersectsRect(_henryHead.boundingBox, [randomSprite boundingBox])){
                             CCLOG(@"Intersect other RECT2");
+//                            CCLOG(@"Bounding Box: %@", randomSprite.boundingBox);
                             [randomSprite setRandomPosition:playableAreaSize checkOtherSprites:_arrCharacters];
                         }
                     }
@@ -915,7 +936,8 @@ int kNumObjects=7;
     if(!_targetCharacter.isShape){
         if (UI_USER_INTERFACE_IDIOM() != UIUserInterfaceIdiomPad) { 
             float scale = MAX(targetSpriteCopy.boundingBox.size.height/usableHUDHeight, targetSpriteCopy.boundingBox.size.width/usableHUDWidth);
-              [targetSpriteCopy setScale:1/scale * 1.4];  
+                
+              [targetSpriteCopy setScale:(1/scale * 1.4 * [CCDirector sharedDirector].winSizeInPixels.width/968)];  
         }else{ 
             float scale = MAX([targetSpriteCopy boundingBox].size.height/usableHUDHeight, [targetSpriteCopy boundingBox].size.width/usableHUDWidth);
             [targetSpriteCopy setScale:1/scale * 1.4];
@@ -925,7 +947,7 @@ int kNumObjects=7;
             CCLOG(@"HEIGHT RATIO: %f",targetSpriteCopy.boundingBox.size.height/usableHUDHeight);
             CCLOG(@"WIDTH RATIO: %f",targetSpriteCopy.boundingBox.size.width/usableHUDWidth);
             float scale = MAX(targetSpriteCopy.boundingBox.size.height/usableHUDHeight, targetSpriteCopy.boundingBox.size.width/usableHUDWidth);
-            [targetSpriteCopy setScale:1.0f/scale];  
+            [targetSpriteCopy setScale:(1.0f/scale)];  
             CCLOG(@"SCALE: %f", targetSpriteCopy.scale);
         }else{ 
             float scale = MAX([targetSpriteCopy boundingBox].size.height/usableHUDHeight, [targetSpriteCopy boundingBox].size.width/usableHUDWidth);

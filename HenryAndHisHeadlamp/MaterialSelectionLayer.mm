@@ -123,7 +123,7 @@
                                        selector:@selector(startGame:)];
         playAllSprite.anchorPoint=ccp(0,0);
         playAllSprite.scale=.8616;
-        playAllSprite.position=ccp(size.width * 210/1024,size.height - ( size.height * 620/768));
+        playAllSprite.position=ccp(size.width * 200/1024,size.height - ( size.height * 640/768));
         
         materialMenu=[CCMenu menuWithItems:ABCcap,abcLower,numberSprite,shapeSprite,playAllSprite, nil];
        materialMenu.anchorPoint=ccp(0,0);

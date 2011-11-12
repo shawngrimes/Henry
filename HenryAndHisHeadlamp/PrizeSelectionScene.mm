@@ -145,8 +145,8 @@ float _userTime=0.0;
                 [prizeMenu addChild:prizeIconItem];
             }
             if(hasPrize==YES){
-                if([prizesWonSet count]<15)
-                    prizeIconItem.isEnabled=FALSE;
+//                if([prizesWonSet count]<15)
+//                    prizeIconItem.isEnabled=FALSE;
                 
                 CCSprite *checkMark=[CCSprite spriteWithSpriteFrameName:@"CheckMark.png"];
                 [prizeIconItem addChild:checkMark];

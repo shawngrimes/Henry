@@ -32,6 +32,16 @@ enum {
     }
 }
 
+-(float) pixelsToMeterMouse{
+    if(UI_USER_INTERFACE_IDIOM()==UIUserInterfaceIdiomPad){
+        return 32.0f;
+    }else{
+        return 16.0f;
+//        return (CC_CONTENT_SCALE_FACTOR() * 16.0f);
+        //        return 16.0f;
+    }
+}
+
 +(CCScene *) scene
 {
 	// 'scene' is an autorelease object.
@@ -108,10 +118,10 @@ enum {
 		
 //		uint32 flags = 0;
 //		flags += b2DebugDraw::e_shapeBit;
-//        //		flags += b2DebugDraw::e_jointBit;
+//        		flags += b2DebugDraw::e_jointBit;
 //        //		flags += b2DebugDraw::e_aabbBit;
 //        //		flags += b2DebugDraw::e_pairBit;
-//        //		flags += b2DebugDraw::e_centerOfMassBit;
+//        		flags += b2DebugDraw::e_centerOfMassBit;
 //		m_debugDraw->SetFlags(flags);		
         
         // Create edges around the entire screen
@@ -176,7 +186,7 @@ enum {
                     bodyStart=ccp(winSize.width * 889/1024,winSize.height * 70/768);
                     break;
                 case 6:
-                    bodyStart=ccp(winSize.width * 839/1024,winSize.height * 70/768);
+                    bodyStart=ccp(winSize.width * 839/1024,winSize.height * 80/768);
                     break;
                 case 7:
                     bodyStart=ccp(winSize.width * 840/1024,winSize.height * 220/768);
@@ -359,7 +369,8 @@ enum {
     UITouch *myTouch = [touches anyObject];
     CGPoint location = [myTouch locationInView:[myTouch view]];
     location = [[CCDirector sharedDirector] convertToGL:location];
-    b2Vec2 locationWorld = b2Vec2(location.x/[self pixelsToMeterRatio], location.y/[self pixelsToMeterRatio]);
+//    b2Vec2 locationWorld = b2Vec2(location.x/[self pixelsToMeterRatio], location.y/[self pixelsToMeterRatio]);
+    b2Vec2 locationWorld = b2Vec2(location.x/[self pixelsToMeterMouse], location.y/[self pixelsToMeterMouse]);
     for(b2Body *b = _world->GetBodyList(); b; b=b->GetNext()) {    
         for(b2Fixture *f = b->GetFixtureList(); f; f=f->GetNext()){
             if(f->TestPoint(locationWorld)){
@@ -384,7 +395,8 @@ enum {
     UITouch *myTouch = [touches anyObject];
     CGPoint location = [myTouch locationInView:[myTouch view]];
     location = [[CCDirector sharedDirector] convertToGL:location];
-    b2Vec2 locationWorld = b2Vec2(location.x/[self pixelsToMeterRatio], location.y/[self pixelsToMeterRatio]);
+//    b2Vec2 locationWorld = b2Vec2(location.x/[self pixelsToMeterRatio], location.y/[self pixelsToMeterRatio]);
+    b2Vec2 locationWorld = b2Vec2(location.x/[self pixelsToMeterMouse], location.y/[self pixelsToMeterMouse]);
     
     _mouseJoint->SetTarget(locationWorld);
     

@@ -29,5 +29,6 @@
 -(id) initWithTime:(float)userTime andGameModeType:(GameModeType) gameMode;
 -(void)withTime:(float)userTime;
 -(void) showPrizes;
+-(void)speakPrize;
 
 @end

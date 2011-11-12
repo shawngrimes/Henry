@@ -15,6 +15,7 @@
 #import "FlurryAnalytics.h"
 #import "TestFlight.h"
 #import "ScoresLayer.h"
+#import "CDAudioManager.h"
 
 typedef enum {
     kGameModeNone=0,
@@ -25,7 +26,7 @@ typedef enum {
     kGameModeSmartAll,
 } GameModeType;
 
-@interface GameLayer : CCLayer {
+@interface GameLayer : CCLayer <CDLongAudioSourceDelegate>{
     CCSprite *_headLampLight;
     CCSprite *_henryHead;
     NSMutableArray *_arrCharacters;
@@ -34,12 +35,18 @@ typedef enum {
     CCLabelBMFont *_timerLabel;
     float gameTimer;
     GameModeType gameMode;
+    BOOL _isEffectPlaying;
+    CDSoundSource *_effectSpeech;
 }
 
 @property (nonatomic, retain) NSMutableArray *arrCharacters;
+@property (nonatomic, retain) CDSoundSource *effectSpeech;
 
 +(CCScene *) sceneWithGameMode:(GameModeType)selectedGameMode;
 -(id) initWithGameMode:(GameModeType) selectedGameMode;
 -(void)showTargetLabel;
 -(void)gameOver;
+-(float)getDelayForStringFound:(CharacterSprite* )selectedCharacter;
+-(void)removeFireworks;
+
 @end

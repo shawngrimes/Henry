@@ -8,22 +8,74 @@
 
 #import "CharacterSprite.h"
 #import "CCSpriteExtension.h"
+#import "SimpleAudioEngine.h"
+#import "CDAudioManager.h"
 
 @implementation CharacterSprite
 @synthesize description=_description;
 @synthesize isTarget=_isTarget;
 @synthesize isShape=_isShape;
 @synthesize characterString;
+@synthesize shapeColor;
+@synthesize shape;
 
 - (BOOL)isEqual:(id)anObject{
     CharacterSprite *compareObject=(CharacterSprite *)anObject;
     if(self.isShape!=compareObject.isShape){
         return NO;
     }
-    if(self.characterString!=compareObject.characterString){
+    CCLOG(@"Self is shape: %i", self.isShape);
+    CCLOG(@"CompareObject is shape: %i", self.isShape);
+    if(!self.isShape){
+        CCLOG(@"Self is characterString: %@", self.characterString);
+        CCLOG(@"CompareObject is characterString: %@", self.characterString);
+        if(![self.characterString isEqualToString:compareObject.characterString]){
+            return NO;
+        }else{
+            return YES;
+        }
+    }
+    
+    if(self.color.r!=compareObject.color.r || self.color.g!=compareObject.color.g || self.color.b!=compareObject.color.b){
         return NO;
     }
-    return [super isEqual:anObject];
+    return YES;
+}
+
+-(NSString *)descriptorFile{
+    unichar aChar=[self.characterString characterAtIndex:0];
+    NSCharacterSet* theCaps = [NSCharacterSet uppercaseLetterCharacterSet];
+    if([theCaps characterIsMember:aChar]){
+        return @"Henry_Capital.caf";
+    }
+    
+    NSCharacterSet *theLower=[NSCharacterSet lowercaseLetterCharacterSet];
+    if([theLower characterIsMember:aChar]){
+        return @"Henry_Lowercase.caf";
+    }
+    
+    NSCharacterSet *theNumbers=[NSCharacterSet decimalDigitCharacterSet];
+    if([theNumbers characterIsMember:aChar]){
+        return @"Henry_Number.caf";
+    }
+    return @"";
+}
+
+-(NSString *)speakString{
+    
+    NSString *effectString=[NSString stringWithFormat:@"Henry_%@.caf",[self.characterString uppercaseString]];
+    return effectString;
+    
+}
+
+-(NSString *)speakColor{
+    NSString *effectString=[NSString stringWithFormat:@"Henry_%@.caf",self.shapeColor];
+    return effectString;
+}
+
+-(NSString *)speakShape{
+    NSString *effectString=[NSString stringWithFormat:@"Henry_%@.caf",self.shape];
+    return effectString;
 }
 
 -(id) initWithString:(NSString *)selectedCharacter{
@@ -59,6 +111,7 @@
     if((self=[super initWithSpriteFrameName:spriteFrameName]))
     {
         self.isShape=YES;
+
 //        self.anchorPoint=ccp(0.5,0);
     }
     
@@ -126,7 +179,7 @@
     ccColor3B spriteColor;
 #ifdef HALLOWEEN
 #elif SMART
-    frameName=[NSString stringWithFormat:@"SmartHenry_Shape_%i.png",typeOfCharacter];
+    frameName=[NSString stringWithFormat:@"SmartHenry_Shape_%i.png",typeOfCharacter+1];
     switch (typeOfCharacter) {
         case kCharacterTypeCircle:
             shapeName=@"Circle";
@@ -200,6 +253,8 @@
     CharacterSprite *newCharacter=[[[CharacterSprite alloc] initWithSpriteFrameName:[NSString stringWithFormat:@"%@",frameName]] autorelease];
     newCharacter.color=spriteColor;
     newCharacter.description=[NSString stringWithFormat:@"%@ %@", characterColor, shapeName];
+    newCharacter.shapeColor=characterColor;
+    newCharacter.shape=shapeName;    
     
     return newCharacter;
 }

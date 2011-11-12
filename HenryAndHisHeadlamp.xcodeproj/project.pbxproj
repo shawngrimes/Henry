@@ -236,14 +236,9 @@
 		290A3117144D2EC800BBFBA3 /* ccUtils.c in Sources */ = {isa = PBXBuildFile; fileRef = 2986CB16141932C9002DA1C8 /* ccUtils.c */; };
 		290A3118144D2F4600BBFBA3 /* buttonsAndResources-Halloween.plist in Resources */ = {isa = PBXBuildFile; fileRef = 29B94FDF1436CCBD00885326 /* buttonsAndResources-Halloween.plist */; };
 		290A3119144D2F4600BBFBA3 /* buttonsAndResources-Halloween.png in Resources */ = {isa = PBXBuildFile; fileRef = 29B94FE01436CCBD00885326 /* buttonsAndResources-Halloween.png */; };
-		290A311A144D2F4700BBFBA3 /* buttonsAndResources-Halloween.plist in Resources */ = {isa = PBXBuildFile; fileRef = 29B94FDF1436CCBD00885326 /* buttonsAndResources-Halloween.plist */; };
-		290A311B144D2F4700BBFBA3 /* buttonsAndResources-Halloween.png in Resources */ = {isa = PBXBuildFile; fileRef = 29B94FE01436CCBD00885326 /* buttonsAndResources-Halloween.png */; };
 		290A311C144D2FC100BBFBA3 /* Henry_Spooky_Story_Scene.png in Resources */ = {isa = PBXBuildFile; fileRef = 29F23A5A143A5BCA00673AEE /* Henry_Spooky_Story_Scene.png */; };
-		290A311D144D2FC100BBFBA3 /* Henry_Spooky_Story_Scene.png in Resources */ = {isa = PBXBuildFile; fileRef = 29F23A5A143A5BCA00673AEE /* Henry_Spooky_Story_Scene.png */; };
 		290A311E144D2FDD00BBFBA3 /* Henry_Spooky_Speech1.png in Resources */ = {isa = PBXBuildFile; fileRef = 29B94FDB1436C27B00885326 /* Henry_Spooky_Speech1.png */; };
 		290A311F144D2FDD00BBFBA3 /* Henry_Spooky_Speech2.png in Resources */ = {isa = PBXBuildFile; fileRef = 29B94FDC1436C27B00885326 /* Henry_Spooky_Speech2.png */; };
-		290A3120144D2FDD00BBFBA3 /* Henry_Spooky_Speech1.png in Resources */ = {isa = PBXBuildFile; fileRef = 29B94FDB1436C27B00885326 /* Henry_Spooky_Speech1.png */; };
-		290A3121144D2FDD00BBFBA3 /* Henry_Spooky_Speech2.png in Resources */ = {isa = PBXBuildFile; fileRef = 29B94FDC1436C27B00885326 /* Henry_Spooky_Speech2.png */; };
 		290A3122144D304400BBFBA3 /* Corben-64.fnt in Resources */ = {isa = PBXBuildFile; fileRef = 29BBEE8F142BB94600B44E52 /* Corben-64.fnt */; };
 		290A3123144D304400BBFBA3 /* Corben-64.png in Resources */ = {isa = PBXBuildFile; fileRef = 29BBEE90142BB94600B44E52 /* Corben-64.png */; };
 		290A3124144D304500BBFBA3 /* Corben-64.fnt in Resources */ = {isa = PBXBuildFile; fileRef = 29BBEE8F142BB94600B44E52 /* Corben-64.fnt */; };
@@ -535,6 +530,154 @@
 		297B755F145F68E6001EFCCC /* SpeechBubbles.plist in Resources */ = {isa = PBXBuildFile; fileRef = 297B7554145F68E5001EFCCC /* SpeechBubbles.plist */; };
 		297B7560145F68E6001EFCCC /* SpeechBubbles.pvr.gz in Resources */ = {isa = PBXBuildFile; fileRef = 297B7555145F68E5001EFCCC /* SpeechBubbles.pvr.gz */; };
 		297B7561145F68E6001EFCCC /* SpeechBubbles.pvr.gz in Resources */ = {isa = PBXBuildFile; fileRef = 297B7555145F68E5001EFCCC /* SpeechBubbles.pvr.gz */; };
+		298410F5146DEF36006FC977 /* Henry_1.caf in Resources */ = {isa = PBXBuildFile; fileRef = 298410AB146DEF36006FC977 /* Henry_1.caf */; };
+		298410F6146DEF36006FC977 /* Henry_1.caf in Resources */ = {isa = PBXBuildFile; fileRef = 298410AB146DEF36006FC977 /* Henry_1.caf */; };
+		298410F7146DEF36006FC977 /* Henry_2.caf in Resources */ = {isa = PBXBuildFile; fileRef = 298410AC146DEF36006FC977 /* Henry_2.caf */; };
+		298410F8146DEF36006FC977 /* Henry_2.caf in Resources */ = {isa = PBXBuildFile; fileRef = 298410AC146DEF36006FC977 /* Henry_2.caf */; };
+		298410F9146DEF36006FC977 /* Henry_3.caf in Resources */ = {isa = PBXBuildFile; fileRef = 298410AD146DEF36006FC977 /* Henry_3.caf */; };
+		298410FA146DEF36006FC977 /* Henry_3.caf in Resources */ = {isa = PBXBuildFile; fileRef = 298410AD146DEF36006FC977 /* Henry_3.caf */; };
+		298410FB146DEF36006FC977 /* Henry_4.caf in Resources */ = {isa = PBXBuildFile; fileRef = 298410AE146DEF36006FC977 /* Henry_4.caf */; };
+		298410FC146DEF36006FC977 /* Henry_4.caf in Resources */ = {isa = PBXBuildFile; fileRef = 298410AE146DEF36006FC977 /* Henry_4.caf */; };
+		298410FD146DEF36006FC977 /* Henry_5.caf in Resources */ = {isa = PBXBuildFile; fileRef = 298410AF146DEF36006FC977 /* Henry_5.caf */; };
+		298410FE146DEF36006FC977 /* Henry_5.caf in Resources */ = {isa = PBXBuildFile; fileRef = 298410AF146DEF36006FC977 /* Henry_5.caf */; };
+		298410FF146DEF36006FC977 /* Henry_6.caf in Resources */ = {isa = PBXBuildFile; fileRef = 298410B0146DEF36006FC977 /* Henry_6.caf */; };
+		29841100146DEF36006FC977 /* Henry_6.caf in Resources */ = {isa = PBXBuildFile; fileRef = 298410B0146DEF36006FC977 /* Henry_6.caf */; };
+		29841101146DEF36006FC977 /* Henry_7.caf in Resources */ = {isa = PBXBuildFile; fileRef = 298410B1146DEF36006FC977 /* Henry_7.caf */; };
+		29841102146DEF36006FC977 /* Henry_7.caf in Resources */ = {isa = PBXBuildFile; fileRef = 298410B1146DEF36006FC977 /* Henry_7.caf */; };
+		29841103146DEF36006FC977 /* Henry_8.caf in Resources */ = {isa = PBXBuildFile; fileRef = 298410B2146DEF36006FC977 /* Henry_8.caf */; };
+		29841104146DEF36006FC977 /* Henry_8.caf in Resources */ = {isa = PBXBuildFile; fileRef = 298410B2146DEF36006FC977 /* Henry_8.caf */; };
+		29841105146DEF36006FC977 /* Henry_9.caf in Resources */ = {isa = PBXBuildFile; fileRef = 298410B3146DEF36006FC977 /* Henry_9.caf */; };
+		29841106146DEF36006FC977 /* Henry_9.caf in Resources */ = {isa = PBXBuildFile; fileRef = 298410B3146DEF36006FC977 /* Henry_9.caf */; };
+		29841107146DEF36006FC977 /* Henry_10.caf in Resources */ = {isa = PBXBuildFile; fileRef = 298410B4146DEF36006FC977 /* Henry_10.caf */; };
+		29841108146DEF36006FC977 /* Henry_10.caf in Resources */ = {isa = PBXBuildFile; fileRef = 298410B4146DEF36006FC977 /* Henry_10.caf */; };
+		29841109146DEF36006FC977 /* Henry_11.caf in Resources */ = {isa = PBXBuildFile; fileRef = 298410B5146DEF36006FC977 /* Henry_11.caf */; };
+		2984110A146DEF36006FC977 /* Henry_11.caf in Resources */ = {isa = PBXBuildFile; fileRef = 298410B5146DEF36006FC977 /* Henry_11.caf */; };
+		2984110B146DEF36006FC977 /* Henry_12.caf in Resources */ = {isa = PBXBuildFile; fileRef = 298410B6146DEF36006FC977 /* Henry_12.caf */; };
+		2984110C146DEF36006FC977 /* Henry_12.caf in Resources */ = {isa = PBXBuildFile; fileRef = 298410B6146DEF36006FC977 /* Henry_12.caf */; };
+		2984110D146DEF36006FC977 /* Henry_13.caf in Resources */ = {isa = PBXBuildFile; fileRef = 298410B7146DEF36006FC977 /* Henry_13.caf */; };
+		2984110E146DEF36006FC977 /* Henry_13.caf in Resources */ = {isa = PBXBuildFile; fileRef = 298410B7146DEF36006FC977 /* Henry_13.caf */; };
+		2984110F146DEF36006FC977 /* Henry_14.caf in Resources */ = {isa = PBXBuildFile; fileRef = 298410B8146DEF36006FC977 /* Henry_14.caf */; };
+		29841110146DEF36006FC977 /* Henry_14.caf in Resources */ = {isa = PBXBuildFile; fileRef = 298410B8146DEF36006FC977 /* Henry_14.caf */; };
+		29841111146DEF36006FC977 /* Henry_15.caf in Resources */ = {isa = PBXBuildFile; fileRef = 298410B9146DEF36006FC977 /* Henry_15.caf */; };
+		29841112146DEF36006FC977 /* Henry_15.caf in Resources */ = {isa = PBXBuildFile; fileRef = 298410B9146DEF36006FC977 /* Henry_15.caf */; };
+		29841113146DEF36006FC977 /* Henry_16.caf in Resources */ = {isa = PBXBuildFile; fileRef = 298410BA146DEF36006FC977 /* Henry_16.caf */; };
+		29841114146DEF36006FC977 /* Henry_16.caf in Resources */ = {isa = PBXBuildFile; fileRef = 298410BA146DEF36006FC977 /* Henry_16.caf */; };
+		29841115146DEF36006FC977 /* Henry_17.caf in Resources */ = {isa = PBXBuildFile; fileRef = 298410BB146DEF36006FC977 /* Henry_17.caf */; };
+		29841116146DEF36006FC977 /* Henry_17.caf in Resources */ = {isa = PBXBuildFile; fileRef = 298410BB146DEF36006FC977 /* Henry_17.caf */; };
+		29841117146DEF36006FC977 /* Henry_18.caf in Resources */ = {isa = PBXBuildFile; fileRef = 298410BC146DEF36006FC977 /* Henry_18.caf */; };
+		29841118146DEF36006FC977 /* Henry_18.caf in Resources */ = {isa = PBXBuildFile; fileRef = 298410BC146DEF36006FC977 /* Henry_18.caf */; };
+		29841119146DEF36006FC977 /* Henry_19.caf in Resources */ = {isa = PBXBuildFile; fileRef = 298410BD146DEF36006FC977 /* Henry_19.caf */; };
+		2984111A146DEF36006FC977 /* Henry_19.caf in Resources */ = {isa = PBXBuildFile; fileRef = 298410BD146DEF36006FC977 /* Henry_19.caf */; };
+		2984111B146DEF36006FC977 /* Henry_20.caf in Resources */ = {isa = PBXBuildFile; fileRef = 298410BE146DEF36006FC977 /* Henry_20.caf */; };
+		2984111C146DEF36006FC977 /* Henry_20.caf in Resources */ = {isa = PBXBuildFile; fileRef = 298410BE146DEF36006FC977 /* Henry_20.caf */; };
+		2984111D146DEF36006FC977 /* Henry_A.caf in Resources */ = {isa = PBXBuildFile; fileRef = 298410BF146DEF36006FC977 /* Henry_A.caf */; };
+		2984111E146DEF36006FC977 /* Henry_A.caf in Resources */ = {isa = PBXBuildFile; fileRef = 298410BF146DEF36006FC977 /* Henry_A.caf */; };
+		2984111F146DEF36006FC977 /* Henry_B.caf in Resources */ = {isa = PBXBuildFile; fileRef = 298410C0146DEF36006FC977 /* Henry_B.caf */; };
+		29841120146DEF36006FC977 /* Henry_B.caf in Resources */ = {isa = PBXBuildFile; fileRef = 298410C0146DEF36006FC977 /* Henry_B.caf */; };
+		29841121146DEF36006FC977 /* Henry_Blue.caf in Resources */ = {isa = PBXBuildFile; fileRef = 298410C1146DEF36006FC977 /* Henry_Blue.caf */; };
+		29841122146DEF36006FC977 /* Henry_Blue.caf in Resources */ = {isa = PBXBuildFile; fileRef = 298410C1146DEF36006FC977 /* Henry_Blue.caf */; };
+		29841123146DEF36006FC977 /* Henry_C.caf in Resources */ = {isa = PBXBuildFile; fileRef = 298410C2146DEF36006FC977 /* Henry_C.caf */; };
+		29841124146DEF36006FC977 /* Henry_C.caf in Resources */ = {isa = PBXBuildFile; fileRef = 298410C2146DEF36006FC977 /* Henry_C.caf */; };
+		29841125146DEF36006FC977 /* Henry_Can_You_Find_The.caf in Resources */ = {isa = PBXBuildFile; fileRef = 298410C3146DEF36006FC977 /* Henry_Can_You_Find_The.caf */; };
+		29841126146DEF36006FC977 /* Henry_Can_You_Find_The.caf in Resources */ = {isa = PBXBuildFile; fileRef = 298410C3146DEF36006FC977 /* Henry_Can_You_Find_The.caf */; };
+		29841127146DEF36006FC977 /* Henry_Capital_Letters.caf in Resources */ = {isa = PBXBuildFile; fileRef = 298410C4146DEF36006FC977 /* Henry_Capital_Letters.caf */; };
+		29841128146DEF36006FC977 /* Henry_Capital_Letters.caf in Resources */ = {isa = PBXBuildFile; fileRef = 298410C4146DEF36006FC977 /* Henry_Capital_Letters.caf */; };
+		29841129146DEF36006FC977 /* Henry_Capital.caf in Resources */ = {isa = PBXBuildFile; fileRef = 298410C5146DEF36006FC977 /* Henry_Capital.caf */; };
+		2984112A146DEF36006FC977 /* Henry_Capital.caf in Resources */ = {isa = PBXBuildFile; fileRef = 298410C5146DEF36006FC977 /* Henry_Capital.caf */; };
+		2984112B146DEF36006FC977 /* Henry_Circle.caf in Resources */ = {isa = PBXBuildFile; fileRef = 298410C6146DEF36006FC977 /* Henry_Circle.caf */; };
+		2984112C146DEF36006FC977 /* Henry_Circle.caf in Resources */ = {isa = PBXBuildFile; fileRef = 298410C6146DEF36006FC977 /* Henry_Circle.caf */; };
+		2984112D146DEF36006FC977 /* Henry_Colors.caf in Resources */ = {isa = PBXBuildFile; fileRef = 298410C7146DEF36006FC977 /* Henry_Colors.caf */; };
+		2984112E146DEF36006FC977 /* Henry_Colors.caf in Resources */ = {isa = PBXBuildFile; fileRef = 298410C7146DEF36006FC977 /* Henry_Colors.caf */; };
+		2984112F146DEF36006FC977 /* Henry_D.caf in Resources */ = {isa = PBXBuildFile; fileRef = 298410C8146DEF36006FC977 /* Henry_D.caf */; };
+		29841130146DEF36006FC977 /* Henry_D.caf in Resources */ = {isa = PBXBuildFile; fileRef = 298410C8146DEF36006FC977 /* Henry_D.caf */; };
+		29841131146DEF36006FC977 /* Henry_E.caf in Resources */ = {isa = PBXBuildFile; fileRef = 298410C9146DEF36006FC977 /* Henry_E.caf */; };
+		29841132146DEF36006FC977 /* Henry_E.caf in Resources */ = {isa = PBXBuildFile; fileRef = 298410C9146DEF36006FC977 /* Henry_E.caf */; };
+		29841133146DEF36006FC977 /* Henry_F.caf in Resources */ = {isa = PBXBuildFile; fileRef = 298410CA146DEF36006FC977 /* Henry_F.caf */; };
+		29841134146DEF36006FC977 /* Henry_F.caf in Resources */ = {isa = PBXBuildFile; fileRef = 298410CA146DEF36006FC977 /* Henry_F.caf */; };
+		29841135146DEF36006FC977 /* Henry_G.caf in Resources */ = {isa = PBXBuildFile; fileRef = 298410CB146DEF36006FC977 /* Henry_G.caf */; };
+		29841136146DEF36006FC977 /* Henry_G.caf in Resources */ = {isa = PBXBuildFile; fileRef = 298410CB146DEF36006FC977 /* Henry_G.caf */; };
+		29841137146DEF36006FC977 /* Henry_Green.caf in Resources */ = {isa = PBXBuildFile; fileRef = 298410CC146DEF36006FC977 /* Henry_Green.caf */; };
+		29841138146DEF36006FC977 /* Henry_Green.caf in Resources */ = {isa = PBXBuildFile; fileRef = 298410CC146DEF36006FC977 /* Henry_Green.caf */; };
+		29841139146DEF36006FC977 /* Henry_H.caf in Resources */ = {isa = PBXBuildFile; fileRef = 298410CD146DEF36006FC977 /* Henry_H.caf */; };
+		2984113A146DEF36006FC977 /* Henry_H.caf in Resources */ = {isa = PBXBuildFile; fileRef = 298410CD146DEF36006FC977 /* Henry_H.caf */; };
+		2984113B146DEF36006FC977 /* Henry_Hexagon.caf in Resources */ = {isa = PBXBuildFile; fileRef = 298410CE146DEF36006FC977 /* Henry_Hexagon.caf */; };
+		2984113C146DEF36006FC977 /* Henry_Hexagon.caf in Resources */ = {isa = PBXBuildFile; fileRef = 298410CE146DEF36006FC977 /* Henry_Hexagon.caf */; };
+		2984113D146DEF36006FC977 /* Henry_I.caf in Resources */ = {isa = PBXBuildFile; fileRef = 298410CF146DEF36006FC977 /* Henry_I.caf */; };
+		2984113E146DEF36006FC977 /* Henry_I.caf in Resources */ = {isa = PBXBuildFile; fileRef = 298410CF146DEF36006FC977 /* Henry_I.caf */; };
+		2984113F146DEF36006FC977 /* Henry_J.caf in Resources */ = {isa = PBXBuildFile; fileRef = 298410D0146DEF36006FC977 /* Henry_J.caf */; };
+		29841140146DEF36006FC977 /* Henry_J.caf in Resources */ = {isa = PBXBuildFile; fileRef = 298410D0146DEF36006FC977 /* Henry_J.caf */; };
+		29841141146DEF36006FC977 /* Henry_K.caf in Resources */ = {isa = PBXBuildFile; fileRef = 298410D1146DEF36006FC977 /* Henry_K.caf */; };
+		29841142146DEF36006FC977 /* Henry_K.caf in Resources */ = {isa = PBXBuildFile; fileRef = 298410D1146DEF36006FC977 /* Henry_K.caf */; };
+		29841143146DEF36006FC977 /* Henry_L.caf in Resources */ = {isa = PBXBuildFile; fileRef = 298410D2146DEF36006FC977 /* Henry_L.caf */; };
+		29841144146DEF36006FC977 /* Henry_L.caf in Resources */ = {isa = PBXBuildFile; fileRef = 298410D2146DEF36006FC977 /* Henry_L.caf */; };
+		29841145146DEF36006FC977 /* Henry_Lowercase_Letters.caf in Resources */ = {isa = PBXBuildFile; fileRef = 298410D3146DEF36006FC977 /* Henry_Lowercase_Letters.caf */; };
+		29841146146DEF36006FC977 /* Henry_Lowercase_Letters.caf in Resources */ = {isa = PBXBuildFile; fileRef = 298410D3146DEF36006FC977 /* Henry_Lowercase_Letters.caf */; };
+		29841147146DEF36006FC977 /* Henry_Lowercase.caf in Resources */ = {isa = PBXBuildFile; fileRef = 298410D4146DEF36006FC977 /* Henry_Lowercase.caf */; };
+		29841148146DEF36006FC977 /* Henry_Lowercase.caf in Resources */ = {isa = PBXBuildFile; fileRef = 298410D4146DEF36006FC977 /* Henry_Lowercase.caf */; };
+		29841149146DEF36006FC977 /* Henry_M.caf in Resources */ = {isa = PBXBuildFile; fileRef = 298410D5146DEF36006FC977 /* Henry_M.caf */; };
+		2984114A146DEF36006FC977 /* Henry_M.caf in Resources */ = {isa = PBXBuildFile; fileRef = 298410D5146DEF36006FC977 /* Henry_M.caf */; };
+		2984114B146DEF36006FC977 /* Henry_N.caf in Resources */ = {isa = PBXBuildFile; fileRef = 298410D6146DEF36006FC977 /* Henry_N.caf */; };
+		2984114C146DEF36006FC977 /* Henry_N.caf in Resources */ = {isa = PBXBuildFile; fileRef = 298410D6146DEF36006FC977 /* Henry_N.caf */; };
+		2984114D146DEF36006FC977 /* Henry_Number.caf in Resources */ = {isa = PBXBuildFile; fileRef = 298410D7146DEF36006FC977 /* Henry_Number.caf */; };
+		2984114E146DEF36006FC977 /* Henry_Number.caf in Resources */ = {isa = PBXBuildFile; fileRef = 298410D7146DEF36006FC977 /* Henry_Number.caf */; };
+		2984114F146DEF36006FC977 /* Henry_Numbers.caf in Resources */ = {isa = PBXBuildFile; fileRef = 298410D8146DEF36006FC977 /* Henry_Numbers.caf */; };
+		29841150146DEF36006FC977 /* Henry_Numbers.caf in Resources */ = {isa = PBXBuildFile; fileRef = 298410D8146DEF36006FC977 /* Henry_Numbers.caf */; };
+		29841151146DEF36006FC977 /* Henry_O.caf in Resources */ = {isa = PBXBuildFile; fileRef = 298410D9146DEF36006FC977 /* Henry_O.caf */; };
+		29841152146DEF36006FC977 /* Henry_O.caf in Resources */ = {isa = PBXBuildFile; fileRef = 298410D9146DEF36006FC977 /* Henry_O.caf */; };
+		29841153146DEF36006FC977 /* Henry_Orange.caf in Resources */ = {isa = PBXBuildFile; fileRef = 298410DA146DEF36006FC977 /* Henry_Orange.caf */; };
+		29841154146DEF36006FC977 /* Henry_Orange.caf in Resources */ = {isa = PBXBuildFile; fileRef = 298410DA146DEF36006FC977 /* Henry_Orange.caf */; };
+		29841155146DEF36006FC977 /* Henry_Oval.caf in Resources */ = {isa = PBXBuildFile; fileRef = 298410DB146DEF36006FC977 /* Henry_Oval.caf */; };
+		29841156146DEF36006FC977 /* Henry_Oval.caf in Resources */ = {isa = PBXBuildFile; fileRef = 298410DB146DEF36006FC977 /* Henry_Oval.caf */; };
+		29841157146DEF36006FC977 /* Henry_P.caf in Resources */ = {isa = PBXBuildFile; fileRef = 298410DC146DEF36006FC977 /* Henry_P.caf */; };
+		29841158146DEF36006FC977 /* Henry_P.caf in Resources */ = {isa = PBXBuildFile; fileRef = 298410DC146DEF36006FC977 /* Henry_P.caf */; };
+		29841159146DEF36006FC977 /* Henry_Pick_Your_Prize.caf in Resources */ = {isa = PBXBuildFile; fileRef = 298410DD146DEF36006FC977 /* Henry_Pick_Your_Prize.caf */; };
+		2984115A146DEF36006FC977 /* Henry_Pick_Your_Prize.caf in Resources */ = {isa = PBXBuildFile; fileRef = 298410DD146DEF36006FC977 /* Henry_Pick_Your_Prize.caf */; };
+		2984115B146DEF36006FC977 /* Henry_Pink.caf in Resources */ = {isa = PBXBuildFile; fileRef = 298410DE146DEF36006FC977 /* Henry_Pink.caf */; };
+		2984115C146DEF36006FC977 /* Henry_Pink.caf in Resources */ = {isa = PBXBuildFile; fileRef = 298410DE146DEF36006FC977 /* Henry_Pink.caf */; };
+		2984115D146DEF36006FC977 /* Henry_Play_All.caf in Resources */ = {isa = PBXBuildFile; fileRef = 298410DF146DEF36006FC977 /* Henry_Play_All.caf */; };
+		2984115E146DEF36006FC977 /* Henry_Play_All.caf in Resources */ = {isa = PBXBuildFile; fileRef = 298410DF146DEF36006FC977 /* Henry_Play_All.caf */; };
+		2984115F146DEF36006FC977 /* Henry_Purple.caf in Resources */ = {isa = PBXBuildFile; fileRef = 298410E0146DEF36006FC977 /* Henry_Purple.caf */; };
+		29841160146DEF36006FC977 /* Henry_Purple.caf in Resources */ = {isa = PBXBuildFile; fileRef = 298410E0146DEF36006FC977 /* Henry_Purple.caf */; };
+		29841161146DEF36006FC977 /* Henry_Q.caf in Resources */ = {isa = PBXBuildFile; fileRef = 298410E1146DEF36006FC977 /* Henry_Q.caf */; };
+		29841162146DEF36006FC977 /* Henry_Q.caf in Resources */ = {isa = PBXBuildFile; fileRef = 298410E1146DEF36006FC977 /* Henry_Q.caf */; };
+		29841163146DEF36006FC977 /* Henry_R.caf in Resources */ = {isa = PBXBuildFile; fileRef = 298410E2146DEF36006FC977 /* Henry_R.caf */; };
+		29841164146DEF36006FC977 /* Henry_R.caf in Resources */ = {isa = PBXBuildFile; fileRef = 298410E2146DEF36006FC977 /* Henry_R.caf */; };
+		29841165146DEF36006FC977 /* Henry_Rectangle.caf in Resources */ = {isa = PBXBuildFile; fileRef = 298410E3146DEF36006FC977 /* Henry_Rectangle.caf */; };
+		29841166146DEF36006FC977 /* Henry_Rectangle.caf in Resources */ = {isa = PBXBuildFile; fileRef = 298410E3146DEF36006FC977 /* Henry_Rectangle.caf */; };
+		29841167146DEF36006FC977 /* Henry_Red.caf in Resources */ = {isa = PBXBuildFile; fileRef = 298410E4146DEF36006FC977 /* Henry_Red.caf */; };
+		29841168146DEF36006FC977 /* Henry_Red.caf in Resources */ = {isa = PBXBuildFile; fileRef = 298410E4146DEF36006FC977 /* Henry_Red.caf */; };
+		29841169146DEF36006FC977 /* Henry_Rhombus.caf in Resources */ = {isa = PBXBuildFile; fileRef = 298410E5146DEF36006FC977 /* Henry_Rhombus.caf */; };
+		2984116A146DEF36006FC977 /* Henry_Rhombus.caf in Resources */ = {isa = PBXBuildFile; fileRef = 298410E5146DEF36006FC977 /* Henry_Rhombus.caf */; };
+		2984116B146DEF36006FC977 /* Henry_S.caf in Resources */ = {isa = PBXBuildFile; fileRef = 298410E6146DEF36006FC977 /* Henry_S.caf */; };
+		2984116C146DEF36006FC977 /* Henry_S.caf in Resources */ = {isa = PBXBuildFile; fileRef = 298410E6146DEF36006FC977 /* Henry_S.caf */; };
+		2984116D146DEF36006FC977 /* Henry_Shapes.caf in Resources */ = {isa = PBXBuildFile; fileRef = 298410E7146DEF36006FC977 /* Henry_Shapes.caf */; };
+		2984116E146DEF36006FC977 /* Henry_Shapes.caf in Resources */ = {isa = PBXBuildFile; fileRef = 298410E7146DEF36006FC977 /* Henry_Shapes.caf */; };
+		2984116F146DEF36006FC977 /* Henry_Square.caf in Resources */ = {isa = PBXBuildFile; fileRef = 298410E8146DEF36006FC977 /* Henry_Square.caf */; };
+		29841170146DEF36006FC977 /* Henry_Square.caf in Resources */ = {isa = PBXBuildFile; fileRef = 298410E8146DEF36006FC977 /* Henry_Square.caf */; };
+		29841171146DEF36006FC977 /* Henry_Star.caf in Resources */ = {isa = PBXBuildFile; fileRef = 298410E9146DEF36006FC977 /* Henry_Star.caf */; };
+		29841172146DEF36006FC977 /* Henry_Star.caf in Resources */ = {isa = PBXBuildFile; fileRef = 298410E9146DEF36006FC977 /* Henry_Star.caf */; };
+		29841173146DEF36006FC977 /* Henry_T.caf in Resources */ = {isa = PBXBuildFile; fileRef = 298410EA146DEF36006FC977 /* Henry_T.caf */; };
+		29841174146DEF36006FC977 /* Henry_T.caf in Resources */ = {isa = PBXBuildFile; fileRef = 298410EA146DEF36006FC977 /* Henry_T.caf */; };
+		29841175146DEF36006FC977 /* Henry_Trapezoid.caf in Resources */ = {isa = PBXBuildFile; fileRef = 298410EB146DEF36006FC977 /* Henry_Trapezoid.caf */; };
+		29841176146DEF36006FC977 /* Henry_Trapezoid.caf in Resources */ = {isa = PBXBuildFile; fileRef = 298410EB146DEF36006FC977 /* Henry_Trapezoid.caf */; };
+		29841177146DEF36006FC977 /* Henry_Triangle.caf in Resources */ = {isa = PBXBuildFile; fileRef = 298410EC146DEF36006FC977 /* Henry_Triangle.caf */; };
+		29841178146DEF36006FC977 /* Henry_Triangle.caf in Resources */ = {isa = PBXBuildFile; fileRef = 298410EC146DEF36006FC977 /* Henry_Triangle.caf */; };
+		29841179146DEF36006FC977 /* Henry_U.caf in Resources */ = {isa = PBXBuildFile; fileRef = 298410ED146DEF36006FC977 /* Henry_U.caf */; };
+		2984117A146DEF36006FC977 /* Henry_U.caf in Resources */ = {isa = PBXBuildFile; fileRef = 298410ED146DEF36006FC977 /* Henry_U.caf */; };
+		2984117B146DEF36006FC977 /* Henry_V.caf in Resources */ = {isa = PBXBuildFile; fileRef = 298410EE146DEF36006FC977 /* Henry_V.caf */; };
+		2984117C146DEF36006FC977 /* Henry_V.caf in Resources */ = {isa = PBXBuildFile; fileRef = 298410EE146DEF36006FC977 /* Henry_V.caf */; };
+		2984117D146DEF36006FC977 /* Henry_W.caf in Resources */ = {isa = PBXBuildFile; fileRef = 298410EF146DEF36006FC977 /* Henry_W.caf */; };
+		2984117E146DEF36006FC977 /* Henry_W.caf in Resources */ = {isa = PBXBuildFile; fileRef = 298410EF146DEF36006FC977 /* Henry_W.caf */; };
+		2984117F146DEF36006FC977 /* Henry_X.caf in Resources */ = {isa = PBXBuildFile; fileRef = 298410F0146DEF36006FC977 /* Henry_X.caf */; };
+		29841180146DEF36006FC977 /* Henry_X.caf in Resources */ = {isa = PBXBuildFile; fileRef = 298410F0146DEF36006FC977 /* Henry_X.caf */; };
+		29841181146DEF36006FC977 /* Henry_Y.caf in Resources */ = {isa = PBXBuildFile; fileRef = 298410F1146DEF36006FC977 /* Henry_Y.caf */; };
+		29841182146DEF36006FC977 /* Henry_Y.caf in Resources */ = {isa = PBXBuildFile; fileRef = 298410F1146DEF36006FC977 /* Henry_Y.caf */; };
+		29841183146DEF36006FC977 /* Henry_Yellow.caf in Resources */ = {isa = PBXBuildFile; fileRef = 298410F2146DEF36006FC977 /* Henry_Yellow.caf */; };
+		29841184146DEF36006FC977 /* Henry_Yellow.caf in Resources */ = {isa = PBXBuildFile; fileRef = 298410F2146DEF36006FC977 /* Henry_Yellow.caf */; };
+		29841185146DEF36006FC977 /* Henry_You_Found_The.caf in Resources */ = {isa = PBXBuildFile; fileRef = 298410F3146DEF36006FC977 /* Henry_You_Found_The.caf */; };
+		29841186146DEF36006FC977 /* Henry_You_Found_The.caf in Resources */ = {isa = PBXBuildFile; fileRef = 298410F3146DEF36006FC977 /* Henry_You_Found_The.caf */; };
+		29841187146DEF36006FC977 /* Henry_Z.caf in Resources */ = {isa = PBXBuildFile; fileRef = 298410F4146DEF36006FC977 /* Henry_Z.caf */; };
+		29841188146DEF36006FC977 /* Henry_Z.caf in Resources */ = {isa = PBXBuildFile; fileRef = 298410F4146DEF36006FC977 /* Henry_Z.caf */; };
 		2986CA0E141932C6002DA1C8 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2986CA0D141932C6002DA1C8 /* QuartzCore.framework */; };
 		2986CA10141932C6002DA1C8 /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2986CA0F141932C6002DA1C8 /* OpenGLES.framework */; };
 		2986CA12141932C6002DA1C8 /* OpenAL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2986CA11141932C6002DA1C8 /* OpenAL.framework */; };
@@ -693,8 +836,6 @@
 		29A9DB091450D07400B5A240 /* MaterialSelectionLayer.mm in Sources */ = {isa = PBXBuildFile; fileRef = 29A9DB071450D07400B5A240 /* MaterialSelectionLayer.mm */; };
 		29ABB2011452236300A3A3F7 /* PrizeSelectionScene.mm in Sources */ = {isa = PBXBuildFile; fileRef = 29ABB1AE14521C9100A3A3F7 /* PrizeSelectionScene.mm */; };
 		29ABB2021452236500A3A3F7 /* PrizeSelectionScene.mm in Sources */ = {isa = PBXBuildFile; fileRef = 29ABB1AE14521C9100A3A3F7 /* PrizeSelectionScene.mm */; };
-		29ABB21F1452363D00A3A3F7 /* PrizeSelect_Black.png in Resources */ = {isa = PBXBuildFile; fileRef = 29ABB21E1452363D00A3A3F7 /* PrizeSelect_Black.png */; };
-		29ABB2201452363D00A3A3F7 /* PrizeSelect_Black.png in Resources */ = {isa = PBXBuildFile; fileRef = 29ABB21E1452363D00A3A3F7 /* PrizeSelect_Black.png */; };
 		29B82CCD146464520030C39B /* Icon-72.png in Resources */ = {isa = PBXBuildFile; fileRef = 29B82CC6146464520030C39B /* Icon-72.png */; };
 		29B82CCE146464520030C39B /* Icon-Small-50.png in Resources */ = {isa = PBXBuildFile; fileRef = 29B82CC7146464520030C39B /* Icon-Small-50.png */; };
 		29B82CCF146464520030C39B /* Icon-Small.png in Resources */ = {isa = PBXBuildFile; fileRef = 29B82CC8146464520030C39B /* Icon-Small.png */; };
@@ -927,6 +1068,80 @@
 		297B7553145F68E4001EFCCC /* SpeechBubbles-ipad.pvr.gz */ = {isa = PBXFileReference; lastKnownFileType = archive.gzip; path = "SpeechBubbles-ipad.pvr.gz"; sourceTree = "<group>"; };
 		297B7554145F68E5001EFCCC /* SpeechBubbles.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = SpeechBubbles.plist; sourceTree = "<group>"; };
 		297B7555145F68E5001EFCCC /* SpeechBubbles.pvr.gz */ = {isa = PBXFileReference; lastKnownFileType = archive.gzip; path = SpeechBubbles.pvr.gz; sourceTree = "<group>"; };
+		298410AB146DEF36006FC977 /* Henry_1.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Henry_1.caf; sourceTree = "<group>"; };
+		298410AC146DEF36006FC977 /* Henry_2.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Henry_2.caf; sourceTree = "<group>"; };
+		298410AD146DEF36006FC977 /* Henry_3.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Henry_3.caf; sourceTree = "<group>"; };
+		298410AE146DEF36006FC977 /* Henry_4.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Henry_4.caf; sourceTree = "<group>"; };
+		298410AF146DEF36006FC977 /* Henry_5.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Henry_5.caf; sourceTree = "<group>"; };
+		298410B0146DEF36006FC977 /* Henry_6.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Henry_6.caf; sourceTree = "<group>"; };
+		298410B1146DEF36006FC977 /* Henry_7.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Henry_7.caf; sourceTree = "<group>"; };
+		298410B2146DEF36006FC977 /* Henry_8.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Henry_8.caf; sourceTree = "<group>"; };
+		298410B3146DEF36006FC977 /* Henry_9.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Henry_9.caf; sourceTree = "<group>"; };
+		298410B4146DEF36006FC977 /* Henry_10.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Henry_10.caf; sourceTree = "<group>"; };
+		298410B5146DEF36006FC977 /* Henry_11.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Henry_11.caf; sourceTree = "<group>"; };
+		298410B6146DEF36006FC977 /* Henry_12.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Henry_12.caf; sourceTree = "<group>"; };
+		298410B7146DEF36006FC977 /* Henry_13.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Henry_13.caf; sourceTree = "<group>"; };
+		298410B8146DEF36006FC977 /* Henry_14.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Henry_14.caf; sourceTree = "<group>"; };
+		298410B9146DEF36006FC977 /* Henry_15.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Henry_15.caf; sourceTree = "<group>"; };
+		298410BA146DEF36006FC977 /* Henry_16.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Henry_16.caf; sourceTree = "<group>"; };
+		298410BB146DEF36006FC977 /* Henry_17.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Henry_17.caf; sourceTree = "<group>"; };
+		298410BC146DEF36006FC977 /* Henry_18.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Henry_18.caf; sourceTree = "<group>"; };
+		298410BD146DEF36006FC977 /* Henry_19.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Henry_19.caf; sourceTree = "<group>"; };
+		298410BE146DEF36006FC977 /* Henry_20.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Henry_20.caf; sourceTree = "<group>"; };
+		298410BF146DEF36006FC977 /* Henry_A.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Henry_A.caf; sourceTree = "<group>"; };
+		298410C0146DEF36006FC977 /* Henry_B.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Henry_B.caf; sourceTree = "<group>"; };
+		298410C1146DEF36006FC977 /* Henry_Blue.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Henry_Blue.caf; sourceTree = "<group>"; };
+		298410C2146DEF36006FC977 /* Henry_C.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Henry_C.caf; sourceTree = "<group>"; };
+		298410C3146DEF36006FC977 /* Henry_Can_You_Find_The.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Henry_Can_You_Find_The.caf; sourceTree = "<group>"; };
+		298410C4146DEF36006FC977 /* Henry_Capital_Letters.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Henry_Capital_Letters.caf; sourceTree = "<group>"; };
+		298410C5146DEF36006FC977 /* Henry_Capital.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Henry_Capital.caf; sourceTree = "<group>"; };
+		298410C6146DEF36006FC977 /* Henry_Circle.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Henry_Circle.caf; sourceTree = "<group>"; };
+		298410C7146DEF36006FC977 /* Henry_Colors.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Henry_Colors.caf; sourceTree = "<group>"; };
+		298410C8146DEF36006FC977 /* Henry_D.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Henry_D.caf; sourceTree = "<group>"; };
+		298410C9146DEF36006FC977 /* Henry_E.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Henry_E.caf; sourceTree = "<group>"; };
+		298410CA146DEF36006FC977 /* Henry_F.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Henry_F.caf; sourceTree = "<group>"; };
+		298410CB146DEF36006FC977 /* Henry_G.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Henry_G.caf; sourceTree = "<group>"; };
+		298410CC146DEF36006FC977 /* Henry_Green.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Henry_Green.caf; sourceTree = "<group>"; };
+		298410CD146DEF36006FC977 /* Henry_H.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Henry_H.caf; sourceTree = "<group>"; };
+		298410CE146DEF36006FC977 /* Henry_Hexagon.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Henry_Hexagon.caf; sourceTree = "<group>"; };
+		298410CF146DEF36006FC977 /* Henry_I.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Henry_I.caf; sourceTree = "<group>"; };
+		298410D0146DEF36006FC977 /* Henry_J.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Henry_J.caf; sourceTree = "<group>"; };
+		298410D1146DEF36006FC977 /* Henry_K.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Henry_K.caf; sourceTree = "<group>"; };
+		298410D2146DEF36006FC977 /* Henry_L.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Henry_L.caf; sourceTree = "<group>"; };
+		298410D3146DEF36006FC977 /* Henry_Lowercase_Letters.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Henry_Lowercase_Letters.caf; sourceTree = "<group>"; };
+		298410D4146DEF36006FC977 /* Henry_Lowercase.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Henry_Lowercase.caf; sourceTree = "<group>"; };
+		298410D5146DEF36006FC977 /* Henry_M.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Henry_M.caf; sourceTree = "<group>"; };
+		298410D6146DEF36006FC977 /* Henry_N.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Henry_N.caf; sourceTree = "<group>"; };
+		298410D7146DEF36006FC977 /* Henry_Number.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Henry_Number.caf; sourceTree = "<group>"; };
+		298410D8146DEF36006FC977 /* Henry_Numbers.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Henry_Numbers.caf; sourceTree = "<group>"; };
+		298410D9146DEF36006FC977 /* Henry_O.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Henry_O.caf; sourceTree = "<group>"; };
+		298410DA146DEF36006FC977 /* Henry_Orange.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Henry_Orange.caf; sourceTree = "<group>"; };
+		298410DB146DEF36006FC977 /* Henry_Oval.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Henry_Oval.caf; sourceTree = "<group>"; };
+		298410DC146DEF36006FC977 /* Henry_P.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Henry_P.caf; sourceTree = "<group>"; };
+		298410DD146DEF36006FC977 /* Henry_Pick_Your_Prize.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Henry_Pick_Your_Prize.caf; sourceTree = "<group>"; };
+		298410DE146DEF36006FC977 /* Henry_Pink.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Henry_Pink.caf; sourceTree = "<group>"; };
+		298410DF146DEF36006FC977 /* Henry_Play_All.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Henry_Play_All.caf; sourceTree = "<group>"; };
+		298410E0146DEF36006FC977 /* Henry_Purple.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Henry_Purple.caf; sourceTree = "<group>"; };
+		298410E1146DEF36006FC977 /* Henry_Q.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Henry_Q.caf; sourceTree = "<group>"; };
+		298410E2146DEF36006FC977 /* Henry_R.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Henry_R.caf; sourceTree = "<group>"; };
+		298410E3146DEF36006FC977 /* Henry_Rectangle.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Henry_Rectangle.caf; sourceTree = "<group>"; };
+		298410E4146DEF36006FC977 /* Henry_Red.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Henry_Red.caf; sourceTree = "<group>"; };
+		298410E5146DEF36006FC977 /* Henry_Rhombus.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Henry_Rhombus.caf; sourceTree = "<group>"; };
+		298410E6146DEF36006FC977 /* Henry_S.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Henry_S.caf; sourceTree = "<group>"; };
+		298410E7146DEF36006FC977 /* Henry_Shapes.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Henry_Shapes.caf; sourceTree = "<group>"; };
+		298410E8146DEF36006FC977 /* Henry_Square.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Henry_Square.caf; sourceTree = "<group>"; };
+		298410E9146DEF36006FC977 /* Henry_Star.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Henry_Star.caf; sourceTree = "<group>"; };
+		298410EA146DEF36006FC977 /* Henry_T.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Henry_T.caf; sourceTree = "<group>"; };
+		298410EB146DEF36006FC977 /* Henry_Trapezoid.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Henry_Trapezoid.caf; sourceTree = "<group>"; };
+		298410EC146DEF36006FC977 /* Henry_Triangle.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Henry_Triangle.caf; sourceTree = "<group>"; };
+		298410ED146DEF36006FC977 /* Henry_U.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Henry_U.caf; sourceTree = "<group>"; };
+		298410EE146DEF36006FC977 /* Henry_V.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Henry_V.caf; sourceTree = "<group>"; };
+		298410EF146DEF36006FC977 /* Henry_W.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Henry_W.caf; sourceTree = "<group>"; };
+		298410F0146DEF36006FC977 /* Henry_X.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Henry_X.caf; sourceTree = "<group>"; };
+		298410F1146DEF36006FC977 /* Henry_Y.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Henry_Y.caf; sourceTree = "<group>"; };
+		298410F2146DEF36006FC977 /* Henry_Yellow.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Henry_Yellow.caf; sourceTree = "<group>"; };
+		298410F3146DEF36006FC977 /* Henry_You_Found_The.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Henry_You_Found_The.caf; sourceTree = "<group>"; };
+		298410F4146DEF36006FC977 /* Henry_Z.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Henry_Z.caf; sourceTree = "<group>"; };
 		2986CA09141932C6002DA1C8 /* HenryAndHisHeadlamp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HenryAndHisHeadlamp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2986CA0D141932C6002DA1C8 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		2986CA0F141932C6002DA1C8 /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
@@ -1193,7 +1408,6 @@
 		29A9DB071450D07400B5A240 /* MaterialSelectionLayer.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = MaterialSelectionLayer.mm; sourceTree = "<group>"; };
 		29ABB1AD14521C9100A3A3F7 /* PrizeSelectionScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PrizeSelectionScene.h; sourceTree = "<group>"; };
 		29ABB1AE14521C9100A3A3F7 /* PrizeSelectionScene.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = PrizeSelectionScene.mm; sourceTree = "<group>"; };
-		29ABB21E1452363D00A3A3F7 /* PrizeSelect_Black.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = PrizeSelect_Black.png; sourceTree = "<group>"; };
 		29B82CC6146464520030C39B /* Icon-72.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-72.png"; sourceTree = "<group>"; };
 		29B82CC7146464520030C39B /* Icon-Small-50.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-Small-50.png"; sourceTree = "<group>"; };
 		29B82CC8146464520030C39B /* Icon-Small.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-Small.png"; sourceTree = "<group>"; };
@@ -1475,6 +1689,7 @@
 		290A2FA9144CFF5700BBFBA3 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				29840ECC146CCD98006FC977 /* Speech */,
 				290A2FBD144D021B00BBFBA3 /* Fonts */,
 				29ABB28414524A3E00A3A3F7 /* External Libraries */,
 				290A2FAB144CFF6C00BBFBA3 /* Music */,
@@ -1493,7 +1708,6 @@
 				297B7554145F68E5001EFCCC /* SpeechBubbles.plist */,
 				297B7555145F68E5001EFCCC /* SpeechBubbles.pvr.gz */,
 				29ABB2291452416F00A3A3F7 /* Prizes */,
-				29ABB21E1452363D00A3A3F7 /* PrizeSelect_Black.png */,
 				294C4C5E144E193F000E3BC6 /* TitleScreenObjects-hd.plist */,
 				294C4C5F144E193F000E3BC6 /* TitleScreenObjects-hd.png */,
 				294C4C60144E193F000E3BC6 /* TitleScreenObjects.plist */,
@@ -1633,6 +1847,87 @@
 				29C9D785143955630020172C /* spooky2.caf */,
 			);
 			name = Audio;
+			sourceTree = "<group>";
+		};
+		29840ECC146CCD98006FC977 /* Speech */ = {
+			isa = PBXGroup;
+			children = (
+				298410AB146DEF36006FC977 /* Henry_1.caf */,
+				298410AC146DEF36006FC977 /* Henry_2.caf */,
+				298410AD146DEF36006FC977 /* Henry_3.caf */,
+				298410AE146DEF36006FC977 /* Henry_4.caf */,
+				298410AF146DEF36006FC977 /* Henry_5.caf */,
+				298410B0146DEF36006FC977 /* Henry_6.caf */,
+				298410B1146DEF36006FC977 /* Henry_7.caf */,
+				298410B2146DEF36006FC977 /* Henry_8.caf */,
+				298410B3146DEF36006FC977 /* Henry_9.caf */,
+				298410B4146DEF36006FC977 /* Henry_10.caf */,
+				298410B5146DEF36006FC977 /* Henry_11.caf */,
+				298410B6146DEF36006FC977 /* Henry_12.caf */,
+				298410B7146DEF36006FC977 /* Henry_13.caf */,
+				298410B8146DEF36006FC977 /* Henry_14.caf */,
+				298410B9146DEF36006FC977 /* Henry_15.caf */,
+				298410BA146DEF36006FC977 /* Henry_16.caf */,
+				298410BB146DEF36006FC977 /* Henry_17.caf */,
+				298410BC146DEF36006FC977 /* Henry_18.caf */,
+				298410BD146DEF36006FC977 /* Henry_19.caf */,
+				298410BE146DEF36006FC977 /* Henry_20.caf */,
+				298410BF146DEF36006FC977 /* Henry_A.caf */,
+				298410C0146DEF36006FC977 /* Henry_B.caf */,
+				298410C1146DEF36006FC977 /* Henry_Blue.caf */,
+				298410C2146DEF36006FC977 /* Henry_C.caf */,
+				298410C3146DEF36006FC977 /* Henry_Can_You_Find_The.caf */,
+				298410C4146DEF36006FC977 /* Henry_Capital_Letters.caf */,
+				298410C5146DEF36006FC977 /* Henry_Capital.caf */,
+				298410C6146DEF36006FC977 /* Henry_Circle.caf */,
+				298410C7146DEF36006FC977 /* Henry_Colors.caf */,
+				298410C8146DEF36006FC977 /* Henry_D.caf */,
+				298410C9146DEF36006FC977 /* Henry_E.caf */,
+				298410CA146DEF36006FC977 /* Henry_F.caf */,
+				298410CB146DEF36006FC977 /* Henry_G.caf */,
+				298410CC146DEF36006FC977 /* Henry_Green.caf */,
+				298410CD146DEF36006FC977 /* Henry_H.caf */,
+				298410CE146DEF36006FC977 /* Henry_Hexagon.caf */,
+				298410CF146DEF36006FC977 /* Henry_I.caf */,
+				298410D0146DEF36006FC977 /* Henry_J.caf */,
+				298410D1146DEF36006FC977 /* Henry_K.caf */,
+				298410D2146DEF36006FC977 /* Henry_L.caf */,
+				298410D3146DEF36006FC977 /* Henry_Lowercase_Letters.caf */,
+				298410D4146DEF36006FC977 /* Henry_Lowercase.caf */,
+				298410D5146DEF36006FC977 /* Henry_M.caf */,
+				298410D6146DEF36006FC977 /* Henry_N.caf */,
+				298410D7146DEF36006FC977 /* Henry_Number.caf */,
+				298410D8146DEF36006FC977 /* Henry_Numbers.caf */,
+				298410D9146DEF36006FC977 /* Henry_O.caf */,
+				298410DA146DEF36006FC977 /* Henry_Orange.caf */,
+				298410DB146DEF36006FC977 /* Henry_Oval.caf */,
+				298410DC146DEF36006FC977 /* Henry_P.caf */,
+				298410DD146DEF36006FC977 /* Henry_Pick_Your_Prize.caf */,
+				298410DE146DEF36006FC977 /* Henry_Pink.caf */,
+				298410DF146DEF36006FC977 /* Henry_Play_All.caf */,
+				298410E0146DEF36006FC977 /* Henry_Purple.caf */,
+				298410E1146DEF36006FC977 /* Henry_Q.caf */,
+				298410E2146DEF36006FC977 /* Henry_R.caf */,
+				298410E3146DEF36006FC977 /* Henry_Rectangle.caf */,
+				298410E4146DEF36006FC977 /* Henry_Red.caf */,
+				298410E5146DEF36006FC977 /* Henry_Rhombus.caf */,
+				298410E6146DEF36006FC977 /* Henry_S.caf */,
+				298410E7146DEF36006FC977 /* Henry_Shapes.caf */,
+				298410E8146DEF36006FC977 /* Henry_Square.caf */,
+				298410E9146DEF36006FC977 /* Henry_Star.caf */,
+				298410EA146DEF36006FC977 /* Henry_T.caf */,
+				298410EB146DEF36006FC977 /* Henry_Trapezoid.caf */,
+				298410EC146DEF36006FC977 /* Henry_Triangle.caf */,
+				298410ED146DEF36006FC977 /* Henry_U.caf */,
+				298410EE146DEF36006FC977 /* Henry_V.caf */,
+				298410EF146DEF36006FC977 /* Henry_W.caf */,
+				298410F0146DEF36006FC977 /* Henry_X.caf */,
+				298410F1146DEF36006FC977 /* Henry_Y.caf */,
+				298410F2146DEF36006FC977 /* Henry_Yellow.caf */,
+				298410F3146DEF36006FC977 /* Henry_You_Found_The.caf */,
+				298410F4146DEF36006FC977 /* Henry_Z.caf */,
+			);
+			name = Speech;
 			sourceTree = "<group>";
 		};
 		2986C9FE141932C6002DA1C8 = {
@@ -2405,7 +2700,6 @@
 				29A9DAFF1450D05700B5A240 /* MaterialSelectScreen.png in Resources */,
 				29A9DB011450D05700B5A240 /* MaterialSelectScreen-hd.png in Resources */,
 				29A9DB031450D05700B5A240 /* MaterialSelectScreen-ipad.png in Resources */,
-				29ABB21F1452363D00A3A3F7 /* PrizeSelect_Black.png in Resources */,
 				296A42D5145E43E0009EB9F9 /* Icon-72.png in Resources */,
 				296A42D7145E43E0009EB9F9 /* Icon-Small-50.png in Resources */,
 				296A42D9145E43E0009EB9F9 /* Icon-Small.png in Resources */,
@@ -2471,6 +2765,80 @@
 				2911CAC21460D16300FCD918 /* ShapeTextures-hd.pvr.ccz in Resources */,
 				2911CAC41460D16300FCD918 /* ShapeTextures.plist in Resources */,
 				2911CAC61460D16300FCD918 /* ShapeTextures.pvr.ccz in Resources */,
+				298410F5146DEF36006FC977 /* Henry_1.caf in Resources */,
+				298410F7146DEF36006FC977 /* Henry_2.caf in Resources */,
+				298410F9146DEF36006FC977 /* Henry_3.caf in Resources */,
+				298410FB146DEF36006FC977 /* Henry_4.caf in Resources */,
+				298410FD146DEF36006FC977 /* Henry_5.caf in Resources */,
+				298410FF146DEF36006FC977 /* Henry_6.caf in Resources */,
+				29841101146DEF36006FC977 /* Henry_7.caf in Resources */,
+				29841103146DEF36006FC977 /* Henry_8.caf in Resources */,
+				29841105146DEF36006FC977 /* Henry_9.caf in Resources */,
+				29841107146DEF36006FC977 /* Henry_10.caf in Resources */,
+				29841109146DEF36006FC977 /* Henry_11.caf in Resources */,
+				2984110B146DEF36006FC977 /* Henry_12.caf in Resources */,
+				2984110D146DEF36006FC977 /* Henry_13.caf in Resources */,
+				2984110F146DEF36006FC977 /* Henry_14.caf in Resources */,
+				29841111146DEF36006FC977 /* Henry_15.caf in Resources */,
+				29841113146DEF36006FC977 /* Henry_16.caf in Resources */,
+				29841115146DEF36006FC977 /* Henry_17.caf in Resources */,
+				29841117146DEF36006FC977 /* Henry_18.caf in Resources */,
+				29841119146DEF36006FC977 /* Henry_19.caf in Resources */,
+				2984111B146DEF36006FC977 /* Henry_20.caf in Resources */,
+				2984111D146DEF36006FC977 /* Henry_A.caf in Resources */,
+				2984111F146DEF36006FC977 /* Henry_B.caf in Resources */,
+				29841121146DEF36006FC977 /* Henry_Blue.caf in Resources */,
+				29841123146DEF36006FC977 /* Henry_C.caf in Resources */,
+				29841125146DEF36006FC977 /* Henry_Can_You_Find_The.caf in Resources */,
+				29841127146DEF36006FC977 /* Henry_Capital_Letters.caf in Resources */,
+				29841129146DEF36006FC977 /* Henry_Capital.caf in Resources */,
+				2984112B146DEF36006FC977 /* Henry_Circle.caf in Resources */,
+				2984112D146DEF36006FC977 /* Henry_Colors.caf in Resources */,
+				2984112F146DEF36006FC977 /* Henry_D.caf in Resources */,
+				29841131146DEF36006FC977 /* Henry_E.caf in Resources */,
+				29841133146DEF36006FC977 /* Henry_F.caf in Resources */,
+				29841135146DEF36006FC977 /* Henry_G.caf in Resources */,
+				29841137146DEF36006FC977 /* Henry_Green.caf in Resources */,
+				29841139146DEF36006FC977 /* Henry_H.caf in Resources */,
+				2984113B146DEF36006FC977 /* Henry_Hexagon.caf in Resources */,
+				2984113D146DEF36006FC977 /* Henry_I.caf in Resources */,
+				2984113F146DEF36006FC977 /* Henry_J.caf in Resources */,
+				29841141146DEF36006FC977 /* Henry_K.caf in Resources */,
+				29841143146DEF36006FC977 /* Henry_L.caf in Resources */,
+				29841145146DEF36006FC977 /* Henry_Lowercase_Letters.caf in Resources */,
+				29841147146DEF36006FC977 /* Henry_Lowercase.caf in Resources */,
+				29841149146DEF36006FC977 /* Henry_M.caf in Resources */,
+				2984114B146DEF36006FC977 /* Henry_N.caf in Resources */,
+				2984114D146DEF36006FC977 /* Henry_Number.caf in Resources */,
+				2984114F146DEF36006FC977 /* Henry_Numbers.caf in Resources */,
+				29841151146DEF36006FC977 /* Henry_O.caf in Resources */,
+				29841153146DEF36006FC977 /* Henry_Orange.caf in Resources */,
+				29841155146DEF36006FC977 /* Henry_Oval.caf in Resources */,
+				29841157146DEF36006FC977 /* Henry_P.caf in Resources */,
+				29841159146DEF36006FC977 /* Henry_Pick_Your_Prize.caf in Resources */,
+				2984115B146DEF36006FC977 /* Henry_Pink.caf in Resources */,
+				2984115D146DEF36006FC977 /* Henry_Play_All.caf in Resources */,
+				2984115F146DEF36006FC977 /* Henry_Purple.caf in Resources */,
+				29841161146DEF36006FC977 /* Henry_Q.caf in Resources */,
+				29841163146DEF36006FC977 /* Henry_R.caf in Resources */,
+				29841165146DEF36006FC977 /* Henry_Rectangle.caf in Resources */,
+				29841167146DEF36006FC977 /* Henry_Red.caf in Resources */,
+				29841169146DEF36006FC977 /* Henry_Rhombus.caf in Resources */,
+				2984116B146DEF36006FC977 /* Henry_S.caf in Resources */,
+				2984116D146DEF36006FC977 /* Henry_Shapes.caf in Resources */,
+				2984116F146DEF36006FC977 /* Henry_Square.caf in Resources */,
+				29841171146DEF36006FC977 /* Henry_Star.caf in Resources */,
+				29841173146DEF36006FC977 /* Henry_T.caf in Resources */,
+				29841175146DEF36006FC977 /* Henry_Trapezoid.caf in Resources */,
+				29841177146DEF36006FC977 /* Henry_Triangle.caf in Resources */,
+				29841179146DEF36006FC977 /* Henry_U.caf in Resources */,
+				2984117B146DEF36006FC977 /* Henry_V.caf in Resources */,
+				2984117D146DEF36006FC977 /* Henry_W.caf in Resources */,
+				2984117F146DEF36006FC977 /* Henry_X.caf in Resources */,
+				29841181146DEF36006FC977 /* Henry_Y.caf in Resources */,
+				29841183146DEF36006FC977 /* Henry_Yellow.caf in Resources */,
+				29841185146DEF36006FC977 /* Henry_You_Found_The.caf in Resources */,
+				29841187146DEF36006FC977 /* Henry_Z.caf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2478,11 +2846,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				290A311A144D2F4700BBFBA3 /* buttonsAndResources-Halloween.plist in Resources */,
-				290A311B144D2F4700BBFBA3 /* buttonsAndResources-Halloween.png in Resources */,
-				290A311D144D2FC100BBFBA3 /* Henry_Spooky_Story_Scene.png in Resources */,
-				290A3120144D2FDD00BBFBA3 /* Henry_Spooky_Speech1.png in Resources */,
-				290A3121144D2FDD00BBFBA3 /* Henry_Spooky_Speech2.png in Resources */,
 				290A3124144D304500BBFBA3 /* Corben-64.fnt in Resources */,
 				290A3125144D304500BBFBA3 /* Corben-64.png in Resources */,
 				2952A015144DD6F200B19FEE /* particleTexture.png in Resources */,
@@ -2510,7 +2873,6 @@
 				29A9DB001450D05700B5A240 /* MaterialSelectScreen.png in Resources */,
 				29A9DB021450D05700B5A240 /* MaterialSelectScreen-hd.png in Resources */,
 				29A9DB041450D05700B5A240 /* MaterialSelectScreen-ipad.png in Resources */,
-				29ABB2201452363D00A3A3F7 /* PrizeSelect_Black.png in Resources */,
 				296A42E6145E444F009EB9F9 /* TitleScreen-portrait-hd.png in Resources */,
 				296A42E8145E444F009EB9F9 /* TitleScreen-portrait.png in Resources */,
 				296A42E9145E445D009EB9F9 /* Default@2x.png in Resources */,
@@ -2578,6 +2940,80 @@
 				29B82CD2146464520030C39B /* Icon@2x.png in Resources */,
 				29B82CD3146464520030C39B /* iTunesArtwork in Resources */,
 				29B82CD7146465340030C39B /* Icon.png in Resources */,
+				298410F6146DEF36006FC977 /* Henry_1.caf in Resources */,
+				298410F8146DEF36006FC977 /* Henry_2.caf in Resources */,
+				298410FA146DEF36006FC977 /* Henry_3.caf in Resources */,
+				298410FC146DEF36006FC977 /* Henry_4.caf in Resources */,
+				298410FE146DEF36006FC977 /* Henry_5.caf in Resources */,
+				29841100146DEF36006FC977 /* Henry_6.caf in Resources */,
+				29841102146DEF36006FC977 /* Henry_7.caf in Resources */,
+				29841104146DEF36006FC977 /* Henry_8.caf in Resources */,
+				29841106146DEF36006FC977 /* Henry_9.caf in Resources */,
+				29841108146DEF36006FC977 /* Henry_10.caf in Resources */,
+				2984110A146DEF36006FC977 /* Henry_11.caf in Resources */,
+				2984110C146DEF36006FC977 /* Henry_12.caf in Resources */,
+				2984110E146DEF36006FC977 /* Henry_13.caf in Resources */,
+				29841110146DEF36006FC977 /* Henry_14.caf in Resources */,
+				29841112146DEF36006FC977 /* Henry_15.caf in Resources */,
+				29841114146DEF36006FC977 /* Henry_16.caf in Resources */,
+				29841116146DEF36006FC977 /* Henry_17.caf in Resources */,
+				29841118146DEF36006FC977 /* Henry_18.caf in Resources */,
+				2984111A146DEF36006FC977 /* Henry_19.caf in Resources */,
+				2984111C146DEF36006FC977 /* Henry_20.caf in Resources */,
+				2984111E146DEF36006FC977 /* Henry_A.caf in Resources */,
+				29841120146DEF36006FC977 /* Henry_B.caf in Resources */,
+				29841122146DEF36006FC977 /* Henry_Blue.caf in Resources */,
+				29841124146DEF36006FC977 /* Henry_C.caf in Resources */,
+				29841126146DEF36006FC977 /* Henry_Can_You_Find_The.caf in Resources */,
+				29841128146DEF36006FC977 /* Henry_Capital_Letters.caf in Resources */,
+				2984112A146DEF36006FC977 /* Henry_Capital.caf in Resources */,
+				2984112C146DEF36006FC977 /* Henry_Circle.caf in Resources */,
+				2984112E146DEF36006FC977 /* Henry_Colors.caf in Resources */,
+				29841130146DEF36006FC977 /* Henry_D.caf in Resources */,
+				29841132146DEF36006FC977 /* Henry_E.caf in Resources */,
+				29841134146DEF36006FC977 /* Henry_F.caf in Resources */,
+				29841136146DEF36006FC977 /* Henry_G.caf in Resources */,
+				29841138146DEF36006FC977 /* Henry_Green.caf in Resources */,
+				2984113A146DEF36006FC977 /* Henry_H.caf in Resources */,
+				2984113C146DEF36006FC977 /* Henry_Hexagon.caf in Resources */,
+				2984113E146DEF36006FC977 /* Henry_I.caf in Resources */,
+				29841140146DEF36006FC977 /* Henry_J.caf in Resources */,
+				29841142146DEF36006FC977 /* Henry_K.caf in Resources */,
+				29841144146DEF36006FC977 /* Henry_L.caf in Resources */,
+				29841146146DEF36006FC977 /* Henry_Lowercase_Letters.caf in Resources */,
+				29841148146DEF36006FC977 /* Henry_Lowercase.caf in Resources */,
+				2984114A146DEF36006FC977 /* Henry_M.caf in Resources */,
+				2984114C146DEF36006FC977 /* Henry_N.caf in Resources */,
+				2984114E146DEF36006FC977 /* Henry_Number.caf in Resources */,
+				29841150146DEF36006FC977 /* Henry_Numbers.caf in Resources */,
+				29841152146DEF36006FC977 /* Henry_O.caf in Resources */,
+				29841154146DEF36006FC977 /* Henry_Orange.caf in Resources */,
+				29841156146DEF36006FC977 /* Henry_Oval.caf in Resources */,
+				29841158146DEF36006FC977 /* Henry_P.caf in Resources */,
+				2984115A146DEF36006FC977 /* Henry_Pick_Your_Prize.caf in Resources */,
+				2984115C146DEF36006FC977 /* Henry_Pink.caf in Resources */,
+				2984115E146DEF36006FC977 /* Henry_Play_All.caf in Resources */,
+				29841160146DEF36006FC977 /* Henry_Purple.caf in Resources */,
+				29841162146DEF36006FC977 /* Henry_Q.caf in Resources */,
+				29841164146DEF36006FC977 /* Henry_R.caf in Resources */,
+				29841166146DEF36006FC977 /* Henry_Rectangle.caf in Resources */,
+				29841168146DEF36006FC977 /* Henry_Red.caf in Resources */,
+				2984116A146DEF36006FC977 /* Henry_Rhombus.caf in Resources */,
+				2984116C146DEF36006FC977 /* Henry_S.caf in Resources */,
+				2984116E146DEF36006FC977 /* Henry_Shapes.caf in Resources */,
+				29841170146DEF36006FC977 /* Henry_Square.caf in Resources */,
+				29841172146DEF36006FC977 /* Henry_Star.caf in Resources */,
+				29841174146DEF36006FC977 /* Henry_T.caf in Resources */,
+				29841176146DEF36006FC977 /* Henry_Trapezoid.caf in Resources */,
+				29841178146DEF36006FC977 /* Henry_Triangle.caf in Resources */,
+				2984117A146DEF36006FC977 /* Henry_U.caf in Resources */,
+				2984117C146DEF36006FC977 /* Henry_V.caf in Resources */,
+				2984117E146DEF36006FC977 /* Henry_W.caf in Resources */,
+				29841180146DEF36006FC977 /* Henry_X.caf in Resources */,
+				29841182146DEF36006FC977 /* Henry_Y.caf in Resources */,
+				29841184146DEF36006FC977 /* Henry_Yellow.caf in Resources */,
+				29841186146DEF36006FC977 /* Henry_You_Found_The.caf in Resources */,
+				29841188146DEF36006FC977 /* Henry_Z.caf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -3300,7 +3736,7 @@
 				);
 				OTHER_LDFLAGS = "-lz";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "044FAAA4-77EB-458A-AF3B-B58443CC2DF1";
+				PROVISIONING_PROFILE = "BF0991E3-D410-40A5-8B3D-5692C73DB459";
 				TARGETED_DEVICE_FAMILY = "1,2";
 				USER_HEADER_SEARCH_PATHS = "\"HenryAndHisHeadlamp/libs\"";
 				VALIDATE_PRODUCT = YES;

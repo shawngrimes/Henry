@@ -9,9 +9,11 @@
 #import "GameLayer.h"
 #import "CharacterSprite.h"
 #import "PrizeSelectionScene.h"
+#import "CocosDenshion.h"
 
 @implementation GameLayer
 @synthesize arrCharacters=_arrCharacters;
+@synthesize effectSpeech=_effectSpeech;
 
 typedef enum {
     kTAGfireWorks=1,
@@ -39,6 +41,9 @@ int kNumObjects=7;
 	// add layer as a child to scene
 	[scene addChild: layer];
 
+    [[SimpleAudioEngine sharedEngine] preloadEffect:@"Henry_Can_You_Find_The.caf"];
+    [[SimpleAudioEngine sharedEngine] preloadEffect:@"Henry_You_Found_The.caf"];
+    
     
 //    ParentLoginViewController *parentVC=[[ParentLoginViewController alloc] init];
 //    AppDelegate *myDelegate=(AppDelegate *)[[UIApplication sharedApplication] delegate];
@@ -55,8 +60,53 @@ int kNumObjects=7;
 	// always call "super" init
 	// Apple recommends to re-assign "self" with the "super" return value
 	if( (self=[super init])) {
+        NSString *initialSound;
+        switch (selectedGameMode) {
+            case kGameModeUpperAlphabet:
+                initialSound=@"Henry_Capital_Letters.caf";
+                [[SimpleAudioEngine sharedEngine] unloadEffect:@"Henry_Lowercase_Letters.caf"];
+                [[SimpleAudioEngine sharedEngine] unloadEffect:@"Henry_Numbers.caf"];
+                [[SimpleAudioEngine sharedEngine] unloadEffect:@"Henry_Shapes.caf"];
+                [[SimpleAudioEngine sharedEngine] unloadEffect:@"Henry_Play_All.caf"];
+                break;
+            case kGameModeLowerAlphabet:
+                initialSound=@"Henry_Lowercase_Letters.caf";
+                [[SimpleAudioEngine sharedEngine] unloadEffect:@"Henry_Capital_Letters.caf"];
+                [[SimpleAudioEngine sharedEngine] unloadEffect:@"Henry_Numbers.caf"];
+                [[SimpleAudioEngine sharedEngine] unloadEffect:@"Henry_Shapes.caf"];
+                [[SimpleAudioEngine sharedEngine] unloadEffect:@"Henry_Play_All.caf"];
+                break;
+            case kGameModeNumbers:
+                initialSound=@"Henry_Numbers.caf";
+                [[SimpleAudioEngine sharedEngine] unloadEffect:@"Henry_Capital_Letters.caf"];
+                [[SimpleAudioEngine sharedEngine] unloadEffect:@"Henry_Lowercase_Letters.caf"];
+                [[SimpleAudioEngine sharedEngine] unloadEffect:@"Henry_Shapes.caf"];
+                [[SimpleAudioEngine sharedEngine] unloadEffect:@"Henry_Play_All.caf"];
+                break;    
+            case kGameModeShapes:
+                initialSound=@"Henry_Shapes.caf";
+                [[SimpleAudioEngine sharedEngine] unloadEffect:@"Henry_Capital_Letters.caf"];
+                [[SimpleAudioEngine sharedEngine] unloadEffect:@"Henry_Lowercase_Letters.caf"];
+                [[SimpleAudioEngine sharedEngine] unloadEffect:@"Henry_Numbers.caf"];
+                [[SimpleAudioEngine sharedEngine] unloadEffect:@"Henry_Play_All.caf"];
+                break;
+            case kGameModeSmartAll:
+                initialSound=@"Henry_Play_All.caf";
+                [[SimpleAudioEngine sharedEngine] unloadEffect:@"Henry_Capital_Letters.caf"];
+                [[SimpleAudioEngine sharedEngine] unloadEffect:@"Henry_Lowercase_Letters.caf"];
+                [[SimpleAudioEngine sharedEngine] unloadEffect:@"Henry_Numbers.caf"];
+                [[SimpleAudioEngine sharedEngine] unloadEffect:@"Henry_Shapes.caf"];
+                break;
+            default:
+                break;
+        }
+        _effectSpeech = [[[SimpleAudioEngine sharedEngine] soundSourceForFile:initialSound] retain];
+        self.effectSpeech=_effectSpeech;
+        [self.effectSpeech play];
         
         self.isTouchEnabled=YES;
+        
+        
 
         gameMode=selectedGameMode;
         
@@ -99,7 +149,7 @@ int kNumObjects=7;
 //        }
         statusBarSprite.anchorPoint=ccp(1,1);
         statusBarSprite.position=ccp(size.width,size.height);
-        [self addChild:statusBarSprite z:3 tag:kTAGHUD];
+        [self addChild:statusBarSprite z:6 tag:kTAGHUD];
         
         
         CCSprite *henryBody=[CCSprite spriteWithSpriteFrameName:@"HenryBody.png"];
@@ -226,7 +276,7 @@ int kNumObjects=7;
 //                    }
                     randomSprite.color=ccc3(118,188,241);
                     [_arrCharacters addObject:randomSprite];
-                    [self addChild:randomSprite];
+                    [self addChild:randomSprite z:4];
                 }
 
                 
@@ -276,7 +326,7 @@ int kNumObjects=7;
 //                    }
                     randomSprite.color=ccc3(216,60,68);
                     [_arrCharacters addObject:randomSprite];
-                    [self addChild:randomSprite];
+                    [self addChild:randomSprite z:4];
                 }
                 break;
             }
@@ -323,23 +373,23 @@ int kNumObjects=7;
 //                        }
                         randomSprite.color=ccc3(93, 185, 51);
                         [_arrCharacters addObject:randomSprite];
-                        [self addChild:randomSprite];
+                        [self addChild:randomSprite z:4];
                     }
                     break;
                 }
             case kGameModeShapes:
             {
-                int MAX_CHARACTERS=kCharacterTypeMAX-1;
+                int MAX_CHARACTERS=kCharacterTypeMAX;
                 
                 NSMutableArray *aryCharacterTypes=[NSMutableArray arrayWithCapacity:kNumObjects];
                 for (int c=0; c<kNumObjects; c++) {
-                    int randomCharacter=arc4random() % MAX_CHARACTERS+1;
+                    int randomCharacter=arc4random() % MAX_CHARACTERS;
                     while ([aryCharacterTypes containsObject:[NSNumber numberWithInt:randomCharacter]]){
-                        randomCharacter=arc4random() % MAX_CHARACTERS+1;
+                        randomCharacter=arc4random() % MAX_CHARACTERS;
                     }
                     [aryCharacterTypes addObject:[NSNumber numberWithInt:randomCharacter]];
                     CCLOG(@"Random Character Type: %i", randomCharacter);
-                    int randomColor=(arc4random() % kCharacterColorMAX)+1;
+                    int randomColor=(arc4random() % kCharacterColorMAX);
                     CharacterSprite *randomSprite=[CharacterSprite characterOfType:randomCharacter withColor:randomColor];
 //                    if (UI_USER_INTERFACE_IDIOM() != UIUserInterfaceIdiomPad) { 
 //                        CGSize winSizeInPixels=[[CCDirector sharedDirector] winSizeInPixels];
@@ -364,7 +414,7 @@ int kNumObjects=7;
                     }
                     
                     [_arrCharacters addObject:randomSprite];
-                    [self addChild:randomSprite];
+                    [self addChild:randomSprite z:4];
                 }
 
                 break;
@@ -449,9 +499,9 @@ int kNumObjects=7;
                         
                         case 3:
                         {
-                            int MAX_CHARACTERS=kCharacterTypeMAX-1;
-                            int randomCharacter=(arc4random() % MAX_CHARACTERS)+1;
-                            int randomColor=(arc4random() % kCharacterColorMAX)+1;
+                            int MAX_CHARACTERS=kCharacterTypeMAX;
+                            int randomCharacter=(arc4random() % MAX_CHARACTERS);
+                            int randomColor=(arc4random() % kCharacterColorMAX);
                             randomSprite=[CharacterSprite characterOfType:randomCharacter withColor:randomColor];
                             while ([aryCharacterTypes containsObject:randomSprite]){
                                 int randomCharacter=arc4random() % MAX_CHARACTERS+1;
@@ -484,7 +534,7 @@ int kNumObjects=7;
                     }
                     
                     [_arrCharacters addObject:randomSprite];
-                    [self addChild:randomSprite];
+                    [self addChild:randomSprite z:4];
                     
                 }
                 
@@ -515,10 +565,10 @@ int kNumObjects=7;
 //        }
         _headLampLight.position=ccp(size.width/2, size.height/2);
         [_headLampLight setVisible:NO];
-        [self addChild:_headLampLight z:1 tag:kTAGheadLamp];
+        [self addChild:_headLampLight z:5 tag:kTAGheadLamp];
         
         CCLayerColor *layerColor=[CCLayerColor layerWithColor:ccc4(0,0,0,255)];
-        [self addChild:layerColor z:1 tag:kTAGnight];
+        [self addChild:layerColor z:5 tag:kTAGnight];
         
         
 
@@ -554,7 +604,7 @@ int kNumObjects=7;
 //        CCLOG(@"Status Bar: %f, %f",statusBarSprite.boundingBox.origin.x, statusBarSprite.boundingBox.origin.y);
         _timerLabel.position=ccp(statusBarSprite.boundingBox.origin.x + size.width*.13,statusBarSprite.boundingBox.origin.y + size.height*0.055);
 //        _timerLabel.position=ccp(size.width-size.width/15,size.height-(size.height/10));
-        [self addChild:_timerLabel z:4 tag:kTAGTimer];
+        [self addChild:_timerLabel z:8 tag:kTAGTimer];
         
         
         [[SimpleAudioEngine sharedEngine] preloadEffect:@"click.caf"];
@@ -574,11 +624,26 @@ int kNumObjects=7;
     
     [TestFlight passCheckpoint:@"SET_INITIAL_TARGET"];
     
-    [self schedule: @selector(updateTimer:) interval:1.0];
+    [self schedule:@selector(showTargetLabel) interval:2.0];
+    
+    [self schedule:@selector(updateTimer:) interval:1.0];
        
     [TestFlight passCheckpoint:@"RETURNING_SCENE"];
     
 	return self;
+}
+
+-(void)cdAudioSourceFileDidChange:(CDLongAudioSource *)audioSource{
+    
+    NSLog(@"Audio file changed: %@", audioSource);
+    _isEffectPlaying=YES;
+    
+}
+
+-(void)cdAudioSourceDidFinishPlaying:(CDLongAudioSource *)audioSource{
+    _isEffectPlaying=NO;
+    
+    NSLog(@"Audio Source Stopped: %@",  audioSource);
 }
 
 -(CharacterSprite *) setNextTarget
@@ -651,22 +716,91 @@ int kNumObjects=7;
         [system setScaleY:size.height/768.0f];
     }
     system.position=_targetCharacter.position;
-    [self addChild:system z:1 tag:kTAGfireWorks];
+    [self addChild:system  z:11 tag:kTAGfireWorks];
+    [self reorderChild:_targetCharacter z:12];
 
-
-    [[SimpleAudioEngine sharedEngine] playEffect:@"ding.caf"];
-    
-    
-        
+    [self stopAllActions];
+    id youFoundTheAction=[CCCallFuncO actionWithTarget:self selector:@selector(speakFoundItem:) object:_targetCharacter];
     _targetCharacter=[self setNextTarget];
+    float delaySeconds=[self getDelayForStringFound:_targetCharacter];
+//    NSLog(@"Delay In Seconds: %f", delaySeconds);
+    id delay=[CCDelayTime actionWithDuration:delaySeconds];
+    id findTheAction=[CCCallFunc actionWithTarget:self selector:@selector(showTargetLabel)];
+
+
+//    _targetCharacter=[self setNextTarget];
     if(_targetCharacter==nil){
         [self gameOver];
-        
+        findTheAction=nil;
     }else{
         [self schedule:@selector(removeFireworks) interval:4];
-        [self showTargetLabel];
+//        [self showTargetLabel];
     }
+    CCSequence *soundSequence=[CCSequence actions:youFoundTheAction,delay,findTheAction, nil];
+    [self runAction:soundSequence];
+    
+    
+    
     [TestFlight passCheckpoint:@"WIN_SIGNALED"];
+}
+
+-(void)speakString:(NSString *)stringToSpeak{
+    while(self.effectSpeech.isPlaying){
+    }
+    NSLog(@"Saying: %@", stringToSpeak);
+    self.effectSpeech=[[SimpleAudioEngine sharedEngine] soundSourceForFile:stringToSpeak];
+    [self.effectSpeech play];
+
+}
+
+-(float)getDelayForStringFound:(CharacterSprite* )selectedCharacter{
+    float delayInSeconds=0;
+    delayInSeconds+=[[SimpleAudioEngine sharedEngine] soundSourceForFile:@"Henry_You_Found_The.caf"].durationInSeconds;
+    if(selectedCharacter.isShape){
+        delayInSeconds+=[[SimpleAudioEngine sharedEngine] soundSourceForFile:[selectedCharacter speakColor]].durationInSeconds;
+        delayInSeconds+=[[SimpleAudioEngine sharedEngine] soundSourceForFile:[selectedCharacter speakShape]].durationInSeconds;
+    }else{
+        delayInSeconds+=[[SimpleAudioEngine sharedEngine] soundSourceForFile:[selectedCharacter descriptorFile]].durationInSeconds;
+        delayInSeconds+=[[SimpleAudioEngine sharedEngine] soundSourceForFile:[selectedCharacter speakString]].durationInSeconds;        
+    }
+    CCLOG(@"Delay In Seconds: %f", delayInSeconds);
+    delayInSeconds+=.5;
+    return delayInSeconds;
+}
+
+-(void)moveFoundItemBack:(CharacterSprite *)foundSprite{
+    [self reorderChild:foundSprite z:4];
+    [self removeFireworks];
+}
+
+-(void)speakFoundItem:(CharacterSprite *)foundSprite{
+    
+    [[SimpleAudioEngine sharedEngine] playEffect:@"ding.caf"];
+    
+    self.effectSpeech=[[SimpleAudioEngine sharedEngine] soundSourceForFile:@"Henry_You_Found_The.caf"];
+    [self speakString:@"Henry_You_Found_The.caf"];
+    
+    id delayOne=[CCDelayTime actionWithDuration:[[SimpleAudioEngine sharedEngine] soundSourceForFile:@"Henry_You_Found_The.caf"].durationInSeconds];
+    id speakDescriptor;
+    id delayTwo;
+    id speakObject;
+    id delayThree;
+    
+    if(foundSprite.isShape){
+        speakDescriptor=[CCCallFuncO actionWithTarget:self selector:@selector(speakString:) object:[foundSprite speakColor]];
+        delayTwo=[CCDelayTime actionWithDuration:[[SimpleAudioEngine sharedEngine] soundSourceForFile:[foundSprite speakColor]].durationInSeconds];
+        speakObject=[CCCallFuncO actionWithTarget:self selector:@selector(speakString:) object:[foundSprite speakShape]];
+        delayThree=[CCDelayTime actionWithDuration:[[SimpleAudioEngine sharedEngine] soundSourceForFile:[foundSprite speakShape]].durationInSeconds];
+    }else{
+        speakDescriptor=[CCCallFuncO actionWithTarget:self selector:@selector(speakString:) object:[foundSprite descriptorFile]];
+        delayTwo=[CCDelayTime actionWithDuration:[[SimpleAudioEngine sharedEngine] soundSourceForFile:[foundSprite descriptorFile]].durationInSeconds];
+        speakObject=[CCCallFuncO actionWithTarget:self selector:@selector(speakString:) object:[foundSprite speakString]];  
+        delayThree=[CCDelayTime actionWithDuration:[[SimpleAudioEngine sharedEngine] soundSourceForFile:[foundSprite speakString]].durationInSeconds];
+    }
+    id moveFoundSpriteAction=[CCCallFuncO actionWithTarget:self selector:@selector(moveFoundItemBack:) object:foundSprite];
+    [self removeChildByTag:kTAGtargetSprite cleanup:YES];
+    [self runAction:[CCSequence actions:delayOne,speakDescriptor,delayTwo,speakObject,delayThree,moveFoundSpriteAction, nil]];
+
 }
 
 -(void)gameOver{
@@ -705,8 +839,8 @@ int kNumObjects=7;
     }
     gameOverLabel.position =  ccp( size.width /2 , size.height/2 );
     gameOverTime.position=ccp(size.width * 0.5, size.height-size.height * 0.6);
-    [self addChild: gameOverLabel];
-    [self addChild:gameOverTime];
+    [self addChild: gameOverLabel z:10];
+    [self addChild:gameOverTime z:10];
     
     [self removeChildByTag:kTAGnight cleanup:YES];
     [_headLampLight setVisible:NO];
@@ -718,6 +852,10 @@ int kNumObjects=7;
 //    playAgainMenu.position=ccp(size.width/2, size.height/2);  //size.height-size.height * 0.8);
 //    labelPlayAgainItem.position=ccp(size.width/2, size.height/2);
     
+}
+
+-(void) showTargetSprite:(CharacterSprite *)targetSpriteCopy{
+    [self addChild:targetSpriteCopy z:8 tag:kTAGtargetSprite];
 }
 
 -(void) loadScores{
@@ -743,9 +881,11 @@ int kNumObjects=7;
 }
 
 -(void)showTargetLabel{
+    [self unschedule:@selector(showTargetLabel)];
     [TestFlight passCheckpoint:@"Showing_Target_Label"];
 //    [self removeChildByTag:kTAGtargetLabel cleanup:YES];
     [self removeChildByTag:kTAGtargetSprite cleanup:YES];
+    
     CGSize size = [[CCDirector sharedDirector] winSize];
     CCSprite *HUDSprite=(CCSprite *)[self getChildByTag:kTAGHUD];
     
@@ -799,9 +939,45 @@ int kNumObjects=7;
         targetSpriteCopy.position=ccp(HUDSprite.boundingBox.origin.x + HUDSprite.boundingBox.size.width/2, HUDSprite.boundingBox.origin.y + HUDSprite.boundingBox.size.height/1.75);
     }
     targetSpriteCopy.color=_targetCharacter.color;
-    [self addChild:targetSpriteCopy z:5 tag:kTAGtargetSprite];
+
+//    effectSpeech = [[CDAudioManager sharedManager] audioSourceForChannel:kASC_Right];
+//    effectSpeech.backgroundMusic = NO;
+//    effectSpeech.delegate=self;
+    
+    
+    
+    while(self.effectSpeech.isPlaying){
+    }
+    
+    self.effectSpeech=[[SimpleAudioEngine sharedEngine] soundSourceForFile:@"Henry_Can_You_Find_The.caf"];
+    [self speakString:@"Henry_Can_You_Find_The.caf"];
+    
+    id delayOne=[CCDelayTime actionWithDuration:self.effectSpeech.durationInSeconds];
+    id speakDescriptor;
+    id delayTwo;
+    id speakObject;
+    
+    if(_targetCharacter.isShape){
+        speakDescriptor=[CCCallFuncO actionWithTarget:self selector:@selector(speakString:) object:[_targetCharacter speakColor]];
+        delayTwo=[CCDelayTime actionWithDuration:[[SimpleAudioEngine sharedEngine] soundSourceForFile:[_targetCharacter speakColor]].durationInSeconds];
+        speakObject=[CCCallFuncO actionWithTarget:self selector:@selector(speakString:) object:[_targetCharacter speakShape]];
+    }else{
+        speakDescriptor=[CCCallFuncO actionWithTarget:self selector:@selector(speakString:) object:[_targetCharacter descriptorFile]];
+        delayTwo=[CCDelayTime actionWithDuration:[[SimpleAudioEngine sharedEngine] soundSourceForFile:[_targetCharacter descriptorFile]].durationInSeconds];
+        speakObject=[CCCallFuncO actionWithTarget:self selector:@selector(speakString:) object:[_targetCharacter speakString]];        
+    }
+    id showTargetSprite=[CCCallFuncO actionWithTarget:self selector:@selector(showTargetSprite:) object:targetSpriteCopy];
+    [self runAction:[CCSequence actions:delayOne,speakDescriptor,delayTwo,speakObject,showTargetSprite, nil]];
+
+
+    
+    
+
+    
 //    NSLog(@"Target Bounding Box: %f, %f, %f, %f", [targetSpriteCopy boundingBox].origin.x, [targetSpriteCopy boundingBox].origin.y, [targetSpriteCopy boundingBox].size.width,[targetSpriteCopy boundingBox].size.height);
 }
+
+
 
 -(void)removeFireworks{
     CCLOG(@"Removing fireworks");
@@ -813,10 +989,12 @@ int kNumObjects=7;
 
 -(void) updateTimer: (ccTime) dt
 {
-    if(![self getChildByTag:kTAGtargetSprite])
-        [self showTargetLabel];
-    gameTimer+=dt;
-    _timerLabel.string=[NSString stringWithFormat:@"%i", (int)gameTimer];
+//    if(![self getChildByTag:kTAGtargetSprite])
+//        [self showTargetLabel];
+    if([self getChildByTag:kTAGtargetSprite]){
+        gameTimer+=dt;
+        _timerLabel.string=[NSString stringWithFormat:@"%i", (int)gameTimer];
+    }
 //    if(gameTimer>2)
 //        [self gameOver];
 }
@@ -874,7 +1052,8 @@ int kNumObjects=7;
         if (CGRectContainsPoint([node boundingBox], location))
         {
             CCLOG(@"Contains Point!");
-            [self signalWin];
+            if([self getChildByTag:kTAGtargetSprite])
+                [self signalWin];
         }
     }
 #elif HALLOWEEN
@@ -929,7 +1108,8 @@ int kNumObjects=7;
 //#elif HALLOWEEN
     if(CGRectContainsPoint([_targetCharacter boundingBox], location)){
         CCLOG(@"Contains Point!");
-        [self signalWin];
+        if([self getChildByTag:kTAGtargetSprite])
+            [self signalWin];
     }
 //#endif
 }

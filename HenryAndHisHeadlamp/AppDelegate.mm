@@ -118,8 +118,8 @@
 	[director setAnimationInterval:1.0/60];
 	[director setDisplayFPS:NO];
 	
-
-    
+    [[CDAudioManager sharedManager] setResignBehavior:kAMRBStopPlay autoHandle:YES];
+//    [[CDAudioManager sharedManager] setMode:kAMM_FxOnly];
 	
 	// make the OpenGLView a child of the view controller
 	[viewController setView:glView];

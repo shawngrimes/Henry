@@ -24,8 +24,7 @@ typedef enum {
 } CharacterType;
 #elif SMART
 typedef enum {
-    kCharacterTypeNone=0,
-    kCharacterTypeStar,
+    kCharacterTypeStar=0,
     kCharacterTypeHexagon,
     kCharacterTypeTrapezoid,
     kCharacterTypeRhombus,
@@ -39,7 +38,7 @@ typedef enum {
 #endif
 
 typedef enum {
-    kCharacterColorYellow=1,
+    kCharacterColorYellow=0,
     kCharacterColorOrange,
     kCharacterColorRed,
     kCharacterColorGreen,
@@ -57,6 +56,8 @@ typedef enum {
 
 @property (nonatomic, retain) NSString *characterString;
 @property (nonatomic, retain) NSString *description;
+@property (nonatomic, retain) NSString *shapeColor;
+@property (nonatomic, retain) NSString *shape;
 @property (nonatomic) BOOL isTarget;
 @property (nonatomic) BOOL isShape;
 
@@ -72,4 +73,8 @@ typedef enum {
 -(CGRect) getBoundingRectForNode:(CCNode *)selectedNode;
 - (BOOL)isEqual:(id)anObject;
 
+-(NSString *)descriptorFile;
+-(NSString *)speakString;
+-(NSString *)speakColor;
+-(NSString *)speakShape;
 @end

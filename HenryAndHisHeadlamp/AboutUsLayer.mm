@@ -98,7 +98,7 @@
         
         [mainMenu alignItemsHorizontallyWithPadding:0.2*size.width];
         if (UI_USER_INTERFACE_IDIOM() != UIUserInterfaceIdiomPad) {
-            mainMenu.position=ccp(size.width *.5, size.height/10);
+            mainMenu.position=ccp(size.width *.5, size.height/11);
         }else{
             mainMenu.position=ccp(size.width *.5, size.height/6);
         }

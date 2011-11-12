@@ -100,12 +100,13 @@ float _userTime=0.0;
         NSError *error;
         NSArray *fetchedObjects = [sharedAppDelegate.managedObjectContext executeFetchRequest:fetchRequest error:&error];
         NSSet *prizesWonSet;
-        if([fetchedObjects count]==0){
+                if([fetchedObjects count]==0){
             CCLOG(@"No user found in database");
         }else{
             currentPlayer=[[fetchedObjects objectAtIndex:0] retain];
             prizesWonSet=[NSSet setWithSet:currentPlayer.prizes];
-            
+            CCLOG(@"prizesWon Count: %i", [prizesWonSet count]);
+
         }
         [fetchRequest release];
         
@@ -118,7 +119,6 @@ float _userTime=0.0;
                     hasPrize=YES;
                 }
             }
-            
             
             CCMenuItemSprite *prizeIconItem;
             if(x>5){
@@ -145,7 +145,9 @@ float _userTime=0.0;
                 [prizeMenu addChild:prizeIconItem];
             }
             if(hasPrize==YES){
-                prizeIconItem.isEnabled=FALSE;
+                if([prizesWonSet count]<15)
+                    prizeIconItem.isEnabled=FALSE;
+                
                 CCSprite *checkMark=[CCSprite spriteWithSpriteFrameName:@"CheckMark.png"];
                 [prizeIconItem addChild:checkMark];
                 checkMark.position=ccp(prizeIconItem.contentSize.width * .5, prizeIconItem.contentSize.height * .5);
@@ -192,9 +194,6 @@ float _userTime=0.0;
                                                 0);
                 }
             }
-
-           
-            
         }
             
         [self addChild:prizeMenu];
@@ -204,10 +203,19 @@ float _userTime=0.0;
         }else{
             prizeMenu.position=ccp(150,125);
         }
-        
+        [self schedule:@selector(speakPrize) interval:2.0];
     }
     return self;
 }
+
+-(void)speakPrize{
+    [self unschedule:@selector(speakPrize)];
+    NSString *stringToSpeak=@"Henry_Pick_Your_Prize.caf";
+    NSLog(@"Saying: %@", stringToSpeak);
+    CDSoundSource *_effectSpeech=[[SimpleAudioEngine sharedEngine] soundSourceForFile:stringToSpeak];
+    [_effectSpeech play];
+}
+
 
 -(void)selectPrize:(id) sender{
     CCMenuItemSprite *selectedMaterialSprite=(CCMenuItemSprite *) sender;

@@ -16,6 +16,15 @@
 {
 	// 'scene' is an autorelease object.
 	CCScene *scene = [CCScene node];
+    
+    [[SimpleAudioEngine sharedEngine] unloadEffect:@"Speech1.aifc"];
+    [[SimpleAudioEngine sharedEngine] unloadEffect:@"Speech2.aifc"];
+    
+    [[SimpleAudioEngine sharedEngine] preloadEffect:@"Henry_Capital_Letters.caf"];
+    [[SimpleAudioEngine sharedEngine] preloadEffect:@"Henry_Lowercase_Letters.caf"];
+    [[SimpleAudioEngine sharedEngine] preloadEffect:@"Henry_Numbers.caf"];
+    [[SimpleAudioEngine sharedEngine] preloadEffect:@"Henry_Shapes.caf"];
+    [[SimpleAudioEngine sharedEngine] preloadEffect:@"Henry_Play_All.caf"];
 	
 	// 'layer' is an autorelease object.
 	MaterialSelectionLayer *layer = [MaterialSelectionLayer node];
@@ -114,7 +123,7 @@
                                        selector:@selector(startGame:)];
         playAllSprite.anchorPoint=ccp(0,0);
         playAllSprite.scale=.8616;
-        playAllSprite.position=ccp(size.width * 195/1024,size.height - ( size.height * 620/768));
+        playAllSprite.position=ccp(size.width * 210/1024,size.height - ( size.height * 620/768));
         
         materialMenu=[CCMenu menuWithItems:ABCcap,abcLower,numberSprite,shapeSprite,playAllSprite, nil];
        materialMenu.anchorPoint=ccp(0,0);
@@ -149,6 +158,21 @@
     }
     CCSprite *selectedSprite=(CCSprite *)[selectedMaterialSprite.children objectAtIndex:0];
     CCLOG(@"TAG: %i", selectedSprite.tag);
+    
+//    [GameLayer sceneWithGameMode:(GameModeType) selectedSprite.tag]
+//    CCScene *gameModeScene = [CCScene node];
+//	
+//	// 'layer' is an autorelease object.
+//	GameLayer *gamelayer = [[[GameLayer alloc] initWithGameMode:(GameModeType) selectedSprite.tag] autorelease];
+//	
+	// add layer as a child to scene
+	
+    
+    [[SimpleAudioEngine sharedEngine] preloadEffect:@"Henry_Can_You_Find_The.caf"];
+    [[SimpleAudioEngine sharedEngine] preloadEffect:@"Henry_You_Found_The.caf"];
+
+//    [gameModeScene addChild:gamelayer];
+    
     [[CCDirector sharedDirector] replaceScene:[CCTransitionMoveInR transitionWithDuration:1.0f scene:[GameLayer sceneWithGameMode:(GameModeType) selectedSprite.tag]]];    
 
 }

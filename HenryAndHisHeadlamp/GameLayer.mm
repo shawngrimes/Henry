@@ -441,10 +441,10 @@ int kNumObjects=7;
                                 NSString *randomCharacter=[NSString stringWithFormat:@"%c",[letters characterAtIndex:randomCharacterInt]];
                                 randomSprite=[[[CharacterSprite alloc] initWithString:randomCharacter] autorelease];
                             }
-                            if (UI_USER_INTERFACE_IDIOM() != UIUserInterfaceIdiomPad) { 
-                                [randomSprite setScale:size.width/1024.0f];
-//                                [randomSprite setScaleY:size.height/768.0f];
-                            }
+//                            if (UI_USER_INTERFACE_IDIOM() != UIUserInterfaceIdiomPad) { 
+//                                [randomSprite setScale:size.width/1024.0f];
+////                                [randomSprite setScaleY:size.height/768.0f];
+//                            }
                             for (CCSprite *child in randomSprite.children) {
                                 child.color=ccc3(118,188,241);
                             }
@@ -464,10 +464,10 @@ int kNumObjects=7;
                                 NSString *randomCharacter=[NSString stringWithFormat:@"%c",[letters characterAtIndex:randomCharacterInt]];
                                 randomSprite=[[[CharacterSprite alloc] initWithString:randomCharacter] autorelease];
                             }
-                            if (UI_USER_INTERFACE_IDIOM() != UIUserInterfaceIdiomPad) { 
-                                [randomSprite setScale:size.width/1024.0f];
-//                                [randomSprite setScaleY:size.height/768.0f];
-                            }
+//                            if (UI_USER_INTERFACE_IDIOM() != UIUserInterfaceIdiomPad) { 
+//                                [randomSprite setScale:size.width/1024.0f];
+////                                [randomSprite setScaleY:size.height/768.0f];
+//                            }
                             for (CCSprite *child in randomSprite.children) {
                                 child.color=ccc3(216,60,68);
                             }
@@ -486,10 +486,10 @@ int kNumObjects=7;
                                 NSString *randomCharacter=[NSString stringWithFormat:@"%i",randomCharacterInt];
                                 randomSprite=[[[CharacterSprite alloc] initWithString:randomCharacter] autorelease];
                             }
-                            if (UI_USER_INTERFACE_IDIOM() != UIUserInterfaceIdiomPad) { 
-                                [randomSprite setScale:size.width/1024.0f];
-//                                [randomSprite setScaleY:size.height/768.0f];
-                            }
+//                            if (UI_USER_INTERFACE_IDIOM() != UIUserInterfaceIdiomPad) { 
+//                                [randomSprite setScale:size.width/1024.0f];
+////                                [randomSprite setScaleY:size.height/768.0f];
+//                            }
                             for (CCSprite *child in randomSprite.children) {
                                 child.color=ccc3(93, 185, 51);
                             }

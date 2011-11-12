@@ -3679,8 +3679,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Developer: Shawn Grimes (YJ5G38Q2SU)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Shawn Grimes (YJ5G38Q2SU)";
 				COPY_PHASE_STRIP = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -3707,7 +3707,8 @@
 				);
 				OTHER_LDFLAGS = "-lz";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE = "513691CC-9728-41DF-AEEC-EE4AB3C5A6EA";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "513691CC-9728-41DF-AEEC-EE4AB3C5A6EA";
 				TARGETED_DEVICE_FAMILY = "1,2";
 				USER_HEADER_SEARCH_PATHS = "\"HenryAndHisHeadlamp/libs\"";
 				WRAPPER_EXTENSION = app;

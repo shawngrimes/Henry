@@ -3622,7 +3622,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Shawn Grimes (YJ5G38Q2SU)";
 				COPY_PHASE_STRIP = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -3634,7 +3634,7 @@
 				GCC_PREFIX_HEADER = SmartHenry/Prefix.pch;
 				"GCC_THUMB_SUPPORT[arch=armv6]" = "";
 				INFOPLIST_FILE = SmartHenry/Resources/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 4.2;
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)\"",
@@ -3642,6 +3642,7 @@
 				);
 				OTHER_LDFLAGS = "-lz";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "513691CC-9728-41DF-AEEC-EE4AB3C5A6EA";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -3651,7 +3652,8 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Campfire Apps, LLC.";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Campfire Apps, LLC.";
 				COPY_PHASE_STRIP = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -3662,7 +3664,7 @@
 				GCC_PREFIX_HEADER = SmartHenry/Prefix.pch;
 				"GCC_THUMB_SUPPORT[arch=armv6]" = "";
 				INFOPLIST_FILE = SmartHenry/Resources/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 4.2;
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)\"",
@@ -3670,6 +3672,8 @@
 				);
 				OTHER_LDFLAGS = "-lz";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "EFDCBF52-F4AB-413C-B4F9-BADC1BEC5914";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "EFDCBF52-F4AB-413C-B4F9-BADC1BEC5914";
 				VALIDATE_PRODUCT = YES;
 				WRAPPER_EXTENSION = app;
 			};
@@ -3679,13 +3683,15 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = (
+					armv6,
+					"$(ARCHS_STANDARD_32_BIT)",
+				);
 				CODE_SIGN_IDENTITY = "iPhone Developer: Shawn Grimes (YJ5G38Q2SU)";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Shawn Grimes (YJ5G38Q2SU)";
 				COPY_PHASE_STRIP = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
-					"\"$(SRCROOT)/Smore.embeddedframework\"",
-					"\"$(SRCROOT)/../../Library/Developer/Xcode/DerivedData/Smore-hgkfgjvvptzkwhgpkgxksrtpbdtw/Build/Products/Debug-iphoneos/Smore.embeddedframework\"",
 					"\"$(SRCROOT)\"",
 				);
 				GCC_DYNAMIC_NO_PIC = NO;
@@ -3699,7 +3705,7 @@
 				"GCC_THUMB_SUPPORT[arch=armv6]" = "";
 				HEADER_SEARCH_PATHS = "\"HenryAndHisHeadlamp/libs\"";
 				INFOPLIST_FILE = SmartHenry/Resources/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 4.2;
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)\"",
@@ -3707,8 +3713,8 @@
 				);
 				OTHER_LDFLAGS = "-lz";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "513691CC-9728-41DF-AEEC-EE4AB3C5A6EA";
-				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "513691CC-9728-41DF-AEEC-EE4AB3C5A6EA";
+				PROVISIONING_PROFILE = "B827A97C-3DCA-4CCF-B445-1BF040B60468";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "B827A97C-3DCA-4CCF-B445-1BF040B60468";
 				TARGETED_DEVICE_FAMILY = "1,2";
 				USER_HEADER_SEARCH_PATHS = "\"HenryAndHisHeadlamp/libs\"";
 				WRAPPER_EXTENSION = app;
@@ -3719,13 +3725,15 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				ARCHS = (
+					armv6,
+					"$(ARCHS_STANDARD_32_BIT)",
+				);
 				CODE_SIGN_IDENTITY = "iPhone Distribution: Campfire Apps, LLC.";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Campfire Apps, LLC.";
 				COPY_PHASE_STRIP = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
-					"\"$(SRCROOT)/Smore.embeddedframework\"",
-					"\"$(SRCROOT)/../../Library/Developer/Xcode/DerivedData/Smore-hgkfgjvvptzkwhgpkgxksrtpbdtw/Build/Products/Debug-iphoneos/Smore.embeddedframework\"",
 					"\"$(SRCROOT)\"",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
@@ -3737,7 +3745,7 @@
 				"GCC_THUMB_SUPPORT[arch=armv6]" = "";
 				HEADER_SEARCH_PATHS = "\"HenryAndHisHeadlamp/libs\"";
 				INFOPLIST_FILE = SmartHenry/Resources/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 4.2;
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)\"",
@@ -3745,7 +3753,8 @@
 				);
 				OTHER_LDFLAGS = "-lz";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "BF0991E3-D410-40A5-8B3D-5692C73DB459";
+				PROVISIONING_PROFILE = "EFDCBF52-F4AB-413C-B4F9-BADC1BEC5914";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "EFDCBF52-F4AB-413C-B4F9-BADC1BEC5914";
 				TARGETED_DEVICE_FAMILY = "1,2";
 				USER_HEADER_SEARCH_PATHS = "\"HenryAndHisHeadlamp/libs\"";
 				VALIDATE_PRODUCT = YES;

@@ -111,6 +111,7 @@
 	//
 #if GAME_AUTOROTATION == kGameAutorotationUIViewController
 	[director setDeviceOrientation:kCCDeviceOrientationPortrait];
+//    [director setDeviceOrientation:kCCDeviceOrientationLandscapeLeft];
 #else
 	[director setDeviceOrientation:kCCDeviceOrientationLandscapeLeft];
 #endif

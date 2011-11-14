@@ -729,7 +729,8 @@ int kNumObjects=7;
     
     CCParticleSystem *system=(CCParticleSystem *)[self getChildByTag:kTAGfireWorks];
     if(system!=nil){
-        [self removeChild:system cleanup:YES];
+        [self removeChildByTag:kTAGfireWorks cleanup:YES];
+//        [self removeChild:system cleanup:YES];
     }
     system=[CCParticleSystemQuad particleWithFile:@"startParticles.plist"];
     if (UI_USER_INTERFACE_IDIOM() != UIUserInterfaceIdiomPad) { 
@@ -740,24 +741,40 @@ int kNumObjects=7;
     [self addChild:system  z:11 tag:kTAGfireWorks];
     [self reorderChild:_targetCharacter z:12];
 
-    [self stopAllActions];
+//    [self stopAllActions];
+    CCLOG(@"Setting Up sound files");
     id youFoundTheAction=[CCCallFuncO actionWithTarget:self selector:@selector(speakFoundItem:) object:_targetCharacter];
-    _targetCharacter=[self setNextTarget];
     float delaySeconds=[self getDelayForStringFound:_targetCharacter];
 //    NSLog(@"Delay In Seconds: %f", delaySeconds);
     id delay=[CCDelayTime actionWithDuration:delaySeconds];
+    _targetCharacter=[self setNextTarget];
     id findTheAction=[CCCallFunc actionWithTarget:self selector:@selector(showTargetLabel)];
 
 
+    
 //    _targetCharacter=[self setNextTarget];
     if(_targetCharacter==nil){
+//        CCLOG(@"GAME_IS_OVER_CALLING_GAMEOVER_FUNCTION");
+//        [TestFlight passCheckpoint:@"GAME_IS_OVER_CALLING_GAMEOVER_FUNCTION"];
         [self gameOver];
+//        CCLOG(@"GAMEOVER_FUNCTION_CALLED");
+//        [TestFlight passCheckpoint:@"GAMEOVER_FUNCTION_CALLED"];
         findTheAction=nil;
     }else{
+//        CCLOG(@"SCHEDULING_REMOVAL_OF_FIREWORKS");
+//        [TestFlight passCheckpoint:@"SCHEDULING_REMOVAL_OF_FIREWORKS"];
         [self schedule:@selector(removeFireworks) interval:4];
 //        [self showTargetLabel];
     }
-    CCSequence *soundSequence=[CCSequence actions:youFoundTheAction,delay,findTheAction, nil];
+    
+    CCSequence *soundSequence;
+    
+    if(!findTheAction){
+        soundSequence=[CCSequence actions:youFoundTheAction,delay,nil];
+    }else{
+        soundSequence=[CCSequence actions:youFoundTheAction,delay,findTheAction, nil];
+    }
+    
     [self runAction:soundSequence];
     
     

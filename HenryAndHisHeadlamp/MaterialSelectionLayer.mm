@@ -20,7 +20,7 @@
     [[SimpleAudioEngine sharedEngine] unloadEffect:@"Speech1.aifc"];
     [[SimpleAudioEngine sharedEngine] unloadEffect:@"Speech2.aifc"];
     
-    [[SimpleAudioEngine sharedEngine] preloadEffect:@"Henry_Capital_Letters.caf"];
+    [[SimpleAudioEngine sharedEngine] preloadEffect:@"Henry_Uppercase_Letters.caf"];
     [[SimpleAudioEngine sharedEngine] preloadEffect:@"Henry_Lowercase_Letters.caf"];
     [[SimpleAudioEngine sharedEngine] preloadEffect:@"Henry_Numbers.caf"];
     [[SimpleAudioEngine sharedEngine] preloadEffect:@"Henry_Shapes.caf"];

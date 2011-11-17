@@ -46,7 +46,7 @@
     unichar aChar=[self.characterString characterAtIndex:0];
     NSCharacterSet* theCaps = [NSCharacterSet uppercaseLetterCharacterSet];
     if([theCaps characterIsMember:aChar]){
-        return @"Henry_Capital.caf";
+        return @"Henry_Uppercase.caf";
     }
     
     NSCharacterSet *theLower=[NSCharacterSet lowercaseLetterCharacterSet];

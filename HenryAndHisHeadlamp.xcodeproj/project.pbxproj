@@ -241,8 +241,6 @@
 		290A311F144D2FDD00BBFBA3 /* Henry_Spooky_Speech2.png in Resources */ = {isa = PBXBuildFile; fileRef = 29B94FDC1436C27B00885326 /* Henry_Spooky_Speech2.png */; };
 		290A3122144D304400BBFBA3 /* Corben-64.fnt in Resources */ = {isa = PBXBuildFile; fileRef = 29BBEE8F142BB94600B44E52 /* Corben-64.fnt */; };
 		290A3123144D304400BBFBA3 /* Corben-64.png in Resources */ = {isa = PBXBuildFile; fileRef = 29BBEE90142BB94600B44E52 /* Corben-64.png */; };
-		290A3124144D304500BBFBA3 /* Corben-64.fnt in Resources */ = {isa = PBXBuildFile; fileRef = 29BBEE8F142BB94600B44E52 /* Corben-64.fnt */; };
-		290A3125144D304500BBFBA3 /* Corben-64.png in Resources */ = {isa = PBXBuildFile; fileRef = 29BBEE90142BB94600B44E52 /* Corben-64.png */; };
 		2911CAC01460D16300FCD918 /* ShapeTextures-hd.plist in Resources */ = {isa = PBXBuildFile; fileRef = 2911CABC1460D16300FCD918 /* ShapeTextures-hd.plist */; };
 		2911CAC11460D16300FCD918 /* ShapeTextures-hd.plist in Resources */ = {isa = PBXBuildFile; fileRef = 2911CABC1460D16300FCD918 /* ShapeTextures-hd.plist */; };
 		2911CAC21460D16300FCD918 /* ShapeTextures-hd.pvr.ccz in Resources */ = {isa = PBXBuildFile; fileRef = 2911CABD1460D16300FCD918 /* ShapeTextures-hd.pvr.ccz */; };
@@ -580,10 +578,6 @@
 		29841124146DEF36006FC977 /* Henry_C.caf in Resources */ = {isa = PBXBuildFile; fileRef = 298410C2146DEF36006FC977 /* Henry_C.caf */; };
 		29841125146DEF36006FC977 /* Henry_Can_You_Find_The.caf in Resources */ = {isa = PBXBuildFile; fileRef = 298410C3146DEF36006FC977 /* Henry_Can_You_Find_The.caf */; };
 		29841126146DEF36006FC977 /* Henry_Can_You_Find_The.caf in Resources */ = {isa = PBXBuildFile; fileRef = 298410C3146DEF36006FC977 /* Henry_Can_You_Find_The.caf */; };
-		29841127146DEF36006FC977 /* Henry_Capital_Letters.caf in Resources */ = {isa = PBXBuildFile; fileRef = 298410C4146DEF36006FC977 /* Henry_Capital_Letters.caf */; };
-		29841128146DEF36006FC977 /* Henry_Capital_Letters.caf in Resources */ = {isa = PBXBuildFile; fileRef = 298410C4146DEF36006FC977 /* Henry_Capital_Letters.caf */; };
-		29841129146DEF36006FC977 /* Henry_Capital.caf in Resources */ = {isa = PBXBuildFile; fileRef = 298410C5146DEF36006FC977 /* Henry_Capital.caf */; };
-		2984112A146DEF36006FC977 /* Henry_Capital.caf in Resources */ = {isa = PBXBuildFile; fileRef = 298410C5146DEF36006FC977 /* Henry_Capital.caf */; };
 		2984112B146DEF36006FC977 /* Henry_Circle.caf in Resources */ = {isa = PBXBuildFile; fileRef = 298410C6146DEF36006FC977 /* Henry_Circle.caf */; };
 		2984112C146DEF36006FC977 /* Henry_Circle.caf in Resources */ = {isa = PBXBuildFile; fileRef = 298410C6146DEF36006FC977 /* Henry_Circle.caf */; };
 		2984112D146DEF36006FC977 /* Henry_Colors.caf in Resources */ = {isa = PBXBuildFile; fileRef = 298410C7146DEF36006FC977 /* Henry_Colors.caf */; };
@@ -865,6 +859,12 @@
 		29BBEE94142BB94700B44E52 /* Corben-64.png in Resources */ = {isa = PBXBuildFile; fileRef = 29BBEE90142BB94600B44E52 /* Corben-64.png */; };
 		29BBEE97142BBE4600B44E52 /* Hallow_status_bar.png in Resources */ = {isa = PBXBuildFile; fileRef = 29BBEE96142BBE4600B44E52 /* Hallow_status_bar.png */; };
 		29BBEE98142BBE4600B44E52 /* Hallow_status_bar.png in Resources */ = {isa = PBXBuildFile; fileRef = 29BBEE96142BBE4600B44E52 /* Hallow_status_bar.png */; };
+		29BF02CE147478A600CCAB32 /* Henry_Uppercase_Letters.caf in Resources */ = {isa = PBXBuildFile; fileRef = 29BF02CC147478A600CCAB32 /* Henry_Uppercase_Letters.caf */; };
+		29BF02CF147478A600CCAB32 /* Henry_Uppercase_Letters.caf in Resources */ = {isa = PBXBuildFile; fileRef = 29BF02CC147478A600CCAB32 /* Henry_Uppercase_Letters.caf */; };
+		29BF02D0147478A600CCAB32 /* Henry_Uppercase.caf in Resources */ = {isa = PBXBuildFile; fileRef = 29BF02CD147478A600CCAB32 /* Henry_Uppercase.caf */; };
+		29BF02D1147478A600CCAB32 /* Henry_Uppercase.caf in Resources */ = {isa = PBXBuildFile; fileRef = 29BF02CD147478A600CCAB32 /* Henry_Uppercase.caf */; };
+		29BF02D214747E5200CCAB32 /* Corben-64.fnt in Resources */ = {isa = PBXBuildFile; fileRef = 29BBEE8F142BB94600B44E52 /* Corben-64.fnt */; };
+		29BF02D314747E5200CCAB32 /* Corben-64.png in Resources */ = {isa = PBXBuildFile; fileRef = 29BBEE90142BB94600B44E52 /* Corben-64.png */; };
 		29BFCB2E143112FF000A021F /* libFlurryAnalytics.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 29BFCB2D143112FE000A021F /* libFlurryAnalytics.a */; };
 		29BFCB2F143112FF000A021F /* libFlurryAnalytics.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 29BFCB2D143112FE000A021F /* libFlurryAnalytics.a */; };
 		29BFCB3614311752000A021F /* libTestFlight.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 29BFCB3414311752000A021F /* libTestFlight.a */; };
@@ -1095,8 +1095,6 @@
 		298410C1146DEF36006FC977 /* Henry_Blue.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Henry_Blue.caf; sourceTree = "<group>"; };
 		298410C2146DEF36006FC977 /* Henry_C.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Henry_C.caf; sourceTree = "<group>"; };
 		298410C3146DEF36006FC977 /* Henry_Can_You_Find_The.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Henry_Can_You_Find_The.caf; sourceTree = "<group>"; };
-		298410C4146DEF36006FC977 /* Henry_Capital_Letters.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Henry_Capital_Letters.caf; sourceTree = "<group>"; };
-		298410C5146DEF36006FC977 /* Henry_Capital.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Henry_Capital.caf; sourceTree = "<group>"; };
 		298410C6146DEF36006FC977 /* Henry_Circle.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Henry_Circle.caf; sourceTree = "<group>"; };
 		298410C7146DEF36006FC977 /* Henry_Colors.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Henry_Colors.caf; sourceTree = "<group>"; };
 		298410C8146DEF36006FC977 /* Henry_D.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Henry_D.caf; sourceTree = "<group>"; };
@@ -1318,7 +1316,6 @@
 		2986CB24141932C9002DA1C8 /* utlist.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = utlist.h; path = libs/cocos2d/Support/utlist.h; sourceTree = "<group>"; };
 		2986CB25141932C9002DA1C8 /* ZipUtils.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = ZipUtils.h; path = libs/cocos2d/Support/ZipUtils.h; sourceTree = "<group>"; };
 		2986CB26141932C9002DA1C8 /* ZipUtils.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = ZipUtils.m; path = libs/cocos2d/Support/ZipUtils.m; sourceTree = "<group>"; };
-		2986CB28141932C9002DA1C8 /* LICENSE_cocos2d.txt */ = {isa = PBXFileReference; lastKnownFileType = text; name = LICENSE_cocos2d.txt; path = libs/LICENSE_cocos2d.txt; sourceTree = "<group>"; };
 		2986CB2A141932C9002DA1C8 /* CDAudioManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = CDAudioManager.h; path = libs/CocosDenshion/CDAudioManager.h; sourceTree = "<group>"; };
 		2986CB2B141932C9002DA1C8 /* CDAudioManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = CDAudioManager.m; path = libs/CocosDenshion/CDAudioManager.m; sourceTree = "<group>"; };
 		2986CB2D141932C9002DA1C8 /* CDConfig.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = CDConfig.h; path = libs/CocosDenshion/CDConfig.h; sourceTree = "<group>"; };
@@ -1328,14 +1325,12 @@
 		2986CB32141932C9002DA1C8 /* CocosDenshion.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = CocosDenshion.m; path = libs/CocosDenshion/CocosDenshion.m; sourceTree = "<group>"; };
 		2986CB34141932C9002DA1C8 /* SimpleAudioEngine.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = SimpleAudioEngine.h; path = libs/CocosDenshion/SimpleAudioEngine.h; sourceTree = "<group>"; };
 		2986CB35141932C9002DA1C8 /* SimpleAudioEngine.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = SimpleAudioEngine.m; path = libs/CocosDenshion/SimpleAudioEngine.m; sourceTree = "<group>"; };
-		2986CB37141932C9002DA1C8 /* LICENSE_CocosDenshion.txt */ = {isa = PBXFileReference; lastKnownFileType = text; name = LICENSE_CocosDenshion.txt; path = libs/LICENSE_CocosDenshion.txt; sourceTree = "<group>"; };
 		2986CB39141932C9002DA1C8 /* CLScoreServerPost.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = CLScoreServerPost.h; path = libs/cocoslive/CLScoreServerPost.h; sourceTree = "<group>"; };
 		2986CB3A141932C9002DA1C8 /* CLScoreServerPost.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = CLScoreServerPost.m; path = libs/cocoslive/CLScoreServerPost.m; sourceTree = "<group>"; };
 		2986CB3C141932C9002DA1C8 /* CLScoreServerRequest.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = CLScoreServerRequest.h; path = libs/cocoslive/CLScoreServerRequest.h; sourceTree = "<group>"; };
 		2986CB3D141932C9002DA1C8 /* CLScoreServerRequest.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = CLScoreServerRequest.m; path = libs/cocoslive/CLScoreServerRequest.m; sourceTree = "<group>"; };
 		2986CB3F141932C9002DA1C8 /* cocoslive.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = cocoslive.h; path = libs/cocoslive/cocoslive.h; sourceTree = "<group>"; };
 		2986CB40141932C9002DA1C8 /* cocoslive.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = cocoslive.m; path = libs/cocoslive/cocoslive.m; sourceTree = "<group>"; };
-		2986CB42141932C9002DA1C8 /* LICENSE_TouchJSON.txt */ = {isa = PBXFileReference; lastKnownFileType = text; name = LICENSE_TouchJSON.txt; path = libs/LICENSE_TouchJSON.txt; sourceTree = "<group>"; };
 		2986CB44141932C9002DA1C8 /* CDataScanner.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = CDataScanner.h; path = libs/TouchJSON/CDataScanner.h; sourceTree = "<group>"; };
 		2986CB45141932C9002DA1C8 /* CDataScanner.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = CDataScanner.m; path = libs/TouchJSON/CDataScanner.m; sourceTree = "<group>"; };
 		2986CB48141932C9002DA1C8 /* CDataScanner_Extensions.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = CDataScanner_Extensions.h; path = libs/TouchJSON/Extensions/CDataScanner_Extensions.h; sourceTree = "<group>"; };
@@ -1360,7 +1355,6 @@
 		2986CB66141932C9002DA1C8 /* ZAttributedStringPrivate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = ZAttributedStringPrivate.h; path = libs/FontLabel/ZAttributedStringPrivate.h; sourceTree = "<group>"; };
 		2986CB67141932C9002DA1C8 /* ZFont.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = ZFont.h; path = libs/FontLabel/ZFont.h; sourceTree = "<group>"; };
 		2986CB68141932C9002DA1C8 /* ZFont.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = ZFont.m; path = libs/FontLabel/ZFont.m; sourceTree = "<group>"; };
-		2986CB6A141932CA002DA1C8 /* LICENSE_FontLabel.txt */ = {isa = PBXFileReference; lastKnownFileType = text; name = LICENSE_FontLabel.txt; path = libs/LICENSE_FontLabel.txt; sourceTree = "<group>"; };
 		2986CB6C141932CA002DA1C8 /* Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Prefix.pch; sourceTree = "<group>"; };
 		2986CB6D141932CA002DA1C8 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		2986CB6F141932CA002DA1C8 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -1432,6 +1426,8 @@
 		29BBEE8F142BB94600B44E52 /* Corben-64.fnt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "Corben-64.fnt"; sourceTree = "<group>"; };
 		29BBEE90142BB94600B44E52 /* Corben-64.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Corben-64.png"; sourceTree = "<group>"; };
 		29BBEE96142BBE4600B44E52 /* Hallow_status_bar.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Hallow_status_bar.png; sourceTree = "<group>"; };
+		29BF02CC147478A600CCAB32 /* Henry_Uppercase_Letters.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Henry_Uppercase_Letters.caf; sourceTree = "<group>"; };
+		29BF02CD147478A600CCAB32 /* Henry_Uppercase.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Henry_Uppercase.caf; sourceTree = "<group>"; };
 		29BFCB2C143112FE000A021F /* FlurryAnalytics.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FlurryAnalytics.h; sourceTree = "<group>"; };
 		29BFCB2D143112FE000A021F /* libFlurryAnalytics.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libFlurryAnalytics.a; sourceTree = "<group>"; };
 		29BFCB3414311752000A021F /* libTestFlight.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libTestFlight.a; sourceTree = "<group>"; };
@@ -1855,6 +1851,8 @@
 		29840ECC146CCD98006FC977 /* Speech */ = {
 			isa = PBXGroup;
 			children = (
+				29BF02CC147478A600CCAB32 /* Henry_Uppercase_Letters.caf */,
+				29BF02CD147478A600CCAB32 /* Henry_Uppercase.caf */,
 				298410AB146DEF36006FC977 /* Henry_1.caf */,
 				298410AC146DEF36006FC977 /* Henry_2.caf */,
 				298410AD146DEF36006FC977 /* Henry_3.caf */,
@@ -1880,8 +1878,6 @@
 				298410C1146DEF36006FC977 /* Henry_Blue.caf */,
 				298410C2146DEF36006FC977 /* Henry_C.caf */,
 				298410C3146DEF36006FC977 /* Henry_Can_You_Find_The.caf */,
-				298410C4146DEF36006FC977 /* Henry_Capital_Letters.caf */,
-				298410C5146DEF36006FC977 /* Henry_Capital.caf */,
 				298410C6146DEF36006FC977 /* Henry_Circle.caf */,
 				298410C7146DEF36006FC977 /* Henry_Colors.caf */,
 				298410C8146DEF36006FC977 /* Henry_D.caf */,
@@ -2060,10 +2056,6 @@
 		2986CA32141932C6002DA1C8 /* libs */ = {
 			isa = PBXGroup;
 			children = (
-				2986CB28141932C9002DA1C8 /* LICENSE_cocos2d.txt */,
-				2986CB37141932C9002DA1C8 /* LICENSE_CocosDenshion.txt */,
-				2986CB42141932C9002DA1C8 /* LICENSE_TouchJSON.txt */,
-				2986CB6A141932CA002DA1C8 /* LICENSE_FontLabel.txt */,
 				29E5B8B4144FD3E600C8B033 /* Box2D */,
 				2986CA33141932C6002DA1C8 /* cocos2d */,
 				2986CB29141932C9002DA1C8 /* CocosDenshion */,
@@ -2794,8 +2786,6 @@
 				29841121146DEF36006FC977 /* Henry_Blue.caf in Resources */,
 				29841123146DEF36006FC977 /* Henry_C.caf in Resources */,
 				29841125146DEF36006FC977 /* Henry_Can_You_Find_The.caf in Resources */,
-				29841127146DEF36006FC977 /* Henry_Capital_Letters.caf in Resources */,
-				29841129146DEF36006FC977 /* Henry_Capital.caf in Resources */,
 				2984112B146DEF36006FC977 /* Henry_Circle.caf in Resources */,
 				2984112D146DEF36006FC977 /* Henry_Colors.caf in Resources */,
 				2984112F146DEF36006FC977 /* Henry_D.caf in Resources */,
@@ -2844,6 +2834,8 @@
 				29841185146DEF36006FC977 /* Henry_You_Found_The.caf in Resources */,
 				29841187146DEF36006FC977 /* Henry_Z.caf in Resources */,
 				29D72404146EC475004909A0 /* Default@2x.png in Resources */,
+				29BF02CE147478A600CCAB32 /* Henry_Uppercase_Letters.caf in Resources */,
+				29BF02D0147478A600CCAB32 /* Henry_Uppercase.caf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2851,8 +2843,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				290A3124144D304500BBFBA3 /* Corben-64.fnt in Resources */,
-				290A3125144D304500BBFBA3 /* Corben-64.png in Resources */,
+				29BF02D214747E5200CCAB32 /* Corben-64.fnt in Resources */,
+				29BF02D314747E5200CCAB32 /* Corben-64.png in Resources */,
 				2952A015144DD6F200B19FEE /* particleTexture.png in Resources */,
 				2952A017144DD6F600B19FEE /* startParticles.plist in Resources */,
 				29218E54144DDA6300CBADFE /* SmartHenry.fnt in Resources */,
@@ -2970,8 +2962,6 @@
 				29841122146DEF36006FC977 /* Henry_Blue.caf in Resources */,
 				29841124146DEF36006FC977 /* Henry_C.caf in Resources */,
 				29841126146DEF36006FC977 /* Henry_Can_You_Find_The.caf in Resources */,
-				29841128146DEF36006FC977 /* Henry_Capital_Letters.caf in Resources */,
-				2984112A146DEF36006FC977 /* Henry_Capital.caf in Resources */,
 				2984112C146DEF36006FC977 /* Henry_Circle.caf in Resources */,
 				2984112E146DEF36006FC977 /* Henry_Colors.caf in Resources */,
 				29841130146DEF36006FC977 /* Henry_D.caf in Resources */,
@@ -3020,6 +3010,8 @@
 				29841186146DEF36006FC977 /* Henry_You_Found_The.caf in Resources */,
 				29841188146DEF36006FC977 /* Henry_Z.caf in Resources */,
 				29D72406146EC49B004909A0 /* Default.png in Resources */,
+				29BF02CF147478A600CCAB32 /* Henry_Uppercase_Letters.caf in Resources */,
+				29BF02D1147478A600CCAB32 /* Henry_Uppercase.caf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -3753,8 +3745,8 @@
 				);
 				OTHER_LDFLAGS = "-lz";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "EFDCBF52-F4AB-413C-B4F9-BADC1BEC5914";
-				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "EFDCBF52-F4AB-413C-B4F9-BADC1BEC5914";
+				PROVISIONING_PROFILE = "4C8AC10E-7B53-4812-8F21-CE65CCCF90C3";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "4C8AC10E-7B53-4812-8F21-CE65CCCF90C3";
 				TARGETED_DEVICE_FAMILY = "1,2";
 				USER_HEADER_SEARCH_PATHS = "\"HenryAndHisHeadlamp/libs\"";
 				VALIDATE_PRODUCT = YES;

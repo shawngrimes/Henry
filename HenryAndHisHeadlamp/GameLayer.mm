@@ -63,7 +63,7 @@ int kNumObjects=7;
         NSString *initialSound;
         switch (selectedGameMode) {
             case kGameModeUpperAlphabet:
-                initialSound=@"Henry_Capital_Letters.caf";
+                initialSound=@"Henry_Uppercase_Letters.caf";
                 [[SimpleAudioEngine sharedEngine] unloadEffect:@"Henry_Lowercase_Letters.caf"];
                 [[SimpleAudioEngine sharedEngine] unloadEffect:@"Henry_Numbers.caf"];
                 [[SimpleAudioEngine sharedEngine] unloadEffect:@"Henry_Shapes.caf"];
@@ -71,28 +71,28 @@ int kNumObjects=7;
                 break;
             case kGameModeLowerAlphabet:
                 initialSound=@"Henry_Lowercase_Letters.caf";
-                [[SimpleAudioEngine sharedEngine] unloadEffect:@"Henry_Capital_Letters.caf"];
+                [[SimpleAudioEngine sharedEngine] unloadEffect:@"Henry_Uppercase_Letters.caf"];
                 [[SimpleAudioEngine sharedEngine] unloadEffect:@"Henry_Numbers.caf"];
                 [[SimpleAudioEngine sharedEngine] unloadEffect:@"Henry_Shapes.caf"];
                 [[SimpleAudioEngine sharedEngine] unloadEffect:@"Henry_Play_All.caf"];
                 break;
             case kGameModeNumbers:
                 initialSound=@"Henry_Numbers.caf";
-                [[SimpleAudioEngine sharedEngine] unloadEffect:@"Henry_Capital_Letters.caf"];
+                [[SimpleAudioEngine sharedEngine] unloadEffect:@"Henry_Uppercase_Letters.caf"];
                 [[SimpleAudioEngine sharedEngine] unloadEffect:@"Henry_Lowercase_Letters.caf"];
                 [[SimpleAudioEngine sharedEngine] unloadEffect:@"Henry_Shapes.caf"];
                 [[SimpleAudioEngine sharedEngine] unloadEffect:@"Henry_Play_All.caf"];
                 break;    
             case kGameModeShapes:
                 initialSound=@"Henry_Shapes.caf";
-                [[SimpleAudioEngine sharedEngine] unloadEffect:@"Henry_Capital_Letters.caf"];
+                [[SimpleAudioEngine sharedEngine] unloadEffect:@"Henry_Uppercase_Letters.caf"];
                 [[SimpleAudioEngine sharedEngine] unloadEffect:@"Henry_Lowercase_Letters.caf"];
                 [[SimpleAudioEngine sharedEngine] unloadEffect:@"Henry_Numbers.caf"];
                 [[SimpleAudioEngine sharedEngine] unloadEffect:@"Henry_Play_All.caf"];
                 break;
             case kGameModeSmartAll:
                 initialSound=@"Henry_Play_All.caf";
-                [[SimpleAudioEngine sharedEngine] unloadEffect:@"Henry_Capital_Letters.caf"];
+                [[SimpleAudioEngine sharedEngine] unloadEffect:@"Henry_Uppercase_Letters.caf"];
                 [[SimpleAudioEngine sharedEngine] unloadEffect:@"Henry_Lowercase_Letters.caf"];
                 [[SimpleAudioEngine sharedEngine] unloadEffect:@"Henry_Numbers.caf"];
                 [[SimpleAudioEngine sharedEngine] unloadEffect:@"Henry_Shapes.caf"];

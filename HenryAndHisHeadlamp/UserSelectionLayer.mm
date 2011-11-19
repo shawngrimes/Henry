@@ -12,7 +12,7 @@
 #import "StoryLevel.h"
 #import "MaterialSelectionLayer.h"
 #import "Player.h"
-
+#import "PrizeSelectionScene.h"
 
 @implementation UserSelectionLayer
 +(CCScene *) scene
@@ -117,23 +117,32 @@
         
         [self addChild:userIconMenu z:1 tag:kTAGuserSelectionMenu];
         
-        
+        [self schedule:@selector(showUserIconAlert) interval:.5];
     }
     return self;
+}
+
+-(void)showUserIconAlert{
+    [self unschedule:@selector(showUserIconAlert)];
+    
+    NSUserDefaults *userDefaults=[NSUserDefaults standardUserDefaults];
+    NSNumber *alertCount=[userDefaults valueForKey:@"alertCount"];
+    int alertCountInt=[alertCount integerValue];
+    if(alertCountInt<3){
+        ++alertCountInt;
+        alertCount=[NSNumber numberWithInt:alertCountInt];
+        [userDefaults setValue:alertCount forKey:@"alertCount"];
+        [userDefaults synchronize];
+        [[[UIAlertView alloc] initWithTitle:@"Attention Parents" message:@"Please have your child choose the same user icon each time in order to track their prizes.  This alert will show three times." delegate:nil cancelButtonTitle:@"Ok" otherButtonTitles:nil] show];
+    }
 }
 
 -(void)setUserIcon:(id) sender{
     BOOL loadInstructions=YES;
     CCMenuItemSprite *selectedMaterialSprite=(CCMenuItemSprite *) sender;
     
-//    for (CCNode *childElement in selectedMaterialSprite.children) {
-//        NSLog(@"ChildELement: %@", childElement);
-//    }
-    
     CCSprite *selectedSprite=(CCSprite *)[selectedMaterialSprite.children objectAtIndex:0];
-    
-    
-    
+
     NSFetchRequest *fetchRequest = [[NSFetchRequest alloc] init];
     AppDelegate *sharedAppDelegate=(AppDelegate *)[UIApplication sharedApplication].delegate;
     
@@ -161,7 +170,6 @@
     sharedAppDelegate.currentPlayerIconNumber=selectedSprite.tag;
     
     [FlurryAnalytics logEvent:@"USER_ICON_SELECTED" withParameters:[NSDictionary dictionaryWithObject:[NSNumber numberWithInt:selectedSprite.tag] forKey:@"USER_ICON"]];
-    
     
     if(loadInstructions){
         [[CCDirector sharedDirector] replaceScene:

@@ -30,6 +30,8 @@ typedef enum {
 
 int kNumObjects=7;
 
+bool isInTarget=NO;
+
 +(CCScene *) sceneWithGameMode:(GameModeType)selectedGameMode
 {
 	// 'scene' is an autorelease object.
@@ -60,6 +62,9 @@ int kNumObjects=7;
 	// always call "super" init
 	// Apple recommends to re-assign "self" with the "super" return value
 	if( (self=[super init])) {
+        if(UI_USER_INTERFACE_IDIOM()!=UIUserInterfaceIdiomPad){
+            kNumObjects=5;
+        }
         NSString *initialSound;
         switch (selectedGameMode) {
             case kGameModeUpperAlphabet:
@@ -141,12 +146,7 @@ int kNumObjects=7;
 #elif SMART
         CCSprite *statusBarSprite=[CCSprite spriteWithFile:@"SmartHenry_StatusBox.png"];
 #endif
-//        if (UI_USER_INTERFACE_IDIOM() != UIUserInterfaceIdiomPad) { 
-//            [statusBarSprite setScaleX:size.width/1024.0f];
-//            [statusBarSprite setScaleY:size.height/768.0f];
-//        }else{
-//            [statusBarSprite setScale:1.2];
-//        }
+
         statusBarSprite.anchorPoint=ccp(1,1);
         statusBarSprite.position=ccp(size.width,size.height);
         [self addChild:statusBarSprite z:6 tag:kTAGHUD];
@@ -154,22 +154,14 @@ int kNumObjects=7;
         
         CCSprite *henryBody=[CCSprite spriteWithSpriteFrameName:@"HenryBody.png"];
         _henryHead=[CCSprite spriteWithSpriteFrameName:@"HenryHead-Off.png"];
-//        if (UI_USER_INTERFACE_IDIOM() != UIUserInterfaceIdiomPad) { 
-//            [henryBody setScaleX:size.width/1024.0f];
-//            [henryBody setScaleY:size.height/768.0f];
-//            [_henryHead setScaleX:size.width/1024.0f * 1.25];
-//            [_henryHead setScaleY:size.height/768.0f * 1.25];
-//        }else{
-            _henryHead.scale=1.25;
-//        }
+        _henryHead.scale=1.25;
+
         henryBody.anchorPoint=ccp(0.5, 0);
         henryBody.position=ccp(size.width-((henryBody.textureRect.size.width * henryBody.scaleX) + .01*size.width), 0);
         
         _henryHead.anchorPoint=ccp(0.581,0.188);
         _henryHead.position=ccp(henryBody.boundingBox.origin.x+((henryBody.boundingBox.size.width)/2 + .13 * henryBody.boundingBox.size.width), 
-                                ((henryBody.boundingBox.size.height) - (.2*henryBody.boundingBox.size.height)));// * _henryHead.scaleY);
-//        CCLOG(@"Henry Head Position: %f %f", _henryHead.position.x, _henryHead.position.y);
-//        _henryHead.rotation= 22.700861;
+                                ((henryBody.boundingBox.size.height) - (.2*henryBody.boundingBox.size.height)));
         _henryHead.rotation=-22.700861;
         [self addChild:henryBody z:9 tag:kTAGhenry];
         [self addChild:_henryHead z:10 tag:kTAGhenryHead];
@@ -181,8 +173,6 @@ int kNumObjects=7;
         
         [TestFlight passCheckpoint:@"PLACING_CHARACTERS"];
 #ifdef HALLOWEEN
-        
-        
         
         int MAX_CHARACTERS=28;
         
@@ -244,15 +234,10 @@ int kNumObjects=7;
 
                     CharacterSprite *randomSprite=[[[CharacterSprite alloc] initWithString:randomCharacter] autorelease];
                     CCLOG(@"randomSprite before scale Box: %f, %f, %f, %f", randomSprite.boundingBox.origin.x, randomSprite.boundingBox.origin.y, randomSprite.boundingBox.size.width,randomSprite.boundingBox.size.height);
-//                    if (UI_USER_INTERFACE_IDIOM() != UIUserInterfaceIdiomPad) { 
-//                        CGSize winSizeInPixels=[[CCDirector sharedDirector] winSizeInPixels];
-////                        [randomSprite setScale:winSizeInPixels.width/1024.0f];
-////                        [randomSprite setScaleY:size.height/768.0f];
-//                    }
+
                      CCLOG(@"randomSprite after scale : %f, %f, %f, %f", randomSprite.boundingBox.origin.x, randomSprite.boundingBox.origin.y, randomSprite.boundingBox.size.width,randomSprite.boundingBox.size.height);
                     
                     if(_arrCharacters.count<1){
-//                        CCLOG(@"Random Sprite Size: %f, %f", randomSprite.boundingBox.size.width,randomSprite.boundingBox.size.height);
                         [randomSprite setRandomPosition:playableAreaSize];
                         while(CGRectIntersectsRect(statusBarSprite.boundingBox, [randomSprite getChildRect]) 
                               || CGRectIntersectsRect(henryBody.boundingBox, [randomSprite getChildRect]) 
@@ -261,8 +246,6 @@ int kNumObjects=7;
                             [randomSprite setRandomPosition:playableAreaSize];
                         }
                     }else{
-//                        CCLOG(@"Random Sprite Size: %f, %f", randomSprite.contentSize.width, randomSprite.contentSize.height);
-//                        [randomSprite setRandomPosition:playableAreaSize];
                         [randomSprite setRandomPosition:playableAreaSize checkOtherSprites:_arrCharacters];
                         int loopCount=0;
                         while(CGRectIntersectsRect(statusBarSprite.boundingBox, [randomSprite getChildRect]) 
@@ -276,12 +259,9 @@ int kNumObjects=7;
                             }
                         }
                     }
-//                    for (CCSprite *child in randomSprite.children) {
-//                        child.color=ccc3(118,188,241);
-//                    }
                     randomSprite.color=ccc3(118,188,241);
                     [_arrCharacters addObject:randomSprite];
-                    [self addChild:randomSprite z:4];
+                    [self addChild:randomSprite z:3];
                 }
 
                 
@@ -305,10 +285,6 @@ int kNumObjects=7;
                     
                     CharacterSprite *randomSprite=[[[CharacterSprite alloc] initWithString:randomCharacter] autorelease];
                     
-//                    if (UI_USER_INTERFACE_IDIOM() != UIUserInterfaceIdiomPad) { 
-//                        CGSize winSizeInPixels=[[CCDirector sharedDirector] winSizeInPixels];
-//                        [randomSprite setScale:winSizeInPixels.width/1024.0f];
-//                    }
                     if(_arrCharacters.count<1){
                         [randomSprite setRandomPosition:playableAreaSize];
                         while(CGRectIntersectsRect(statusBarSprite.boundingBox, [randomSprite getChildRect]) 
@@ -336,7 +312,7 @@ int kNumObjects=7;
 //                    }
                     randomSprite.color=ccc3(216,60,68);
                     [_arrCharacters addObject:randomSprite];
-                    [self addChild:randomSprite z:4];
+                    [self addChild:randomSprite z:3];
                 }
                 break;
             }
@@ -388,7 +364,7 @@ int kNumObjects=7;
 //                        }
                         randomSprite.color=ccc3(93, 185, 51);
                         [_arrCharacters addObject:randomSprite];
-                        [self addChild:randomSprite z:4];
+                        [self addChild:randomSprite z:3];
                     }
                     break;
                 }
@@ -434,7 +410,7 @@ int kNumObjects=7;
                     }
                     
                     [_arrCharacters addObject:randomSprite];
-                    [self addChild:randomSprite z:4];
+                    [self addChild:randomSprite z:3];
                 }
 
                 break;
@@ -555,7 +531,7 @@ int kNumObjects=7;
                     }
                     
                     [_arrCharacters addObject:randomSprite];
-                    [self addChild:randomSprite z:4];
+                    [self addChild:randomSprite z:3];
                     
                 }
                 
@@ -640,8 +616,8 @@ int kNumObjects=7;
     
     winCount=0;
     
-    _targetCharacter=[_arrCharacters objectAtIndex:0];
-    _targetCharacter.isTarget=YES;
+//    _targetCharacter=[_arrCharacters objectAtIndex:0];
+//    _targetCharacter.isTarget=YES;
     
     [TestFlight passCheckpoint:@"SET_INITIAL_TARGET"];
     
@@ -686,19 +662,8 @@ int kNumObjects=7;
     return nil;
 }
 
--(void)signalWin{
-    
-    [TestFlight passCheckpoint:@"SIGNALING_WIN"];
-    
-    [self unschedule:@selector(removeFireworks)];
-    
+-(void)moveCharactersRandomly{
     CGSize size = [[CCDirector sharedDirector] winSize];
-   
-    //Hide instructions
-    winCount++;
-    if(winCount>1)
-        [self getChildByTag:kTAGInstructions].visible=NO;
-    
     //Move all the other characters around
     CGSize playableAreaSize=CGSizeMake(size.width, size.height-(2 * (size.height/8)));
     NSEnumerator *characterEnum=[_arrCharacters objectEnumerator];
@@ -712,7 +677,7 @@ int kNumObjects=7;
     
     characterEnum=[_arrCharacters objectEnumerator]; 
     while(nextCharacter=[characterEnum nextObject]){
-//        CCLOG(@"Setting %@", nextCharacter.description);
+        //        CCLOG(@"Setting %@", nextCharacter.description);
         if(!nextCharacter.isTarget){
             [nextCharacter setRandomPosition:playableAreaSize checkOtherSprites:_arrCharacters];
             CCSprite *statusBarSprite=(CCSprite*)[self getChildByTag:kTAGHUD];
@@ -725,6 +690,21 @@ int kNumObjects=7;
         }
     }
 
+}
+
+-(void)signalWin{
+    [self unschedule:@selector(signalWin)];
+
+    [TestFlight passCheckpoint:@"SIGNALING_WIN"];
+    
+    [self unschedule:@selector(removeFireworks)];
+    
+    CGSize size = [[CCDirector sharedDirector] winSize];
+   
+    //Hide instructions
+    winCount++;
+    if(winCount>1)
+        [self getChildByTag:kTAGInstructions].visible=NO;
 
     
     CCParticleSystem *system=(CCParticleSystem *)[self getChildByTag:kTAGfireWorks];
@@ -741,31 +721,19 @@ int kNumObjects=7;
     [self addChild:system  z:11 tag:kTAGfireWorks];
     [self reorderChild:_targetCharacter z:12];
 
-//    [self stopAllActions];
     CCLOG(@"Setting Up sound files");
     id youFoundTheAction=[CCCallFuncO actionWithTarget:self selector:@selector(speakFoundItem:) object:_targetCharacter];
     float delaySeconds=[self getDelayForStringFound:_targetCharacter];
-//    NSLog(@"Delay In Seconds: %f", delaySeconds);
     id delay=[CCDelayTime actionWithDuration:delaySeconds];
-    _targetCharacter=[self setNextTarget];
+    
     id findTheAction=[CCCallFunc actionWithTarget:self selector:@selector(showTargetLabel)];
 
-
-    
-//    _targetCharacter=[self setNextTarget];
-    if(_targetCharacter==nil){
-//        CCLOG(@"GAME_IS_OVER_CALLING_GAMEOVER_FUNCTION");
-//        [TestFlight passCheckpoint:@"GAME_IS_OVER_CALLING_GAMEOVER_FUNCTION"];
-        [self gameOver];
-//        CCLOG(@"GAMEOVER_FUNCTION_CALLED");
-//        [TestFlight passCheckpoint:@"GAMEOVER_FUNCTION_CALLED"];
-        findTheAction=nil;
-    }else{
-//        CCLOG(@"SCHEDULING_REMOVAL_OF_FIREWORKS");
-//        [TestFlight passCheckpoint:@"SCHEDULING_REMOVAL_OF_FIREWORKS"];
+//    if(_targetCharacter==nil){
+//        [self gameOver];
+//        findTheAction=nil;
+//    }else{
         [self schedule:@selector(removeFireworks) interval:4];
-//        [self showTargetLabel];
-    }
+//    }
     
     CCSequence *soundSequence;
     
@@ -836,11 +804,15 @@ int kNumObjects=7;
         delayThree=[CCDelayTime actionWithDuration:[[SimpleAudioEngine sharedEngine] soundSourceForFile:[foundSprite speakString]].durationInSeconds];
     }
     id moveFoundSpriteAction=[CCCallFuncO actionWithTarget:self selector:@selector(moveFoundItemBack:) object:foundSprite];
-    [self removeChildByTag:kTAGtargetSprite cleanup:YES];
-    [self runAction:[CCSequence actions:delayOne,speakDescriptor,delayTwo,speakObject,delayThree,moveFoundSpriteAction, nil]];
+    id removeTargetSpriteAction=[CCCallFunc actionWithTarget:self selector:@selector(removeTargetSprite)];
+    [self runAction:[CCSequence actions:delayOne,speakDescriptor,delayTwo,speakObject,delayThree,moveFoundSpriteAction,removeTargetSpriteAction, nil]];
 
 }
 
+ -(void)removeTargetSprite{
+     [self removeChildByTag:kTAGtargetSprite cleanup:YES];
+ }
+                                 
 -(void)gameOver{
 
     [TestFlight passCheckpoint:@"SIGNALING_GAME_OVER"];
@@ -885,11 +857,7 @@ int kNumObjects=7;
         
     [TestFlight passCheckpoint:@"GAME_OVER_SIGNALED"];
     
-    [self schedule:@selector(loadScores) interval:2.0];
-    
-//    playAgainMenu.position=ccp(size.width/2, size.height/2);  //size.height-size.height * 0.8);
-//    labelPlayAgainItem.position=ccp(size.width/2, size.height/2);
-    
+    [self schedule:@selector(loadScores) interval:3.0];
 }
 
 -(void) showTargetSprite:(CharacterSprite *)targetSpriteCopy{
@@ -921,99 +889,105 @@ int kNumObjects=7;
 -(void)showTargetLabel{
     [self unschedule:@selector(showTargetLabel)];
     [TestFlight passCheckpoint:@"Showing_Target_Label"];
+    
+    [self moveCharactersRandomly];
+    
 //    [self removeChildByTag:kTAGtargetLabel cleanup:YES];
     [self removeChildByTag:kTAGtargetSprite cleanup:YES];
     
-    CGSize size = [[CCDirector sharedDirector] winSize];
-    CCSprite *HUDSprite=(CCSprite *)[self getChildByTag:kTAGHUD];
+    if(_targetCharacter!=nil){
+        [self reorderChild:_targetCharacter z:3];
+        _targetCharacter=[self setNextTarget];
+    }else{
+        _targetCharacter=[_arrCharacters objectAtIndex:0];
+        _targetCharacter.isTarget=YES;
+    }
+    if(_targetCharacter==nil){
+        [self gameOver];
+    }else{
+        [self reorderChild:_targetCharacter z:4];
     
-//    _timerLabel.position=ccp(statusBarSprite.boundingBox.origin.x + size.width*.15,statusBarSprite.boundingBox.origin.y + size.width*0.04);
-    
-//    float usableHUDHeight=(.35*HUDSprite.boundingBox.size.height);
-    float usableHUDHeight=(.4*HUDSprite.boundingBox.size.height);
-    float usableHUDWidth=(.86*HUDSprite.boundingBox.size.width);
-    
-    CharacterSprite *targetSpriteCopy;
-#if HALLOWEEN
-    targetSpriteCopy=[CharacterSprite spriteWithTexture:_targetCharacter.texture rect:_targetCharacter.textureRect];
-#elif SMART
-    if(_targetCharacter.isShape){
+        CGSize size = [[CCDirector sharedDirector] winSize];
+        CCSprite *HUDSprite=(CCSprite *)[self getChildByTag:kTAGHUD];
+        
+        float usableHUDHeight=(.4*HUDSprite.boundingBox.size.height);
+        float usableHUDWidth=(.86*HUDSprite.boundingBox.size.width);
+        
+        CharacterSprite *targetSpriteCopy;
+    #if HALLOWEEN
         targetSpriteCopy=[CharacterSprite spriteWithTexture:_targetCharacter.texture rect:_targetCharacter.textureRect];
-//        targetSpriteCopy.color=_targetCharacter.color;
-        targetSpriteCopy.isShape=YES;
-    }else{
-        targetSpriteCopy=[[[CharacterSprite alloc] initWithString:_targetCharacter.characterString] autorelease];
-        CCSprite *targetChild=(CCSprite *)[_targetCharacter.children objectAtIndex:0];
-        targetSpriteCopy.color=targetChild.color;
-    }
-#endif
-    
-    
-//    [targetSpriteCopy setScale:.25];
-    if(!_targetCharacter.isShape){
-        if (UI_USER_INTERFACE_IDIOM() != UIUserInterfaceIdiomPad) { 
-            float scale = MAX(targetSpriteCopy.boundingBox.size.height/usableHUDHeight, targetSpriteCopy.boundingBox.size.width/usableHUDWidth);
-                
-              [targetSpriteCopy setScale:(1/scale * 1.4 * [CCDirector sharedDirector].winSizeInPixels.width/968)];  
-        }else{ 
-            float scale = MAX([targetSpriteCopy boundingBox].size.height/usableHUDHeight, [targetSpriteCopy boundingBox].size.width/usableHUDWidth);
-            [targetSpriteCopy setScale:1/scale * 1.4];
+    #elif SMART
+        if(_targetCharacter.isShape){
+            targetSpriteCopy=[CharacterSprite spriteWithTexture:_targetCharacter.texture rect:_targetCharacter.textureRect];
+    //        targetSpriteCopy.color=_targetCharacter.color;
+            targetSpriteCopy.isShape=YES;
+        }else{
+            targetSpriteCopy=[[[CharacterSprite alloc] initWithString:_targetCharacter.characterString] autorelease];
+            CCSprite *targetChild=(CCSprite *)[_targetCharacter.children objectAtIndex:0];
+            targetSpriteCopy.color=targetChild.color;
         }
-    }else{
-        if (UI_USER_INTERFACE_IDIOM() != UIUserInterfaceIdiomPad) { 
-            CCLOG(@"HEIGHT RATIO: %f",targetSpriteCopy.boundingBox.size.height/usableHUDHeight);
-            CCLOG(@"WIDTH RATIO: %f",targetSpriteCopy.boundingBox.size.width/usableHUDWidth);
-            float scale = MAX(targetSpriteCopy.boundingBox.size.height/usableHUDHeight, targetSpriteCopy.boundingBox.size.width/usableHUDWidth);
-            [targetSpriteCopy setScale:(1.0f/scale)];  
-            CCLOG(@"SCALE: %f", targetSpriteCopy.scale);
-        }else{ 
-            float scale = MAX([targetSpriteCopy boundingBox].size.height/usableHUDHeight, [targetSpriteCopy boundingBox].size.width/usableHUDWidth);
-            [targetSpriteCopy setScale:1.0/scale ];
-        }        
-    }
-    targetSpriteCopy.anchorPoint=ccp(0.5,0);
-    if(_targetCharacter.isShape){
-        targetSpriteCopy.position=ccp(HUDSprite.boundingBox.origin.x + HUDSprite.boundingBox.size.width/2, HUDSprite.boundingBox.origin.y + size.height*0.1);
-    }else{
-        targetSpriteCopy.position=ccp(HUDSprite.boundingBox.origin.x + HUDSprite.boundingBox.size.width/2, HUDSprite.boundingBox.origin.y + HUDSprite.boundingBox.size.height/1.75);
-    }
-    targetSpriteCopy.color=_targetCharacter.color;
+    #endif
+        
+        
+    //    [targetSpriteCopy setScale:.25];
+        if(!_targetCharacter.isShape){
+            if (UI_USER_INTERFACE_IDIOM() != UIUserInterfaceIdiomPad) { 
+                float scale = MAX(targetSpriteCopy.boundingBox.size.height/usableHUDHeight, targetSpriteCopy.boundingBox.size.width/usableHUDWidth);
+                    
+                  [targetSpriteCopy setScale:(1/scale * 1.4 * [CCDirector sharedDirector].winSizeInPixels.width/968)];  
+            }else{ 
+                float scale = MAX([targetSpriteCopy boundingBox].size.height/usableHUDHeight, [targetSpriteCopy boundingBox].size.width/usableHUDWidth);
+                [targetSpriteCopy setScale:1/scale * 1.4];
+            }
+        }else{
+            if (UI_USER_INTERFACE_IDIOM() != UIUserInterfaceIdiomPad) { 
+                CCLOG(@"HEIGHT RATIO: %f",targetSpriteCopy.boundingBox.size.height/usableHUDHeight);
+                CCLOG(@"WIDTH RATIO: %f",targetSpriteCopy.boundingBox.size.width/usableHUDWidth);
+                float scale = MAX(targetSpriteCopy.boundingBox.size.height/usableHUDHeight, targetSpriteCopy.boundingBox.size.width/usableHUDWidth);
+                [targetSpriteCopy setScale:(1.0f/scale)];  
+                CCLOG(@"SCALE: %f", targetSpriteCopy.scale);
+            }else{ 
+                float scale = MAX([targetSpriteCopy boundingBox].size.height/usableHUDHeight, [targetSpriteCopy boundingBox].size.width/usableHUDWidth);
+                [targetSpriteCopy setScale:1.0/scale ];
+            }        
+        }
+        targetSpriteCopy.anchorPoint=ccp(0.5,0);
+        if(_targetCharacter.isShape){
+            targetSpriteCopy.position=ccp(HUDSprite.boundingBox.origin.x + HUDSprite.boundingBox.size.width/2, HUDSprite.boundingBox.origin.y + size.height*0.1);
+        }else{
+            targetSpriteCopy.position=ccp(HUDSprite.boundingBox.origin.x + HUDSprite.boundingBox.size.width/2, HUDSprite.boundingBox.origin.y + HUDSprite.boundingBox.size.height/1.75);
+        }
+        targetSpriteCopy.color=_targetCharacter.color;
 
-//    effectSpeech = [[CDAudioManager sharedManager] audioSourceForChannel:kASC_Right];
-//    effectSpeech.backgroundMusic = NO;
-//    effectSpeech.delegate=self;
-    
-    
-    
-    while(self.effectSpeech.isPlaying){
+    //    effectSpeech = [[CDAudioManager sharedManager] audioSourceForChannel:kASC_Right];
+    //    effectSpeech.backgroundMusic = NO;
+    //    effectSpeech.delegate=self;
+        
+        
+        
+        while(self.effectSpeech.isPlaying){
+        }
+        
+        self.effectSpeech=[[SimpleAudioEngine sharedEngine] soundSourceForFile:@"Henry_Can_You_Find_The.caf"];
+        [self speakString:@"Henry_Can_You_Find_The.caf"];
+        
+        id delayOne=[CCDelayTime actionWithDuration:self.effectSpeech.durationInSeconds];
+        id speakDescriptor;
+        id delayTwo;
+        id speakObject;
+        
+        if(_targetCharacter.isShape){
+            speakDescriptor=[CCCallFuncO actionWithTarget:self selector:@selector(speakString:) object:[_targetCharacter speakColor]];
+            delayTwo=[CCDelayTime actionWithDuration:[[SimpleAudioEngine sharedEngine] soundSourceForFile:[_targetCharacter speakColor]].durationInSeconds];
+            speakObject=[CCCallFuncO actionWithTarget:self selector:@selector(speakString:) object:[_targetCharacter speakShape]];
+        }else{
+            speakDescriptor=[CCCallFuncO actionWithTarget:self selector:@selector(speakString:) object:[_targetCharacter descriptorFile]];
+            delayTwo=[CCDelayTime actionWithDuration:[[SimpleAudioEngine sharedEngine] soundSourceForFile:[_targetCharacter descriptorFile]].durationInSeconds];
+            speakObject=[CCCallFuncO actionWithTarget:self selector:@selector(speakString:) object:[_targetCharacter speakString]];        
+        }
+        id showTargetSprite=[CCCallFuncO actionWithTarget:self selector:@selector(showTargetSprite:) object:targetSpriteCopy];
+        [self runAction:[CCSequence actions:delayOne,speakDescriptor,delayTwo,speakObject,showTargetSprite, nil]];
     }
-    
-    self.effectSpeech=[[SimpleAudioEngine sharedEngine] soundSourceForFile:@"Henry_Can_You_Find_The.caf"];
-    [self speakString:@"Henry_Can_You_Find_The.caf"];
-    
-    id delayOne=[CCDelayTime actionWithDuration:self.effectSpeech.durationInSeconds];
-    id speakDescriptor;
-    id delayTwo;
-    id speakObject;
-    
-    if(_targetCharacter.isShape){
-        speakDescriptor=[CCCallFuncO actionWithTarget:self selector:@selector(speakString:) object:[_targetCharacter speakColor]];
-        delayTwo=[CCDelayTime actionWithDuration:[[SimpleAudioEngine sharedEngine] soundSourceForFile:[_targetCharacter speakColor]].durationInSeconds];
-        speakObject=[CCCallFuncO actionWithTarget:self selector:@selector(speakString:) object:[_targetCharacter speakShape]];
-    }else{
-        speakDescriptor=[CCCallFuncO actionWithTarget:self selector:@selector(speakString:) object:[_targetCharacter descriptorFile]];
-        delayTwo=[CCDelayTime actionWithDuration:[[SimpleAudioEngine sharedEngine] soundSourceForFile:[_targetCharacter descriptorFile]].durationInSeconds];
-        speakObject=[CCCallFuncO actionWithTarget:self selector:@selector(speakString:) object:[_targetCharacter speakString]];        
-    }
-    id showTargetSprite=[CCCallFuncO actionWithTarget:self selector:@selector(showTargetSprite:) object:targetSpriteCopy];
-    [self runAction:[CCSequence actions:delayOne,speakDescriptor,delayTwo,speakObject,showTargetSprite, nil]];
-
-
-    
-    
-
-    
-//    NSLog(@"Target Bounding Box: %f, %f, %f, %f", [targetSpriteCopy boundingBox].origin.x, [targetSpriteCopy boundingBox].origin.y, [targetSpriteCopy boundingBox].size.width,[targetSpriteCopy boundingBox].size.height);
 }
 
 
@@ -1021,21 +995,15 @@ int kNumObjects=7;
 -(void)removeFireworks{
     CCLOG(@"Removing fireworks");
     [self unschedule:@selector(removeFireworks)];
-//    CCParticleSystem *system=(CCParticleSystem *)[self getChildByTag:kTAGfireWorks];
-//    system.visible=NO;
     [self removeChildByTag:kTAGfireWorks cleanup:YES];
 }
 
 -(void) updateTimer: (ccTime) dt
 {
-//    if(![self getChildByTag:kTAGtargetSprite])
-//        [self showTargetLabel];
     if([self getChildByTag:kTAGtargetSprite]){
         gameTimer+=dt;
         _timerLabel.string=[NSString stringWithFormat:@"%i", (int)gameTimer];
     }
-//    if(gameTimer>2)
-//        [self gameOver];
 }
 
 - (void)registerWithTouchDispatcher {
@@ -1085,19 +1053,31 @@ int kNumObjects=7;
     [self removeChildByTag:kTAGfireWorks cleanup:YES];
     
 #ifdef SMART
-    CCNode *node;
-    CCARRAY_FOREACH([_targetCharacter children], node)
-    {
-        if (CGRectContainsPoint([node boundingBox], location))
+    if(CGRectContainsPoint([_targetCharacter boundingBox], location)){
+//        CCLOG(@"Contains Point!");
+        if([self getChildByTag:kTAGtargetSprite])
         {
-            CCLOG(@"Contains Point!");
-            if([self getChildByTag:kTAGtargetSprite])
-                [self signalWin];
+            
+            id actionBy = [CCScaleBy actionWithDuration:1  scale: 1.5];
+            id actionByBack = [actionBy reverse];
+            id delay=[CCDelayTime actionWithDuration:.5];
+            if(!isInTarget){
+                isInTarget=YES;
+                [_targetCharacter runAction: [CCSequence actions:delay,actionBy, actionByBack, nil]];
+                [self schedule:@selector(signalWin) interval:1.5];
+            }
         }
+    }else{
+        [_targetCharacter stopAllActions];
+//        CCLOG(@"Original Scale: %f", _targetCharacter.originalScale);
+        [_targetCharacter setScale:_targetCharacter.originalScale];
+        isInTarget=NO;
+        //            [self unschedule:@selector(signalWin)];
     }
+
 #elif HALLOWEEN
     if(CGRectContainsPoint([_targetCharacter boundingBox], location)){
-        CCLOG(@"Contains Point!");
+//        CCLOG(@"Contains Point!");
         [self signalWin];
     }
 #endif
@@ -1126,30 +1106,27 @@ int kNumObjects=7;
         _henryHead.rotation=cocosAngle;
     }
 
-
-    
-//    location=[self convertTouchToNodeSpace:touch];
-//#ifdef SMART
-//    CCNode *node;
-//    CCARRAY_FOREACH([_targetCharacter children], node)
-//    {
-////        NSLog(@"BOUNDING BOX: %f,%f %fx%f",[node boundingBox].origin.x,[node boundingBox].origin.y,[node boundingBox].size.width,[node boundingBox].size.height);
-////        CGRect newBoundingBox=[self getBoundingRectForNode:node];
-//        CGRect newBoundingBox=[_targetCharacter getChildRect];
-//        NSLog(@"BOUNDING BOX: %f,%f %fx%f",newBoundingBox.origin.x,newBoundingBox.origin.y,newBoundingBox.size.width,newBoundingBox.size.height);
-//        CCLOG(@"TOUCH LOCATION: %f,%f", location.x,location.y);
-//        if (CGRectContainsPoint(newBoundingBox, location))
-//        {
-//            NSLog(@"Contains Point!");
-//            [self signalWin];
-//        }
-//    }
-//#elif HALLOWEEN
     if(CGRectContainsPoint([_targetCharacter boundingBox], location)){
         CCLOG(@"Contains Point!");
         if([self getChildByTag:kTAGtargetSprite])
-            [self signalWin];
+        {
+        
+            id actionBy = [CCScaleBy actionWithDuration:1  scale: 2];
+            id actionByBack = [actionBy reverse];
+            id delay=[CCDelayTime actionWithDuration:.5];
+            if(!isInTarget){
+                [_targetCharacter runAction: [CCSequence actions:delay,actionBy, actionByBack, nil]];
+                [self schedule:@selector(signalWin) interval:1.5];
+                isInTarget=YES;
+            }
+        }
+    }else{
+        isInTarget=NO;
+        [_targetCharacter stopAllActions];
+        [_targetCharacter setScale:_targetCharacter.originalScale];
+        [self unschedule:@selector(signalWin)];
     }
+
 //#endif
 }
 
@@ -1160,6 +1137,12 @@ int kNumObjects=7;
     [_henryHead setDisplayFrame:[[CCSpriteFrameCache sharedSpriteFrameCache] spriteFrameByName:@"HenryHead-Off.png"]];
     
     [_headLampLight setVisible:NO];
+
+    isInTarget=NO;
+    [_targetCharacter stopAllActions];
+    [_targetCharacter setScale:_targetCharacter.originalScale];
+    [self unschedule:@selector(signalWin)];
+    
 }
 
 

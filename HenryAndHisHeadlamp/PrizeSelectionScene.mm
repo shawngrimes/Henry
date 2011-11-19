@@ -110,7 +110,7 @@ float _userTime=0.0;
         }
         [fetchRequest release];
         
-        CCMenu *prizeMenu;
+//        CCMenu *prizeMenu;
         
         for (int x=1; x<=15; x++) {
             bool hasPrize=NO;
@@ -140,9 +140,9 @@ float _userTime=0.0;
             }
             
             if(x==1){
-                prizeMenu=[CCMenu menuWithItems:prizeIconItem, nil];
+                prizeSelectionMenu=[CCMenu menuWithItems:prizeIconItem, nil];
             }else{
-                [prizeMenu addChild:prizeIconItem];
+                [prizeSelectionMenu addChild:prizeIconItem];
             }
             if(hasPrize==YES){
 //                if([prizesWonSet count]<15)
@@ -172,7 +172,7 @@ float _userTime=0.0;
             if(x<=5){
                 if(UI_USER_INTERFACE_IDIOM() != UIUserInterfaceIdiomPad){
                     prizeIconItem.position=ccp((x-1)*testSize.width + ((x-1)*testSize.width/2),
-                                        (1.15*testSize.height + testSize.height));
+                                        (1.18*testSize.height + testSize.height));
                 }else{
                     prizeIconItem.position=ccp((x-1)*testSize.width + ((x-1)*testSize.width/2),
                                        (1.2*testSize.height + testSize.height));
@@ -196,12 +196,12 @@ float _userTime=0.0;
             }
         }
             
-        [self addChild:prizeMenu];
-        prizeMenu.anchorPoint=ccp(0,0);
+        [self addChild:prizeSelectionMenu];
+        prizeSelectionMenu.anchorPoint=ccp(0,0);
         if(UI_USER_INTERFACE_IDIOM()!=UIUserInterfaceIdiomPad){
-            prizeMenu.position=ccp(60,40);
+            prizeSelectionMenu.position=ccp(60,40);
         }else{
-            prizeMenu.position=ccp(150,125);
+            prizeSelectionMenu.position=ccp(150,125);
         }
         [self schedule:@selector(speakPrize) interval:2.0];
     }
@@ -224,6 +224,9 @@ float _userTime=0.0;
         CCLOG(@"ChildELement: %@", childElement);
     }
     
+    for (CCMenuItem *prizeItem in prizeSelectionMenu.children) {
+        [prizeItem setIsEnabled:NO];
+    }
     
     CCSprite *selectedSprite=(CCSprite *)[selectedMaterialSprite.children objectAtIndex:0];
     CCLOG(@"TAG: %i", selectedSprite.tag);
@@ -290,12 +293,20 @@ float _userTime=0.0;
     sharedAppDelegate.currentPlayerIconNumber=selectedSprite.tag;
     [fetchRequest release];
     
+    CCSprite *checkMark=[CCSprite spriteWithSpriteFrameName:@"CheckMark.png"];
+    [selectedMaterialSprite addChild:checkMark];
+    checkMark.position=ccp(selectedMaterialSprite.contentSize.width * .5, selectedMaterialSprite.contentSize.height * .5);
+    [selectedMaterialSprite setIsEnabled:YES];
+    
     [FlurryAnalytics logEvent:@"PRIZE_PICKED" withParameters:[NSDictionary dictionaryWithObject:[NSNumber numberWithInt:selectedSprite.tag] forKey:@"PRIZE_ICON"]];
     
     
-     [[CCDirector sharedDirector] replaceScene:[CCTransitionMoveInR transitionWithDuration:1.0f scene:[StartUpScreenLayer scene]]]; 
+    [self schedule:@selector(loadStartup) interval:2.5];
     
-    
+}
+
+-(void)loadStartup{
+     [[CCDirector sharedDirector] replaceScene:[CCTransitionMoveInR transitionWithDuration:1.0f scene:[StartUpScreenLayer scene]]];
 }
 
 -(void)withTime:(float)userTime{

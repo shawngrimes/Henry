@@ -60,6 +60,7 @@ typedef enum {
 @property (nonatomic, retain) NSString *shape;
 @property (nonatomic) BOOL isTarget;
 @property (nonatomic) BOOL isShape;
+@property (nonatomic) float originalScale;
 
 +(CharacterSprite *) characterOfType:(int)typeOfCharacter;
 +(CharacterSprite *) characterOfType:(int)typeOfCharacter withColor:(int)colorOfCharacter;

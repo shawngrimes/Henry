@@ -14,10 +14,10 @@
 			<key>orderHint</key>
 			<integer>3</integer>
 		</dict>
-		<key>SmartHenry - iPhone.xcscheme_^#shared#^_</key>
+		<key>SmartHenry - iPhone.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
-			<integer>2</integer>
+			<integer>4</integer>
 		</dict>
 		<key>Spooky Henry.xcscheme</key>
 		<dict>
@@ -43,6 +43,11 @@
 			<true/>
 		</dict>
 		<key>2986CA08141932C6002DA1C8</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>29AD037B14776535003E19EC</key>
 		<dict>
 			<key>primary</key>
 			<true/>

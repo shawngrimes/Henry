@@ -20,6 +20,7 @@
     ScoreNode *playerScore;
     Player *currentPlayer;
     GameModeType selectedGameMode;
+    CCMenu *prizeSelectionMenu;
 }
 
 
@@ -30,5 +31,6 @@
 -(void)withTime:(float)userTime;
 -(void) showPrizes;
 -(void)speakPrize;
+-(void)loadStartup;
 
 @end

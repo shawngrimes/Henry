@@ -11,7 +11,7 @@
 #import "PrizeSelectionScene.h"
 #import "SimpleAudioEngine.h"
 #import "UserSelectionLayer.h"
-#import "GLES-Render.h"
+//#import "GLES-Render.h"
 #import "Box2DHelper.h"
 
 enum {
@@ -113,9 +113,9 @@ enum {
         bool doSleep = true;
         _world = new b2World(gravity, doSleep);
         
-        GLESDebugDraw *m_debugDraw = new GLESDebugDraw( [self pixelsToMeterRatio] );
-		_world->SetDebugDraw(m_debugDraw);
-		
+//        GLESDebugDraw *m_debugDraw = new GLESDebugDraw( [self pixelsToMeterRatio] );
+//		_world->SetDebugDraw(m_debugDraw);
+//		
 //		uint32 flags = 0;
 //		flags += b2DebugDraw::e_shapeBit;
 //        		flags += b2DebugDraw::e_jointBit;
@@ -316,9 +316,7 @@ enum {
 //    //    [prizeLayer withTime:gameTimer];
 //    [scoreScene addChild:prizeLayer];
     
-//    [[CCDirector sharedDirector] replaceScene:
-//     [CCTransitionRotoZoom transitionWithDuration:2.0f scene:scoreScene]];
-    
+
 //    [self loadGameLayer];
     
 //    [self schedule:@selector(loadGameLayer) interval:0.5];

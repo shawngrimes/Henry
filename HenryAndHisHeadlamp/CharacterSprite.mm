@@ -18,6 +18,7 @@
 @synthesize characterString;
 @synthesize shapeColor;
 @synthesize shape;
+@synthesize originalScale;
 
 - (BOOL)isEqual:(id)anObject{
     CharacterSprite *compareObject=(CharacterSprite *)anObject;
@@ -92,7 +93,9 @@
         if (UI_USER_INTERFACE_IDIOM() != UIUserInterfaceIdiomPad) { 
             CGSize size = [[CCDirector sharedDirector] winSizeInPixels];
             self.scale=size.width/1024.0f;
+            self.originalScale=self.scale;
         }
+        self.originalScale=self.scale;
     }
     return self;
 }
@@ -148,10 +151,16 @@
 
 -(CGRect) boundingBox{
     if([self.children count]>0){
-//        CCLOG(@"HAS %i CHILDREN", [self.children count]);
-        return [self getChildRect];
+        CCLabelBMFont *labelBox=[self.children objectAtIndex:0];
+//        CCNode *letter=[labelBox.children objectAtIndex:0];
+        CGPoint newOrigin=[self convertToWorldSpace:labelBox.boundingBox.origin];
+        CGSize letterSize=[labelBox contentSize];
+        letterSize.width*=self.scaleX;
+        letterSize.height*=self.scaleY;
+        
+        return CGRectMake(newOrigin.x, newOrigin.y, letterSize.width, letterSize.height);
     }else{
-//        CCLOG(@"Getting bounding rect");
+        CCLOG(@"Getting bounding rect");
         return [super boundingBox];
     }
 }
@@ -169,8 +178,11 @@
     if (UI_USER_INTERFACE_IDIOM() != UIUserInterfaceIdiomPad) { 
         CGSize size = [[CCDirector sharedDirector] winSize];
         [newCharacter setScale:size.width/1024.0f];
-//        [newCharacter setScaleY:size.height/768.0f];
+        //        [newCharacter setScaleY:size.height/768.0f];
     }
+    newCharacter.originalScale=newCharacter.scale;
+    CCLOG(@"Original Scale in Sprite: %f", newCharacter.originalScale);
+    
     return newCharacter;
 }
 
@@ -260,6 +272,9 @@
     newCharacter.shapeColor=characterColor;
     newCharacter.shape=shapeName;    
     
+    newCharacter.originalScale=newCharacter.scale;
+    CCLOG(@"Original Scale in Sprite: %f", newCharacter.originalScale);
+    
     return newCharacter;
 }
 
@@ -317,19 +332,24 @@
 }
 
 
--(void)setScale:(float)scale{
-    if(self.isShape){
-        [super setScale:scale];
-    }else{
-        CCNode *node;
-        CCARRAY_FOREACH([self children], node)
-        {
-            //        totalBoundingRect=[self getBoundingRectForNode:node];
-    //        totalBoundingRect=[node boundingBox];
-            [node setScale:scale];
-        }
-    }
-}
+//-(void)setScale:(float)scale{
+//    if(self.isShape){
+//        [super setScale:scale];
+//    }else{
+//        CCNode *node;
+//        CCARRAY_FOREACH([self children], node)
+//        {
+//            if([node isKindOfClass:[CCLabelBMFont class]]){
+//                CCLabelBMFont *labelToScale=(CCLabelBMFont *)node;
+//                CCLOG(@"Current Scale of font: %f", labelToScale.scale);
+//                CCLOG(@"Setting Scale of font: %f", scale);
+//                CCSprite *char_B = (CCSprite*) [labelToScale getChildByTag:0]; // character 'B'
+//                char_B.scale=scale;
+////                [labelToScale setScale:2.0];
+//            }
+//        }
+//    }
+//}
     
 -(void)setColor:(ccColor3B)color{
     CCSprite *node;

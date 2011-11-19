@@ -13,8 +13,8 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "290A2CE2144CFE2500BBFBA3"
-               BuildableName = "SmartHenry-iPhone.app"
+               BlueprintIdentifier = "29AD037B14776535003E19EC"
+               BuildableName = "SmartHenry-Universal copy.app"
                BlueprintName = "SmartHenry-iPhone"
                ReferencedContainer = "container:HenryAndHisHeadlamp.xcodeproj">
             </BuildableReference>
@@ -31,8 +31,8 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "290A2CE2144CFE2500BBFBA3"
-            BuildableName = "SmartHenry-iPhone.app"
+            BlueprintIdentifier = "29AD037B14776535003E19EC"
+            BuildableName = "SmartHenry-Universal copy.app"
             BlueprintName = "SmartHenry-iPhone"
             ReferencedContainer = "container:HenryAndHisHeadlamp.xcodeproj">
          </BuildableReference>
@@ -49,8 +49,8 @@
       <BuildableProductRunnable>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "290A2CE2144CFE2500BBFBA3"
-            BuildableName = "SmartHenry-iPhone.app"
+            BlueprintIdentifier = "29AD037B14776535003E19EC"
+            BuildableName = "SmartHenry-Universal copy.app"
             BlueprintName = "SmartHenry-iPhone"
             ReferencedContainer = "container:HenryAndHisHeadlamp.xcodeproj">
          </BuildableReference>
@@ -67,8 +67,8 @@
       <BuildableProductRunnable>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "290A2CE2144CFE2500BBFBA3"
-            BuildableName = "SmartHenry-iPhone.app"
+            BlueprintIdentifier = "29AD037B14776535003E19EC"
+            BuildableName = "SmartHenry-Universal copy.app"
             BlueprintName = "SmartHenry-iPhone"
             ReferencedContainer = "container:HenryAndHisHeadlamp.xcodeproj">
          </BuildableReference>

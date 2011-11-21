@@ -319,6 +319,8 @@
         if(self!=checkSprite){
 #if HALLOWEEN
             while (CGRectIntersectsRect(self.boundingBox, checkSprite.boundingBox)) {
+#elif WINTER
+            while (CGRectIntersectsRect(self.boundingBox, checkSprite.boundingBox)) {
 #elif SMART
             while (CGRectIntersectsRect([self boundingBox], [checkSprite boundingBox])) { 
 #endif

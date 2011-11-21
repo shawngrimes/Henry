@@ -167,7 +167,7 @@
 #ifdef HALLOWEEN
     [[UIApplication sharedApplication] openURL:[NSURL URLWithString:@"http://click.linksynergy.com/fs-bin/stat?id=ufqtEXoqemY&offerid=146261&type=3&subid=0&tmpid=1826&RD_PARM1=http%253A%252F%252Fitunes.apple.com%252Fus%252Fapp%252Fhenrys-spooky-headlamp%252Fid469760219%253Fmt%253D8%2526uo%253D4%2526partnerId%253D30"]];
 #elif SMART
-    [[UIApplication sharedApplication] openURL:[NSURL URLWithString:@""]];
+    [[UIApplication sharedApplication] openURL:[NSURL URLWithString:@"http://itunes.apple.com/us/app/id482490502"]];
 #endif
 }
 

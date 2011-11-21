@@ -131,6 +131,10 @@ bool isInTarget=NO;
         //Stuff for Full version
         int backGroundNumber=arc4random() % 3;
         CCSprite *backgroundSprite=[CCSprite spriteWithFile:[NSString stringWithFormat:@"SmartHenry_Bkgrd_%i.png", backGroundNumber]];
+#elif WINTER
+        int backGroundNumber=arc4random() % 2;
+        CCSprite *backgroundSprite=[CCSprite spriteWithFile:[NSString stringWithFormat:@"WinterHenry_Bkgrd_%i.png", backGroundNumber]];
+
 #endif
 
 //if (UI_USER_INTERFACE_IDIOM() != UIUserInterfaceIdiomPad) { 
@@ -145,6 +149,13 @@ bool isInTarget=NO;
         CCSprite *statusBarSprite=[CCSprite spriteWithSpriteFrameName:@"Henry_Spooky_Status_Box.png"];
 #elif SMART
         CCSprite *statusBarSprite=[CCSprite spriteWithFile:@"SmartHenry_StatusBox.png"];
+#elif WINTER
+        if(UI_USER_INTERFACE_IDIOM()==UIUserInterfaceIdiomPad){
+            [[CCSpriteFrameCache sharedSpriteFrameCache] addSpriteFramesWithFile:@"FindObjects-hd.plist"];
+        }else{
+            [[CCSpriteFrameCache sharedSpriteFrameCache] addSpriteFramesWithFile:@"FindObjects.plist"];
+        }
+        CCSprite *statusBarSprite=[CCSprite spriteWithSpriteFrameName:@"StatusBox.png"];
 #endif
 
         statusBarSprite.anchorPoint=ccp(1,1);

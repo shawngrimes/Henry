@@ -87,6 +87,14 @@ enum {
             [backgroundSprite setScaleX:size.width/1024.0f];
             [backgroundSprite setScaleY:size.height/768.0f];
         }
+#elif WINTER
+        [[CCSpriteFrameCache sharedSpriteFrameCache] addSpriteFramesWithFile:@"Buttons.plist"];
+        if(UI_USER_INTERFACE_IDIOM()==UIUserInterfaceIdiomPad){
+            backgroundSprite=[CCSprite spriteWithFile:@"TitleScreen-ipad.png"];
+        }else{
+            backgroundSprite=[CCSprite spriteWithFile:@"TitleScreen.png"];
+        }
+
 #elif SMART
         //Stuff for Full version
         [[CCSpriteFrameCache sharedSpriteFrameCache] addSpriteFramesWithFile:@"buttonsAndResources-Smart.plist"];
@@ -255,9 +263,9 @@ enum {
         mainMenu.position=ccp(size.width *.5, size.height/3);
 
         [self addChild:mainMenu z:8];
-        CCLOG(@"Winsize %fx%f", winSize.width, winSize.height);
-        CCLOG(@"Content Scale Facter: %f",CC_CONTENT_SCALE_FACTOR());
-        CCLOG(@"PTM: %f", [self pixelsToMeterRatio]);
+//        CCLOG(@"Winsize %fx%f", winSize.width, winSize.height);
+//        CCLOG(@"Content Scale Facter: %f",CC_CONTENT_SCALE_FACTOR());
+//        CCLOG(@"PTM: %f", [self pixelsToMeterRatio]);
 
     }
         [TestFlight passCheckpoint:@"RETURNING_SPLASH"];

@@ -20,13 +20,13 @@
 
 +(int) scoreForTime:(float)playerTime{
     int numberOfStars=0;
-    if(playerTime<=30.0){
+    if(playerTime<=50.0){
         numberOfStars=5;
-    }else if(playerTime>30.0 && playerTime<=37.0){
+    }else if(playerTime>50.0 && playerTime<=60.0){
         numberOfStars=4;
-    }else if(playerTime>37.0 && playerTime<=60.0){
+    }else if(playerTime>60.0 && playerTime<=75.0){
         numberOfStars=3;
-    }else if(playerTime>60.0 && playerTime<=90.0){
+    }else if(playerTime>75.0 && playerTime<=90.0){
         numberOfStars=2;
     }else if(playerTime>90.0 && playerTime<=120.0){
         numberOfStars=1;

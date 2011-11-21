@@ -137,12 +137,31 @@
     }
 }
 
+-(NSString *)uuid{
+    NSUserDefaults *userDefaults=[NSUserDefaults standardUserDefaults];
+    NSString *uuidString=[userDefaults valueForKey:@"uuid"];
+    if(uuidString==nil || [uuidString isEqualToString:@""]){
+        CFUUIDRef theUUID = CFUUIDCreate(NULL);
+        uuidString=[(NSString *)CFUUIDCreateString(NULL, theUUID) autorelease];
+        CFRelease(theUUID);
+        [userDefaults setValue:uuidString forKey:@"uuid"];
+        [userDefaults synchronize];
+    }
+    
+    return uuidString;
+}
+
 -(void)setUserIcon:(id) sender{
+    
+    
+    
     BOOL loadInstructions=YES;
     CCMenuItemSprite *selectedMaterialSprite=(CCMenuItemSprite *) sender;
     
     CCSprite *selectedSprite=(CCSprite *)[selectedMaterialSprite.children objectAtIndex:0];
 
+    [FlurryAnalytics setUserID:[NSString stringWithFormat:@"%@-%i", [self uuid], selectedSprite.tag]];
+    
     NSFetchRequest *fetchRequest = [[NSFetchRequest alloc] init];
     AppDelegate *sharedAppDelegate=(AppDelegate *)[UIApplication sharedApplication].delegate;
     

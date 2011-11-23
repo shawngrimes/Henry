@@ -51,6 +51,8 @@
 //    [TestFlight takeOff:@"76c69515ac87392bd0ccfe77842a7140_MzEzMjQyMDExLTA5LTI2IDE2OjI3OjI4Ljc1OTExNg"];
 #elif SMART
     [TestFlight takeOff:@"075e25c5c29c398a3fb2923d445f6a30_MzgyNzkyMDExLTExLTAyIDAxOjM1OjU4Ljg1ODA4Mg"];
+#elif WINTER
+    
 #endif
     
 #ifdef HALLOWEEN
@@ -58,6 +60,9 @@
     [FlurryAnalytics setSessionReportsOnPauseEnabled:YES];
 #elif SMART
     [FlurryAnalytics startSession:@"L22N74AJKXDUV25RTFAP"];
+    [FlurryAnalytics setSessionReportsOnPauseEnabled:YES];
+#elif WINTER
+    [FlurryAnalytics startSession:@"VDIZ4G18SD233ZHM5JX4"];
     [FlurryAnalytics setSessionReportsOnPauseEnabled:YES];
 #endif
     

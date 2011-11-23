@@ -297,9 +297,7 @@ enum {
             
         }
         [self schedule:@selector(tick:)];
-        
-//        [self scheduleUpdate];       
-        
+
         backgroundSprite=[CCSprite spriteWithFile:@"TitleScreen.png"];
 //        CCLOG(@"BackgroundSprite: %@", backgroundSprite.)
         

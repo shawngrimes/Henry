@@ -43,9 +43,10 @@ bool isInTarget=NO;
 	// add layer as a child to scene
 	[scene addChild: layer];
 
+#if SMART
     [[SimpleAudioEngine sharedEngine] preloadEffect:@"Henry_Can_You_Find_The.caf"];
     [[SimpleAudioEngine sharedEngine] preloadEffect:@"Henry_You_Found_The.caf"];
-    
+#endif
     
 //    ParentLoginViewController *parentVC=[[ParentLoginViewController alloc] init];
 //    AppDelegate *myDelegate=(AppDelegate *)[[UIApplication sharedApplication] delegate];
@@ -139,13 +140,8 @@ bool isInTarget=NO;
         }else{
             [frameCache addSpriteFramesWithFile:@"HenryBodyTextures-hd.plist"];
         }
-
 #endif
 
-//if (UI_USER_INTERFACE_IDIOM() != UIUserInterfaceIdiomPad) { 
-//    [backgroundSprite setScaleX:size.width/1024.0f];
-//    [backgroundSprite setScaleY:size.height/768.0f];
-//}
         backgroundSprite.position=ccp(size.width/2, size.height/2);
         [self addChild:backgroundSprite];
         
@@ -178,6 +174,12 @@ bool isInTarget=NO;
         _henryHead.anchorPoint=ccp(0.581,0.188);
         _henryHead.position=ccp(henryBody.boundingBox.origin.x+((henryBody.boundingBox.size.width)/2 + .13 * henryBody.boundingBox.size.width), 
                                 ((henryBody.boundingBox.size.height) - (.2*henryBody.boundingBox.size.height)));
+#if WINTER
+        _henryHead.position=ccp(
+                                henryBody.boundingBox.origin.x+((henryBody.boundingBox.size.width)/2 + .13 * henryBody.boundingBox.size.width), 
+                                ((henryBody.boundingBox.size.height) +  .81 * (_henryHead.anchorPoint.y * _henryHead.boundingBox.size.height)));
+
+#endif
         _henryHead.rotation=-22.700861;
         [self addChild:henryBody z:9 tag:kTAGhenry];
         [self addChild:_henryHead z:10 tag:kTAGhenryHead];
@@ -563,10 +565,10 @@ bool isInTarget=NO;
             [aryCharacterTypes addObject:[NSNumber numberWithInt:randomCharacter]];
             CCLOG(@"Random Character Type: %i", randomCharacter);
             CharacterSprite *randomSprite=[CharacterSprite characterOfType:randomCharacter];
-            if (UI_USER_INTERFACE_IDIOM() != UIUserInterfaceIdiomPad) { 
-                [randomSprite setScaleX:size.width/1024.0f];
-                [randomSprite setScaleY:size.height/768.0f];
-            }
+//            if (UI_USER_INTERFACE_IDIOM() != UIUserInterfaceIdiomPad) { 
+//                [randomSprite setScaleX:size.width/1024.0f];
+//                [randomSprite setScaleY:size.height/768.0f];
+//            }
             
             if(_arrCharacters.count<1){
                 [randomSprite setRandomPosition:playableAreaSize];
@@ -639,25 +641,15 @@ bool isInTarget=NO;
         
         
         _timerLabel=[CCLabelBMFont labelWithString:@"0" fntFile:@"Corben-64.fnt"];
-//        if (UI_USER_INTERFACE_IDIOM() != UIUserInterfaceIdiomPad){
-//            [_timerLabel setScaleX:size.width/1024.0f * 0.4];
-//            [_timerLabel setScaleY:size.height/768.0f * 0.4];
-//        }else{
         [_timerLabel setScale:(winSizeInPixels.width/1024.0f) * .4];
-//        }
-
-//        CCLOG(@"Status Bar: %f, %f",statusBarSprite.boundingBox.origin.x, statusBarSprite.boundingBox.origin.y);
         _timerLabel.position=ccp(statusBarSprite.boundingBox.origin.x + size.width*.13,statusBarSprite.boundingBox.origin.y + size.height*0.055);
-//        _timerLabel.position=ccp(size.width-size.width/15,size.height-(size.height/10));
+
         [self addChild:_timerLabel z:8 tag:kTAGTimer];
         
         
         [[SimpleAudioEngine sharedEngine] preloadEffect:@"click.caf"];
         [[SimpleAudioEngine sharedEngine] preloadEffect:@"ding.caf"];
-#ifdef HALLOWEEN
-//        [[SimpleAudioEngine sharedEngine] preloadBackgroundMusic:@"spooky2.caf"];
-//        [[SimpleAudioEngine sharedEngine] playBackgroundMusic:@"spooky2.caf" loop:YES];
-#endif
+
 
         
 	}
@@ -747,6 +739,8 @@ bool isInTarget=NO;
     
     [self unschedule:@selector(removeFireworks)];
     
+    [[SimpleAudioEngine sharedEngine] playEffect:@"ding.caf"];
+    
     CGSize size = [[CCDirector sharedDirector] winSize];
    
     //Hide instructions
@@ -769,30 +763,29 @@ bool isInTarget=NO;
     [self addChild:system  z:11 tag:kTAGfireWorks];
     [self reorderChild:_targetCharacter z:12];
 
+#if SMART
     CCLOG(@"Setting Up sound files");
     id youFoundTheAction=[CCCallFuncO actionWithTarget:self selector:@selector(speakFoundItem:) object:_targetCharacter];
     float delaySeconds=[self getDelayForStringFound:_targetCharacter];
+    
     id delay=[CCDelayTime actionWithDuration:delaySeconds];
     
     id findTheAction=[CCCallFunc actionWithTarget:self selector:@selector(showTargetLabel)];
+    
+    [self schedule:@selector(removeFireworks) interval:4];
 
-//    if(_targetCharacter==nil){
-//        [self gameOver];
-//        findTheAction=nil;
-//    }else{
-        [self schedule:@selector(removeFireworks) interval:4];
-//    }
     
     CCSequence *soundSequence;
-    
+
     if(!findTheAction){
         soundSequence=[CCSequence actions:youFoundTheAction,delay,nil];
     }else{
         soundSequence=[CCSequence actions:youFoundTheAction,delay,findTheAction, nil];
     }
-    
     [self runAction:soundSequence];
-    
+#else
+    [self showTargetLabel];
+#endif
     
     
     [TestFlight passCheckpoint:@"WIN_SIGNALED"];
@@ -829,7 +822,7 @@ bool isInTarget=NO;
 
 -(void)speakFoundItem:(CharacterSprite *)foundSprite{
     
-    [[SimpleAudioEngine sharedEngine] playEffect:@"ding.caf"];
+    
     
     self.effectSpeech=[[SimpleAudioEngine sharedEngine] soundSourceForFile:@"Henry_You_Found_The.caf"];
     [self speakString:@"Henry_You_Found_The.caf"];
@@ -884,6 +877,9 @@ bool isInTarget=NO;
 #ifdef HALLOWEEN
     gameOverLabel.color=ccORANGE;
     gameOverTime.color=ccORANGE;
+#elif WINTER
+    gameOverLabel.color=ccc3(115, 48, 131);
+    gameOverTime.color=ccc3(115, 48, 131);
 #endif
 
     if (UI_USER_INTERFACE_IDIOM() != UIUserInterfaceIdiomPad) { 
@@ -962,9 +958,9 @@ bool isInTarget=NO;
         float usableHUDWidth=(.86*HUDSprite.boundingBox.size.width);
         
         CharacterSprite *targetSpriteCopy;
-    #if HALLOWEEN
+#if HALLOWEEN
         targetSpriteCopy=[CharacterSprite spriteWithTexture:_targetCharacter.texture rect:_targetCharacter.textureRect];
-    #elif SMART
+#elif SMART
         if(_targetCharacter.isShape){
             targetSpriteCopy=[CharacterSprite spriteWithTexture:_targetCharacter.texture rect:_targetCharacter.textureRect];
     //        targetSpriteCopy.color=_targetCharacter.color;
@@ -974,7 +970,9 @@ bool isInTarget=NO;
             CCSprite *targetChild=(CCSprite *)[_targetCharacter.children objectAtIndex:0];
             targetSpriteCopy.color=targetChild.color;
         }
-    #endif
+#elif WINTER
+        targetSpriteCopy=[CharacterSprite spriteWithTexture:_targetCharacter.texture rect:_targetCharacter.textureRect];
+#endif
         
         
     //    [targetSpriteCopy setScale:.25];
@@ -1007,12 +1005,7 @@ bool isInTarget=NO;
         }
         targetSpriteCopy.color=_targetCharacter.color;
 
-    //    effectSpeech = [[CDAudioManager sharedManager] audioSourceForChannel:kASC_Right];
-    //    effectSpeech.backgroundMusic = NO;
-    //    effectSpeech.delegate=self;
-        
-        
-        
+#if SMART
         while(self.effectSpeech.isPlaying){
         }
         
@@ -1035,6 +1028,9 @@ bool isInTarget=NO;
         }
         id showTargetSprite=[CCCallFuncO actionWithTarget:self selector:@selector(showTargetSprite:) object:targetSpriteCopy];
         [self runAction:[CCSequence actions:delayOne,speakDescriptor,delayTwo,speakObject,showTargetSprite, nil]];
+#else
+        [self showTargetSprite:targetSpriteCopy];
+#endif
     }
 }
 
@@ -1100,7 +1096,6 @@ bool isInTarget=NO;
     
     [self removeChildByTag:kTAGfireWorks cleanup:YES];
     
-#ifdef SMART
     if(CGRectContainsPoint([_targetCharacter boundingBox], location)){
 //        CCLOG(@"Contains Point!");
         if([self getChildByTag:kTAGtargetSprite])
@@ -1122,13 +1117,6 @@ bool isInTarget=NO;
         isInTarget=NO;
         //            [self unschedule:@selector(signalWin)];
     }
-
-#elif HALLOWEEN
-    if(CGRectContainsPoint([_targetCharacter boundingBox], location)){
-//        CCLOG(@"Contains Point!");
-        [self signalWin];
-    }
-#endif
 
     
     return TRUE;

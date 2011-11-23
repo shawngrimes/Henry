@@ -87,7 +87,7 @@
         characterLabel.position=CGPointZero;
 //        characterLabel.color=ccc3(118, 188, 241);
         [self addChild:characterLabel];
-        CCLOG(@"Bounding Box: %f, %f, %f, %f", [characterLabel boundingBox].origin.x, [characterLabel boundingBox].origin.y, [characterLabel boundingBox].size.width,[characterLabel boundingBox].size.height);
+//        CCLOG(@"Bounding Box: %f, %f, %f, %f", [characterLabel boundingBox].origin.x, [characterLabel boundingBox].origin.y, [characterLabel boundingBox].size.width,[characterLabel boundingBox].size.height);
         self.characterString=selectedCharacter;
         self.isShape=NO;
         if (UI_USER_INTERFACE_IDIOM() != UIUserInterfaceIdiomPad) { 
@@ -166,7 +166,7 @@
         
         return CGRectMake(newOrigin.x, newOrigin.y, letterSize.width, letterSize.height);
     }else{
-        CCLOG(@"Getting bounding rect");
+//        CCLOG(@"Getting bounding rect");
         return [super boundingBox];
     }
 }
@@ -180,12 +180,15 @@
     CharacterSprite *newCharacter=[[[CharacterSprite alloc] initWithSpriteFrameName:[NSString stringWithFormat:@"%i.png",typeOfCharacter]] autorelease];
 //    newCharacter.color=spriteColor;
 //    newCharacter.description=[NSString stringWithFormat:@"%@", frameName];
-    
+
+#ifdef SMART
     if (UI_USER_INTERFACE_IDIOM() != UIUserInterfaceIdiomPad) { 
         CGSize size = [[CCDirector sharedDirector] winSize];
         [newCharacter setScale:size.width/1024.0f];
         //        [newCharacter setScaleY:size.height/768.0f];
     }
+#endif
+    
     newCharacter.originalScale=newCharacter.scale;
     CCLOG(@"Original Scale in Sprite: %f", newCharacter.originalScale);
     

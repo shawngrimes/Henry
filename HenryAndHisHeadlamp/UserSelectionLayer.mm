@@ -96,7 +96,9 @@
                                                 (.7*testSize.height + testSize.height));
                 }
 #if WINTER
-                userIconSprite.position=ccp(userIconSprite.position.x, userIconSprite.position.y * .8); 
+                if(UI_USER_INTERFACE_IDIOM()==UIUserInterfaceIdiomPad){
+                    userIconSprite.position=ccp(userIconSprite.position.x, userIconSprite.position.y * .8); 
+                }
 #endif
             }else if(x>6){
                 if(UI_USER_INTERFACE_IDIOM() != UIUserInterfaceIdiomPad){
@@ -107,7 +109,9 @@
                                             (2.3*testSize.height + testSize.height));
                 }
 #if WINTER
-                userIconSprite.position=ccp(userIconSprite.position.x, userIconSprite.position.y * .83); 
+                if(UI_USER_INTERFACE_IDIOM()==UIUserInterfaceIdiomPad){
+                    userIconSprite.position=ccp(userIconSprite.position.x, userIconSprite.position.y * .83); 
+                }
 #endif
             }
         }
@@ -123,7 +127,11 @@
             userIconMenu.position=ccp(size.width * (540.0/1024.0),size.height-(size.height * (535.0/768.0)));
         }
 #if WINTER
-        userIconMenu.position=ccp(userIconMenu.position.x * 1.1, userIconMenu.position.y * 1); 
+        if(UI_USER_INTERFACE_IDIOM()==UIUserInterfaceIdiomPad){
+            userIconMenu.position=ccp(userIconMenu.position.x * 1.1, userIconMenu.position.y * 1); 
+        }else{
+            userIconMenu.position=ccp(userIconMenu.position.x * 1, userIconMenu.position.y * .9); 
+        }
 #endif
         
        

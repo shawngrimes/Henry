@@ -66,6 +66,15 @@ ALuint soundEffect=0;
 //            [[CCSpriteFrameCache sharedSpriteFrameCache] addSpriteFramesWithFile:@"ButtonTextures-hd.plist"];
 //            batchNode = [CCSpriteBatchNode batchNodeWithFile:@"ButtonTextures-hd.pvr.gz"];
 //        }
+#elif WINTER
+        backgroundSprite=[CCSprite spriteWithFile:@"StoryScreen.png"];
+        if(UI_USER_INTERFACE_IDIOM()==UIUserInterfaceIdiomPad){
+            [[CCSpriteFrameCache sharedSpriteFrameCache] addSpriteFramesWithFile:@"SpeechBubbles-hd.plist"];
+            batchNode = [CCSpriteBatchNode batchNodeWithFile:@"SpeechBubbles-hd.pvr.ccz"];
+        }else{
+            [[CCSpriteFrameCache sharedSpriteFrameCache] addSpriteFramesWithFile:@"SpeechBubbles.plist"];
+            batchNode = [CCSpriteBatchNode batchNodeWithFile:@"SpeechBubbles.pvr.ccz"];
+        }
 #endif
         backgroundSprite.position=ccp(size.width *0.5, size.height *0.5);
         [self addChild:backgroundSprite];
@@ -85,10 +94,31 @@ ALuint soundEffect=0;
         speechBubble1.position=ccp(size.width * (650.0/1024.0),size.height-(size.height * (230.0/768.0)));
         [batchNode addChild:speechBubble1 z:2 tag:2];
         [self addChild:batchNode];
+#elif WINTER
+        speechBubble1=[CCSprite spriteWithSpriteFrameName:@"SpeechBubble1.png"];
+        speechBubble1.anchorPoint=ccp(0.5,0.5);
+        speechBubble1.position=ccp(size.width * (650.0/1024.0),size.height-(size.height * (230.0/768.0)));
+        [batchNode addChild:speechBubble1 z:2 tag:2];
+        [self addChild:batchNode];
 #endif
         
 #ifdef SMART
         [[CCSpriteFrameCache sharedSpriteFrameCache] addSpriteFramesWithFile:@"buttonsAndResources-Smart.plist"];
+        CCMenuItemSprite *backSprite=[CCMenuItemSprite 
+                                      itemFromNormalSprite:[CCSprite spriteWithSpriteFrameName:@"BackArrow_inactive.png"] 
+                                      selectedSprite:[CCSprite spriteWithSpriteFrameName:@"BackArrow_active.png"] 
+                                      target:self 
+                                      selector:@selector(transitionToPrevScreen)];
+        CCMenu *backMenu=[CCMenu menuWithItems:backSprite, nil];
+        [self addChild:backMenu];
+        backMenu.anchorPoint=ccp(0.5,0.5);
+        backMenu.position=ccp(0+backSprite.contentSize.width,size.height-backSprite.contentSize.height);
+#elif WINTER
+        if(UI_USER_INTERFACE_IDIOM()==UIUserInterfaceIdiomPad){
+            [[CCSpriteFrameCache sharedSpriteFrameCache] addSpriteFramesWithFile:@"Buttons-hd.plist"];
+        }else{
+            [[CCSpriteFrameCache sharedSpriteFrameCache] addSpriteFramesWithFile:@"Buttons.plist"];
+        }
         CCMenuItemSprite *backSprite=[CCMenuItemSprite 
                                       itemFromNormalSprite:[CCSprite spriteWithSpriteFrameName:@"BackArrow_inactive.png"] 
                                       selectedSprite:[CCSprite spriteWithSpriteFrameName:@"BackArrow_active.png"] 
@@ -108,6 +138,9 @@ ALuint soundEffect=0;
 #ifdef HALLOWEEN
         soundEffect=[[SimpleAudioEngine sharedEngine] playEffect:@"HenrySpeech1.caf"];
 #elif SMART
+        [[SimpleAudioEngine sharedEngine] setBackgroundMusicVolume:0.5];
+        soundEffect=[[SimpleAudioEngine sharedEngine] playEffect:@"Speech1.aifc"];
+#elif WINTER
         [[SimpleAudioEngine sharedEngine] setBackgroundMusicVolume:0.5];
         soundEffect=[[SimpleAudioEngine sharedEngine] playEffect:@"Speech1.aifc"];
 #endif
@@ -155,6 +188,8 @@ ALuint soundEffect=0;
     [self removeChildByTag:2 cleanup:YES];
 #elif SMART
     [batchNode removeChildByTag:2 cleanup:YES];
+#elif WINTER
+    [batchNode removeChildByTag:2 cleanup:YES];
 #endif
     
     // ask director the the window size
@@ -171,7 +206,7 @@ ALuint soundEffect=0;
         }
         [self addChild:speechBubble2 z:2 tag:2];
         
-#elif SMART
+#elif SMART or WINTER
         speechBubble2=[CCSprite spriteWithSpriteFrameName:@"SpeechBubble2.png"];
         speechBubble2.anchorPoint=ccp(0.5,0.5);
         speechBubble2.position=ccp(size.width * (650.0/1024.0),size.height-(size.height * (230.0/768.0)));
@@ -181,8 +216,9 @@ ALuint soundEffect=0;
         
         [[SimpleAudioEngine sharedEngine] stopEffect:soundEffect];
 #ifdef HALLOWEEN
-        
         soundEffect=[[SimpleAudioEngine sharedEngine] playEffect:@"HenrySpeech2.caf"];
+#elif WINTER
+        soundEffect=[[SimpleAudioEngine sharedEngine] playEffect:@"Speech2.caf"];
 #elif SMART
         soundEffect=[[SimpleAudioEngine sharedEngine] playEffect:@"Speech2.aifc"];
 #endif
@@ -203,6 +239,8 @@ ALuint soundEffect=0;
 #endif
         [[SimpleAudioEngine sharedEngine] stopEffect:soundEffect];
 #if HALLOWEEN
+        [self schedule:@selector(loadGameLayer) interval:0.2];
+#elif WINTER
         [self schedule:@selector(loadGameLayer) interval:0.2];
 #elif SMART
         [self schedule:@selector(loadUserSelectionScene) interval:0.2];

@@ -111,6 +111,12 @@
     }else{
         [frameCache addSpriteFramesWithFile:@"ShapeTextures.plist"];
     }
+#elif WINTER
+    if (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad) { 
+        [frameCache addSpriteFramesWithFile:@"FindObjects-hd.plist"];
+    }else{
+        [frameCache addSpriteFramesWithFile:@"FindObjects.plist"];
+    }
 #endif
     
     CCLOG(@"FrameName: %@", spriteFrameName);

@@ -88,12 +88,87 @@ enum {
             [backgroundSprite setScaleY:size.height/768.0f];
         }
 #elif WINTER
-        [[CCSpriteFrameCache sharedSpriteFrameCache] addSpriteFramesWithFile:@"Buttons.plist"];
         if(UI_USER_INTERFACE_IDIOM()==UIUserInterfaceIdiomPad){
+            [[CCSpriteFrameCache sharedSpriteFrameCache] addSpriteFramesWithFile:@"Buttons-hd.plist"];
             backgroundSprite=[CCSprite spriteWithFile:@"TitleScreen-ipad.png"];
         }else{
+            [[CCSpriteFrameCache sharedSpriteFrameCache] addSpriteFramesWithFile:@"Buttons.plist"];
             backgroundSprite=[CCSprite spriteWithFile:@"TitleScreen.png"];
         }
+        if(UI_USER_INTERFACE_IDIOM()==UIUserInterfaceIdiomPad){
+            batchNode = [CCSpriteBatchNode batchNodeWithFile:@"Snowflake-hd.png"];
+        }else{
+            batchNode = [CCSpriteBatchNode batchNodeWithFile:@"Snowflake.png"];
+        }
+//        batchNode=[CCSpriteBatchNode batchNodeWithFile:@"Snowflake.png"];
+        [self addChild:batchNode z:3 tag:kTagBatchNode];
+        [[GB2ShapeCache sharedShapeCache]  
+         addShapesWithFile:@"SnowflakePhysics.plist"];
+        
+        CGSize winSize = [[CCDirector sharedDirector] winSizeInPixels];
+        // Create a world
+        b2Vec2 gravity = b2Vec2(0.0f, -30.0f);
+        bool doSleep = true;
+        _world = new b2World(gravity, doSleep);
+        
+//        GLESDebugDraw *m_debugDraw = new GLESDebugDraw( [self pixelsToMeterRatio] );
+//		_world->SetDebugDraw(m_debugDraw);
+//		
+//		uint32 flags = 0;
+//		flags += b2DebugDraw::e_shapeBit;
+//        		flags += b2DebugDraw::e_jointBit;
+//        //		flags += b2DebugDraw::e_aabbBit;
+//        //		flags += b2DebugDraw::e_pairBit;
+//        		flags += b2DebugDraw::e_centerOfMassBit;
+//		m_debugDraw->SetFlags(flags);		
+        
+        // Create edges around the entire screen
+        b2BodyDef groundBodyDef;
+        groundBodyDef.position.Set(0,0);
+        _groundBody = _world->CreateBody(&groundBodyDef);
+        b2PolygonShape groundBox;
+        b2FixtureDef boxShapeDef;
+        boxShapeDef.shape = &groundBox;
+        groundBox.SetAsEdge(b2Vec2(0,0), 
+                            b2Vec2(winSize.width/[self pixelsToMeterRatio], 0));
+        _groundBody->CreateFixture(&boxShapeDef);
+        groundBox.SetAsEdge(b2Vec2(0,0), 
+                            b2Vec2(0, winSize.height/[self pixelsToMeterRatio]));
+        _groundBody->CreateFixture(&boxShapeDef);
+        groundBox.SetAsEdge(b2Vec2(0, winSize.height/[self pixelsToMeterRatio]), 
+                            b2Vec2(winSize.width/[self pixelsToMeterRatio], 
+                                   winSize.height/[self pixelsToMeterRatio]));
+        _groundBody->CreateFixture(&boxShapeDef);
+        groundBox.SetAsEdge(b2Vec2(winSize.width/[self pixelsToMeterRatio], 
+                                   winSize.height/[self pixelsToMeterRatio]), 
+                            b2Vec2(winSize.width/[self pixelsToMeterRatio], 0));
+        _groundBody->CreateFixture(&boxShapeDef);
+        CGPoint bodyStart=ccp(winSize.width * .5, 0);
+        for (int x=1; x<10; x++) {
+            CCSprite *sprite;
+            if(UI_USER_INTERFACE_IDIOM()==UIUserInterfaceIdiomPad){
+                sprite = [CCSprite spriteWithFile:@"Snowflake-hd.png"];
+            }else{
+                sprite = [CCSprite spriteWithFile:@"Snowflake.png"];
+            }
+            [batchNode addChild:sprite];
+            int randomHeight=arc4random() % 200;
+            bodyStart=ccp(winSize.width * .1 * x, size.height-(sprite.contentSize.height + 10 + randomHeight));
+
+            b2BodyDef bodyDef;
+            bodyDef.type = b2_dynamicBody;
+            //            b2Vec2 bodyStartPixels=[Box2DHelper toMeters:bodyStart];
+            bodyDef.position.Set(bodyStart.x/[self pixelsToMeterRatio], bodyStart.y/[self pixelsToMeterRatio]);
+            bodyDef.userData = sprite;
+            b2Body *body = _world->CreateBody(&bodyDef);
+            [[GB2ShapeCache sharedShapeCache] addFixturesToBody:body forShapeName:@"Snowflake"];
+            
+            [sprite setAnchorPoint:[[GB2ShapeCache sharedShapeCache] anchorPointForShape:@"Snowflake"]];
+            
+        }
+        [self schedule:@selector(tick:)];
+
+        
 
 #elif SMART
         //Stuff for Full version

@@ -93,11 +93,11 @@
          continueAfterRunningActions = "No"
          isPathRelative = "1"
          filePath = "HenryAndHisHeadlamp/UserSelectionLayer.mm"
-         timestampString = "342588992.238279"
+         timestampString = "343587868.105008"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "86"
-         endingLineNumber = "86"
+         startingLineNumber = "88"
+         endingLineNumber = "88"
          landmarkName = "-init"
          landmarkType = "5">
       </FileBreakpoint>
@@ -135,11 +135,11 @@
          continueAfterRunningActions = "No"
          isPathRelative = "1"
          filePath = "HenryAndHisHeadlamp/StartUpScreenLayer.mm"
-         timestampString = "342803061.077813"
+         timestampString = "343684356.480964"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "236"
-         endingLineNumber = "236"
+         startingLineNumber = "311"
+         endingLineNumber = "311"
          landmarkName = "-init"
          landmarkType = "5">
       </FileBreakpoint>
@@ -149,11 +149,11 @@
          continueAfterRunningActions = "No"
          isPathRelative = "1"
          filePath = "HenryAndHisHeadlamp/StartUpScreenLayer.mm"
-         timestampString = "342803061.077813"
+         timestampString = "343684356.480964"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "220"
-         endingLineNumber = "220"
+         startingLineNumber = "295"
+         endingLineNumber = "295"
          landmarkName = "-init"
          landmarkType = "5">
       </FileBreakpoint>
@@ -163,11 +163,11 @@
          continueAfterRunningActions = "No"
          isPathRelative = "1"
          filePath = "HenryAndHisHeadlamp/StartUpScreenLayer.mm"
-         timestampString = "342803061.077813"
+         timestampString = "343684356.480964"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "219"
-         endingLineNumber = "219"
+         startingLineNumber = "294"
+         endingLineNumber = "294"
          landmarkName = "-init"
          landmarkType = "5">
       </FileBreakpoint>
@@ -177,11 +177,11 @@
          continueAfterRunningActions = "No"
          isPathRelative = "1"
          filePath = "HenryAndHisHeadlamp/StartUpScreenLayer.mm"
-         timestampString = "342803061.077813"
+         timestampString = "343684356.480964"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "96"
-         endingLineNumber = "96"
+         startingLineNumber = "104"
+         endingLineNumber = "104"
          landmarkName = "-init"
          landmarkType = "5">
       </FileBreakpoint>
@@ -219,11 +219,11 @@
          continueAfterRunningActions = "No"
          isPathRelative = "1"
          filePath = "HenryAndHisHeadlamp/GameLayer.mm"
-         timestampString = "343463604.975845"
+         timestampString = "343702325.109741"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "646"
-         endingLineNumber = "646"
+         startingLineNumber = "683"
+         endingLineNumber = "683"
          landmarkName = "-cdAudioSourceFileDidChange:"
          landmarkType = "5">
       </FileBreakpoint>
@@ -233,11 +233,11 @@
          continueAfterRunningActions = "No"
          isPathRelative = "1"
          filePath = "HenryAndHisHeadlamp/GameLayer.mm"
-         timestampString = "343463604.975845"
+         timestampString = "343702325.109741"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "640"
-         endingLineNumber = "640"
+         startingLineNumber = "677"
+         endingLineNumber = "677"
          landmarkName = "-initWithGameMode:"
          landmarkType = "5">
       </FileBreakpoint>
@@ -247,7 +247,7 @@
          continueAfterRunningActions = "No"
          isPathRelative = "1"
          filePath = "HenryAndHisHeadlamp/GameLayer.mm"
-         timestampString = "343463604.975845"
+         timestampString = "343702325.109741"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
          startingLineNumber = "533"
@@ -261,7 +261,7 @@
          continueAfterRunningActions = "No"
          isPathRelative = "1"
          filePath = "HenryAndHisHeadlamp/GameLayer.mm"
-         timestampString = "343463604.975845"
+         timestampString = "343702325.109741"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
          startingLineNumber = "534"
@@ -275,11 +275,11 @@
          continueAfterRunningActions = "No"
          isPathRelative = "1"
          filePath = "HenryAndHisHeadlamp/CharacterSprite.mm"
-         timestampString = "343284934.082581"
+         timestampString = "343702325.109741"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "149"
-         endingLineNumber = "149"
+         startingLineNumber = "155"
+         endingLineNumber = "155"
          landmarkName = "-getChildRect"
          landmarkType = "5">
       </FileBreakpoint>
@@ -289,11 +289,11 @@
          continueAfterRunningActions = "No"
          isPathRelative = "1"
          filePath = "HenryAndHisHeadlamp/GameLayer.mm"
-         timestampString = "343463604.975845"
+         timestampString = "343702325.109741"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "1131"
-         endingLineNumber = "1131"
+         startingLineNumber = "1168"
+         endingLineNumber = "1168"
          landmarkName = "-ccTouchMoved:withEvent:"
          landmarkType = "5">
       </FileBreakpoint>
@@ -303,11 +303,11 @@
          continueAfterRunningActions = "No"
          isPathRelative = "1"
          filePath = "HenryAndHisHeadlamp/GameLayer.mm"
-         timestampString = "343463604.975845"
+         timestampString = "343702325.109741"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "1148"
-         endingLineNumber = "1148"
+         startingLineNumber = "1185"
+         endingLineNumber = "1185"
          landmarkName = "-ccTouchEnded:withEvent:"
          landmarkType = "5">
       </FileBreakpoint>
@@ -317,12 +317,26 @@
          continueAfterRunningActions = "No"
          isPathRelative = "1"
          filePath = "HenryAndHisHeadlamp/GameLayer.mm"
-         timestampString = "343463604.975845"
+         timestampString = "343702325.109741"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "903"
-         endingLineNumber = "903"
+         startingLineNumber = "940"
+         endingLineNumber = "940"
          landmarkName = "-showTargetLabel"
+         landmarkType = "5">
+      </FileBreakpoint>
+      <FileBreakpoint
+         shouldBeEnabled = "Yes"
+         ignoreCount = "0"
+         continueAfterRunningActions = "No"
+         isPathRelative = "1"
+         filePath = "HenryAndHisHeadlamp/StoryLevel.mm"
+         timestampString = "343705507.373404"
+         startingColumnNumber = "9223372036854775807"
+         endingColumnNumber = "9223372036854775807"
+         startingLineNumber = "70"
+         endingLineNumber = "70"
+         landmarkName = "-init"
          landmarkType = "5">
       </FileBreakpoint>
    </FileBreakpoints>

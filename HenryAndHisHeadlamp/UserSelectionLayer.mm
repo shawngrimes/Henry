@@ -43,6 +43,8 @@
         CCSprite *backgroundSprite;
 #if SMART
         backgroundSprite=[CCSprite spriteWithFile:@"UserSelectScreen.png"];
+#elif WINTER
+        backgroundSprite=[CCSprite spriteWithFile:@"UserSelectionScreen.png"];
 #endif
         
         if (UI_USER_INTERFACE_IDIOM() != UIUserInterfaceIdiomPad) { 
@@ -93,6 +95,9 @@
                     userIconSprite.position=ccp((x-4)*testSize.width + ((x-4)*testSize.width/2),
                                                 (.7*testSize.height + testSize.height));
                 }
+#if WINTER
+                userIconSprite.position=ccp(userIconSprite.position.x, userIconSprite.position.y * .8); 
+#endif
             }else if(x>6){
                 if(UI_USER_INTERFACE_IDIOM() != UIUserInterfaceIdiomPad){
                     userIconSprite.position=ccp((x-7)*testSize.width + ((x-7)*testSize.width/2),
@@ -101,8 +106,13 @@
                     userIconSprite.position=ccp((x-7)*testSize.width + ((x-7)*testSize.width/2),
                                             (2.3*testSize.height + testSize.height));
                 }
+#if WINTER
+                userIconSprite.position=ccp(userIconSprite.position.x, userIconSprite.position.y * .83); 
+#endif
             }
         }
+        
+
         
         userIconMenu.anchorPoint=ccp(0,0);
         if (UI_USER_INTERFACE_IDIOM() != UIUserInterfaceIdiomPad) { 
@@ -112,6 +122,9 @@
         }else{
             userIconMenu.position=ccp(size.width * (540.0/1024.0),size.height-(size.height * (535.0/768.0)));
         }
+#if WINTER
+        userIconMenu.position=ccp(userIconMenu.position.x * 1.1, userIconMenu.position.y * 1); 
+#endif
         
        
         
@@ -194,8 +207,13 @@
         [[CCDirector sharedDirector] replaceScene:
          [CCTransitionMoveInR transitionWithDuration:1.0 scene:[StoryLevel scene]]];
     }else{
+#if SMART
         [[CCDirector sharedDirector] replaceScene:
          [CCTransitionMoveInR transitionWithDuration:1.0 scene:[MaterialSelectionLayer scene]]];
+#elif WINTER
+        [[CCDirector sharedDirector] replaceScene:
+         [CCTransitionMoveInR transitionWithDuration:1.0 scene:[GameLayer sceneWithGameMode:kGameModeNone]]];
+#endif
     }
 }
 

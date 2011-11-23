@@ -58,13 +58,15 @@ bool isInTarget=NO;
 
 -(id) initWithGameMode:(GameModeType) selectedGameMode
 {
-    [TestFlight passCheckpoint:@"INIT_SCENE"];
+    [TestFlight passCheckpoint:@"INIT_GAME_SCENE"];
 	// always call "super" init
 	// Apple recommends to re-assign "self" with the "super" return value
 	if( (self=[super init])) {
         if(UI_USER_INTERFACE_IDIOM()!=UIUserInterfaceIdiomPad){
             kNumObjects=5;
         }
+
+#ifdef SMART
         NSString *initialSound;
         switch (selectedGameMode) {
             case kGameModeUpperAlphabet:
@@ -108,21 +110,14 @@ bool isInTarget=NO;
         _effectSpeech = [[[SimpleAudioEngine sharedEngine] soundSourceForFile:initialSound] retain];
         self.effectSpeech=_effectSpeech;
         [self.effectSpeech play];
+        gameMode=selectedGameMode;
+#endif
         
         self.isTouchEnabled=YES;
-        
-        
-
-        gameMode=selectedGameMode;
         
         CGSize size = [[CCDirector sharedDirector] winSize];
         
         CCSpriteFrameCache *frameCache=[CCSpriteFrameCache sharedSpriteFrameCache];
-        if (UI_USER_INTERFACE_IDIOM() != UIUserInterfaceIdiomPad) { 
-            [frameCache addSpriteFramesWithFile:@"HenryBodyTextures.plist"];
-        }else{
-            [frameCache addSpriteFramesWithFile:@"HenryBodyTextures-hd.plist"];
-        }
         
 #ifdef HALLOWEEN
         //Stuff for Lite version
@@ -131,9 +126,19 @@ bool isInTarget=NO;
         //Stuff for Full version
         int backGroundNumber=arc4random() % 3;
         CCSprite *backgroundSprite=[CCSprite spriteWithFile:[NSString stringWithFormat:@"SmartHenry_Bkgrd_%i.png", backGroundNumber]];
+        if (UI_USER_INTERFACE_IDIOM() != UIUserInterfaceIdiomPad) { 
+            [frameCache addSpriteFramesWithFile:@"HenryBodyTextures.plist"];
+        }else{
+            [frameCache addSpriteFramesWithFile:@"HenryBodyTextures-hd.plist"];
+        }
 #elif WINTER
-        int backGroundNumber=arc4random() % 2;
+        int backGroundNumber=arc4random() % 1;
         CCSprite *backgroundSprite=[CCSprite spriteWithFile:[NSString stringWithFormat:@"WinterHenry_Bkgrd_%i.png", backGroundNumber]];
+        if (UI_USER_INTERFACE_IDIOM() != UIUserInterfaceIdiomPad) { 
+            [frameCache addSpriteFramesWithFile:@"HenryBodyTextures.plist"];
+        }else{
+            [frameCache addSpriteFramesWithFile:@"HenryBodyTextures-hd.plist"];
+        }
 
 #endif
 
@@ -184,9 +189,7 @@ bool isInTarget=NO;
         
         [TestFlight passCheckpoint:@"PLACING_CHARACTERS"];
 #ifdef HALLOWEEN
-        
         int MAX_CHARACTERS=28;
-        
         NSMutableArray *aryCharacterTypes=[NSMutableArray arrayWithCapacity:kNumObjects];
         for (int c=0; c<kNumObjects; c++) {
             int randomCharacter=arc4random() % MAX_CHARACTERS+1;
@@ -222,9 +225,6 @@ bool isInTarget=NO;
             [_arrCharacters addObject:randomSprite];
             [self addChild:randomSprite];
         }
-        
-       
-        
 #elif SMART
         switch (gameMode) {
             case kGameModeUpperAlphabet:
@@ -551,6 +551,43 @@ bool isInTarget=NO;
             }
             default:
                 break;
+        }
+#elif WINTER
+        int MAX_CHARACTERS=20;
+        NSMutableArray *aryCharacterTypes=[NSMutableArray arrayWithCapacity:kNumObjects];
+        for (int c=0; c<kNumObjects; c++) {
+            int randomCharacter=(arc4random() % MAX_CHARACTERS);
+            while ([aryCharacterTypes containsObject:[NSNumber numberWithInt:randomCharacter]]){
+                randomCharacter=(arc4random() % MAX_CHARACTERS);
+            }
+            [aryCharacterTypes addObject:[NSNumber numberWithInt:randomCharacter]];
+            CCLOG(@"Random Character Type: %i", randomCharacter);
+            CharacterSprite *randomSprite=[CharacterSprite characterOfType:randomCharacter];
+            if (UI_USER_INTERFACE_IDIOM() != UIUserInterfaceIdiomPad) { 
+                [randomSprite setScaleX:size.width/1024.0f];
+                [randomSprite setScaleY:size.height/768.0f];
+            }
+            
+            if(_arrCharacters.count<1){
+                [randomSprite setRandomPosition:playableAreaSize];
+                while(CGRectIntersectsRect(statusBarSprite.boundingBox, randomSprite.boundingBox) 
+                      || CGRectIntersectsRect(henryBody.boundingBox, randomSprite.boundingBox) 
+                      || CGRectIntersectsRect(_henryHead.boundingBox, randomSprite.boundingBox)){
+                    CCLOG(@"Intersect other RECT1");
+                    [randomSprite setRandomPosition:playableAreaSize];
+                }
+            }else{
+                [randomSprite setRandomPosition:playableAreaSize checkOtherSprites:_arrCharacters];
+                while(CGRectIntersectsRect(statusBarSprite.boundingBox, randomSprite.boundingBox) 
+                      || CGRectIntersectsRect(henryBody.boundingBox, randomSprite.boundingBox) 
+                      || CGRectIntersectsRect(_henryHead.boundingBox, randomSprite.boundingBox)){
+                    CCLOG(@"Intersect other RECT2");
+                    [randomSprite setRandomPosition:playableAreaSize checkOtherSprites:_arrCharacters];
+                }
+            }
+            
+            [_arrCharacters addObject:randomSprite];
+            [self addChild:randomSprite];
         }
         
 #endif

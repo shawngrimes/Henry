@@ -11,6 +11,11 @@
 #import "PrizeSelectionScene.h"
 #import "CocosDenshion.h"
 
+#ifdef WINTER
+#import "GingerBreadLayer.h"
+#import "PrizeSelectionLayer.h"
+#endif
+
 @implementation GameLayer
 @synthesize arrCharacters=_arrCharacters;
 @synthesize effectSpeech=_effectSpeech;
@@ -66,6 +71,9 @@ bool isInTarget=NO;
         if(UI_USER_INTERFACE_IDIOM()!=UIUserInterfaceIdiomPad){
             kNumObjects=5;
         }
+#ifdef WINTER
+        kNumObjects=6;
+#endif
 
 #ifdef SMART
         NSString *initialSound;
@@ -926,6 +934,15 @@ bool isInTarget=NO;
     
     [[CCDirector sharedDirector] replaceScene:
      [CCTransitionRotoZoom transitionWithDuration:2.0f scene:scoreScene]];
+#elif WINTER
+    CCScene *prizeSelectionScene=[CCScene node];
+    GingerBreadLayer *gbLayer=[[[GingerBreadLayer alloc] init] autorelease];
+    [prizeSelectionScene addChild:gbLayer];
+    PrizeSelectionLayer *prizeLayer=[[[PrizeSelectionLayer alloc] init] autorelease];
+    [prizeSelectionScene addChild:prizeLayer];
+    [[CCDirector sharedDirector] replaceScene:
+     [CCTransitionRotoZoom transitionWithDuration:2.0f scene:prizeSelectionScene]];
+    
 #endif
     
 }

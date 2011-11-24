@@ -348,7 +348,7 @@
 
 -(void) transitionToGameScreen{
     [TestFlight passCheckpoint:@"LOADING_GAME_SCENE"];
-    [FlurryAnalytics logEvent:@"PLAY_AGAING_SELECTED_ON_SCORES_SCREEN"];
+    [FlurryAnalytics logEvent:@"PLAY_AGAIN_SELECTED_ON_SCORES_SCREEN"];
     [[CCDirector sharedDirector] replaceScene:
      [CCTransitionSlideInL transitionWithDuration:1.0f scene:[GameLayer sceneWithGameMode:kGameModeNone]]];
 }

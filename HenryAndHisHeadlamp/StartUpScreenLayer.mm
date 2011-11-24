@@ -343,6 +343,8 @@ enum {
     }
         [TestFlight passCheckpoint:@"RETURNING_SPLASH"];
     
+    [FlurryAnalytics logEvent:@"STARTUP_SCENE" timed:YES];
+    
 	return self;
     
 }
@@ -388,7 +390,9 @@ enum {
 }
 
 -(void) transitionToGamePlay{
+    [FlurryAnalytics endTimedEvent:@"STARTUP_SCENE" withParameters:nil];
     [TestFlight passCheckpoint:@"LOADING_USER_SELECTION_SCENE"];
+    [FlurryAnalytics logEvent:@"LOADING_USER_SELECTION_SCENE"];
     [[CCDirector sharedDirector] replaceScene:
      [CCTransitionSlideInR transitionWithDuration:1.0f scene:[UserSelectionLayer scene]]];
 
@@ -404,6 +408,7 @@ enum {
 }
 
 -(void) loadGameLayer{
+    [FlurryAnalytics endTimedEvent:@"STARTUP_SCENE" withParameters:nil];
     [[CCDirector sharedDirector] replaceScene:
      [CCTransitionSlideInR transitionWithDuration:1.0f scene:[StoryLevel scene]]];
 //    CCScene *scoreScene=[CCScene node];
@@ -417,6 +422,8 @@ enum {
 }
 
 -(void) transitionToAboutPage{
+    [FlurryAnalytics endTimedEvent:@"STARTUP_SCENE" withParameters:nil];
+    [FlurryAnalytics logEvent:@"ABOUT_BUTTON_TOUCHED"];
     [TestFlight passCheckpoint:@"LOADING_ABOUT_SCENE"];
     [[CCDirector sharedDirector] replaceScene:
      [CCTransitionSlideInR transitionWithDuration:1.0f scene:[AboutUsLayer scene]]];

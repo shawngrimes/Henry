@@ -14,7 +14,7 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "29AD037B14776535003E19EC"
-               BuildableName = "SmartHenry-Universal copy.app"
+               BuildableName = "Smart Henry.app"
                BlueprintName = "SmartHenry-iPhone"
                ReferencedContainer = "container:HenryAndHisHeadlamp.xcodeproj">
             </BuildableReference>
@@ -32,7 +32,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "29AD037B14776535003E19EC"
-            BuildableName = "SmartHenry-Universal copy.app"
+            BuildableName = "Smart Henry.app"
             BlueprintName = "SmartHenry-iPhone"
             ReferencedContainer = "container:HenryAndHisHeadlamp.xcodeproj">
          </BuildableReference>
@@ -50,7 +50,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "29AD037B14776535003E19EC"
-            BuildableName = "SmartHenry-Universal copy.app"
+            BuildableName = "Smart Henry.app"
             BlueprintName = "SmartHenry-iPhone"
             ReferencedContainer = "container:HenryAndHisHeadlamp.xcodeproj">
          </BuildableReference>
@@ -68,7 +68,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "29AD037B14776535003E19EC"
-            BuildableName = "SmartHenry-Universal copy.app"
+            BuildableName = "Smart Henry.app"
             BlueprintName = "SmartHenry-iPhone"
             ReferencedContainer = "container:HenryAndHisHeadlamp.xcodeproj">
          </BuildableReference>

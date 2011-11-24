@@ -1182,6 +1182,20 @@
 		29ED638614780C8E0029F045 /* Default-Portrait~ipad.png in Resources */ = {isa = PBXBuildFile; fileRef = 29ED638514780C8E0029F045 /* Default-Portrait~ipad.png */; };
 		29ED638714780D010029F045 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 29ED637D14780B3C0029F045 /* Default.png */; };
 		29ED638814780DC40029F045 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 29D72405146EC49B004909A0 /* Default.png */; };
+		29EE5C63147E03C200964292 /* GingerBreadLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 29EE5C62147E03C200964292 /* GingerBreadLayer.m */; };
+		29EE5C67147E09C500964292 /* PrizeSelectionScreen-hd.png in Resources */ = {isa = PBXBuildFile; fileRef = 29EE5C64147E09C500964292 /* PrizeSelectionScreen-hd.png */; };
+		29EE5C68147E09C500964292 /* PrizeSelectionScreen-ipad.png in Resources */ = {isa = PBXBuildFile; fileRef = 29EE5C65147E09C500964292 /* PrizeSelectionScreen-ipad.png */; };
+		29EE5C69147E09C500964292 /* PrizeSelectionScreen.png in Resources */ = {isa = PBXBuildFile; fileRef = 29EE5C66147E09C500964292 /* PrizeSelectionScreen.png */; };
+		29EE5C72147E0FE900964292 /* GingerBreadObjects-hd.plist in Resources */ = {isa = PBXBuildFile; fileRef = 29EE5C6A147E0FE900964292 /* GingerBreadObjects-hd.plist */; };
+		29EE5C73147E0FE900964292 /* GingerBreadObjects-hd.pvr.ccz in Resources */ = {isa = PBXBuildFile; fileRef = 29EE5C6B147E0FE900964292 /* GingerBreadObjects-hd.pvr.ccz */; };
+		29EE5C74147E0FE900964292 /* GingerBreadObjects.plist in Resources */ = {isa = PBXBuildFile; fileRef = 29EE5C6C147E0FE900964292 /* GingerBreadObjects.plist */; };
+		29EE5C75147E0FE900964292 /* GingerBreadObjects.pvr.ccz in Resources */ = {isa = PBXBuildFile; fileRef = 29EE5C6D147E0FE900964292 /* GingerBreadObjects.pvr.ccz */; };
+		29EE5C76147E0FE900964292 /* PrizeSelectionObjects-hd.plist in Resources */ = {isa = PBXBuildFile; fileRef = 29EE5C6E147E0FE900964292 /* PrizeSelectionObjects-hd.plist */; };
+		29EE5C77147E0FE900964292 /* PrizeSelectionObjects-hd.pvr.ccz in Resources */ = {isa = PBXBuildFile; fileRef = 29EE5C6F147E0FE900964292 /* PrizeSelectionObjects-hd.pvr.ccz */; };
+		29EE5C78147E0FE900964292 /* PrizeSelectionObjects.plist in Resources */ = {isa = PBXBuildFile; fileRef = 29EE5C70147E0FE900964292 /* PrizeSelectionObjects.plist */; };
+		29EE5C79147E0FE900964292 /* PrizeSelectionObjects.pvr.ccz in Resources */ = {isa = PBXBuildFile; fileRef = 29EE5C71147E0FE900964292 /* PrizeSelectionObjects.pvr.ccz */; };
+		29EE5C7C147E153800964292 /* PrizeSelectionLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 29EE5C7B147E153800964292 /* PrizeSelectionLayer.m */; };
+		29EE5C7F147E155D00964292 /* CCScrollLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 29EE5C7E147E155D00964292 /* CCScrollLayer.m */; };
 		29F23A5C143A5BCA00673AEE /* Henry_Spooky_Story_Scene.png in Resources */ = {isa = PBXBuildFile; fileRef = 29F23A5A143A5BCA00673AEE /* Henry_Spooky_Story_Scene.png */; };
 		29F23A5D143A5BCA00673AEE /* Henry_Spooky_Title_Screen.png in Resources */ = {isa = PBXBuildFile; fileRef = 29F23A5B143A5BCA00673AEE /* Henry_Spooky_Title_Screen.png */; };
 /* End PBXBuildFile section */
@@ -1804,6 +1818,23 @@
 		29ED637E14780B3C0029F045 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
 		29ED638114780B8C0029F045 /* Default-Landscape~ipad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-Landscape~ipad.png"; sourceTree = "<group>"; };
 		29ED638514780C8E0029F045 /* Default-Portrait~ipad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-Portrait~ipad.png"; sourceTree = "<group>"; };
+		29EE5C61147E03C200964292 /* GingerBreadLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GingerBreadLayer.h; sourceTree = "<group>"; };
+		29EE5C62147E03C200964292 /* GingerBreadLayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GingerBreadLayer.m; sourceTree = "<group>"; };
+		29EE5C64147E09C500964292 /* PrizeSelectionScreen-hd.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "PrizeSelectionScreen-hd.png"; sourceTree = "<group>"; };
+		29EE5C65147E09C500964292 /* PrizeSelectionScreen-ipad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "PrizeSelectionScreen-ipad.png"; sourceTree = "<group>"; };
+		29EE5C66147E09C500964292 /* PrizeSelectionScreen.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = PrizeSelectionScreen.png; sourceTree = "<group>"; };
+		29EE5C6A147E0FE900964292 /* GingerBreadObjects-hd.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GingerBreadObjects-hd.plist"; sourceTree = "<group>"; };
+		29EE5C6B147E0FE900964292 /* GingerBreadObjects-hd.pvr.ccz */ = {isa = PBXFileReference; lastKnownFileType = file; path = "GingerBreadObjects-hd.pvr.ccz"; sourceTree = "<group>"; };
+		29EE5C6C147E0FE900964292 /* GingerBreadObjects.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = GingerBreadObjects.plist; sourceTree = "<group>"; };
+		29EE5C6D147E0FE900964292 /* GingerBreadObjects.pvr.ccz */ = {isa = PBXFileReference; lastKnownFileType = file; path = GingerBreadObjects.pvr.ccz; sourceTree = "<group>"; };
+		29EE5C6E147E0FE900964292 /* PrizeSelectionObjects-hd.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "PrizeSelectionObjects-hd.plist"; sourceTree = "<group>"; };
+		29EE5C6F147E0FE900964292 /* PrizeSelectionObjects-hd.pvr.ccz */ = {isa = PBXFileReference; lastKnownFileType = file; path = "PrizeSelectionObjects-hd.pvr.ccz"; sourceTree = "<group>"; };
+		29EE5C70147E0FE900964292 /* PrizeSelectionObjects.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = PrizeSelectionObjects.plist; sourceTree = "<group>"; };
+		29EE5C71147E0FE900964292 /* PrizeSelectionObjects.pvr.ccz */ = {isa = PBXFileReference; lastKnownFileType = file; path = PrizeSelectionObjects.pvr.ccz; sourceTree = "<group>"; };
+		29EE5C7A147E153800964292 /* PrizeSelectionLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PrizeSelectionLayer.h; sourceTree = "<group>"; };
+		29EE5C7B147E153800964292 /* PrizeSelectionLayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PrizeSelectionLayer.m; sourceTree = "<group>"; };
+		29EE5C7D147E155D00964292 /* CCScrollLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CCScrollLayer.h; sourceTree = "<group>"; };
+		29EE5C7E147E155D00964292 /* CCScrollLayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CCScrollLayer.m; sourceTree = "<group>"; };
 		29F23A5A143A5BCA00673AEE /* Henry_Spooky_Story_Scene.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Henry_Spooky_Story_Scene.png; sourceTree = "<group>"; };
 		29F23A5B143A5BCA00673AEE /* Henry_Spooky_Title_Screen.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Henry_Spooky_Title_Screen.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -2909,6 +2940,17 @@
 		29ED635414780A7B0029F045 /* WinterHenry */ = {
 			isa = PBXGroup;
 			children = (
+				29EE5C6A147E0FE900964292 /* GingerBreadObjects-hd.plist */,
+				29EE5C6B147E0FE900964292 /* GingerBreadObjects-hd.pvr.ccz */,
+				29EE5C6C147E0FE900964292 /* GingerBreadObjects.plist */,
+				29EE5C6D147E0FE900964292 /* GingerBreadObjects.pvr.ccz */,
+				29EE5C6E147E0FE900964292 /* PrizeSelectionObjects-hd.plist */,
+				29EE5C6F147E0FE900964292 /* PrizeSelectionObjects-hd.pvr.ccz */,
+				29EE5C70147E0FE900964292 /* PrizeSelectionObjects.plist */,
+				29EE5C71147E0FE900964292 /* PrizeSelectionObjects.pvr.ccz */,
+				29EE5C64147E09C500964292 /* PrizeSelectionScreen-hd.png */,
+				29EE5C65147E09C500964292 /* PrizeSelectionScreen-ipad.png */,
+				29EE5C66147E09C500964292 /* PrizeSelectionScreen.png */,
 				292B64C6147C8464003EEA8B /* Speech2.caf */,
 				292B64BE147C7CEA003EEA8B /* SpeechBubbles-hd.plist */,
 				292B64BF147C7CEA003EEA8B /* SpeechBubbles-hd.pvr.ccz */,
@@ -2955,6 +2997,12 @@
 				29ED636614780A7B0029F045 /* WinterHenry_Bkgrd_1-hd.png */,
 				29ED636714780A7B0029F045 /* WinterHenry_Bkgrd_1-ipad.png */,
 				29ED636814780A7B0029F045 /* WinterHenry_Bkgrd_1.png */,
+				29EE5C61147E03C200964292 /* GingerBreadLayer.h */,
+				29EE5C62147E03C200964292 /* GingerBreadLayer.m */,
+				29EE5C7A147E153800964292 /* PrizeSelectionLayer.h */,
+				29EE5C7B147E153800964292 /* PrizeSelectionLayer.m */,
+				29EE5C7D147E155D00964292 /* CCScrollLayer.h */,
+				29EE5C7E147E155D00964292 /* CCScrollLayer.m */,
 			);
 			path = WinterHenry;
 			sourceTree = "<group>";
@@ -3573,6 +3621,17 @@
 				292B64C4147C7CEA003EEA8B /* SpeechBubbles.plist in Resources */,
 				292B64C5147C7CEA003EEA8B /* SpeechBubbles.pvr.ccz in Resources */,
 				292B64C7147C8464003EEA8B /* Speech2.caf in Resources */,
+				29EE5C67147E09C500964292 /* PrizeSelectionScreen-hd.png in Resources */,
+				29EE5C68147E09C500964292 /* PrizeSelectionScreen-ipad.png in Resources */,
+				29EE5C69147E09C500964292 /* PrizeSelectionScreen.png in Resources */,
+				29EE5C72147E0FE900964292 /* GingerBreadObjects-hd.plist in Resources */,
+				29EE5C73147E0FE900964292 /* GingerBreadObjects-hd.pvr.ccz in Resources */,
+				29EE5C74147E0FE900964292 /* GingerBreadObjects.plist in Resources */,
+				29EE5C75147E0FE900964292 /* GingerBreadObjects.pvr.ccz in Resources */,
+				29EE5C76147E0FE900964292 /* PrizeSelectionObjects-hd.plist in Resources */,
+				29EE5C77147E0FE900964292 /* PrizeSelectionObjects-hd.pvr.ccz in Resources */,
+				29EE5C78147E0FE900964292 /* PrizeSelectionObjects.plist in Resources */,
+				29EE5C79147E0FE900964292 /* PrizeSelectionObjects.pvr.ccz in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -4257,6 +4316,9 @@
 				29ED62941477FEF60029F045 /* Prize.m in Sources */,
 				29ED62951477FEF60029F045 /* Player.m in Sources */,
 				29A6D2C9147D880700841951 /* main.m in Sources */,
+				29EE5C63147E03C200964292 /* GingerBreadLayer.m in Sources */,
+				29EE5C7C147E153800964292 /* PrizeSelectionLayer.m in Sources */,
+				29EE5C7F147E155D00964292 /* CCScrollLayer.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

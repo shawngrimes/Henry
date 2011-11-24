@@ -106,6 +106,9 @@ float _userTime=0.0;
             currentPlayer=[[fetchedObjects objectAtIndex:0] retain];
             prizesWonSet=[NSSet setWithSet:currentPlayer.prizes];
             CCLOG(@"prizesWon Count: %i", [prizesWonSet count]);
+            
+            [FlurryAnalytics logEvent:@"TOTAL_PRIZES_WON" withParameters:[NSDictionary dictionaryWithObject:[NSNumber numberWithInt:[prizesWonSet count]] forKey:@"PRIZES_WON_COUNT"]];
+            
 
         }
         [fetchRequest release];
@@ -299,6 +302,8 @@ float _userTime=0.0;
     [selectedMaterialSprite setIsEnabled:YES];
     
     [FlurryAnalytics logEvent:@"PRIZE_PICKED" withParameters:[NSDictionary dictionaryWithObject:[NSNumber numberWithInt:selectedSprite.tag] forKey:@"PRIZE_ICON"]];
+    
+    
     
     
     [self schedule:@selector(loadStartup) interval:2.5];

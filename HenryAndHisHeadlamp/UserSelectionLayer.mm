@@ -212,13 +212,17 @@
     [FlurryAnalytics logEvent:@"USER_ICON_SELECTED" withParameters:[NSDictionary dictionaryWithObject:[NSNumber numberWithInt:selectedSprite.tag] forKey:@"USER_ICON"]];
     
     if(loadInstructions){
+         [FlurryAnalytics logEvent:@"LOADING_STORY_SCENE"];
         [[CCDirector sharedDirector] replaceScene:
          [CCTransitionMoveInR transitionWithDuration:1.0 scene:[StoryLevel scene]]];
     }else{
+
 #if SMART
+        [FlurryAnalytics logEvent:@"LOADING_MATERIAL_SELECTION_SCENE"];
         [[CCDirector sharedDirector] replaceScene:
          [CCTransitionMoveInR transitionWithDuration:1.0 scene:[MaterialSelectionLayer scene]]];
 #elif WINTER
+        [FlurryAnalytics logEvent:@"LOADING_GAME_SCENE"];
         [[CCDirector sharedDirector] replaceScene:
          [CCTransitionMoveInR transitionWithDuration:1.0 scene:[GameLayer sceneWithGameMode:kGameModeNone]]];
 #endif

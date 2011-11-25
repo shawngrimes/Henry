@@ -218,13 +218,13 @@
             <key>format</key>
             <integer>2</integer>
             <key>realTextureFileName</key>
-            <string>Buttons-hd.png</string>
+            <string>Buttons-hd.pvr.ccz</string>
             <key>size</key>
             <string>{512,1024}</string>
             <key>smartupdate</key>
-            <string>$TexturePacker:SmartUpdate:852a08550cec0a71ac5b0511e7f27fcb$</string>
+            <string>$TexturePacker:SmartUpdate:024b626f41ffd647920cd5fc377f423a$</string>
             <key>textureFileName</key>
-            <string>Buttons-hd.png</string>
+            <string>Buttons-hd.pvr.ccz</string>
         </dict>
     </dict>
 </plist>

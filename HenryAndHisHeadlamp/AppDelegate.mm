@@ -59,8 +59,13 @@
     [FlurryAnalytics startSession:@"DGHMVRDQU4TFPMXPJIGH"];
     [FlurryAnalytics setSessionReportsOnPauseEnabled:YES];
 #elif SMART
-    [FlurryAnalytics startSession:@"L22N74AJKXDUV25RTFAP"];
-    [FlurryAnalytics setSessionReportsOnPauseEnabled:YES];
+    #ifdef IPHONE
+        [FlurryAnalytics startSession:@"L22N74AJKXDUV25RTFAP"];
+        [FlurryAnalytics setSessionReportsOnPauseEnabled:YES];
+    #elif UNIVERSAL
+        [FlurryAnalytics startSession:@"GGRZTZMPA22UKVBDU9Q1"];
+        [FlurryAnalytics setSessionReportsOnPauseEnabled:YES];
+    #endif
 #elif WINTER
     [FlurryAnalytics startSession:@"VDIZ4G18SD233ZHM5JX4"];
     [FlurryAnalytics setSessionReportsOnPauseEnabled:YES];
@@ -71,7 +76,6 @@
     [[SimpleAudioEngine sharedEngine] playBackgroundMusic:@"spooky2.caf" loop:YES];
 #endif
 
-    
 	// Init the window
 	window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
 	

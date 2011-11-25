@@ -273,6 +273,11 @@
 		292B64C4147C7CEA003EEA8B /* SpeechBubbles.plist in Resources */ = {isa = PBXBuildFile; fileRef = 292B64C0147C7CEA003EEA8B /* SpeechBubbles.plist */; };
 		292B64C5147C7CEA003EEA8B /* SpeechBubbles.pvr.ccz in Resources */ = {isa = PBXBuildFile; fileRef = 292B64C1147C7CEA003EEA8B /* SpeechBubbles.pvr.ccz */; };
 		292B64C7147C8464003EEA8B /* Speech2.caf in Resources */ = {isa = PBXBuildFile; fileRef = 292B64C6147C8464003EEA8B /* Speech2.caf */; };
+		292C8C5814803909002604ED /* AboutScreen-hd.png in Resources */ = {isa = PBXBuildFile; fileRef = 292C8C5514803909002604ED /* AboutScreen-hd.png */; };
+		292C8C5914803909002604ED /* AboutScreen-ipad.png in Resources */ = {isa = PBXBuildFile; fileRef = 292C8C5614803909002604ED /* AboutScreen-ipad.png */; };
+		292C8C5A14803909002604ED /* AboutScreen.png in Resources */ = {isa = PBXBuildFile; fileRef = 292C8C5714803909002604ED /* AboutScreen.png */; };
+		292C8C5E148039B5002604ED /* Buttons-hd.pvr.ccz in Resources */ = {isa = PBXBuildFile; fileRef = 292C8C5C148039B5002604ED /* Buttons-hd.pvr.ccz */; };
+		292C8C5F148039B5002604ED /* Buttons.pvr.ccz in Resources */ = {isa = PBXBuildFile; fileRef = 292C8C5D148039B5002604ED /* Buttons.pvr.ccz */; };
 		293CCBAE142ABA9A00851CD2 /* ding.caf in Resources */ = {isa = PBXBuildFile; fileRef = 293CCBAD142ABA9A00851CD2 /* ding.caf */; };
 		293CCBAF142ABA9A00851CD2 /* ding.caf in Resources */ = {isa = PBXBuildFile; fileRef = 293CCBAD142ABA9A00851CD2 /* ding.caf */; };
 		294C49E6144E131C000E3BC6 /* TitleScreen.png in Resources */ = {isa = PBXBuildFile; fileRef = 294C49E2144E131C000E3BC6 /* TitleScreen.png */; };
@@ -1115,9 +1120,6 @@
 		29ED62BC1477FEF60029F045 /* UserIconsTextures.pvr.ccz in Resources */ = {isa = PBXBuildFile; fileRef = 2991903B1450B3980017B892 /* UserIconsTextures.pvr.ccz */; };
 		29ED62C01477FEF60029F045 /* TitleScreen-portrait-hd.png in Resources */ = {isa = PBXBuildFile; fileRef = 296A42E3145E444F009EB9F9 /* TitleScreen-portrait-hd.png */; };
 		29ED62C11477FEF60029F045 /* TitleScreen-portrait.png in Resources */ = {isa = PBXBuildFile; fileRef = 296A42E4145E444F009EB9F9 /* TitleScreen-portrait.png */; };
-		29ED62C31477FEF60029F045 /* AboutScreen.png in Resources */ = {isa = PBXBuildFile; fileRef = 296A42F1145E47E3009EB9F9 /* AboutScreen.png */; };
-		29ED62C41477FEF60029F045 /* AboutScreen-hd.png in Resources */ = {isa = PBXBuildFile; fileRef = 296A42F2145E47E3009EB9F9 /* AboutScreen-hd.png */; };
-		29ED62C51477FEF60029F045 /* AboutScreen-ipad.png in Resources */ = {isa = PBXBuildFile; fileRef = 296A4309145E4DDD009EB9F9 /* AboutScreen-ipad.png */; };
 		29ED62C61477FEF60029F045 /* buttonsAndResources-Smart-hd.plist in Resources */ = {isa = PBXBuildFile; fileRef = 296A42FD145E4B60009EB9F9 /* buttonsAndResources-Smart-hd.plist */; };
 		29ED62C71477FEF60029F045 /* buttonsAndResources-Smart-hd.pvr.ccz in Resources */ = {isa = PBXBuildFile; fileRef = 296A42FE145E4B60009EB9F9 /* buttonsAndResources-Smart-hd.pvr.ccz */; };
 		29ED62C81477FEF60029F045 /* buttonsAndResources-Smart.plist in Resources */ = {isa = PBXBuildFile; fileRef = 296A42FF145E4B60009EB9F9 /* buttonsAndResources-Smart.plist */; };
@@ -1131,9 +1133,7 @@
 		29ED62E81477FEF60029F045 /* click.caf in Resources */ = {isa = PBXBuildFile; fileRef = 2991C8E0142A7EA800053634 /* click.caf */; };
 		29ED62EA1477FEF60029F045 /* Speech1.aifc in Resources */ = {isa = PBXBuildFile; fileRef = 295E69DF145FA72D00C6BF20 /* Speech1.aifc */; };
 		29ED636914780A7B0029F045 /* Buttons-hd.plist in Resources */ = {isa = PBXBuildFile; fileRef = 29ED635514780A7B0029F045 /* Buttons-hd.plist */; };
-		29ED636A14780A7B0029F045 /* Buttons-hd.png in Resources */ = {isa = PBXBuildFile; fileRef = 29ED635614780A7B0029F045 /* Buttons-hd.png */; };
 		29ED636B14780A7B0029F045 /* Buttons.plist in Resources */ = {isa = PBXBuildFile; fileRef = 29ED635714780A7B0029F045 /* Buttons.plist */; };
-		29ED636C14780A7B0029F045 /* Buttons.png in Resources */ = {isa = PBXBuildFile; fileRef = 29ED635814780A7B0029F045 /* Buttons.png */; };
 		29ED636D14780A7B0029F045 /* FindObjects-hd.plist in Resources */ = {isa = PBXBuildFile; fileRef = 29ED635914780A7B0029F045 /* FindObjects-hd.plist */; };
 		29ED636E14780A7B0029F045 /* FindObjects-hd.pvr.ccz in Resources */ = {isa = PBXBuildFile; fileRef = 29ED635A14780A7B0029F045 /* FindObjects-hd.pvr.ccz */; };
 		29ED636F14780A7B0029F045 /* FindObjects.plist in Resources */ = {isa = PBXBuildFile; fileRef = 29ED635B14780A7B0029F045 /* FindObjects.plist */; };
@@ -1238,6 +1238,11 @@
 		292B64C0147C7CEA003EEA8B /* SpeechBubbles.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = SpeechBubbles.plist; sourceTree = "<group>"; };
 		292B64C1147C7CEA003EEA8B /* SpeechBubbles.pvr.ccz */ = {isa = PBXFileReference; lastKnownFileType = file; path = SpeechBubbles.pvr.ccz; sourceTree = "<group>"; };
 		292B64C6147C8464003EEA8B /* Speech2.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Speech2.caf; sourceTree = "<group>"; };
+		292C8C5514803909002604ED /* AboutScreen-hd.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "AboutScreen-hd.png"; sourceTree = "<group>"; };
+		292C8C5614803909002604ED /* AboutScreen-ipad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "AboutScreen-ipad.png"; sourceTree = "<group>"; };
+		292C8C5714803909002604ED /* AboutScreen.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = AboutScreen.png; sourceTree = "<group>"; };
+		292C8C5C148039B5002604ED /* Buttons-hd.pvr.ccz */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Buttons-hd.pvr.ccz"; sourceTree = "<group>"; };
+		292C8C5D148039B5002604ED /* Buttons.pvr.ccz */ = {isa = PBXFileReference; lastKnownFileType = file; path = Buttons.pvr.ccz; sourceTree = "<group>"; };
 		293CCBAD142ABA9A00851CD2 /* ding.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = ding.caf; sourceTree = "<group>"; };
 		294C49E2144E131C000E3BC6 /* TitleScreen.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = TitleScreen.png; sourceTree = "<group>"; };
 		294C49E3144E131C000E3BC6 /* TitleScreen-hd.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "TitleScreen-hd.png"; sourceTree = "<group>"; };
@@ -1769,9 +1774,7 @@
 		29ED634F1477FEF60029F045 /* Winter Henry.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Winter Henry.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		29ED63521477FEF70029F045 /* WinterHenry-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "WinterHenry-Info.plist"; path = "/Users/shawn/SourceCode/Henry/WinterHenry-Info.plist"; sourceTree = "<absolute>"; };
 		29ED635514780A7B0029F045 /* Buttons-hd.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "Buttons-hd.plist"; sourceTree = "<group>"; };
-		29ED635614780A7B0029F045 /* Buttons-hd.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Buttons-hd.png"; sourceTree = "<group>"; };
 		29ED635714780A7B0029F045 /* Buttons.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Buttons.plist; sourceTree = "<group>"; };
-		29ED635814780A7B0029F045 /* Buttons.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Buttons.png; sourceTree = "<group>"; };
 		29ED635914780A7B0029F045 /* FindObjects-hd.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "FindObjects-hd.plist"; sourceTree = "<group>"; };
 		29ED635A14780A7B0029F045 /* FindObjects-hd.pvr.ccz */ = {isa = PBXFileReference; lastKnownFileType = file; path = "FindObjects-hd.pvr.ccz"; sourceTree = "<group>"; };
 		29ED635B14780A7B0029F045 /* FindObjects.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = FindObjects.plist; sourceTree = "<group>"; };
@@ -2911,6 +2914,11 @@
 		29ED635414780A7B0029F045 /* WinterHenry */ = {
 			isa = PBXGroup;
 			children = (
+				292C8C5C148039B5002604ED /* Buttons-hd.pvr.ccz */,
+				292C8C5D148039B5002604ED /* Buttons.pvr.ccz */,
+				292C8C5514803909002604ED /* AboutScreen-hd.png */,
+				292C8C5614803909002604ED /* AboutScreen-ipad.png */,
+				292C8C5714803909002604ED /* AboutScreen.png */,
 				29AB61B9148007600058EC50 /* winterBackgroundMusic.caf */,
 				29EE5C6A147E0FE900964292 /* GingerBreadObjects-hd.plist */,
 				29EE5C6B147E0FE900964292 /* GingerBreadObjects-hd.pvr.ccz */,
@@ -2950,9 +2958,7 @@
 				29ED637D14780B3C0029F045 /* Default.png */,
 				29ED637E14780B3C0029F045 /* Default@2x.png */,
 				29ED635514780A7B0029F045 /* Buttons-hd.plist */,
-				29ED635614780A7B0029F045 /* Buttons-hd.png */,
 				29ED635714780A7B0029F045 /* Buttons.plist */,
-				29ED635814780A7B0029F045 /* Buttons.png */,
 				29ED635914780A7B0029F045 /* FindObjects-hd.plist */,
 				29ED635A14780A7B0029F045 /* FindObjects-hd.pvr.ccz */,
 				29ED635B14780A7B0029F045 /* FindObjects.plist */,
@@ -3501,9 +3507,6 @@
 				29ED62BC1477FEF60029F045 /* UserIconsTextures.pvr.ccz in Resources */,
 				29ED62C01477FEF60029F045 /* TitleScreen-portrait-hd.png in Resources */,
 				29ED62C11477FEF60029F045 /* TitleScreen-portrait.png in Resources */,
-				29ED62C31477FEF60029F045 /* AboutScreen.png in Resources */,
-				29ED62C41477FEF60029F045 /* AboutScreen-hd.png in Resources */,
-				29ED62C51477FEF60029F045 /* AboutScreen-ipad.png in Resources */,
 				29ED62C61477FEF60029F045 /* buttonsAndResources-Smart-hd.plist in Resources */,
 				29ED62C71477FEF60029F045 /* buttonsAndResources-Smart-hd.pvr.ccz in Resources */,
 				29ED62C81477FEF60029F045 /* buttonsAndResources-Smart.plist in Resources */,
@@ -3517,9 +3520,7 @@
 				29ED62E81477FEF60029F045 /* click.caf in Resources */,
 				29ED62EA1477FEF60029F045 /* Speech1.aifc in Resources */,
 				29ED636914780A7B0029F045 /* Buttons-hd.plist in Resources */,
-				29ED636A14780A7B0029F045 /* Buttons-hd.png in Resources */,
 				29ED636B14780A7B0029F045 /* Buttons.plist in Resources */,
-				29ED636C14780A7B0029F045 /* Buttons.png in Resources */,
 				29ED636D14780A7B0029F045 /* FindObjects-hd.plist in Resources */,
 				29ED636E14780A7B0029F045 /* FindObjects-hd.pvr.ccz in Resources */,
 				29ED636F14780A7B0029F045 /* FindObjects.plist in Resources */,
@@ -3574,6 +3575,11 @@
 				29EE5C78147E0FE900964292 /* PrizeSelectionObjects.plist in Resources */,
 				29EE5C79147E0FE900964292 /* PrizeSelectionObjects.pvr.ccz in Resources */,
 				29AB61BA148007600058EC50 /* winterBackgroundMusic.caf in Resources */,
+				292C8C5814803909002604ED /* AboutScreen-hd.png in Resources */,
+				292C8C5914803909002604ED /* AboutScreen-ipad.png in Resources */,
+				292C8C5A14803909002604ED /* AboutScreen.png in Resources */,
+				292C8C5E148039B5002604ED /* Buttons-hd.pvr.ccz in Resources */,
+				292C8C5F148039B5002604ED /* Buttons.pvr.ccz in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -4286,6 +4292,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = SmartHenry/Prefix.pch;
 				GCC_PREPROCESSOR_DEFINITIONS = (
+					UNIVERSAL,
 					SMART,
 					DEBUG,
 					"COCOS2D_DEBUG=1",
@@ -4327,6 +4334,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = SmartHenry/Prefix.pch;
 				GCC_PREPROCESSOR_DEFINITIONS = (
+					UNIVERSAL,
 					SMART,
 					NDEBUG,
 				);
@@ -4564,6 +4572,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = SmartHenry/Prefix.pch;
 				GCC_PREPROCESSOR_DEFINITIONS = (
+					IPHONE,
 					SMART,
 					DEBUG,
 					"COCOS2D_DEBUG=1",
@@ -4605,6 +4614,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = SmartHenry/Prefix.pch;
 				GCC_PREPROCESSOR_DEFINITIONS = (
+					IPHONE,
 					SMART,
 					NDEBUG,
 				);

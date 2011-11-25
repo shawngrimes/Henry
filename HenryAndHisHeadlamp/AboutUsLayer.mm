@@ -51,6 +51,8 @@
 #elif SMART
         //Stuff for Full version
         backgroundSprite=[CCSprite spriteWithFile:@"AboutScreen.png"];
+#elif WINTER
+        backgroundSprite=[CCSprite spriteWithFile:@"AboutScreen.png"];
 #endif
         
 //        if (UI_USER_INTERFACE_IDIOM() != UIUserInterfaceIdiomPad) { 
@@ -64,6 +66,12 @@
         [[CCSpriteFrameCache sharedSpriteFrameCache] addSpriteFramesWithFile:@"buttonsAndResources-Halloween.plist"];
 #elif SMART
         [[CCSpriteFrameCache sharedSpriteFrameCache] addSpriteFramesWithFile:@"buttonsAndResources-Smart.plist"];
+#elif WINTER
+        if(UI_USER_INTERFACE_IDIOM()==UIUserInterfaceIdiomPad){
+            [[CCSpriteFrameCache sharedSpriteFrameCache] addSpriteFramesWithFile:@"Buttons-hd.plist"];
+        }else{
+            [[CCSpriteFrameCache sharedSpriteFrameCache] addSpriteFramesWithFile:@"Buttons.plist"];
+        }
 #endif
         CCMenuItemSprite *backSprite=[CCMenuItemSprite 
                                       itemFromNormalSprite:[CCSprite spriteWithSpriteFrameName:@"BackArrow_inactive.png"] 
@@ -168,17 +176,18 @@
     [[UIApplication sharedApplication] openURL:[NSURL URLWithString:@"http://click.linksynergy.com/fs-bin/stat?id=ufqtEXoqemY&offerid=146261&type=3&subid=0&tmpid=1826&RD_PARM1=http%253A%252F%252Fitunes.apple.com%252Fus%252Fapp%252Fhenrys-spooky-headlamp%252Fid469760219%253Fmt%253D8%2526uo%253D4%2526partnerId%253D30"]];
 #elif SMART
     [[UIApplication sharedApplication] openURL:[NSURL URLWithString:@"http://itunes.apple.com/us/app/id482490502"]];
+#elif WINTER
+    [[UIApplication sharedApplication] openURL:[NSURL URLWithString:@"http://itunes.apple.com/us/app/id483606662"]];
 #endif
+    
 }
 
 -(void) transitionToMoreApps{
     [TestFlight passCheckpoint:@"LOADING_MORE_APPS"];
     [FlurryAnalytics logEvent:@"MORE_APPS_TOUCHED"];
-#ifdef HALLOWEEN
+//    [[UIApplication sharedApplication] openURL:[NSURL URLWithString:@"http://click.linksynergy.com/fs-bin/stat?id=ufqtEXoqemY&offerid=146261&type=3&subid=0&tmpid=1826&RD_PARM1=http%253A%252F%252Fitunes.apple.com%252Fus%252Fartist%252Fcampfire-apps-llc.%252Fid469760222%253Fuo%253D4%2526partnerId%253D30"]];
+
     [[UIApplication sharedApplication] openURL:[NSURL URLWithString:@"http://click.linksynergy.com/fs-bin/stat?id=ufqtEXoqemY&offerid=146261&type=3&subid=0&tmpid=1826&RD_PARM1=http%253A%252F%252Fitunes.apple.com%252Fus%252Fartist%252Fcampfire-apps-llc.%252Fid469760222%253Fuo%253D4%2526partnerId%253D30"]];
-#elif SMART
-    [[UIApplication sharedApplication] openURL:[NSURL URLWithString:@"http://click.linksynergy.com/fs-bin/stat?id=ufqtEXoqemY&offerid=146261&type=3&subid=0&tmpid=1826&RD_PARM1=http%253A%252F%252Fitunes.apple.com%252Fus%252Fartist%252Fcampfire-apps-llc.%252Fid469760222%253Fuo%253D4%2526partnerId%253D30"]];
-#endif
 
 }
 
@@ -193,6 +202,8 @@
     [[UIApplication sharedApplication] openURL:[NSURL URLWithString:@"http://spookyhenry.campfireapps.com"]];
 #elif SMART
     [[UIApplication sharedApplication] openURL:[NSURL URLWithString:@"http://smarthenry.campfireapps.com"]];
+#elif WINTER
+    [[UIApplication sharedApplication] openURL:[NSURL URLWithString:@"http://winterhenry.campfireapps.com"]];
 #endif
 }
 

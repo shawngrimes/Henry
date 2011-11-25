@@ -10,8 +10,18 @@
 #import "cocos2d.h"
 #import "CCScrollLayer.h"
 
+@class GingerBreadLayer;
+@class Player;
+
 @interface PrizeSelectionLayer : CCLayer <CCScrollLayerDelegate> {
-    
+    CCMenu *gbManMenu;
+    CCMenu *gbWomanMenu;
 }
+
+@property (nonatomic, retain, readonly) Player *currentPlayer;
+@property (nonatomic) float prizeHeight;
+@property (nonatomic, retain) GingerBreadLayer *gingerBreadLayer;
+
+-(id) initWithGingerBreadLayer:(GingerBreadLayer *)gbLayer;
 
 @end

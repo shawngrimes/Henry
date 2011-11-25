@@ -189,6 +189,7 @@
     NSEntityDescription *entity = [NSEntityDescription 
                                    entityForName:@"Player" inManagedObjectContext:sharedAppDelegate.managedObjectContext];
     NSPredicate *searchPredicate=[NSPredicate predicateWithFormat:[NSString stringWithFormat:@"iconNumber=%i", selectedSprite.tag]];
+    
     [fetchRequest setEntity:entity];
     [fetchRequest setPredicate:searchPredicate];
     NSError *error;

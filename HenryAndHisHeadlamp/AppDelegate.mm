@@ -52,7 +52,7 @@
 #elif SMART
     [TestFlight takeOff:@"075e25c5c29c398a3fb2923d445f6a30_MzgyNzkyMDExLTExLTAyIDAxOjM1OjU4Ljg1ODA4Mg"];
 #elif WINTER
-    
+    [TestFlight takeOff:@"075e25c5c29c398a3fb2923d445f6a30_MzgyNzkyMDExLTExLTAyIDAxOjM1OjU4Ljg1ODA4Mg"];
 #endif
     
 #ifdef HALLOWEEN
@@ -270,9 +270,11 @@
     {
         return __persistentStoreCoordinator;
     }
-    
+#ifdef SMART
     NSURL *storeURL = [[self applicationDocumentsDirectory] URLByAppendingPathComponent:@"SmartHenryDatabase.sqlite"];
-    
+#elif WINTER
+    NSURL *storeURL = [[self applicationDocumentsDirectory] URLByAppendingPathComponent:@"WinterHenryDatabase.sqlite"];
+#endif
     NSError *error = nil;
     __persistentStoreCoordinator = [[NSPersistentStoreCoordinator alloc] initWithManagedObjectModel:[self managedObjectModel]];
     if (![__persistentStoreCoordinator addPersistentStoreWithType:NSSQLiteStoreType configuration:nil URL:storeURL options:nil error:&error])

@@ -15,4 +15,8 @@
     Player *currentPlayer;
 }
 
+@property (nonatomic, retain, readonly) NSSet *prizesWonSet;
+
+-(void)refreshPrizes;
+
 @end

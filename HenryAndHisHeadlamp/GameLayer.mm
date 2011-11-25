@@ -792,6 +792,7 @@ bool isInTarget=NO;
     }
     [self runAction:soundSequence];
 #else
+//    [self loadScores];
     [self showTargetLabel];
 #endif
     
@@ -938,8 +939,19 @@ bool isInTarget=NO;
     CCScene *prizeSelectionScene=[CCScene node];
     GingerBreadLayer *gbLayer=[[[GingerBreadLayer alloc] init] autorelease];
     [prizeSelectionScene addChild:gbLayer];
-    PrizeSelectionLayer *prizeLayer=[[[PrizeSelectionLayer alloc] init] autorelease];
+    PrizeSelectionLayer *prizeLayer=[[[PrizeSelectionLayer alloc] initWithGingerBreadLayer:gbLayer] autorelease];
+    prizeLayer.gingerBreadLayer=gbLayer;
+      
+//    prizeLayer.position=ccp(prizeLayer.position.x,prizeLayer.prizeHeight);
     [prizeSelectionScene addChild:prizeLayer];
+
+    
+    CGSize winSize=[[CCDirector sharedDirector] winSize];
+    prizeLayer.isRelativeAnchorPoint=YES;
+    prizeLayer.anchorPoint=ccp(0,1);
+    prizeLayer.position=ccp(prizeLayer.position.x,prizeLayer.prizeHeight + (winSize.height * 85.0/768.0));
+
+    
     [[CCDirector sharedDirector] replaceScene:
      [CCTransitionRotoZoom transitionWithDuration:2.0f scene:prizeSelectionScene]];
     
@@ -951,8 +963,11 @@ bool isInTarget=NO;
     [self unschedule:@selector(showTargetLabel)];
     [TestFlight passCheckpoint:@"Showing_Target_Label"];
     
+    [_targetCharacter stopAllActions];
+    //        CCLOG(@"Original Scale: %f", _targetCharacter.originalScale);
+    [_targetCharacter setScale:_targetCharacter.originalScale];
+
     [self moveCharactersRandomly];
-    
 //    [self removeChildByTag:kTAGtargetLabel cleanup:YES];
     [self removeChildByTag:kTAGtargetSprite cleanup:YES];
     
@@ -1048,6 +1063,7 @@ bool isInTarget=NO;
 #else
         [self showTargetSprite:targetSpriteCopy];
 #endif
+
     }
 }
 

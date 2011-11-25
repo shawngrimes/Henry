@@ -261,11 +261,11 @@
          continueAfterRunningActions = "No"
          isPathRelative = "1"
          filePath = "HenryAndHisHeadlamp/GameLayer.mm"
-         timestampString = "343809466.134028"
+         timestampString = "343881631.203807"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "1173"
-         endingLineNumber = "1173"
+         startingLineNumber = "1191"
+         endingLineNumber = "1191"
          landmarkName = "-ccTouchMoved:withEvent:"
          landmarkType = "5">
       </FileBreakpoint>
@@ -275,11 +275,11 @@
          continueAfterRunningActions = "No"
          isPathRelative = "1"
          filePath = "HenryAndHisHeadlamp/GameLayer.mm"
-         timestampString = "343809466.134028"
+         timestampString = "343881631.203807"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "1190"
-         endingLineNumber = "1190"
+         startingLineNumber = "1208"
+         endingLineNumber = "1208"
          landmarkName = "-ccTouchEnded:withEvent:"
          landmarkType = "5">
       </FileBreakpoint>
@@ -288,26 +288,12 @@
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          isPathRelative = "1"
-         filePath = "HenryAndHisHeadlamp/GameLayer.mm"
-         timestampString = "343809466.134028"
-         startingColumnNumber = "9223372036854775807"
-         endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "953"
-         endingLineNumber = "953"
-         landmarkName = "-showTargetLabel"
-         landmarkType = "5">
-      </FileBreakpoint>
-      <FileBreakpoint
-         shouldBeEnabled = "Yes"
-         ignoreCount = "0"
-         continueAfterRunningActions = "No"
-         isPathRelative = "1"
          filePath = "HenryAndHisHeadlamp/StoryLevel.mm"
-         timestampString = "343705507.373404"
+         timestampString = "343890797.16867"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "70"
-         endingLineNumber = "70"
+         startingLineNumber = "61"
+         endingLineNumber = "61"
          landmarkName = "-init"
          landmarkType = "5">
       </FileBreakpoint>
@@ -365,6 +351,20 @@
          startingLineNumber = "186"
          endingLineNumber = "186"
          landmarkName = "+characterOfType:"
+         landmarkType = "5">
+      </FileBreakpoint>
+      <FileBreakpoint
+         shouldBeEnabled = "No"
+         ignoreCount = "0"
+         continueAfterRunningActions = "No"
+         isPathRelative = "1"
+         filePath = "WinterHenry/PrizeSelectionLayer.mm"
+         timestampString = "343891405.782238"
+         startingColumnNumber = "9223372036854775807"
+         endingColumnNumber = "9223372036854775807"
+         startingLineNumber = "148"
+         endingLineNumber = "148"
+         landmarkName = "-scrollLayerPages"
          landmarkType = "5">
       </FileBreakpoint>
    </FileBreakpoints>

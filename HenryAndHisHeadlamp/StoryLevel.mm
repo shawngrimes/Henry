@@ -51,21 +51,12 @@ ALuint soundEffect=0;
             [backgroundSprite setScaleX:size.width/1024.0f];
             [backgroundSprite setScaleY:size.height/768.0f];
         }
-
 #elif SMART
         backgroundSprite=[CCSprite spriteWithFile:@"StoryScreen.png"];
 
         [[CCSpriteFrameCache sharedSpriteFrameCache] addSpriteFramesWithFile:@"SpeechBubbles.plist"];
         batchNode = [CCSpriteBatchNode batchNodeWithFile:@"SpeechBubbles.pvr.gz"];
 
-        
-//        if (UI_USER_INTERFACE_IDIOM() != UIUserInterfaceIdiomPad) { 
-//            [[CCSpriteFrameCache sharedSpriteFrameCache] addSpriteFramesWithFile:@"ButtonTextures.plist"];
-//            batchNode = [CCSpriteBatchNode batchNodeWithFile:@"ButtonTextures.pvr.gz"];
-//        }else{
-//            [[CCSpriteFrameCache sharedSpriteFrameCache] addSpriteFramesWithFile:@"ButtonTextures-hd.plist"];
-//            batchNode = [CCSpriteBatchNode batchNodeWithFile:@"ButtonTextures-hd.pvr.gz"];
-//        }
 #elif WINTER
         backgroundSprite=[CCSprite spriteWithFile:@"StoryScreen.png"];
         if(UI_USER_INTERFACE_IDIOM()==UIUserInterfaceIdiomPad){

@@ -1146,12 +1146,6 @@
 		29ED62DE1477FEF60029F045 /* SmartHenry_Bkgrd_1-ipad.png in Resources */ = {isa = PBXBuildFile; fileRef = 2959F84E145E6AF70056203A /* SmartHenry_Bkgrd_1-ipad.png */; };
 		29ED62DF1477FEF60029F045 /* SmartHenry_Bkgrd_2.png in Resources */ = {isa = PBXBuildFile; fileRef = 2959F861145E6B180056203A /* SmartHenry_Bkgrd_2.png */; };
 		29ED62E01477FEF60029F045 /* backgroundMusic.aifc in Resources */ = {isa = PBXBuildFile; fileRef = 29277F28145EF47E00961A6C /* backgroundMusic.aifc */; };
-		29ED62E11477FEF60029F045 /* SpeechBubbles-hd.plist in Resources */ = {isa = PBXBuildFile; fileRef = 297B7550145F68E3001EFCCC /* SpeechBubbles-hd.plist */; };
-		29ED62E21477FEF60029F045 /* SpeechBubbles-hd.pvr.gz in Resources */ = {isa = PBXBuildFile; fileRef = 297B7551145F68E4001EFCCC /* SpeechBubbles-hd.pvr.gz */; };
-		29ED62E31477FEF60029F045 /* SpeechBubbles-ipad.plist in Resources */ = {isa = PBXBuildFile; fileRef = 297B7552145F68E4001EFCCC /* SpeechBubbles-ipad.plist */; };
-		29ED62E41477FEF60029F045 /* SpeechBubbles-ipad.pvr.gz in Resources */ = {isa = PBXBuildFile; fileRef = 297B7553145F68E4001EFCCC /* SpeechBubbles-ipad.pvr.gz */; };
-		29ED62E51477FEF60029F045 /* SpeechBubbles.plist in Resources */ = {isa = PBXBuildFile; fileRef = 297B7554145F68E5001EFCCC /* SpeechBubbles.plist */; };
-		29ED62E61477FEF60029F045 /* SpeechBubbles.pvr.gz in Resources */ = {isa = PBXBuildFile; fileRef = 297B7555145F68E5001EFCCC /* SpeechBubbles.pvr.gz */; };
 		29ED62E71477FEF60029F045 /* ding.caf in Resources */ = {isa = PBXBuildFile; fileRef = 293CCBAD142ABA9A00851CD2 /* ding.caf */; };
 		29ED62E81477FEF60029F045 /* click.caf in Resources */ = {isa = PBXBuildFile; fileRef = 2991C8E0142A7EA800053634 /* click.caf */; };
 		29ED62E91477FEF60029F045 /* Speech2.aifc in Resources */ = {isa = PBXBuildFile; fileRef = 295E69DE145FA72D00C6BF20 /* Speech2.aifc */; };
@@ -1182,7 +1176,7 @@
 		29ED638614780C8E0029F045 /* Default-Portrait~ipad.png in Resources */ = {isa = PBXBuildFile; fileRef = 29ED638514780C8E0029F045 /* Default-Portrait~ipad.png */; };
 		29ED638714780D010029F045 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 29ED637D14780B3C0029F045 /* Default.png */; };
 		29ED638814780DC40029F045 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 29D72405146EC49B004909A0 /* Default.png */; };
-		29EE5C63147E03C200964292 /* GingerBreadLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 29EE5C62147E03C200964292 /* GingerBreadLayer.m */; };
+		29EE5C63147E03C200964292 /* GingerBreadLayer.mm in Sources */ = {isa = PBXBuildFile; fileRef = 29EE5C62147E03C200964292 /* GingerBreadLayer.mm */; };
 		29EE5C67147E09C500964292 /* PrizeSelectionScreen-hd.png in Resources */ = {isa = PBXBuildFile; fileRef = 29EE5C64147E09C500964292 /* PrizeSelectionScreen-hd.png */; };
 		29EE5C68147E09C500964292 /* PrizeSelectionScreen-ipad.png in Resources */ = {isa = PBXBuildFile; fileRef = 29EE5C65147E09C500964292 /* PrizeSelectionScreen-ipad.png */; };
 		29EE5C69147E09C500964292 /* PrizeSelectionScreen.png in Resources */ = {isa = PBXBuildFile; fileRef = 29EE5C66147E09C500964292 /* PrizeSelectionScreen.png */; };
@@ -1194,8 +1188,8 @@
 		29EE5C77147E0FE900964292 /* PrizeSelectionObjects-hd.pvr.ccz in Resources */ = {isa = PBXBuildFile; fileRef = 29EE5C6F147E0FE900964292 /* PrizeSelectionObjects-hd.pvr.ccz */; };
 		29EE5C78147E0FE900964292 /* PrizeSelectionObjects.plist in Resources */ = {isa = PBXBuildFile; fileRef = 29EE5C70147E0FE900964292 /* PrizeSelectionObjects.plist */; };
 		29EE5C79147E0FE900964292 /* PrizeSelectionObjects.pvr.ccz in Resources */ = {isa = PBXBuildFile; fileRef = 29EE5C71147E0FE900964292 /* PrizeSelectionObjects.pvr.ccz */; };
-		29EE5C7C147E153800964292 /* PrizeSelectionLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 29EE5C7B147E153800964292 /* PrizeSelectionLayer.m */; };
-		29EE5C7F147E155D00964292 /* CCScrollLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 29EE5C7E147E155D00964292 /* CCScrollLayer.m */; };
+		29EE5C7C147E153800964292 /* PrizeSelectionLayer.mm in Sources */ = {isa = PBXBuildFile; fileRef = 29EE5C7B147E153800964292 /* PrizeSelectionLayer.mm */; };
+		29EE5C7F147E155D00964292 /* CCScrollLayer.mm in Sources */ = {isa = PBXBuildFile; fileRef = 29EE5C7E147E155D00964292 /* CCScrollLayer.mm */; };
 		29F23A5C143A5BCA00673AEE /* Henry_Spooky_Story_Scene.png in Resources */ = {isa = PBXBuildFile; fileRef = 29F23A5A143A5BCA00673AEE /* Henry_Spooky_Story_Scene.png */; };
 		29F23A5D143A5BCA00673AEE /* Henry_Spooky_Title_Screen.png in Resources */ = {isa = PBXBuildFile; fileRef = 29F23A5B143A5BCA00673AEE /* Henry_Spooky_Title_Screen.png */; };
 /* End PBXBuildFile section */
@@ -1819,7 +1813,7 @@
 		29ED638114780B8C0029F045 /* Default-Landscape~ipad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-Landscape~ipad.png"; sourceTree = "<group>"; };
 		29ED638514780C8E0029F045 /* Default-Portrait~ipad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-Portrait~ipad.png"; sourceTree = "<group>"; };
 		29EE5C61147E03C200964292 /* GingerBreadLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GingerBreadLayer.h; sourceTree = "<group>"; };
-		29EE5C62147E03C200964292 /* GingerBreadLayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GingerBreadLayer.m; sourceTree = "<group>"; };
+		29EE5C62147E03C200964292 /* GingerBreadLayer.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = GingerBreadLayer.mm; sourceTree = "<group>"; };
 		29EE5C64147E09C500964292 /* PrizeSelectionScreen-hd.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "PrizeSelectionScreen-hd.png"; sourceTree = "<group>"; };
 		29EE5C65147E09C500964292 /* PrizeSelectionScreen-ipad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "PrizeSelectionScreen-ipad.png"; sourceTree = "<group>"; };
 		29EE5C66147E09C500964292 /* PrizeSelectionScreen.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = PrizeSelectionScreen.png; sourceTree = "<group>"; };
@@ -1832,9 +1826,9 @@
 		29EE5C70147E0FE900964292 /* PrizeSelectionObjects.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = PrizeSelectionObjects.plist; sourceTree = "<group>"; };
 		29EE5C71147E0FE900964292 /* PrizeSelectionObjects.pvr.ccz */ = {isa = PBXFileReference; lastKnownFileType = file; path = PrizeSelectionObjects.pvr.ccz; sourceTree = "<group>"; };
 		29EE5C7A147E153800964292 /* PrizeSelectionLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PrizeSelectionLayer.h; sourceTree = "<group>"; };
-		29EE5C7B147E153800964292 /* PrizeSelectionLayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PrizeSelectionLayer.m; sourceTree = "<group>"; };
+		29EE5C7B147E153800964292 /* PrizeSelectionLayer.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = PrizeSelectionLayer.mm; sourceTree = "<group>"; };
 		29EE5C7D147E155D00964292 /* CCScrollLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CCScrollLayer.h; sourceTree = "<group>"; };
-		29EE5C7E147E155D00964292 /* CCScrollLayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CCScrollLayer.m; sourceTree = "<group>"; };
+		29EE5C7E147E155D00964292 /* CCScrollLayer.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = CCScrollLayer.mm; sourceTree = "<group>"; };
 		29F23A5A143A5BCA00673AEE /* Henry_Spooky_Story_Scene.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Henry_Spooky_Story_Scene.png; sourceTree = "<group>"; };
 		29F23A5B143A5BCA00673AEE /* Henry_Spooky_Title_Screen.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Henry_Spooky_Title_Screen.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -2998,11 +2992,11 @@
 				29ED636714780A7B0029F045 /* WinterHenry_Bkgrd_1-ipad.png */,
 				29ED636814780A7B0029F045 /* WinterHenry_Bkgrd_1.png */,
 				29EE5C61147E03C200964292 /* GingerBreadLayer.h */,
-				29EE5C62147E03C200964292 /* GingerBreadLayer.m */,
+				29EE5C62147E03C200964292 /* GingerBreadLayer.mm */,
 				29EE5C7A147E153800964292 /* PrizeSelectionLayer.h */,
-				29EE5C7B147E153800964292 /* PrizeSelectionLayer.m */,
+				29EE5C7B147E153800964292 /* PrizeSelectionLayer.mm */,
 				29EE5C7D147E155D00964292 /* CCScrollLayer.h */,
-				29EE5C7E147E155D00964292 /* CCScrollLayer.m */,
+				29EE5C7E147E155D00964292 /* CCScrollLayer.mm */,
 			);
 			path = WinterHenry;
 			sourceTree = "<group>";
@@ -3561,12 +3555,6 @@
 				29ED62DE1477FEF60029F045 /* SmartHenry_Bkgrd_1-ipad.png in Resources */,
 				29ED62DF1477FEF60029F045 /* SmartHenry_Bkgrd_2.png in Resources */,
 				29ED62E01477FEF60029F045 /* backgroundMusic.aifc in Resources */,
-				29ED62E11477FEF60029F045 /* SpeechBubbles-hd.plist in Resources */,
-				29ED62E21477FEF60029F045 /* SpeechBubbles-hd.pvr.gz in Resources */,
-				29ED62E31477FEF60029F045 /* SpeechBubbles-ipad.plist in Resources */,
-				29ED62E41477FEF60029F045 /* SpeechBubbles-ipad.pvr.gz in Resources */,
-				29ED62E51477FEF60029F045 /* SpeechBubbles.plist in Resources */,
-				29ED62E61477FEF60029F045 /* SpeechBubbles.pvr.gz in Resources */,
 				29ED62E71477FEF60029F045 /* ding.caf in Resources */,
 				29ED62E81477FEF60029F045 /* click.caf in Resources */,
 				29ED62E91477FEF60029F045 /* Speech2.aifc in Resources */,
@@ -4316,9 +4304,9 @@
 				29ED62941477FEF60029F045 /* Prize.m in Sources */,
 				29ED62951477FEF60029F045 /* Player.m in Sources */,
 				29A6D2C9147D880700841951 /* main.m in Sources */,
-				29EE5C63147E03C200964292 /* GingerBreadLayer.m in Sources */,
-				29EE5C7C147E153800964292 /* PrizeSelectionLayer.m in Sources */,
-				29EE5C7F147E155D00964292 /* CCScrollLayer.m in Sources */,
+				29EE5C63147E03C200964292 /* GingerBreadLayer.mm in Sources */,
+				29EE5C7C147E153800964292 /* PrizeSelectionLayer.mm in Sources */,
+				29EE5C7F147E155D00964292 /* CCScrollLayer.mm in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

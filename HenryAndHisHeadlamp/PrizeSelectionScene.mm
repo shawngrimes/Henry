@@ -58,7 +58,7 @@ float _userTime=0.0;
 #if SMART
         backgroundSprite=[CCSprite spriteWithFile:@"PrizeSelectScreen.png"];
 #endif
-        [[CCSpriteFrameCache sharedSpriteFrameCache] removeUnusedSpriteFrames];
+//        [[CCSpriteFrameCache sharedSpriteFrameCache] removeUnusedSpriteFrames];
         
         [[CCSpriteFrameCache sharedSpriteFrameCache] addSpriteFramesWithFile:@"PrizeSelectionObjects.plist"];
         
@@ -293,7 +293,7 @@ float _userTime=0.0;
     if (![sharedAppDelegate.managedObjectContext save:&error]) {
         CCLOG(@"Whoops, couldn't save prize to player: %@", [error localizedDescription]);
     }
-    sharedAppDelegate.currentPlayerIconNumber=selectedSprite.tag;
+//    sharedAppDelegate.currentPlayerIconNumber=selectedSprite.tag;
     [fetchRequest release];
     
     CCSprite *checkMark=[CCSprite spriteWithSpriteFrameName:@"CheckMark.png"];

@@ -72,8 +72,11 @@ enum {
         self.isTouchEnabled=YES;
         self.isAccelerometerEnabled = YES;
         [CCTexture2D PVRImagesHavePremultipliedAlpha:YES];
-        
+#if SMART
         [[SimpleAudioEngine sharedEngine] playBackgroundMusic:@"backgroundMusic.aifc" loop:YES];
+#elif WINTER
+      [[SimpleAudioEngine sharedEngine] playBackgroundMusic:@"winterBackgroundMusic.caf" loop:YES];  
+#endif
         [[SimpleAudioEngine sharedEngine] preloadEffect:@"Speech1.aifc"];
         [[SimpleAudioEngine sharedEngine] preloadEffect:@"Speech2.aifc"];
         

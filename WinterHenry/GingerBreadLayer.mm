@@ -14,6 +14,11 @@
 
 @implementation GingerBreadLayer
 
+enum nodeTags
+{
+	kbatchNode = 75,
+};
+
 
 -(id) init
 {
@@ -61,31 +66,8 @@
     
     
     CGSize size=[[CCDirector sharedDirector] winSize];
-//    
-//    AppDelegate *sharedAppDelegate=(AppDelegate *)[UIApplication sharedApplication].delegate;
-//    NSFetchRequest *fetchRequest = [[NSFetchRequest alloc] init];
-//    
-//    
-//    NSEntityDescription *entity = [NSEntityDescription 
-//                                   entityForName:@"Player" inManagedObjectContext:sharedAppDelegate.managedObjectContext];
-//    NSPredicate *searchPredicate=[NSPredicate predicateWithFormat:[NSString stringWithFormat:@"iconNumber=%i", sharedAppDelegate.currentPlayerIconNumber]];
-//    CCLOG(@"Search Predicate: %@", searchPredicate);
-//    
-//    [fetchRequest setEntity:entity];
-//    [fetchRequest setPredicate:searchPredicate];
-//    NSError *error;
-//    NSArray *fetchedObjects = [sharedAppDelegate.managedObjectContext executeFetchRequest:fetchRequest error:&error];
-//    NSSet *prizesWonSet;
-//    if([fetchedObjects count]==0){
-//        CCLOG(@"No user found in database");
-//    }else{
-//        currentPlayer=[[fetchedObjects objectAtIndex:0] retain];
-//        prizesWonSet=[NSSet setWithSet:currentPlayer.prizes];
-//        CCLOG(@"prizesWon Count: %i", [prizesWonSet count]);
-//    }
-//    [fetchRequest release];
-    
-//    [[CCSpriteFrameCache sharedSpriteFrameCache] removeUnusedSpriteFrames];
+
+    [self removeChildByTag:kbatchNode cleanup:YES];
     CCSpriteBatchNode *batchNode;
     if (UI_USER_INTERFACE_IDIOM() != UIUserInterfaceIdiomPad) { 
         [[CCSpriteFrameCache sharedSpriteFrameCache] addSpriteFramesWithFile:@"GingerBreadObjects.plist"];
@@ -94,7 +76,7 @@
         [[CCSpriteFrameCache sharedSpriteFrameCache] addSpriteFramesWithFile:@"GingerBreadObjects-hd.plist"];
         batchNode=[CCSpriteBatchNode batchNodeWithFile:@"GingerBreadObjects-hd.pvr.ccz"];
     }
-    [self addChild:batchNode z:5];
+    [self addChild:batchNode z:5 tag:kbatchNode];
 
     for (Prize *currentPrize in self.prizesWonSet) {
         //Has prize, add to GB
@@ -106,43 +88,81 @@
         switch ([currentPrize.prizeNumber integerValue]) {
             case 0:
                 prizeSprite.position=ccp(size.width * 330.0/1024.0, size.height - size.height * 260.0/768.0);
+                if(UI_USER_INTERFACE_IDIOM()!=UIUserInterfaceIdiomPad){
+                    prizeSprite.position=ccpAdd(prizeSprite.position, ccp(-5,+5));
+                }
                 break;
                 
             case 1:
                 prizeSprite.position=ccp(size.width * 330.0/1024.0, size.height - size.height * 190.0/768.0);
+                if(UI_USER_INTERFACE_IDIOM()!=UIUserInterfaceIdiomPad){
+                    prizeSprite.position=ccpAdd(prizeSprite.position, ccp(0,+10));
+                }
+                if(UI_USER_INTERFACE_IDIOM()!=UIUserInterfaceIdiomPad){
+                    prizeSprite.position=ccpAdd(prizeSprite.position, ccp(-5,+5));
+                }
                 break;
             case 2:
                 prizeSprite.position=ccp(size.width * 175.0/1024.0, size.height - size.height * 300.0/768.0);
+                if(UI_USER_INTERFACE_IDIOM()!=UIUserInterfaceIdiomPad){
+                    prizeSprite.position=ccpAdd(prizeSprite.position, ccp(-5,+5));
+                }
                 break;
             case 3:
                 prizeSprite.position=ccp(size.width * 330.0/1024.0, size.height - size.height * 395.0/768.0);
+                if(UI_USER_INTERFACE_IDIOM()!=UIUserInterfaceIdiomPad){
+                    prizeSprite.position=ccpAdd(prizeSprite.position, ccp(0,-5));
+                }
+                if(UI_USER_INTERFACE_IDIOM()!=UIUserInterfaceIdiomPad){
+                    prizeSprite.position=ccpAdd(prizeSprite.position, ccp(-5,+5));
+                }
                 break;
             case 4:
                 prizeSprite.position=ccp(size.width * 330.0/1024.0, size.height - size.height * 325.0/768.0);
                 [batchNode reorderChild:prizeSprite z:4];
+                if(UI_USER_INTERFACE_IDIOM()!=UIUserInterfaceIdiomPad){
+                    prizeSprite.position=ccpAdd(prizeSprite.position, ccp(-5,+5));
+                }
                 break;
             case 5:
                 prizeSprite.position=ccp(size.width * 685.0/1024.0, size.height - size.height * 370.0/768.0);                
-                break;
+                if(UI_USER_INTERFACE_IDIOM()!=UIUserInterfaceIdiomPad){
+                    prizeSprite.position=ccpAdd(prizeSprite.position, ccp(+3,+3));
+                }
 
+                break;
             case 6:
                 prizeSprite.position=ccp(size.width * 685.0/1024.0, size.height - size.height * 200.0/768.0);                
+                if(UI_USER_INTERFACE_IDIOM()!=UIUserInterfaceIdiomPad){
+                    prizeSprite.position=ccpAdd(prizeSprite.position, ccp(+3,+15));
+                }
                 break;
             case 7:
                 prizeSprite.position=ccp(size.width * 815.0/1024.0, size.height - size.height * 320.0/768.0);  
+                if(UI_USER_INTERFACE_IDIOM()!=UIUserInterfaceIdiomPad){
+                    prizeSprite.position=ccpAdd(prizeSprite.position, ccp(0,+5));
+                }
                 break;
             case 8:
                 prizeSprite.position=ccp(size.width * 655.0/1024.0, size.height - size.height * 137.0/768.0);                  
+                if(UI_USER_INTERFACE_IDIOM()!=UIUserInterfaceIdiomPad){
+                    prizeSprite.position=ccpAdd(prizeSprite.position, ccp(0,+20));
+                }
                 break;
             case 9:
                 prizeSprite.position=ccp(size.width * 685.0/1024.0, size.height - size.height * 310.0/768.0);                
                 [batchNode reorderChild:prizeSprite z:4];
+                if(UI_USER_INTERFACE_IDIOM()!=UIUserInterfaceIdiomPad){
+                    prizeSprite.position=ccpAdd(prizeSprite.position, ccp(5,+5));
+                }
+
                 break;
 
             default:
                 prizeSprite.position=ccp(size.width * 330.0/1024.0, size.height - size.height * 190.0/768.0);
                 break;
         }
+
     }
 }
 

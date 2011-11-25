@@ -557,6 +557,7 @@
 		29A9DB021450D05700B5A240 /* MaterialSelectScreen-hd.png in Resources */ = {isa = PBXBuildFile; fileRef = 29A9DAFD1450D05700B5A240 /* MaterialSelectScreen-hd.png */; };
 		29A9DB041450D05700B5A240 /* MaterialSelectScreen-ipad.png in Resources */ = {isa = PBXBuildFile; fileRef = 29A9DAFE1450D05700B5A240 /* MaterialSelectScreen-ipad.png */; };
 		29A9DB091450D07400B5A240 /* MaterialSelectionLayer.mm in Sources */ = {isa = PBXBuildFile; fileRef = 29A9DB071450D07400B5A240 /* MaterialSelectionLayer.mm */; };
+		29AB61BA148007600058EC50 /* winterBackgroundMusic.caf in Resources */ = {isa = PBXBuildFile; fileRef = 29AB61B9148007600058EC50 /* winterBackgroundMusic.caf */; };
 		29ABB2021452236500A3A3F7 /* PrizeSelectionScene.mm in Sources */ = {isa = PBXBuildFile; fileRef = 29ABB1AE14521C9100A3A3F7 /* PrizeSelectionScene.mm */; };
 		29AD037D14776535003E19EC /* ccUtils.c in Sources */ = {isa = PBXBuildFile; fileRef = 2986CB16141932C9002DA1C8 /* ccUtils.c */; };
 		29AD037E14776535003E19EC /* base64.c in Sources */ = {isa = PBXBuildFile; fileRef = 2986CB09141932C9002DA1C8 /* base64.c */; };
@@ -1112,9 +1113,6 @@
 		29ED62BA1477FEF60029F045 /* UserIconsTextures-hd.pvr.ccz in Resources */ = {isa = PBXBuildFile; fileRef = 299190391450B3970017B892 /* UserIconsTextures-hd.pvr.ccz */; };
 		29ED62BB1477FEF60029F045 /* UserIconsTextures.plist in Resources */ = {isa = PBXBuildFile; fileRef = 2991903A1450B3970017B892 /* UserIconsTextures.plist */; };
 		29ED62BC1477FEF60029F045 /* UserIconsTextures.pvr.ccz in Resources */ = {isa = PBXBuildFile; fileRef = 2991903B1450B3980017B892 /* UserIconsTextures.pvr.ccz */; };
-		29ED62BD1477FEF60029F045 /* MaterialSelectScreen.png in Resources */ = {isa = PBXBuildFile; fileRef = 29A9DAFC1450D05700B5A240 /* MaterialSelectScreen.png */; };
-		29ED62BE1477FEF60029F045 /* MaterialSelectScreen-hd.png in Resources */ = {isa = PBXBuildFile; fileRef = 29A9DAFD1450D05700B5A240 /* MaterialSelectScreen-hd.png */; };
-		29ED62BF1477FEF60029F045 /* MaterialSelectScreen-ipad.png in Resources */ = {isa = PBXBuildFile; fileRef = 29A9DAFE1450D05700B5A240 /* MaterialSelectScreen-ipad.png */; };
 		29ED62C01477FEF60029F045 /* TitleScreen-portrait-hd.png in Resources */ = {isa = PBXBuildFile; fileRef = 296A42E3145E444F009EB9F9 /* TitleScreen-portrait-hd.png */; };
 		29ED62C11477FEF60029F045 /* TitleScreen-portrait.png in Resources */ = {isa = PBXBuildFile; fileRef = 296A42E4145E444F009EB9F9 /* TitleScreen-portrait.png */; };
 		29ED62C31477FEF60029F045 /* AboutScreen.png in Resources */ = {isa = PBXBuildFile; fileRef = 296A42F1145E47E3009EB9F9 /* AboutScreen.png */; };
@@ -1126,34 +1124,12 @@
 		29ED62C91477FEF60029F045 /* buttonsAndResources-Smart.pvr.ccz in Resources */ = {isa = PBXBuildFile; fileRef = 296A4300145E4B60009EB9F9 /* buttonsAndResources-Smart.pvr.ccz */; };
 		29ED62CA1477FEF60029F045 /* buttonsAndResources-Smart-ipad.plist in Resources */ = {isa = PBXBuildFile; fileRef = 296A430C145E4F4A009EB9F9 /* buttonsAndResources-Smart-ipad.plist */; };
 		29ED62CB1477FEF60029F045 /* buttonsAndResources-Smart-ipad.pvr.ccz in Resources */ = {isa = PBXBuildFile; fileRef = 296A430D145E4F4A009EB9F9 /* buttonsAndResources-Smart-ipad.pvr.ccz */; };
-		29ED62CD1477FEF60029F045 /* MaterialSelectionButtons-hd.plist in Resources */ = {isa = PBXBuildFile; fileRef = 2959F828145E653C0056203A /* MaterialSelectionButtons-hd.plist */; };
-		29ED62CE1477FEF60029F045 /* MaterialSelectionButtons-hd.pvr.gz in Resources */ = {isa = PBXBuildFile; fileRef = 2959F829145E653C0056203A /* MaterialSelectionButtons-hd.pvr.gz */; };
-		29ED62CF1477FEF60029F045 /* MaterialSelectionButtons.plist in Resources */ = {isa = PBXBuildFile; fileRef = 2959F82A145E653C0056203A /* MaterialSelectionButtons.plist */; };
-		29ED62D01477FEF60029F045 /* MaterialSelectionButtons.pvr.gz in Resources */ = {isa = PBXBuildFile; fileRef = 2959F82B145E653C0056203A /* MaterialSelectionButtons.pvr.gz */; };
-		29ED62D11477FEF60029F045 /* SmartHenry_StatusBox.png in Resources */ = {isa = PBXBuildFile; fileRef = 2959F834145E68C30056203A /* SmartHenry_StatusBox.png */; };
-		29ED62D21477FEF60029F045 /* SmartHenry_StatusBox-hd.png in Resources */ = {isa = PBXBuildFile; fileRef = 2959F835145E68C30056203A /* SmartHenry_StatusBox-hd.png */; };
-		29ED62D31477FEF60029F045 /* SmartHenry_StatusBox-ipad.png in Resources */ = {isa = PBXBuildFile; fileRef = 2959F836145E68C30056203A /* SmartHenry_StatusBox-ipad.png */; };
 		29ED62D41477FEF60029F045 /* headLampLight.png in Resources */ = {isa = PBXBuildFile; fileRef = 2959F83D145E6AA70056203A /* headLampLight.png */; };
 		29ED62D51477FEF60029F045 /* headLampLight-hd.png in Resources */ = {isa = PBXBuildFile; fileRef = 2959F83E145E6AA70056203A /* headLampLight-hd.png */; };
 		29ED62D61477FEF60029F045 /* headLampLight-ipad.png in Resources */ = {isa = PBXBuildFile; fileRef = 2959F83F145E6AA70056203A /* headLampLight-ipad.png */; };
-		29ED62D71477FEF60029F045 /* SmartHenry_Bkgrd_0.png in Resources */ = {isa = PBXBuildFile; fileRef = 2959F846145E6AF60056203A /* SmartHenry_Bkgrd_0.png */; };
-		29ED62D81477FEF60029F045 /* SmartHenry_Bkgrd_0-hd.png in Resources */ = {isa = PBXBuildFile; fileRef = 2959F847145E6AF60056203A /* SmartHenry_Bkgrd_0-hd.png */; };
-		29ED62D91477FEF60029F045 /* SmartHenry_Bkgrd_1.png in Resources */ = {isa = PBXBuildFile; fileRef = 2959F848145E6AF60056203A /* SmartHenry_Bkgrd_1.png */; };
-		29ED62DA1477FEF60029F045 /* SmartHenry_Bkgrd_1-hd.png in Resources */ = {isa = PBXBuildFile; fileRef = 2959F849145E6AF60056203A /* SmartHenry_Bkgrd_1-hd.png */; };
-		29ED62DB1477FEF60029F045 /* SmartHenry_Bkgrd_2-hd.png in Resources */ = {isa = PBXBuildFile; fileRef = 2959F84B145E6AF60056203A /* SmartHenry_Bkgrd_2-hd.png */; };
-		29ED62DC1477FEF60029F045 /* SmartHenry_Bkgrd_0-ipad.png in Resources */ = {isa = PBXBuildFile; fileRef = 2959F84C145E6AF60056203A /* SmartHenry_Bkgrd_0-ipad.png */; };
-		29ED62DD1477FEF60029F045 /* SmartHenry_Bkgrd_2-ipad.png in Resources */ = {isa = PBXBuildFile; fileRef = 2959F84D145E6AF70056203A /* SmartHenry_Bkgrd_2-ipad.png */; };
-		29ED62DE1477FEF60029F045 /* SmartHenry_Bkgrd_1-ipad.png in Resources */ = {isa = PBXBuildFile; fileRef = 2959F84E145E6AF70056203A /* SmartHenry_Bkgrd_1-ipad.png */; };
-		29ED62DF1477FEF60029F045 /* SmartHenry_Bkgrd_2.png in Resources */ = {isa = PBXBuildFile; fileRef = 2959F861145E6B180056203A /* SmartHenry_Bkgrd_2.png */; };
-		29ED62E01477FEF60029F045 /* backgroundMusic.aifc in Resources */ = {isa = PBXBuildFile; fileRef = 29277F28145EF47E00961A6C /* backgroundMusic.aifc */; };
 		29ED62E71477FEF60029F045 /* ding.caf in Resources */ = {isa = PBXBuildFile; fileRef = 293CCBAD142ABA9A00851CD2 /* ding.caf */; };
 		29ED62E81477FEF60029F045 /* click.caf in Resources */ = {isa = PBXBuildFile; fileRef = 2991C8E0142A7EA800053634 /* click.caf */; };
-		29ED62E91477FEF60029F045 /* Speech2.aifc in Resources */ = {isa = PBXBuildFile; fileRef = 295E69DE145FA72D00C6BF20 /* Speech2.aifc */; };
 		29ED62EA1477FEF60029F045 /* Speech1.aifc in Resources */ = {isa = PBXBuildFile; fileRef = 295E69DF145FA72D00C6BF20 /* Speech1.aifc */; };
-		29ED62EB1477FEF60029F045 /* PrizeSelectScreen-hd.png in Resources */ = {isa = PBXBuildFile; fileRef = 295E69E5145FB7C500C6BF20 /* PrizeSelectScreen-hd.png */; };
-		29ED62EC1477FEF60029F045 /* PrizeSelectScreen-ipad.png in Resources */ = {isa = PBXBuildFile; fileRef = 295E69E6145FB7C500C6BF20 /* PrizeSelectScreen-ipad.png */; };
-		29ED62ED1477FEF60029F045 /* PrizeSelectScreen.png in Resources */ = {isa = PBXBuildFile; fileRef = 295E69ED145FB7D300C6BF20 /* PrizeSelectScreen.png */; };
-		29ED63331477FEF60029F045 /* Henry_Pick_Your_Prize.caf in Resources */ = {isa = PBXBuildFile; fileRef = 298410DD146DEF36006FC977 /* Henry_Pick_Your_Prize.caf */; };
 		29ED636914780A7B0029F045 /* Buttons-hd.plist in Resources */ = {isa = PBXBuildFile; fileRef = 29ED635514780A7B0029F045 /* Buttons-hd.plist */; };
 		29ED636A14780A7B0029F045 /* Buttons-hd.png in Resources */ = {isa = PBXBuildFile; fileRef = 29ED635614780A7B0029F045 /* Buttons-hd.png */; };
 		29ED636B14780A7B0029F045 /* Buttons.plist in Resources */ = {isa = PBXBuildFile; fileRef = 29ED635714780A7B0029F045 /* Buttons.plist */; };
@@ -1670,6 +1646,7 @@
 		29A9DAFE1450D05700B5A240 /* MaterialSelectScreen-ipad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "MaterialSelectScreen-ipad.png"; sourceTree = "<group>"; };
 		29A9DB061450D07400B5A240 /* MaterialSelectionLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MaterialSelectionLayer.h; sourceTree = "<group>"; };
 		29A9DB071450D07400B5A240 /* MaterialSelectionLayer.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = MaterialSelectionLayer.mm; sourceTree = "<group>"; };
+		29AB61B9148007600058EC50 /* winterBackgroundMusic.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = winterBackgroundMusic.caf; sourceTree = "<group>"; };
 		29ABB1AD14521C9100A3A3F7 /* PrizeSelectionScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PrizeSelectionScene.h; sourceTree = "<group>"; };
 		29ABB1AE14521C9100A3A3F7 /* PrizeSelectionScene.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = PrizeSelectionScene.mm; sourceTree = "<group>"; };
 		29AD04C714776535003E19EC /* Smart Henry.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Smart Henry.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -2934,6 +2911,7 @@
 		29ED635414780A7B0029F045 /* WinterHenry */ = {
 			isa = PBXGroup;
 			children = (
+				29AB61B9148007600058EC50 /* winterBackgroundMusic.caf */,
 				29EE5C6A147E0FE900964292 /* GingerBreadObjects-hd.plist */,
 				29EE5C6B147E0FE900964292 /* GingerBreadObjects-hd.pvr.ccz */,
 				29EE5C6C147E0FE900964292 /* GingerBreadObjects.plist */,
@@ -3521,9 +3499,6 @@
 				29ED62BA1477FEF60029F045 /* UserIconsTextures-hd.pvr.ccz in Resources */,
 				29ED62BB1477FEF60029F045 /* UserIconsTextures.plist in Resources */,
 				29ED62BC1477FEF60029F045 /* UserIconsTextures.pvr.ccz in Resources */,
-				29ED62BD1477FEF60029F045 /* MaterialSelectScreen.png in Resources */,
-				29ED62BE1477FEF60029F045 /* MaterialSelectScreen-hd.png in Resources */,
-				29ED62BF1477FEF60029F045 /* MaterialSelectScreen-ipad.png in Resources */,
 				29ED62C01477FEF60029F045 /* TitleScreen-portrait-hd.png in Resources */,
 				29ED62C11477FEF60029F045 /* TitleScreen-portrait.png in Resources */,
 				29ED62C31477FEF60029F045 /* AboutScreen.png in Resources */,
@@ -3535,34 +3510,12 @@
 				29ED62C91477FEF60029F045 /* buttonsAndResources-Smart.pvr.ccz in Resources */,
 				29ED62CA1477FEF60029F045 /* buttonsAndResources-Smart-ipad.plist in Resources */,
 				29ED62CB1477FEF60029F045 /* buttonsAndResources-Smart-ipad.pvr.ccz in Resources */,
-				29ED62CD1477FEF60029F045 /* MaterialSelectionButtons-hd.plist in Resources */,
-				29ED62CE1477FEF60029F045 /* MaterialSelectionButtons-hd.pvr.gz in Resources */,
-				29ED62CF1477FEF60029F045 /* MaterialSelectionButtons.plist in Resources */,
-				29ED62D01477FEF60029F045 /* MaterialSelectionButtons.pvr.gz in Resources */,
-				29ED62D11477FEF60029F045 /* SmartHenry_StatusBox.png in Resources */,
-				29ED62D21477FEF60029F045 /* SmartHenry_StatusBox-hd.png in Resources */,
-				29ED62D31477FEF60029F045 /* SmartHenry_StatusBox-ipad.png in Resources */,
 				29ED62D41477FEF60029F045 /* headLampLight.png in Resources */,
 				29ED62D51477FEF60029F045 /* headLampLight-hd.png in Resources */,
 				29ED62D61477FEF60029F045 /* headLampLight-ipad.png in Resources */,
-				29ED62D71477FEF60029F045 /* SmartHenry_Bkgrd_0.png in Resources */,
-				29ED62D81477FEF60029F045 /* SmartHenry_Bkgrd_0-hd.png in Resources */,
-				29ED62D91477FEF60029F045 /* SmartHenry_Bkgrd_1.png in Resources */,
-				29ED62DA1477FEF60029F045 /* SmartHenry_Bkgrd_1-hd.png in Resources */,
-				29ED62DB1477FEF60029F045 /* SmartHenry_Bkgrd_2-hd.png in Resources */,
-				29ED62DC1477FEF60029F045 /* SmartHenry_Bkgrd_0-ipad.png in Resources */,
-				29ED62DD1477FEF60029F045 /* SmartHenry_Bkgrd_2-ipad.png in Resources */,
-				29ED62DE1477FEF60029F045 /* SmartHenry_Bkgrd_1-ipad.png in Resources */,
-				29ED62DF1477FEF60029F045 /* SmartHenry_Bkgrd_2.png in Resources */,
-				29ED62E01477FEF60029F045 /* backgroundMusic.aifc in Resources */,
 				29ED62E71477FEF60029F045 /* ding.caf in Resources */,
 				29ED62E81477FEF60029F045 /* click.caf in Resources */,
-				29ED62E91477FEF60029F045 /* Speech2.aifc in Resources */,
 				29ED62EA1477FEF60029F045 /* Speech1.aifc in Resources */,
-				29ED62EB1477FEF60029F045 /* PrizeSelectScreen-hd.png in Resources */,
-				29ED62EC1477FEF60029F045 /* PrizeSelectScreen-ipad.png in Resources */,
-				29ED62ED1477FEF60029F045 /* PrizeSelectScreen.png in Resources */,
-				29ED63331477FEF60029F045 /* Henry_Pick_Your_Prize.caf in Resources */,
 				29ED636914780A7B0029F045 /* Buttons-hd.plist in Resources */,
 				29ED636A14780A7B0029F045 /* Buttons-hd.png in Resources */,
 				29ED636B14780A7B0029F045 /* Buttons.plist in Resources */,
@@ -3620,6 +3573,7 @@
 				29EE5C77147E0FE900964292 /* PrizeSelectionObjects-hd.pvr.ccz in Resources */,
 				29EE5C78147E0FE900964292 /* PrizeSelectionObjects.plist in Resources */,
 				29EE5C79147E0FE900964292 /* PrizeSelectionObjects.pvr.ccz in Resources */,
+				29AB61BA148007600058EC50 /* winterBackgroundMusic.caf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

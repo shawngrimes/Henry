@@ -164,9 +164,20 @@ enum nodeTags
         }
     }
     if([gbManMenu.children count]==0){
-        CCMenuItemFont *menuItemFont = [CCMenuItemFont itemFromString:@"No more pieces here" block:^(id sender) {
-            [gbManMenu removeChild:sender cleanup:YES];
-            [self schedule:@selector(loadStartup) interval:2.5];
+        CCMenuItemFont *menuItemFont = [CCMenuItemFont itemFromString:@"Start Over?" block:^(id sender) {
+            if(self.currentPlayer!=nil){
+                AppDelegate *sharedAppDelegate=(AppDelegate *)[UIApplication sharedApplication].delegate;
+                [self.currentPlayer removePrizes:self.gingerBreadLayer.prizesWonSet];
+                NSError *error;
+                if (![sharedAppDelegate.managedObjectContext save:&error]) {
+                    CCLOG(@"Whoops, couldn't save prize to player: %@", [error localizedDescription]);
+                }
+                
+                [FlurryAnalytics logEvent:@"RESTART_PRIZES"];
+                [self.gingerBreadLayer refreshPrizes];
+
+            }
+            [self updateForScreenReshape];
         }];
         [gbManMenu addChild:menuItemFont];
     }
@@ -252,8 +263,19 @@ enum nodeTags
     
     if([gbWomanMenu.children count]==0){
         CCMenuItemFont *menuItemFont = [CCMenuItemFont itemFromString:@"No more pieces here" block:^(id sender) {
-            [gbWomanMenu removeChild:sender cleanup:YES];
-            [self schedule:@selector(loadStartup) interval:2.5];
+            if(self.currentPlayer!=nil){
+                AppDelegate *sharedAppDelegate=(AppDelegate *)[UIApplication sharedApplication].delegate;
+                [self.currentPlayer removePrizes:self.gingerBreadLayer.prizesWonSet];
+                NSError *error;
+                if (![sharedAppDelegate.managedObjectContext save:&error]) {
+                    CCLOG(@"Whoops, couldn't save prize to player: %@", [error localizedDescription]);
+                }
+                
+                [FlurryAnalytics logEvent:@"RESTART_PRIZES"];
+                [self.gingerBreadLayer refreshPrizes];
+                
+            }
+            [self updateForScreenReshape];
         }];
         [gbWomanMenu addChild:menuItemFont];
     }
@@ -265,6 +287,10 @@ enum nodeTags
     gbManMenu.position=ccp(gbManMenu.position.x,screenSize.height-self.prizeHeight);
 //    gbWomanMenu.anchorPoint=ccp(0,0.5);
     gbWomanMenu.position=ccp(gbWomanMenu.position.x,screenSize.height-self.prizeHeight);
+    if(UI_USER_INTERFACE_IDIOM()!=UIUserInterfaceIdiomPad){
+        gbManMenu.position=ccpAdd(gbManMenu.position, ccp(0,-5));
+        gbWomanMenu.position=ccpAdd(gbWomanMenu.position, ccp(0,-5));
+    }
     
 	return [NSArray arrayWithObjects: pageOne,pageTwo,nil];
 }

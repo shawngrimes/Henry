@@ -187,6 +187,12 @@
         [newCharacter setScale:size.width/1024.0f];
         //        [newCharacter setScaleY:size.height/768.0f];
     }
+#elif WINTER
+    if (UI_USER_INTERFACE_IDIOM() != UIUserInterfaceIdiomPad) { 
+        CGSize size = [[CCDirector sharedDirector] winSize];
+        [newCharacter setScale:.8];
+        //        [newCharacter setScaleY:size.height/768.0f];
+    }
 #endif
     
     newCharacter.originalScale=newCharacter.scale;

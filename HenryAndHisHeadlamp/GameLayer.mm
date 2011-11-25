@@ -72,7 +72,7 @@ bool isInTarget=NO;
             kNumObjects=5;
         }
 #ifdef WINTER
-        kNumObjects=6;
+        kNumObjects=5;
 #endif
 
 #ifdef SMART
@@ -950,6 +950,7 @@ bool isInTarget=NO;
     prizeLayer.isRelativeAnchorPoint=YES;
     prizeLayer.anchorPoint=ccp(0,1);
     prizeLayer.position=ccp(prizeLayer.position.x,prizeLayer.prizeHeight + (winSize.height * 85.0/768.0));
+
 
     
     [[CCDirector sharedDirector] replaceScene:

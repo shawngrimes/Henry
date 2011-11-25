@@ -13,6 +13,8 @@
 #import "MaterialSelectionLayer.h"
 #import "Player.h"
 #import "PrizeSelectionScene.h"
+#import "GingerBreadLayer.h"
+#import "PrizeSelectionLayer.h"
 
 @implementation UserSelectionLayer
 +(CCScene *) scene

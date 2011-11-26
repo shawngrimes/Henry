@@ -141,7 +141,7 @@
         CCMenu *visitMenu=[CCMenu menuWithItems:visitSprite,visitSupportSprite, nil];
         if (UI_USER_INTERFACE_IDIOM() != UIUserInterfaceIdiomPad) {
             [visitMenu alignItemsVerticallyWithPadding:size.height/9];
-            visitMenu.position=ccp(3.9*size.width/5, size.height-size.height/3.1);
+            visitMenu.position=ccp(3.9*size.width/5, size.height-size.height/3.05);
         }else{
             [visitMenu alignItemsVerticallyWithPadding:size.height/9];   
             visitMenu.position=ccp(3.9*size.width/5, size.height-size.height/3.4);

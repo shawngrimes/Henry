@@ -1654,7 +1654,7 @@
 		29AB61B9148007600058EC50 /* winterBackgroundMusic.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = winterBackgroundMusic.caf; sourceTree = "<group>"; };
 		29ABB1AD14521C9100A3A3F7 /* PrizeSelectionScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PrizeSelectionScene.h; sourceTree = "<group>"; };
 		29ABB1AE14521C9100A3A3F7 /* PrizeSelectionScene.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = PrizeSelectionScene.mm; sourceTree = "<group>"; };
-		29AD04C714776535003E19EC /* Smart Henry.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Smart Henry.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		29AD04C714776535003E19EC /* SmartHenry.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SmartHenry.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		29AD04C914776536003E19EC /* SmartHenry-Phone-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "SmartHenry-Phone-Info.plist"; path = "/Users/shawn/SourceCode/Henry/SmartHenry-Phone-Info.plist"; sourceTree = "<absolute>"; };
 		29AD04CB14776803003E19EC /* Icon-72.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-72.png"; sourceTree = "<group>"; };
 		29AD04CC14776803003E19EC /* Icon-Small-50.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-Small-50.png"; sourceTree = "<group>"; };
@@ -1771,7 +1771,7 @@
 		29E5B901144FD3E600C8B033 /* b2WeldJoint.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = b2WeldJoint.cpp; sourceTree = "<group>"; };
 		29E5B902144FD3E600C8B033 /* b2WeldJoint.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = b2WeldJoint.h; sourceTree = "<group>"; };
 		29E6B73A143538DA00EB59AF /* Henry_Spooky_Scores.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Henry_Spooky_Scores.png; sourceTree = "<group>"; };
-		29ED634F1477FEF60029F045 /* Winter Henry.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Winter Henry.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		29ED634F1477FEF60029F045 /* WinterHenry.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WinterHenry.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		29ED63521477FEF70029F045 /* WinterHenry-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "WinterHenry-Info.plist"; path = "/Users/shawn/SourceCode/Henry/WinterHenry-Info.plist"; sourceTree = "<absolute>"; };
 		29ED635514780A7B0029F045 /* Buttons-hd.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "Buttons-hd.plist"; sourceTree = "<group>"; };
 		29ED635714780A7B0029F045 /* Buttons.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Buttons.plist; sourceTree = "<group>"; };
@@ -2284,8 +2284,8 @@
 				2986CA09141932C6002DA1C8 /* HenryAndHisHeadlamp.app */,
 				29151D87142A3D32001ED460 /* SpookyHenry.app */,
 				290A2E51144CFE7B00BBFBA3 /* SmartHenry-Universal.app */,
-				29AD04C714776535003E19EC /* Smart Henry.app */,
-				29ED634F1477FEF60029F045 /* Winter Henry.app */,
+				29AD04C714776535003E19EC /* SmartHenry.app */,
+				29ED634F1477FEF60029F045 /* WinterHenry.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -3053,7 +3053,7 @@
 			);
 			name = "SmartHenry-iPhone";
 			productName = SmartHenry;
-			productReference = 29AD04C714776535003E19EC /* Smart Henry.app */;
+			productReference = 29AD04C714776535003E19EC /* SmartHenry.app */;
 			productType = "com.apple.product-type.application";
 		};
 		29ED62031477FEF60029F045 /* WinterHenry */ = {
@@ -3070,7 +3070,7 @@
 			);
 			name = WinterHenry;
 			productName = SmartHenry;
-			productReference = 29ED634F1477FEF60029F045 /* Winter Henry.app */;
+			productReference = 29ED634F1477FEF60029F045 /* WinterHenry.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -4587,7 +4587,7 @@
 					"\"$(SRCROOT)/FlurryAnalytics\"",
 				);
 				OTHER_LDFLAGS = "-lz";
-				PRODUCT_NAME = "Smart Henry";
+				PRODUCT_NAME = SmartHenry;
 				PROVISIONING_PROFILE = "B827A97C-3DCA-4CCF-B445-1BF040B60468";
 				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "B827A97C-3DCA-4CCF-B445-1BF040B60468";
 				TARGETED_DEVICE_FAMILY = 1;
@@ -4628,7 +4628,7 @@
 					"\"$(SRCROOT)/FlurryAnalytics\"",
 				);
 				OTHER_LDFLAGS = "-lz";
-				PRODUCT_NAME = "Smart Henry";
+				PRODUCT_NAME = SmartHenry;
 				PROVISIONING_PROFILE = "3ED2FDDB-6EBD-48D5-A13E-8AFAD697F7AE";
 				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "3ED2FDDB-6EBD-48D5-A13E-8AFAD697F7AE";
 				TARGETED_DEVICE_FAMILY = 1;
@@ -4671,7 +4671,7 @@
 					"\"$(SRCROOT)/FlurryAnalytics\"",
 				);
 				OTHER_LDFLAGS = "-lz";
-				PRODUCT_NAME = "Winter Henry";
+				PRODUCT_NAME = WinterHenry;
 				PROVISIONING_PROFILE = "B827A97C-3DCA-4CCF-B445-1BF040B60468";
 				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "B827A97C-3DCA-4CCF-B445-1BF040B60468";
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -4711,7 +4711,7 @@
 					"\"$(SRCROOT)/FlurryAnalytics\"",
 				);
 				OTHER_LDFLAGS = "-lz";
-				PRODUCT_NAME = "Winter Henry";
+				PRODUCT_NAME = WinterHenry;
 				PROVISIONING_PROFILE = "3ED2FDDB-6EBD-48D5-A13E-8AFAD697F7AE";
 				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "3ED2FDDB-6EBD-48D5-A13E-8AFAD697F7AE";
 				TARGETED_DEVICE_FAMILY = "1,2";

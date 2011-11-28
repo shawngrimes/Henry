@@ -14,7 +14,7 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "29ED62031477FEF60029F045"
-               BuildableName = "Winter Henry.app"
+               BuildableName = "WinterHenry.app"
                BlueprintName = "WinterHenry"
                ReferencedContainer = "container:HenryAndHisHeadlamp.xcodeproj">
             </BuildableReference>
@@ -32,7 +32,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "29ED62031477FEF60029F045"
-            BuildableName = "Winter Henry.app"
+            BuildableName = "WinterHenry.app"
             BlueprintName = "WinterHenry"
             ReferencedContainer = "container:HenryAndHisHeadlamp.xcodeproj">
          </BuildableReference>
@@ -45,12 +45,13 @@
       useCustomWorkingDirectory = "NO"
       buildConfiguration = "Debug"
       debugDocumentVersioning = "YES"
+      enablesOpenGLESFrameCapture = "YES"
       allowLocationSimulation = "YES">
       <BuildableProductRunnable>
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "29ED62031477FEF60029F045"
-            BuildableName = "Winter Henry.app"
+            BuildableName = "WinterHenry.app"
             BlueprintName = "WinterHenry"
             ReferencedContainer = "container:HenryAndHisHeadlamp.xcodeproj">
          </BuildableReference>
@@ -75,7 +76,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "29ED62031477FEF60029F045"
-            BuildableName = "Winter Henry.app"
+            BuildableName = "WinterHenry.app"
             BlueprintName = "WinterHenry"
             ReferencedContainer = "container:HenryAndHisHeadlamp.xcodeproj">
          </BuildableReference>

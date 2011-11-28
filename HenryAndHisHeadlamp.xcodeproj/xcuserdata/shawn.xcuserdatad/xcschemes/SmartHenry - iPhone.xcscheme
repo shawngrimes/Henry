@@ -14,7 +14,7 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "29AD037B14776535003E19EC"
-               BuildableName = "Smart Henry.app"
+               BuildableName = "SmartHenry.app"
                BlueprintName = "SmartHenry-iPhone"
                ReferencedContainer = "container:HenryAndHisHeadlamp.xcodeproj">
             </BuildableReference>
@@ -32,7 +32,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "29AD037B14776535003E19EC"
-            BuildableName = "Smart Henry.app"
+            BuildableName = "SmartHenry.app"
             BlueprintName = "SmartHenry-iPhone"
             ReferencedContainer = "container:HenryAndHisHeadlamp.xcodeproj">
          </BuildableReference>
@@ -45,12 +45,13 @@
       useCustomWorkingDirectory = "NO"
       buildConfiguration = "Debug"
       debugDocumentVersioning = "YES"
+      enablesOpenGLESFrameCapture = "YES"
       allowLocationSimulation = "YES">
       <BuildableProductRunnable>
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "29AD037B14776535003E19EC"
-            BuildableName = "Smart Henry.app"
+            BuildableName = "SmartHenry.app"
             BlueprintName = "SmartHenry-iPhone"
             ReferencedContainer = "container:HenryAndHisHeadlamp.xcodeproj">
          </BuildableReference>
@@ -68,7 +69,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "29AD037B14776535003E19EC"
-            BuildableName = "Smart Henry.app"
+            BuildableName = "SmartHenry.app"
             BlueprintName = "SmartHenry-iPhone"
             ReferencedContainer = "container:HenryAndHisHeadlamp.xcodeproj">
          </BuildableReference>
